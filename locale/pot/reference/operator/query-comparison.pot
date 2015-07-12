@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/query-comparison.txt:5
+# a28642bfcedb4054a9827fdd7ba6af88
+msgid "Comparison Query Operators"
+msgstr ""
+
+#: ../source/includes/fact-comparison-order.rst:1
+# 5a1c1f8e40a84e5a9aab4168bc65c05a
+msgid "For comparison of different BSON type values, see the :ref:`specified BSON comparison order <bson-types-comparison-order>`."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:2
+# 6f3e4330d7724dda8d187af817322e48
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:2
+# 879ee8897dbf46679254be4f35ef3d5c
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:4
+# 93704cbb4c2b48c09a58a2a72ab1579b
+msgid ":query:`$gt`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:4
+# 589585558f204da99eb9114bdb69ad33
+msgid "Matches values that are greater than the value specified in the query."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:6
+# 22f6be0001fb4918829d901d1aad7120
+msgid ":query:`$gte`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:6
+# 6511a32b652a48d69ab7bb8d2217504e
+msgid "Matches values that are greater than or equal to the value specified in the query."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:8
+# 54e8124b306944ddabbf1d283eed23bf
+msgid ":query:`$lt`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:8
+# 598c8efb6f404963aa967485ca2f7698
+msgid "Matches values that are less than the value specified in the query."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:10
+# ffc19ab553824e3e8e1a737a696a119c
+msgid ":query:`$lte`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:10
+# def12e4657304a08887e4a5db59371b5
+msgid "Matches values that are less than or equal to the value specified in the query."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:12
+# 26a26bb42bc74d658e1e42129dd3208d
+msgid ":query:`$ne`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:12
+# b1429d46f7224e71a76e856be9aaadfe
+msgid "Matches all values that are not equal to the value specified in the query."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:14
+# 3cdd7ea7efec460fb10c9a6bf84d0f5f
+msgid ":query:`$in`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:14
+# 2b213bfb0f3a436794f61dcc5f177866
+msgid "Matches any of the values that exist in an array specified in the query."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:16
+# bd40a22cba204f358f8a91d489148c3a
+msgid ":query:`$nin`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-query-comparison.rst:16
+# e42217e9e02240a691d862769d63c4e8
+msgid "Matches values that **do not** exist in an array specified to the query."
+msgstr ""
+

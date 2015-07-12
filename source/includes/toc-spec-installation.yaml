@@ -1,0 +1,70 @@
+level: 1
+source:
+  file: toc-install-on-linux-landing.yaml
+  ref: /administration/install-on-linux
+---
+level: 2
+source:
+  file: toc-installation-linux.yaml
+  ref: /tutorial/install-mongodb-on-red-hat
+---
+level: 2
+source:
+  file: toc-installation-linux.yaml
+  ref: /tutorial/install-mongodb-on-amazon
+---
+level: 2
+source:
+  file: toc-installation-linux.yaml
+  ref: /tutorial/install-mongodb-on-suse
+---
+level: 2
+source:
+  file: toc-installation-linux.yaml
+  ref: /tutorial/install-mongodb-on-ubuntu
+---
+level: 2
+source:
+  file: toc-installation-linux.yaml
+  ref: /tutorial/install-mongodb-on-debian
+---
+level: 2
+source:
+  file: toc-installation-linux.yaml
+  ref: /tutorial/install-mongodb-on-linux
+---
+level: 1
+source:
+  file: toc-installation-osx.yaml
+  ref: /tutorial/install-mongodb-on-os-x
+---
+level: 1
+source:
+  file: toc-installation-windows.yaml
+  ref: /tutorial/install-mongodb-on-windows
+---
+level: 1
+source:
+  file: toc-installation-enterprise-landing.yaml
+  ref: /administration/install-enterprise
+---
+level: 2
+source:
+  file: toc-installation-enterprise.yaml
+  ref: /tutorial/install-mongodb-enterprise-on-red-hat
+---
+level: 2
+source:
+  file: toc-installation-enterprise.yaml
+  ref: /tutorial/install-mongodb-enterprise-on-ubuntu
+---
+level: 2
+source:
+  file: toc-installation-enterprise.yaml
+  ref: /tutorial/install-mongodb-enterprise-on-amazon
+---
+level: 2
+source:
+  file: toc-installation-enterprise.yaml
+  ref: /tutorial/install-mongodb-enterprise-on-windows
+...

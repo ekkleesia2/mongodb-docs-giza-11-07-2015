@@ -1,0 +1,15 @@
+level: 1
+source:
+  file: toc-data-center-awareness.yaml
+  ref: /core/operational-segregation
+---
+level: 1
+source:
+  file: toc-sharded-cluster-operations.yaml
+  ref: /core/tag-aware-sharding
+---
+level: 1
+source:
+  file: toc-sharded-cluster-data.yaml
+  ref: /tutorial/administer-shard-tags
+...

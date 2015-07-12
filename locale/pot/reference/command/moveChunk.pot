@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/moveChunk.txt:3
+# e9d116c7bc1a4b7886fd710c848c7c77
+msgid "moveChunk"
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:8
+# 5cc93014763246a5b833422e27f744a3
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:12
+# 6788206519b54309ab6d511c07d24cb7
+msgid "Internal administrative command. Moves :term:`chunks <chunk>` between :term:`shards <shard>`. Issue the :dbcommand:`moveChunk` command via a :program:`mongos` instance while using the :term:`admin database`. Use the following forms:"
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:25
+# b1dc81c753a04fc6b66ac27c131ac8db
+msgid "Alternately:"
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:35
+# 6b8647be2b814ea5854af786ca814225
+msgid "The :dbcommand:`moveChunk` command has the following fields:"
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:39
+# 8c3e6de5d5eb45b7a854caa6d379ee36
+msgid "The value of ``bounds`` takes the form:"
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:46
+# b485b88540b947d5a1a3f4c06aa8d4bd
+msgid "The :ref:`chunk migration <sharding-chunk-migration>` section describes how chunks move between shards on MongoDB."
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:49
+# 32356377eb864954b7fc138cdb060d56
+msgid ":dbcommand:`split`, :method:`sh.moveChunk()`, :method:`sh.splitAt()`, and :method:`sh.splitFind()`."
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:53
+# d5aa0f8ff1664db29e70e06629a4fbee
+msgid "Return Messages"
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:55
+# 553a5912e7234a16a74b7d65df9ad42c
+msgid ":dbcommand:`moveChunk` returns the following error message if another metadata operation is in progress on the :data:`~config.chunks` collection:"
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:62
+# 79e95bfc5f2b4a68824981e1a6054063
+msgid "If another process, such as a balancer process, changes meta data while :dbcommand:`moveChunk` is running, you may see this error. You may retry the :dbcommand:`moveChunk` operation without side effects."
+msgstr ""
+
+#: ../source/reference/command/moveChunk.txt:69
+# a0abb337485846148946b07e4a7320b1
+msgid "Only use the :dbcommand:`moveChunk` in special circumstances such as preparing your :term:`sharded cluster` for an initial ingestion of data, or a large bulk import operation. In most cases allow the balancer to create and balance chunks in sharded clusters. See :doc:`/tutorial/create-chunks-in-sharded-cluster` for more information."
+msgstr ""
+

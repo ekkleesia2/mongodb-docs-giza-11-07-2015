@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/query/centerSphere.txt:3
+# 45bc5c76d71f4fb88116788d7df9b57e
+msgid "$centerSphere"
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:11
+# 8a1a57547f4b40708023e64d13b16ff8
+msgid "The :query:`$centerSphere` operator defines a circle for a :term:`geospatial` query that uses spherical geometry. The query returns documents that are within the bounds of the circle."
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:15
+# a9a01e40f6fe4db18026ad89cf647f52
+msgid "You can use the :query:`$centerSphere` operator on both :term:`GeoJSON` objects and legacy coordinate pairs."
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:18
+# 51ae9cfd44d8493b9122d0ffd7179113
+msgid "The ``2d`` and ``2dsphere`` geospatial indexes both support :query:`$centerSphere`."
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:21
+# 44ae3d3b322f428f94066c332ccfe3e7
+msgid "To use :query:`$centerSphere`, specify an array that contains:"
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:23
+# 7015b7f488724cfba45c61cd3744451c
+msgid "The grid coordinates of the circle's center point"
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:25
+# bc0fbada7dd344aab39fcb2939bc41e3
+msgid "The circle's radius measured in radians. To calculate radians, see :doc:`/tutorial/calculate-distances-using-spherical-geometry-with-2d-geospatial-indexes`."
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:28
+# 7938652e73124ae385eb968c85b72965
+msgid "Use the following syntax:"
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:37
+# 0e12fe2fac7c4709b8ef924799bac436
+msgid "If you use longitude and latitude, specify **longitude first**."
+msgstr ""
+
+#: ../source/reference/operator/query/centerSphere.txt:39
+# 461e7acca0014d728f97ed41289c3dd3
+msgid "The following example queries grid coordinates and returns all documents within a 10 mile radius of longitude ``88 W`` and latitude ``30 N``. The query converts the distance to radians by dividing by the approximate radius of the earth, 3959 miles:"
+msgstr ""
+
+#: ../source/includes/note-geospatial-index-must-exist.rst:1
+# 179003da85f84318bd7fac76c55f5265
+msgid "Applications can use |operator| *without* having a geospatial index. However, geospatial indexes support much faster queries than the unindexed equivalents. Before 2.2.3, a geospatial index *must* exist on a field holding coordinates before using any of the geospatial query operators."
+msgstr ""
+

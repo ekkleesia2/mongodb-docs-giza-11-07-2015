@@ -1,0 +1,16 @@
+===========
+rs.addArb()
+===========
+
+.. default-domain:: mongodb
+
+Description
+-----------
+
+.. method:: rs.addArb(host)
+
+   Adds a new :term:`arbiter` to an existing replica set.
+
+   The :method:`rs.addArb()` method takes the following parameter:
+
+   .. include:: /includes/apiargs/method-rs.addArb-param.rst

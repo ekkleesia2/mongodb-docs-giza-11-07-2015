@@ -1,0 +1,28 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/getShardVersion.txt:3
+# 1363bc0987d7460498886b8dafaf8f56
+msgid "getShardVersion"
+msgstr ""
+
+#: ../source/reference/command/getShardVersion.txt:9
+# 33973e83a33041a79caeeaa62683d3cd
+msgid ":dbcommand:`getShardVersion` is a command that supports sharding functionality and is not part of the stable client facing API."
+msgstr ""
+

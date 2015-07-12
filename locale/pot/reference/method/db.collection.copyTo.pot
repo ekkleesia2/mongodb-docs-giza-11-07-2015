@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/db.collection.copyTo.txt:3
+# f877824cd21946f8a1e7b57d4939e6f7
+msgid "db.collection.copyTo()"
+msgstr ""
+
+#: ../source/reference/method/db.collection.copyTo.txt:8
+# 16c481e461534e40a0dde37c7dc0bc21
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/db.collection.copyTo.txt:12
+# 238cfdbf4a284b49a4db667d1a64a121
+msgid "Copies all documents from ``collection`` into ``newCollection`` using server-side JavaScript. If ``newCollection`` does not exist, MongoDB creates it."
+msgstr ""
+
+#: ../source/includes/access-eval.rst:3
+# 23cb6606cb9447f8bf8e7d1bd24dab3e
+msgid "If authorization is enabled, you must have access to all actions on all resources in order to run |eval-object|. Providing such access is not recommended, but if your organization requires a user to run |eval-object|, create a role that grants :authaction:`anyAction` on :ref:`resource-anyresource`. Do not assign this role to any other user."
+msgstr ""
+
+#: ../source/includes/warning-copyto-loss-of-type-fidelity.rst:3
+# 27d457ebfcf74b4ab328e56867d16051
+msgid "When using :method:`db.collection.copyTo()` check field types to ensure that the operation does not remove type information from documents during the translation from :term:`BSON` to :term:`JSON`. Consider using :method:`~db.cloneCollection()` to maintain type fidelity."
+msgstr ""
+
+#: ../source/includes/warning-copyto-loss-of-type-fidelity.rst:9
+# 03b2dd071b9c4f95977fe660a9e38453
+msgid "The :method:`db.collection.copyTo()` method uses the :dbcommand:`eval` command internally. As a result, the :method:`db.collection.copyTo()` operation takes a global lock that blocks all other read and write operations until the :method:`db.collection.copyTo()` completes."
+msgstr ""
+
+#: ../source/reference/method/db.collection.copyTo.txt:23
+# c001d8abf25848ce9f47daa08ef1bb24
+msgid ":method:`~db.collection.copyTo()` returns the number of documents copied. If the copy fails, it throws an exception."
+msgstr ""
+
+#: ../source/reference/method/db.collection.copyTo.txt:27
+# 8d9d3fd9b3a44bdea2e704a459ebe2a0
+msgid "Behavior"
+msgstr ""
+
+#: ../source/reference/method/db.collection.copyTo.txt:29
+# d398041844da43a2bab406db55ff0f57
+msgid "Because :method:`~db.collection.copyTo()` uses :dbcommand:`eval` internally, the copy operations will block all other operations on the :program:`mongod` instance."
+msgstr ""
+
+#: ../source/reference/method/db.collection.copyTo.txt:34
+# 2cdbb72e51204f4c94855f8e9cfc0408
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/method/db.collection.copyTo.txt:36
+# 51676d3c40b44413aadff8f761e461d5
+msgid "The following operation copies all documents from the ``source`` collection into the ``target`` collection."
+msgstr ""
+

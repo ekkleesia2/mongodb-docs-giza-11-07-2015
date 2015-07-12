@@ -1,0 +1,120 @@
+.. _mongoexport:
+
+===============
+``mongoexport``
+===============
+
+.. default-domain:: mongodb
+.. |tool-binary| replace:: mongoexport
+
+Synopsis
+--------
+
+:program:`mongoexport` is a utility that produces a JSON or CSV export
+of data stored in a MongoDB instance. See
+:ref:`human-intelligible-exports` for a more in-depth
+usage overview, and the :doc:`mongoimport` document for more
+information regarding the :program:`mongoimport` utility, which
+provides the inverse "importing" capability.
+
+Considerations
+--------------
+
+.. include:: /includes/fact-type-fidelity-loss.rst
+
+.. include:: /includes/fact-type-fidelity-loss-example.rst
+
+Required Access
+---------------
+
+In order to connect to a :program:`mongod` that enforces authorization
+with the :option:`--auth <mongod --auth>` option, you must use the
+:option:`--username <mongoexport --username>` and :option:`--password
+<mongoexport --password>` options. The connecting user must possess at a
+minimum, the :authrole:`read` role on the database that they are exporting.
+
+Options
+-------
+
+.. include:: /includes/extracts/fact-3.0-tools-drop-dbpath-support-mongoexport.rst
+
+.. include:: /includes/fact-3.0-mongoexport-drop-csv-option.rst
+
+.. binary:: mongoexport
+
+.. program:: mongoexport
+
+.. include:: /includes/option/option-mongoexport-help.rst
+
+.. include:: /includes/option/option-mongoexport-verbose.rst
+
+.. include:: /includes/option/option-mongoexport-quiet.rst
+
+.. include:: /includes/option/option-mongoexport-version.rst
+
+.. include:: /includes/option/option-mongoexport-host.rst
+
+.. include:: /includes/option/option-mongoexport-port.rst
+
+.. include:: /includes/option/option-mongoexport-ipv6.rst
+
+.. include:: /includes/option/option-mongoexport-ssl.rst
+
+.. include:: /includes/option/option-mongoexport-sslCAFile.rst
+
+.. include:: /includes/option/option-mongoexport-sslPEMKeyFile.rst
+
+.. include:: /includes/option/option-mongoexport-sslPEMKeyPassword.rst
+
+.. include:: /includes/option/option-mongoexport-sslCRLFile.rst
+
+.. include:: /includes/option/option-mongoexport-sslAllowInvalidCertificates.rst
+
+.. include:: /includes/option/option-mongoexport-sslAllowInvalidHostnames.rst
+
+.. include:: /includes/option/option-mongoexport-sslFIPSMode.rst
+
+.. include:: /includes/option/option-mongoexport-username.rst
+
+.. include:: /includes/option/option-mongoexport-password.rst
+
+.. include:: /includes/option/option-mongoexport-authenticationDatabase.rst
+
+.. include:: /includes/option/option-mongoexport-authenticationMechanism.rst
+
+.. include:: /includes/option/option-mongoexport-gssapiServiceName.rst
+
+.. include:: /includes/option/option-mongoexport-gssapiHostName.rst
+
+.. include:: /includes/option/option-mongoexport-db.rst
+
+.. include:: /includes/option/option-mongoexport-collection.rst
+
+.. include:: /includes/option/option-mongoexport-fields.rst
+
+.. include:: /includes/option/option-mongoexport-fieldFile.rst
+
+.. include:: /includes/option/option-mongoexport-query.rst
+
+.. include:: /includes/option/option-mongoexport-type.rst
+
+.. include:: /includes/option/option-mongoexport-out.rst
+
+.. include:: /includes/option/option-mongoexport-jsonArray.rst
+
+.. include:: /includes/option/option-mongoexport-pretty.rst
+
+.. include:: /includes/option/option-mongoexport-slaveOk.rst
+
+.. include:: /includes/option/option-mongoexport-forceTableScan.rst
+
+.. include:: /includes/option/option-mongoexport-skip.rst
+
+.. include:: /includes/option/option-mongoexport-limit.rst
+
+.. include:: /includes/option/option-mongoexport-sort.rst
+
+Use
+---
+
+.. include:: /includes/fact-mongoexport-usage.rst

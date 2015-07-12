@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:3
+# 7acfc7bdf8004b1e8ccac7529f1ea5f1
+msgid "$strcasecmp (aggregation)"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:9
+# 28c5da24caa94c2aac87ed61c2074947
+msgid "Performs case-insensitive comparison of two strings. Returns"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:11
+# 7426b775fd5d4f88a60136733e9c4197
+msgid "1 if first string is \"greater than\" the second string."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:13
+# 5b6bd7cd59604aa48fb314812243996e
+msgid "0 if the two strings are equal."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:15
+# a969e16504414ff8b8d1a8ded9a5658d
+msgid "-1 if the first string is \"less than\" the second string."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:17
+# 37e6f605cdee4e07b341ec252aa25e1a
+msgid ":expression:`$strcasecmp` has the following syntax:"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:23
+# 469e7caad08f4b1684ab435f0fe07d95
+msgid "The arguments can be any valid :ref:`expression <aggregation-expressions>` as long as they resolve to strings. For more information on expressions, see :ref:`aggregation-expressions`."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:28
+# 0bf9b255b3034839b23597f467aa686f
+msgid "Behavior"
+msgstr ""
+
+#: ../source/includes/intro-aggregation-string.rst:1
+# c1cac1d30181416b86bcc4f7b297a26b
+msgid "|exp-has| a well-defined behavior for strings of ASCII characters."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:34
+# 51bb1c87271b454aa8e86e76d31de5a7
+msgid "For a case sensitive comparison, see :expression:`$cmp`."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:37
+# 4cbb65569d544ded9c99ed13ee41dd63
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:39
+# b88ab0e93fb247d49d1aab3f205fa09d
+msgid "Consider a ``inventory`` collection with the following documents:"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:47
+# d97475566cbe4e0c8ad94954decb0296
+msgid "The following operation uses the :expression:`$strcasecmp` operator to perform case-insensitive comparison of the ``quarter`` field value to the string ``\"13q3\"``:"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/strcasecmp.txt:65
+# ba0621e2d65849a8b401cf10d1b3054c
+msgid "The operation returns the following results:"
+msgstr ""
+

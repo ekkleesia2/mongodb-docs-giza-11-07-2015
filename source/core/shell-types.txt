@@ -1,0 +1,234 @@
+=================================
+Data Types in the ``mongo`` Shell
+=================================
+
+.. default-domain:: mongodb
+
+MongoDB :term:`BSON` provides support for additional data types than
+:term:`JSON`. :doc:`Drivers </applications/drivers>` provide native
+support for these data types in host languages and the
+:program:`mongo` shell also provides several helper classes to support
+the use of these data types in the :program:`mongo` JavaScript
+shell. See the :doc:`Extended JSON </reference/mongodb-extended-json>`
+reference for additional information.
+
+.. _mongo-shell-data-type:
+
+Types
+-----
+
+.. _mongo-shell-date-type:
+
+Date
+~~~~
+
+The :program:`mongo` shell provides various methods to return the date,
+either as a string or as a ``Date`` object:
+
+- ``Date()`` method which returns the current date as a string.
+
+- ``new Date()`` constructor which returns a ``Date`` object using the
+  ``ISODate()`` wrapper.
+
+- ``ISODate()`` constructor which returns a ``Date`` object using the
+  ``ISODate()`` wrapper.
+
+.. include:: /includes/fact-bson-date-internals.rst
+
+Return Date as a String
+```````````````````````
+
+To return the date as a string, use the ``Date()`` method, as in the
+following example:
+
+.. code-block:: javascript
+
+   var myDateString = Date();
+
+To print the value of the variable, type the variable name in the
+shell, as in the following:
+
+.. code-block:: javascript
+
+   myDateString
+
+The result is the value of ``myDateString``:
+
+.. code-block:: javascript
+
+   Wed Dec 19 2012 01:03:25 GMT-0500 (EST)
+
+To verify the type, use the ``typeof`` operator, as in the following:
+
+.. code-block:: javascript
+
+   typeof myDateString
+
+The operation returns ``string``.
+
+Return ``Date``
+```````````````
+
+The :program:`mongo` shell wrap objects of ``Date`` type with the
+``ISODate`` helper; however, the objects remain of type ``Date``.
+
+The following example uses both the ``new Date()`` constructor and the
+``ISODate()`` constructor to return ``Date`` objects.
+
+.. code-block:: javascript
+
+   var myDate = new Date();
+   var myDateInitUsingISODateWrapper = ISODate();
+
+You can use the ``new`` operator with the ``ISODate()`` constructor as
+well.
+
+To print the value of the variable, type the variable name in the
+shell, as in the following:
+
+.. code-block:: javascript
+
+   myDate
+
+The result is the ``Date`` value of ``myDate`` wrapped in the
+``ISODate()`` helper:
+
+.. code-block:: javascript
+
+   ISODate("2012-12-19T06:01:17.171Z")
+
+To verify the type, use the ``instanceof`` operator, as in the
+following:
+
+.. code-block:: javascript
+
+   myDate instanceof Date
+   myDateInitUsingISODateWrapper instanceof Date
+
+The operation returns ``true`` for both.
+
+ObjectId
+~~~~~~~~
+
+The :program:`mongo` shell provides the ``ObjectId()`` wrapper class
+around the :term:`ObjectId` data type. To generate a new ObjectId, use
+the following operation in the :program:`mongo` shell:
+
+.. code-block:: javascript
+
+   new ObjectId
+
+.. see:: :doc:`/reference/object-id` for full documentation of ObjectIds in
+   MongoDB.
+
+.. _shell-type-long:
+
+NumberLong
+~~~~~~~~~~
+
+By default, the :program:`mongo` shell treats all numbers as
+floating-point values. The :program:`mongo` shell provides the
+``NumberLong()`` wrapper to handle 64-bit integers.
+
+The ``NumberLong()`` wrapper accepts the long as a string:
+
+.. code-block:: javascript
+
+   NumberLong("2090845886852")
+
+The following examples use the ``NumberLong()`` wrapper to write to the
+collection:
+
+.. code-block:: javascript
+
+   db.collection.insert( { _id: 10, calc: NumberLong("2090845886852") } )
+   db.collection.update( { _id: 10 },
+                         { $set:  { calc: NumberLong("2555555000000") } } )
+   db.collection.update( { _id: 10 },
+                         { $inc: { calc: NumberLong(5) } } )
+
+Retrieve the document to verify:
+
+.. code-block:: javascript
+
+   db.collection.findOne( { _id: 10 } )
+
+In the returned document, the ``calc`` field contains a
+``NumberLong`` object:
+
+.. code-block:: sh
+
+   { "_id" : 10, "calc" : NumberLong("2555555000005") }
+
+If you use the :update:`$inc` to increment the value of a field that
+contains a ``NumberLong`` object by a **float**, the data type changes
+to a floating point value, as in the following example:
+
+#. Use :update:`$inc` to increment the ``calc`` field by ``5``, which the
+   :program:`mongo` shell treats as a float:
+
+   .. code-block:: javascript
+
+      db.collection.update( { _id: 10 },
+                            { $inc: { calc: 5 } } )
+
+#. Retrieve the updated document:
+
+   .. code-block:: javascript
+
+      db.collection.findOne( { _id: 10 } )
+
+   In the updated document, the ``calc`` field contains a floating
+   point value:
+
+   .. code-block:: sh
+
+      { "_id" : 10, "calc" : 2555555000010 }
+
+.. _shell-type-int:
+
+NumberInt
+~~~~~~~~~
+
+By default, the :program:`mongo` shell treats all numbers as
+floating-point values. The :program:`mongo` shell provides the
+``NumberInt()`` constructor to explicitly specify 32-bit integers.
+
+.. _check-types-in-shell:
+
+Check Types in the ``mongo`` Shell
+----------------------------------
+
+To determine the type of fields, the :program:`mongo` shell provides
+the ``instanceof`` and ``typeof`` operators.
+
+
+``instanceof``
+~~~~~~~~~~~~~~
+
+``instanceof`` returns a boolean to test if a value is an instance of
+some type.
+
+For example, the following operation tests whether the ``_id`` field is
+an instance of type ``ObjectId``:
+
+.. code-block:: javascript
+
+   mydoc._id instanceof ObjectId
+
+The operation returns ``true``.
+
+``typeof``
+~~~~~~~~~~
+
+``typeof`` returns the type of a field.
+
+For example, the following operation returns the type of the ``_id``
+field:
+
+.. code-block:: javascript
+
+   typeof mydoc._id
+
+In this case ``typeof`` will return the more generic ``object`` type
+rather than ``ObjectId`` type.

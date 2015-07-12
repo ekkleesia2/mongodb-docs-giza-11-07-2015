@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:3
+# 2774ec6d7ffe47cab1204ba67bf21c24
+msgid "Merge Chunks in a Sharded Cluster"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:8
+# c6f66a6168bf4945b2c4d9c4b072831e
+msgid "Overview"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:10
+# 65efaf440e204ca6976cb7bd084c8b92
+msgid "The :dbcommand:`mergeChunks` command allows you to collapse empty chunks into neighboring chunks on the same shard. A :term:`chunk` is empty if it has no documents associated with its shard key range."
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:16
+# ff2a7e0fafd94ed18375cfbbc7277a3b
+msgid "Empty :term:`chunks <chunk>` can make the :term:`balancer` assess the cluster as properly balanced when it is not."
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:19
+# b799868b43574bdfa94511337fd5a24f
+msgid "Empty chunks can occur under various circumstances, including:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:21
+# d612ae69d5664d03b81c54311516361d
+msgid "If a :doc:`pre-split </tutorial/create-chunks-in-sharded-cluster>` creates too many chunks, the distribution of data to chunks may be uneven."
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:25
+# fc3878718fec4f70b9a0b5ac0b8095a5
+msgid "If you delete many documents from a sharded collection, some chunks may no longer contain data."
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:28
+# ea04ab8d67734e60aeb974cb2ce67e3f
+msgid "This tutorial explains how to identify chunks available to merge, and how to merge those chunks with neighboring chunks."
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:32
+# d2b75b7cba7b4a63af5ae3175858b3d9
+msgid "Procedure"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:36
+# 632dff37d14348ed9bf048312748fdf7
+msgid "Examples in this procedure use a ``users`` :term:`collection` in the ``test`` :term:`database`, using the ``username`` filed as a :term:`shard key`."
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:41
+# 35562301c4de4a3dae50c14dfc398053
+msgid "Identify Chunk Ranges"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:43
+# 95bcdb8f9d3d4ec6abc7f47f321e991c
+msgid "In the :program:`mongo` shell, identify the :term:`chunk` ranges with the following operation:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:50
+# 67d40b2e5c874b788153f58683253cd1
+msgid "The output of the :method:`sh.status()` will resemble the following:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:88
+# a930f72b5b3e4c9d852c633e3f9a69a8
+msgid "The chunk ranges appear after the chunk counts for each sharded collection, as in the following excerpts:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:91
+# f74eb232fb9a4f978c1c82472f048b11
+msgid "**Chunk counts:**"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:99
+# 72febbc26d3741418064cc13aaa591ed
+msgid "**Chunk range:**"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:106
+# 65c6171efb244e288e28799a7868a555
+msgid "Verify a Chunk is Empty"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:108
+# 2cdc464979c54284a7ee1b554a94ff40
+msgid "The :dbcommand:`mergeChunks` command requires at least one empty input chunk. In the :program:`mongo` shell, check the amount of data in a chunk using an operation that resembles:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:121
+# f8f0b183ba084a2b9a0b33792eab237b
+msgid "If the input chunk to :dbcommand:`dataSize` is empty, :dbcommand:`dataSize` produces output similar to:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:129
+# 86f73663b7d646c2ab9a415c8cf372b1
+msgid "Merge Chunks"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:131
+# f0252f38a21c46a59f0a64ba8146a959
+msgid "Merge two contiguous :term:`chunks <chunk>` on the same :term:`shard`, where at least one of the contains no data, with an operation that resembles the following:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:142
+# 70b1a60493c84cbf9ab831544749f9ca
+msgid "On success, :dbcommand:`mergeChunks` produces the following output:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:148
+# 067c679eda5a42c0b4f0ac3d68d29314
+msgid "On any failure condition, :dbcommand:`mergeChunks` returns a document where the value of the ``ok`` field is ``0``."
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:152
+# 4a482881e4724ed489289410ee7a3fe2
+msgid "View Merged Chunks Ranges"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:154
+# cb8c98bfec904eca8d20ff346e90a5be
+msgid "After merging all empty chunks, confirm the new chunk, as follows:"
+msgstr ""
+
+#: ../source/tutorial/merge-chunks-in-sharded-cluster.txt:160
+# 3e3f7a86784a4610af7d655fe3222ded
+msgid "The output of :method:`sh.status()` should resemble:"
+msgstr ""
+

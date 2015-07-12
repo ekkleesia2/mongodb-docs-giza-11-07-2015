@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/crud.txt:3
+# cdf5832cf3de4a51ac2e3ee7f9fb20e8
+msgid "MongoDB CRUD Reference"
+msgstr ""
+
+#: ../source/reference/crud.txt:8
+# 233158b576914d188e7705ffb2f4fcd0
+msgid "Query Cursor Methods"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:2
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:2
+# f94e4653ebd6422d979573a73b93c3c8
+# e7c8d2baeb97474bb8de5442c181092e
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:2
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:2
+# 7bf786f7d6f94fea83acc091a538a108
+# e9c23ad292794d80ae62a987f2971a3d
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:4
+# e15c9e7b6c6f4e04ab26c2794ffc4a33
+msgid ":method:`cursor.count()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:4
+# aec0bd3cd0f3467d94523456332eff6d
+msgid "Returns a count of the documents in a cursor."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:6
+# 8be9ff0bcc6d4e42a655271d3e81ada5
+msgid ":method:`cursor.explain()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:6
+# c68b6b59fb50405b87fe66976cd82e7e
+msgid "Reports on the query execution plan, including index use, for a cursor."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:8
+# 75ce89c625e64c9c8f38da357ced26ec
+msgid ":method:`cursor.hint()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:8
+# 6fc71e81b52a403abcc520712adb3cc6
+msgid "Forces MongoDB to use a specific index for a query."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:10
+# 6b8ec250c3d646a3bd30129b8eee4192
+msgid ":method:`cursor.limit()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:10
+# 85b473c34575486592399b69a43d9158
+msgid "Constrains the size of a cursor's result set."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:12
+# 8989c58a907f434ba214e9e828cb6517
+msgid ":method:`cursor.next()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:12
+# 5f4306cea3924460850dacf245edaf13
+msgid "Returns the next document in a cursor."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:14
+# 26e9942ced744ce38a1240098995b4ff
+msgid ":method:`cursor.skip()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:14
+# cfa9c453f0e544be965b707a1d48e93b
+msgid "Returns a cursor that begins returning results only after passing or skipping a number of documents."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:16
+# ba27b827dd324e7eb534107b10103885
+msgid ":method:`cursor.sort()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:16
+# fbe82b9719fe49cd9116cd9a86eda7e2
+msgid "Returns results ordered according to a sort specification."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:18
+# e15669aeae374221aef28410009e924f
+msgid ":method:`cursor.toArray()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-cursor-methods.rst:18
+# 6258cc89fac340ee885e4fb7a01bf5b8
+msgid "Returns an array that contains all documents returned by the cursor."
+msgstr ""
+
+#: ../source/reference/crud.txt:13
+# 95cf599b2dca49d09597721a2ef195a7
+msgid "Query and Data Manipulation Collection Methods"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:4
+# c3d1d06b691d4958970145bd1b2bf399
+msgid ":method:`db.collection.count()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:4
+# ceecc9ef16bf4051a35aea95fe3ffbc0
+msgid "Wraps :dbcommand:`count` to return a count of the number of documents in a collection or matching a query."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:6
+# b0ed7d39162f4d1a89adfa2ba55f1d31
+msgid ":method:`db.collection.distinct()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:6
+# 081c5a8f1778454eb01b5d76056f1827
+msgid "Returns an array of documents that have distinct values for the specified field."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:8
+# 00fbbe1259824a9ea22cd47248d0cef7
+msgid ":method:`db.collection.find()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:8
+# 39160cdf2f4a4cc6ad3af16b5f0e7dfb
+msgid "Performs a query on a collection and returns a cursor object."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:10
+# 4cf70fd5130249ed9b2eba5aeb77be90
+msgid ":method:`db.collection.findOne()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:10
+# 8cce40d7daa546679e120f6e33bbe745
+msgid "Performs a query and returns a single document."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:12
+# 6a2b704473fc4a8eb7cdfa497165158e
+msgid ":method:`db.collection.insert()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:12
+# 74af93c9822949c2ad65e3a07a5f4a5d
+msgid "Creates a new document in a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:14
+# 365fc4e57d6d4853b5e66948fe5b50fc
+msgid ":method:`db.collection.remove()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:14
+# fe37513f5eaa4f47bc25889803ed7f9f
+msgid "Deletes documents from a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:16
+# 52f2f378efb34ca1b4bdb44cee652192
+msgid ":method:`db.collection.save()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:16
+# b7eb1800171f4cc68cce1e176e35db18
+msgid "Provides a wrapper around an :method:`~db.collection.insert()` and :method:`~db.collection.update()` to insert new documents."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:18
+# 654dfa0b48334a4f8f13849b395c6b38
+msgid ":method:`db.collection.update()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-crud-collection-methods.rst:18
+# 28d7c4d0001549a88afc17c661aca15f
+msgid "Modifies a document in a collection."
+msgstr ""
+
+#: ../source/reference/crud.txt:18
+# 59718cce522d4bbc9de6cf403c9f604a
+msgid "MongoDB CRUD Reference Documentation"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-crud-reference.rst:6
+# 0f7c86d371894066b350a46571aa4491
+msgid ":doc:`/reference/write-concern`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-crud-reference.rst:4
+# ac453fecafc4442182801d2bfaa2a77e
+msgid "Configuration options associated with the guarantee MongoDB provides when reporting on the success of a write operation."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-crud-reference.rst:11
+# bc94c700f43540c58a7092283e4003d5
+msgid ":doc:`/reference/sql-comparison`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-crud-reference.rst:9
+# 508c7b4932054b2d8dfd9c2d2e0f82be
+msgid "An overview of common database operations showing both the MongoDB operations and SQL statements."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-crud-reference.rst:16
+# f76c8654d56840099b48fc8547220b72
+msgid ":doc:`/reference/bios-example-collection`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-crud-reference.rst:14
+# c86f79d2cd6f4bd086bb21fd3ba7edeb
+msgid "Sample data for experimenting with MongoDB. :method:`~db.collection.insert()`, :method:`~db.collection.update()` and :method:`~db.collection.find()` pages use the data for some of their examples."
+msgstr ""
+

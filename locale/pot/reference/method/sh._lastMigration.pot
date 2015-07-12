@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/sh._lastMigration.txt:3
+# 70ca239bae2c4cbfa7a8969738520c40
+msgid "sh._lastMigration()"
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:8
+# 0b542233cbab462faea4cf77584e194f
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:12
+# 8e1423b6490c448ea31e57af2a78d014
+msgid "Returns information on the last migration performed on the specified database or collection."
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:15
+# c60526dbdcee45f1a7f6bfd850d16f98
+msgid "The :method:`sh._lastMigration()` method has the following parameter:"
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:20
+# 9fea9665c1a64618998ffda11b1056f8
+msgid "Output"
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:22
+# f456c11a9cef40b786e1e1de512c96f0
+msgid "The :method:`sh._lastMigration()` method returns a document with details about the last migration performed on the database or collection. The document contains the following output:"
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:28
+# 8b1420fefd914db08c57a7f477b2eea8
+msgid "The id of the migration task."
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:32
+# 616425cc921942fba1ed81c9ca4b84a2
+msgid "The name of the server."
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:36
+# b9e93cefff684e6fa19918875ed246ca
+msgid "The IP address and port number of the server."
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:40
+# 23fa284ec85b4532b56667dadd585885
+msgid "The time of the last migration, formatted as :term:`ISODate`."
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:44
+# 58a521d8a9ac455daa2e3f95d875022c
+msgid "The specific type of migration."
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:48
+# d9f4cc04caca47bd977fece59e677d93
+msgid "The complete :term:`namespace` of the collection affected by the migration."
+msgstr ""
+
+#: ../source/reference/method/sh._lastMigration.txt:53
+# 7b43c5b66fd7439f8fbf5d206892d876
+msgid "A document containing details about the migrated chunk. The document includes ``min`` and ``max`` sub-documents with the bounds of the migrated chunk."
+msgstr ""
+

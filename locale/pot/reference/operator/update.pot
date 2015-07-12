@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/update.txt:3
+#: ../source/reference/operator/update.txt:10
+# 84af066a34a54b54ae2bcb878e3211dc
+# aa5d3c4f04f74f19a5731a3b804eb2c8
+msgid "Update Operators"
+msgstr ""
+
+#: ../source/reference/operator/update.txt:13
+# 0f36087187ec4baf9b61b3b9841871d1
+msgid "Fields"
+msgstr ""
+
+#: ../source/reference/operator/update.txt:27
+# d35a5ab6527349088350ca12b2cf0d3e
+msgid "Array"
+msgstr ""
+
+#: ../source/reference/operator/update.txt:49
+# 2d69fdd72007424a899d6d586b290b08
+msgid "Bitwise"
+msgstr ""
+
+#: ../source/reference/operator/update.txt:63
+# e70fc34589014a8aa8f56e7fca159239
+msgid "Isolation"
+msgstr ""
+

@@ -1,0 +1,27 @@
+=========
+rs.conf()
+=========
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. method:: rs.conf()
+
+   Returns a document that contains the current :term:`replica set`
+   configuration.
+
+   The method wraps the :dbcommand:`replSetGetConfig` command.
+
+Output Example
+--------------
+
+.. include:: /includes/replica-set-conf-document-output.rst
+
+For a description of the replica set configuration settings, see
+:ref:`replSetGetConfig-output`.
+
+.. method:: rs.config()
+
+   :method:`rs.config()` is an alias of :method:`rs.conf()`.

@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/nav-diagnostic.txt:3
+# 3750e3ef560c436da7333c8f5677398c
+msgid "Diagnostic Commands"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:2
+# b76571dd70ae46ab9459a846a5a183ab
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:2
+# 8de2cef9eb1447e7b8bb80098be46126
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:4
+# c94ce723dd9347968d43fbe641daecb6
+msgid ":dbcommand:`listDatabases`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:4
+# 0f5d98af69814947984ea60700c9d0ae
+msgid "Returns a document that lists all databases and returns basic database statistics."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:6
+# 7fa7241b9bc74c00a61dc8ca491e8b90
+msgid ":dbcommand:`dbHash`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:6
+# 140ff61882a84a8f86b67762d6c2dbf6
+msgid "Internal command to support sharding."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:8
+# 21043f0232e24539b3a4a466b2ae17dc
+msgid ":dbcommand:`driverOIDTest`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:8
+# 8da812a40bd942b58114815fe6273cef
+msgid "Internal command that converts an ObjectId to a string to support tests."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:10
+# c17b1f93093d4fb29a2b3e8e69d774bb
+msgid ":dbcommand:`listCommands`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:10
+# de577e8becd64a5a9e4ffbeb3a739a3b
+msgid "Lists all database commands provided by the current :program:`mongod` instance."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:12
+# abd054d233cc41a897dd967a9cf2462b
+msgid ":dbcommand:`availableQueryOptions`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:12
+# 7386fb7ee1e34fb780387d2851f21042
+msgid "Internal command that reports on the capabilities of the current MongoDB instance."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:14
+# ae84908ff1fb4e1cbce45d5a909c69c1
+msgid ":dbcommand:`buildInfo`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:14
+# 38362d8aa2dc4b87ac91e65d8a7d7d5b
+msgid "Displays statistics about the MongoDB build."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:16
+# d38084ccf5a94787b0f2efb91e34ff9c
+msgid ":dbcommand:`collStats`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:16
+# f2d30327b6bb4c7bad27584f2e5fbc88
+msgid "Reports storage utilization statics for a specified collection."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:18
+# 9ec7cb0d574343428dedaafa08f749ca
+msgid ":dbcommand:`connPoolStats`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:18
+# f2638d0c8f9a458c81a68d15ecbde149
+msgid "Reports statistics on the outgoing connections from this MongoDB instance to other MongoDB instances in the deployment."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:20
+# f55f3a4edab845448768c42fe46c38fa
+msgid ":dbcommand:`shardConnPoolStats`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:20
+# e5ade8e1c71e433db94abe8ce6ea58f2
+msgid "Reports statistics on a :program:`mongos`'s connection pool for client operations against shards."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:24
+# 339542cd80aa4ab19fce882203bdc752
+msgid ":dbcommand:`dbStats`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:24
+# edd19fb8e9d745dc912b18b0fbf1bcc9
+msgid "Reports storage utilization statistics for the specified database."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:26
+# de2b17e017974da7b48896daa974e1bc
+msgid ":dbcommand:`cursorInfo`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:26
+# 015ad2bc80d24e198942fc713bbb7f80
+msgid "Deprecated. Reports statistics on active cursors."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:28
+# aecfd89419024c77a51c88c0f767495e
+msgid ":dbcommand:`dataSize`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:28
+# d621faba21b7495cb33601aa417ecbda
+msgid "Returns the data size for a range of data. For internal use."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:30
+# df1f8173e60242ecbfbcb846c27c2a8c
+msgid ":dbcommand:`diagLogging`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:30
+# 1772302b759a4fab8c465e60200ff7d4
+msgid "Provides a diagnostic logging. For internal use."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:32
+# 9b3c8f49cdd84306880d618b33bbc1b7
+msgid ":dbcommand:`getCmdLineOpts`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:32
+# 19d9c83c961f471a83df4a23f9055394
+msgid "Returns a document with the run-time arguments to the MongoDB instance and their parsed options."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:34
+# 2d720e4120464c0b8161270fde5f3ad8
+msgid ":dbcommand:`netstat`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:34
+# aa1fc01555fa49d99cdf296cca66649f
+msgid "Internal command that reports on intra-deployment connectivity. Only available for :program:`mongos` instances."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:36
+# 4af4b3ba3ff04c6a887dbae88f09defb
+msgid ":dbcommand:`ping`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:36
+# 6a0906ed1056484b8776624bd2d7fb26
+msgid "Internal command that tests intra-deployment connectivity."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:38
+# ac22119d95fb40558b65ca0a58dc4492
+msgid ":dbcommand:`profile`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:38
+# 655deac0a95b46ae8c05ad1b0d59ddef
+msgid "Interface for the :ref:`database profiler <profiler>`."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:40
+# 809f799e21bb4706bfedcbd4a3de184c
+msgid ":dbcommand:`validate`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:40
+# f1888fe689d24d99a7f969240b8425ed
+msgid "Internal command that scans for a collection's data and indexes for correctness."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:42
+# 9c2410e5b6d840269ccc9d149d99b912
+msgid ":dbcommand:`top`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:42
+# c87ae596a3324854bfc31276c4a83a06
+msgid "Returns raw usage statistics for each database in the :program:`mongod` instance."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:44
+# 780e1a1d8bd444b09f18a44632ce597a
+msgid ":dbcommand:`indexStats`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:44
+# cf336f62a15d4e90b81c5ad4bbd6addb
+msgid "Experimental command that collects and aggregates statistics on all indexes."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:46
+# 2d49de1addb84c9fa8473e6f6913f4ce
+msgid ":dbcommand:`whatsmyuri`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:46
+# 642ea5659c8042c7b47024ab31c6c584
+msgid "Internal command that returns information on the current client."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:48
+# 195c23eeb1a74af480d8e0bbbaf1a7a7
+msgid ":dbcommand:`getLog`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:48
+# 9d3ab54563d746199518c512de4c3d1b
+msgid "Returns recent log messages."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:50
+# c3043b1a13eb4c8b94e2216fe8e6d703
+msgid ":dbcommand:`hostInfo`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:50
+# 5acc3b84643d4afc96245f9e0297d38b
+msgid "Returns data that reflects the underlying host system."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:52
+# 70cc4608ab87447e8fe189cf6793d12a
+msgid ":dbcommand:`serverStatus`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:52
+# 4c42a5decbc0440bb0c3e3a3c609e5c6
+msgid "Returns a collection metrics on instance-wide resource utilization and status."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:54
+# a5656afa0ff24937afcd8f3f24cc1d67
+msgid ":dbcommand:`features`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:54
+# 0458b94d9a114b8390bee7f15b6f0d45
+msgid "Reports on features available in the current MongoDB instance."
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:56
+# 5aaa787e4a3e42a38e187252d77d545a
+msgid ":dbcommand:`isSelf`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-diagnostic.rst:56
+# 46a137d160284fca9354d0cd67754e31
+msgid "Internal command to support testing."
+msgstr ""
+

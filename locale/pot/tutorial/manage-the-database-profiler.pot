@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/manage-the-database-profiler.txt:5
+# c03401940b6c406faffa35558d7a2624
+msgid "Analyze Performance of Database Operations"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:9
+# e76c22ec251d4209ab6e11710900fd35
+msgid "The database profiler collects fine grained data about MongoDB write operations, cursors, database commands on a running :program:`mongod` instance. You can enable profiling on a per-database or per-instance basis. The :ref:`profiling level <database-profiling-level>` is also configurable when enabling profiling."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:15
+# fe9035beb5c44975acba3b756efb775b
+msgid "The database profiler writes all the data it collects to the :data:`system.profile <<database>.system.profile>` collection, which is a :doc:`capped collection </core/capped-collections>`.  See :doc:`/reference/database-profiler` for overview of the data in the :data:`system.profile <<database>.system.profile>` documents created by the profiler."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:22
+# 6f88a13f06554a1faaa9e65e706eb064
+msgid "This document outlines a number of key administration options for the database profiler. For additional related information, consider the following resources:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:26
+# 303e5ac50f974862856fedc637bb9fc3
+msgid ":doc:`/reference/database-profiler`"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:27
+# 5e8b903cce2d45f99a4e28c288111467
+msgid ":doc:`Profile Command </reference/command/profile>`"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:28
+# bc490325c7474a2396113e8b27da40da
+msgid ":doc:`/reference/method/db.currentOp`"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:34
+# e7ba32e73c6a4b9a8749497cda914c51
+msgid "Profiling Levels"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:36
+# c24f33e28a124e6697ea0f336515f79d
+msgid "The following profiling levels are available:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:38
+# 903789390dd7487bbbfe38a569308180
+msgid "``0`` - the profiler is off, does not collect any data. :program:`mongod` always writes operations longer than the :setting:`~operationProfiling.slowOpThresholdMs` threshold to its log."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:42
+# 4d98ab323cd8459198c9f42c67ac4523
+msgid "``1`` - collects profiling data for slow operations only. By default slow operations are those slower than 100 milliseconds."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:45
+# 3d071cecbfde46a382699487123d1262
+msgid "You can modify the threshold for \"slow\" operations with the :setting:`~operationProfiling.slowOpThresholdMs` runtime option or the :dbcommand:`setParameter` command. See the :ref:`database-profiling-specify-slowms-threshold` section for more information."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:50
+# 9040c7472bae4b809bafd9fa360f13f1
+msgid "``2`` - collects profiling data for all database operations."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:57
+# f6f2b76f50bb43ccb3ccda1670ff3dce
+msgid "Enable Database Profiling and Set the Profiling Level"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:59
+# 90a55c2aa7bb4346b913752f5e9905f1
+msgid "You can enable database profiling from the :program:`mongo` shell or through a driver using the :dbcommand:`profile` command. This section will describe how to do so from the :program:`mongo` shell. See your :doc:`driver documentation </applications/drivers>` if you want to control the profiler from within your application."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:65
+# 9c5867d639b1417c9f9d2d80304dfd57
+msgid "When you enable profiling, you also set the :ref:`profiling level <database-profiling-levels>`. The profiler records data in the :data:`system.profile <<database>.system.profile>` collection. MongoDB creates the :data:`system.profile <<database>.system.profile>` collection in a database after you enable profiling for that database."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:72
+# f4e3d9c7adb54981a1fa1aa9379d985a
+msgid "To enable profiling and set the profiling level, use the :method:`db.setProfilingLevel()` helper in the :program:`mongo` shell, passing the profiling level as a parameter. For example, to enable profiling for all database operations, consider the following operation in the :program:`mongo` shell:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:82
+# 0d2bf2ed5caf40efa8453b7f45fb9261
+msgid "The shell returns a document showing the *previous* level of profiling. The ``\"ok\" : 1`` key-value pair indicates the operation succeeded:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:89
+# d32843bf63bd4527b5d96e428d90b282
+msgid "To verify the new setting, see the :ref:`database-profiling-view-status` section."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:95
+# 4c7032cb80c242cb9365f7b5d31c0aff
+msgid "Specify the Threshold for Slow Operations"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:97
+# 3d77d7aa87a44927b7866abd66c31be8
+msgid "The threshold for slow operations applies to the entire :program:`mongod` instance. When you change the threshold, you change it for all databases on the instance."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:101
+# bf83fb3002584a52a144f563dc6a52f4
+msgid "Changing the slow operation threshold for the database profiler also affects the profiling subsystem's slow operation threshold for the entire :program:`mongod` instance. Always set the threshold to the highest useful value."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:106
+# 4c6d353c7b4144488a97af020ec82a8a
+msgid "By default the slow operation threshold is 100 milliseconds. Databases with a profiling level of ``1`` will log operations slower than 100 milliseconds."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:109
+# 189e95d2c5784a62b31ae997dec9ad12
+msgid "To change the threshold, pass two parameters to the :method:`db.setProfilingLevel()` helper in the :program:`mongo` shell. The first parameter sets the profiling level for the current database, and the second sets the default slow operation threshold *for the entire* :program:`mongod` *instance*."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:115
+# 45526cb140144482982ee48644d9935d
+msgid "For example, the following command sets the profiling level for the current database to ``0``, which disables profiling, and sets the slow-operation threshold for the :program:`mongod` instance to 20 milliseconds. Any database on the instance with a profiling level of ``1`` will use this threshold:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:129
+# c452613f556e45f09bc60e86653484d4
+msgid "Check Profiling Level"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:131
+# ec815d892ec042f792fa98915797857f
+msgid "To view the :ref:`profiling level <database-profiling-levels>`, issue the following from the :program:`mongo` shell:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:138
+# f9d964d5f8b54a1a8f8b68b5983a76d9
+msgid "The shell returns a document similar to the following:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:144
+# 10a53a59d1d84055a181edda85018780
+msgid "The ``was`` field indicates the current level of profiling."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:146
+# 9777ac3d13d64ecaa43146675cd35a2a
+msgid "The ``slowms`` field indicates how long an operation must exist in milliseconds for an operation to pass the \"slow\" threshold. MongoDB will log operations that take longer than the threshold if the profiling level is ``1``. This document returns the profiling level in the ``was`` field. For an explanation of profiling levels, see :ref:`database-profiling-levels`."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:153
+# 92b032032d6b469dbb5334ba0ee6447e
+msgid "To return only the profiling level, use the :method:`db.getProfilingLevel()` helper in the :program:`mongo` as in the following:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:161
+# e4605929bb684e78946d39b12413a809
+msgid "Disable Profiling"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:163
+# d59baa2eee9c426482105d26609d901f
+msgid "To disable profiling, use the following helper in the :program:`mongo` shell:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:171
+# b9d81a81ea2c4f66930a1cc9e2777603
+msgid "Enable Profiling for an Entire ``mongod`` Instance"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:173
+# 426506d1dcd24471809031f4595dd43b
+msgid "For development purposes in testing environments, you can enable database profiling for an entire :program:`mongod` instance. The profiling level applies to all databases provided by the :program:`mongod` instance."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:178
+# 3e04db3e8cf54b969ddb8153541d60db
+msgid "To enable profiling for a :program:`mongod` instance, pass the following parameters to :program:`mongod` at startup or within the :doc:`configuration file </reference/configuration-options>`:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:186
+# 0fd4689d8a9c4fa2a597e484499abdbf
+msgid "This sets the profiling level to ``1``, which collects profiling data for slow operations only, and defines slow operations as those that last longer than ``15`` milliseconds."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:190
+# 811a5b8df57a42bf97c84747b8c2e20b
+msgid ":setting:`~operationProfiling.mode` and :setting:`~operationProfiling.slowOpThresholdMs`."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:193
+# 5b7d9a5cf87245cfb2da92d0dc9cd8b0
+msgid "Database Profiling and Sharding"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:195
+# 32b3f181cb8e43c38fb2797daeb1535d
+msgid "You *cannot* enable profiling on a :program:`mongos` instance. To enable profiling in a shard cluster, you must enable profiling for each :program:`mongod` instance in the cluster."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:200
+# ac68e0e6435d406daf85236aa10d75c6
+msgid "View Profiler Data"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:202
+# 6a821966e7a14755872150fdb2bf2079
+msgid "The database profiler logs information about database operations in the :data:`system.profile <<database>.system.profile>` collection."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:205
+# f35b2b45384f493da1b9c98e02daa75f
+msgid "To view profiling information, query the :data:`system.profile <<database>.system.profile>` collection. To view example queries, see :ref:`database-profiling-example-queries`"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:208
+# 757d9dbe7cc54d9d96163c40eac4837b
+msgid "For an explanation of the output data, see :doc:`/reference/database-profiler`."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:212
+# 296758559a334452b53c649089f76566
+msgid "Example Profiler Data Queries"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:214
+# 346c6e341ee5475d9d9f3f10bcbd750f
+msgid "This section displays example queries to the :data:`system.profile <<database>.system.profile>` collection. For an explanation of the query output, see :doc:`/reference/database-profiler`."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:218
+# 45200f7457b744ada03ac00b49431f95
+msgid "To return the most recent 10 log entries in the :data:`system.profile <<database>.system.profile>` collection, run a query similar to the following:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:225
+# ffea4102c5c14dee8ee7b532a3cce922
+msgid "To return all operations except command operations (:term:`$cmd`), run a query similar to the following:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:232
+# b5ccd678d0fe4b029671d97989112c5d
+msgid "To return operations for a particular collection, run a query similar to the following. This example returns operations in the ``mydb`` database's ``test`` collection:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:240
+# 6e4f5928b4154943a6d1ea5e29236b1e
+msgid "To return operations slower than ``5`` milliseconds, run a query similar to the following:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:247
+# 9180f8c0dedc45b3a11d3da7ffb8e39e
+msgid "To return information from a certain time range, run a query similar to the following:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:260
+# 2be864e5d38f4ca5908a246d3dc13ba0
+msgid "The following example looks at the time range, suppresses the ``user`` field from the output to make it easier to read, and sorts the results by how long each operation took to run:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:277
+# dd9f162c2df54e9392649d12b749c1f6
+msgid "Show the Five Most Recent Events"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:279
+# c9b9f948315f4783bd6ac2bfd9044c7a
+msgid "On a database that has profiling enabled, the ``show profile`` helper in the :program:`mongo` shell displays the 5 most recent operations that took at least 1 millisecond to execute. Issue ``show profile`` from the :program:`mongo` shell, as follows:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:291
+# 27da3f156ca04791b72df3260bbbd451
+msgid "Profiler Overhead"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:293
+# 196181efd00d447e873c11b4c3168886
+msgid "When enabled, profiling has a minor effect on performance. The :data:`system.profile <<database>.system.profile>` collection is a :term:`capped collection` with a default size of 1 megabyte. A collection of this size can typically store several thousand profile documents, but some application may use more or less profiling data per operation."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:300
+# 5f6b476564c341d8b9f5e26d503aa3e6
+msgid "To change the size of the :data:`system.profile <<database>.system.profile>` collection, you must:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:303
+# 28fbee20eeb842f2ad056dc4cbbc9be1
+msgid "Disable profiling."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:305
+# 6e93309828324efe9ac084ff631abe24
+msgid "Drop the :data:`system.profile <<database>.system.profile>` collection."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:307
+# dadbfb0a73124a5595695167358a002e
+msgid "Create a new :data:`system.profile <<database>.system.profile>` collection."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:309
+# 9bea3e18b0be493e8012800c27c59941
+msgid "Re-enable profiling."
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:311
+# e414ec9a16ad495e8e11eb93e04331df
+msgid "For example, to create a new :data:`system.profile <<database>.system.profile>` collections that's ``4000000`` bytes, use the following sequence of operations in the :program:`mongo` shell:"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:326
+# c04655689bab41f0856c9d7e0d4b8954
+msgid "Change Size of ``system.profile`` Collection"
+msgstr ""
+
+#: ../source/tutorial/manage-the-database-profiler.txt:328
+# dd97424da4dc4dbbb0d5aa6712912276
+msgid "To change the size of the :data:`system.profile <<database>.system.profile>` collection on a :term:`secondary`, you must stop the secondary, run it as a standalone, and then perform the steps above. When done, restart the standalone as a member of the replica set. For more information, see :doc:`/tutorial/perform-maintence-on-replica-set-members`."
+msgstr ""
+

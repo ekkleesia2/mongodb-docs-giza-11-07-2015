@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/applications/data-models-relationships.txt:3
+# 1413d8bb0bcd4024a4735d5796d878f9
+msgid "Model Relationships Between Documents"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-data-models-relationships.rst:7
+# 734d5ab12f7c4e6494372d8f192dcafa
+msgid ":doc:`/tutorial/model-embedded-one-to-one-relationships-between-documents`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-data-models-relationships.rst:4
+# e96d8083b351421da09a4e791b8343c5
+msgid "Presents a data model that uses :ref:`embedded documents <data-modeling-embedding>` to describe one-to-one relationships between connected data."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-data-models-relationships.rst:13
+# 1f97caca356a4e378a68f19500d0cb22
+msgid ":doc:`/tutorial/model-embedded-one-to-many-relationships-between-documents`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-data-models-relationships.rst:10
+# 30c7742bb04849e6973ba2633ed6c4be
+msgid "Presents a data model that uses :ref:`embedded documents <data-modeling-embedding>` to describe one-to-many relationships between connected data."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-data-models-relationships.rst:17
+# 2f7b3315ca194f2f91522dfd3e315187
+msgid ":doc:`/tutorial/model-referenced-one-to-many-relationships-between-documents`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-data-models-relationships.rst:16
+# 6df949af89bd40d79e3a4c64ca39676c
+msgid "Presents a data model that uses :ref:`references <data-modeling-referencing>` to describe one-to-many relationships between documents."
+msgstr ""
+

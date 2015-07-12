@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:3
+# a690fe90e13d47b4991b7c5ad0ff751b
+msgid "Bulk.find.removeOne()"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:8
+# ef17c7d4b7d64c9b913fb2ad42d69c43
+msgid "Description"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:14
+# 6875f64986994fc2982ca50b1c80e0a6
+msgid "Adds a single document remove operation to a bulk operations list. Use the :method:`Bulk.find()` method to specify the condition that determines which document to remove. The :method:`Bulk.find.removeOne()` limits the removal to one document. To remove multiple documents, see :method:`Bulk.find.remove()`."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:21
+# 31d7e33f0b5f455082d7635c7067ea0b
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:23
+# ef8c7fe8cda247c8b09f816fb368e427
+msgid "The following example initializes a :method:`Bulk()` operations builder for the ``items`` collection and adds two :method:`Bulk.find.removeOne()` operations to the list of operations."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:27
+# 1476ea8246a743e39e0a069aa891a101
+msgid "Each remove operation removes just one document: one document with the ``status`` equal to ``\"D\"`` and another document with the ``status`` equal to ``\"P\"``."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:40
+# b8574e8a640e49ff8eef7fe19331dabc
+msgid ":method:`db.collection.initializeUnorderedBulkOp()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:42
+# 60626b0af69a4dbca6451df1b4279556
+msgid ":method:`db.collection.initializeOrderedBulkOp()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:44
+# db473fe190ac49d0acf84342cbd08b1f
+msgid ":method:`Bulk.find()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:46
+# e50cb290fa384f4e9ae726f634bd5727
+msgid ":method:`Bulk.find.remove()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:48
+# c69c7fd6380b4179a1600280847cfe47
+msgid ":method:`Bulk.execute()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.removeOne.txt:50
+# f902e253ff7f4ba7b2a25c145241c55c
+msgid ":ref:`All Bulk Methods <bulk-methods>`"
+msgstr ""
+

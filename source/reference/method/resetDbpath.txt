@@ -1,0 +1,9 @@
+=============
+resetDbpath()
+=============
+
+.. default-domain:: mongodb
+
+.. method:: resetDbpath()
+
+   For internal use.

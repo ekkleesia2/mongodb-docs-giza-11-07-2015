@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/nav-crud.txt:3
+# 789fa615c86a4a8dab7ce1f75eaa0cd3
+msgid "Query and Write Operation Commands"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:2
+# 84f9497aa1f646fa961141907fd26dba
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:2
+# 40e229683b0643ab950acac0767a07c9
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:4
+# 4d7e059bb1bc4d83a48cd394fd70e3d8
+msgid ":dbcommand:`insert`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:4
+# d29c5886534845ddb54fa31f615a8157
+msgid "Inserts one or more documents."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:6
+# f8a9075d47d344e9b75cecf17cfc6d8c
+msgid ":dbcommand:`update`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:6
+# 27828140abec4d08b20a5e7e0e19afa7
+msgid "Updates one or more documents."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:8
+# 234ce89289c1436ebeccc7fe28fab751
+msgid ":dbcommand:`delete`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:8
+# c6e66980606044ceb610317be6d04c86
+msgid "Deletes one or more documents."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:10
+# 10027a8f78674196a016eb1f02f710fe
+msgid ":dbcommand:`findAndModify`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:10
+# 60e5856893d442a380199e4dec2c0164
+msgid "Returns and modifies a single document."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:12
+# c9fe3e74e129435bb7352b1ff95198cd
+msgid ":dbcommand:`text`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:12
+# 4136b20e184b43b096553bb1fb746ed8
+msgid "Performs a text search."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:14
+# 06e31240d5ab4eb4b49893ecf6bae387
+msgid ":dbcommand:`getLastError`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:14
+# 059f7af81d0c46978d6f7996f6545d16
+msgid "Returns the success status of the last operation."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:16
+# 80c25a48b2c5408e8d0530aae10b6108
+msgid ":dbcommand:`getPrevError`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:16
+# d6938b23663f432f83d1db91fc6e48ef
+msgid "Returns status document containing all errors since the last :dbcommand:`resetError` command."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:18
+# 8c231e5c22114926a7d65d9e67dfd12a
+msgid ":dbcommand:`resetError`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:18
+# 1073518f39cf40008dc1a310295b942f
+msgid "Resets the last error status."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:20
+# 0f659857efe3491eb364191653461906
+msgid ":dbcommand:`eval`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:20
+# 2ecaf594d0384f55801e6b48e23761f1
+msgid "Runs a JavaScript function on the database server."
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:22
+# a912974129e24b0ebd05fab621889f84
+msgid ":dbcommand:`parallelCollectionScan`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-crud.rst:22
+# 9a444f6b93074597b293ac9296b08810
+msgid "Lets applications use multiple parallel cursors when reading documents from a collection."
+msgstr ""
+

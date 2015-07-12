@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/load.txt:3
+# 394d1d80a4744648b1873b0ae1f1f84c
+msgid "load()"
+msgstr ""
+
+#: ../source/reference/method/load.txt:8
+# 4b0681f780ef474a8cb213390cc56093
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/load.txt:12
+# e84bd564491f46c7b2655f2aa72d33b7
+msgid "Loads and runs a JavaScript file into the current shell environment."
+msgstr ""
+
+#: ../source/reference/method/load.txt:14
+# 0028dfa975ba4ca7946827df213b7b8b
+msgid "The :method:`load()` method has the following parameter:"
+msgstr ""
+
+#: ../source/reference/method/load.txt:19
+# ba8fa6fa23884789bc17e5d7ab26a0e1
+msgid "Specify filenames with relative or absolute paths. When using relative path names, confirm the current directory using the :method:`pwd()` method."
+msgstr ""
+
+#: ../source/reference/method/load.txt:23
+# 8f29f223f09441109803f0e338017de9
+msgid "After executing a file with :method:`load()`, you may reference any functions or variables defined the file from the :program:`mongo` shell environment."
+msgstr ""
+
+#: ../source/reference/method/load.txt:28
+# 483e6b5133114d0b8eaac94def088a50
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/method/load.txt:30
+# 2a56ca241ffc46d6b712136b2502519e
+msgid "Consider the following examples of the :method:`load()` method:"
+msgstr ""
+

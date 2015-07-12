@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/administration/install-on-linux.txt:3
+# 9ec3098e20294faaa9b0b5ffd5bdc090
+msgid "Install on Linux"
+msgstr ""
+
+#: ../source/administration/install-on-linux.txt:7
+# 0e9970ad97214b26904de7d42f6821d7
+msgid "These documents provide instructions to install MongoDB for various Linux systems."
+msgstr ""
+
+#: ../source/administration/install-on-linux.txt:11
+# 25445237f9194b29a35d5c8bacdd9cca
+msgid "Recommended"
+msgstr ""
+
+#: ../source/administration/install-on-linux.txt:13
+# a00c72fcff3f40df880bf01f66a37758
+msgid "For easy installation, MongoDB provides packages for popular Linux distributions. The following guides detail the installation process for these systems:"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-installation-linux-packages.rst:4
+# 0022843dd21d4b5284512c33da86a500
+msgid ":doc:`Install on Red Hat </tutorial/install-mongodb-on-red-hat-centos-or-fedora-linux>`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-installation-linux-packages.rst:4
+# 97b1a06bdb214f3c88fcca5f9ff06277
+msgid "Install MongoDB on Red Hat Enterprise, CentOS, Fedora and related Linux systems using ``.rpm`` packages."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-installation-linux-packages.rst:7
+# 47de8c7b34a346d7961f8a040450b130
+msgid ":doc:`Install on Ubuntu </tutorial/install-mongodb-on-ubuntu>`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-installation-linux-packages.rst:7
+# b3dc6b77d14e416cbe6b5c6480f00a2e
+msgid "Install MongoDB on Ubuntu Linux systems using ``.deb`` packages."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-installation-linux-packages.rst:9
+# 97675ad948b942aea6bf54f1440d3189
+msgid ":doc:`Install on Debian </tutorial/install-mongodb-on-debian>`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-installation-linux-packages.rst:10
+# 948903a3c28043bba9697abf00b4dadd
+msgid "Install MongoDB on Debian systems using ``.deb`` packages."
+msgstr ""
+
+#: ../source/administration/install-on-linux.txt:19
+# 9c817fd1b6384691987afa4388ac0633
+msgid "For systems without supported packages, refer to the Manual Installation tutorial."
+msgstr ""
+
+#: ../source/administration/install-on-linux.txt:23
+# 24fadc5027454ef1b3b5ce1bcec21343
+msgid "Manual Installation"
+msgstr ""
+
+#: ../source/administration/install-on-linux.txt:25
+# f082a1d694194cf09d2ca8d32bba0feb
+msgid "Although packages are the preferred installation method, for Linux systems without supported packages, see the following guide:"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-installation-linux-other.rst:3
+# a3ca078c07de47ad84723c34a797ce6a
+msgid ":doc:`Install on Other Linux Systems </tutorial/install-mongodb-on-linux>`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-installation-linux-other.rst:4
+# 0ccec6e0040d447cba2086206fa68054
+msgid "Install the official build of MongoDB on other Linux systems from MongoDB archives."
+msgstr ""
+

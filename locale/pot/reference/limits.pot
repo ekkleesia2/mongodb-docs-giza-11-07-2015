@@ -1,0 +1,541 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/limits.txt:3
+# e17579b7b105414a96a058cb733ea97b
+msgid "MongoDB Limits and Thresholds"
+msgstr ""
+
+#: ../source/reference/limits.txt:7
+# c7c5ce6516bf47658895abb16a903d96
+msgid "This document provides a collection of hard and soft limitations of the MongoDB system."
+msgstr ""
+
+#: ../source/reference/limits.txt:11
+# bf51922d285e47829367e1a9fccc61e2
+msgid "BSON Documents"
+msgstr ""
+
+#: ../source/includes/fact-document-max-size.rst:1
+# f07ea4af992e4d64b1edc921ba8f07be
+msgid "The maximum BSON document size is 16 megabytes."
+msgstr ""
+
+#: ../source/includes/fact-document-max-size.rst:3
+# 29813592f30c4416aef7264764805976
+msgid "The maximum document size helps ensure that a single document cannot use excessive amount of RAM or, during transmission, excessive amount of bandwidth. To store documents larger than the maximum size, MongoDB provides the GridFS API. See :program:`mongofiles` and the documentation for your :doc:`driver </applications/drivers>` for more information about GridFS."
+msgstr ""
+
+#: ../source/reference/limits.txt:23
+# 73b31de80ad1406ebfb7c0e5fd14f066
+msgid "MongoDB supports no more than 100 levels of nesting for :term:`BSON documents <document>`."
+msgstr ""
+
+#: ../source/reference/limits.txt:27
+# 46889857fa8a4ffda2572b5e3006187c
+msgid "Namespaces"
+msgstr ""
+
+#: ../source/reference/limits.txt:32
+# 9bf11dc199b94c889e3ae43668fe5ec5
+msgid "Each namespace, including database and collection name, must be shorter than 123 bytes."
+msgstr ""
+
+#: ../source/reference/limits.txt:40
+# e25c971ed8da4106b75f48e561c89f3f
+msgid "The limitation on the number of namespaces is the size of the namespace file divided by 628."
+msgstr ""
+
+#: ../source/reference/limits.txt:43
+# 02ee01b437ac4e9c93a1eb4d2b2f2057
+msgid "A 16 megabyte namespace file can support approximately 24,000 namespaces. Each collection and index is a namespace."
+msgstr ""
+
+#: ../source/reference/limits.txt:49
+# d4481db39a074226ad7f7469c4618843
+msgid "Namespace files can be no larger than 2047 megabytes."
+msgstr ""
+
+#: ../source/reference/limits.txt:51
+# 4fcd6c1eb6eb4466ac294286095bdaaf
+msgid "By default namespace files are 16 megabytes. You can configure the size using the :setting:`~storage.nsSize` option."
+msgstr ""
+
+#: ../source/reference/limits.txt:57
+# a79114d4cf844d08a1aea9aac4a18379
+msgid "Indexes"
+msgstr ""
+
+#: ../source/reference/limits.txt:62
+# b2e2beab4f8b4cdba0e7e1fdbcd6804e
+msgid "The *total size* of an index entry, which can include structural overhead depending on the BSON type, must be *less than* 1024 bytes."
+msgstr ""
+
+#: ../source/includes/list-index-field-limit-behaviors.rst:1
+# 56be8fb00d514e6e8c938bf38d29f953
+msgid "MongoDB 2.6 implements a stronger enforcement of the limit on :limit:`index key <Index Key Limit>`:"
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:3
+# c2792f0aee1e48c18d69db9ddb4d797d
+msgid "MongoDB will **not** :method:`create an index <db.collection.ensureIndex()>` on a collection if the index entry for an existing document exceeds the |limit|. Previous versions of MongoDB would create the index but not index such documents."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:3
+# c9fe24cda4b6470484fc90ac9822693a
+msgid "Reindexing operations will error if the index entry for an indexed field exceeds the |limit|. Reindexing operations occur as part of :dbcommand:`compact` and :dbcommand:`repairDatabase` commands as well as the :method:`db.collection.reIndex()` method."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:8
+# f85223ae35f34027bc727824ced96f67
+msgid "Because these operations drop *all* the indexes from a collection and then recreate them sequentially, the error from the |limit| prevents these operations from rebuilding any remaining indexes for the collection and, in the case of the :dbcommand:`repairDatabase` command, from continuing with the remainder of the process."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:3
+# 613ce5567ccf419e9591a3a86448ec0d
+msgid "MongoDB will not insert into an indexed collection any document with an indexed field whose corresponding index entry would exceed the |limit|, and instead, will return an error. Previous versions of MongoDB would insert but not index such documents."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:3
+# 7ba386f4a71649e181610902e8d58371
+msgid "Updates to the indexed field will error if the updated value causes the index entry to exceed the |limit|."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:6
+# 9a68e4778c97475596e00ccf4f7cbf11
+msgid "If an existing document contains an indexed field whose index entry exceeds the limit, *any* update that results in the relocation of that document on disk will error."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:3
+# ba9877311a5e448f90c635ab8afa3082
+msgid ":program:`mongorestore` and :program:`mongoimport` will not insert documents that contain an indexed field whose corresponding index entry would exceed the |limit|."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:3
+# 88dc464846e9460f851deb3f250d2eeb
+msgid "In MongoDB 2.6, secondary members of replica sets will continue to replicate documents with an indexed field whose corresponding index entry exceeds the |limit| on initial sync but will print warnings in the logs."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:8
+# 26ee09f7054942699cf8ab57278c9a29
+msgid "Secondary members also allow index build and rebuild operations on a collection that contains an indexed field whose corresponding index entry exceeds the |limit| but with warnings in the logs."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:12
+# 9b1dd8d816d34018bfcb6aa52f67c7bb
+msgid "With *mixed version* replica sets where the secondaries are version 2.6 and the primary is version 2.4, secondaries will replicate documents inserted or updated on the 2.4 primary, but will print error messages in the log if the documents contain an indexed field whose corresponding index entry exceeds the |limit|."
+msgstr ""
+
+#: ../source/includes/fact-index-key-length-operation-behaviors.rst:3
+# a9c9f2225a434401ac9cb8c3264be384
+msgid "For existing sharded collections, :doc:`chunk migration </core/sharding-chunk-migration>` will fail if the chunk has a document that contains an indexed field whose index entry exceeds the |limit|."
+msgstr ""
+
+#: ../source/reference/limits.txt:76
+# 9bcb662ae6bc4284b017b37dc597285c
+msgid "A single collection can have *no more* than 64 indexes."
+msgstr ""
+
+#: ../source/reference/limits.txt:81
+# a4dc42b62dc54d08953c57c9f1fd991a
+msgid "Fully qualified index names, which includes the namespace and the dot separators (i.e. <database name>.<collection name>.$<index name>), cannot be longer than 128 characters."
+msgstr ""
+
+#: ../source/reference/limits.txt:85
+# 3e409cc991534c86a2de21f520b4ff36
+msgid "By default, ``<index name>`` is the concatenation of the field names and index type. You can explicitly specify the ``<index name>`` to the :method:`~db.collection.ensureIndex()` method to ensure that the fully qualified index name does not exceed the limit."
+msgstr ""
+
+#: ../source/reference/limits.txt:92
+# 87c3e0c32bcf4faca2b181e144fd5720
+msgid "There can be no more than 31 fields in a compound index."
+msgstr ""
+
+#: ../source/includes/fact-special-indexes-and-text.rst:1
+# 72f38727c36241df9dc9626bcdc67fb0
+msgid "You cannot combine the |operation|, which requires a special :ref:`text index <create-text-index>`, with a query operator that requires a different type of special index. For example you cannot combine |operation| with the :query:`$near` operator."
+msgstr ""
+
+#: ../source/reference/limits.txt:102
+# 19a628a15070410c8b80190b78069bad
+msgid "The unique indexes limit in :ref:`limits-sharding-operations`."
+msgstr ""
+
+#: ../source/reference/limits.txt:105
+# d4f3483974944b559733858f42731f2f
+msgid "Data"
+msgstr ""
+
+#: ../source/reference/limits.txt:111
+# d02fd30a653647f98f243643432ca327
+msgid "If you specify a maximum number of documents for a capped collection using the ``max`` parameter to :dbcommand:`create`, the limit must be less than 2\\ :sup:`32` documents. If you do not specify a maximum number of documents when creating a capped collection, there is no limit on the number of documents."
+msgstr ""
+
+#: ../source/reference/limits.txt:121
+# 80755df559eb43abb3615d072138491b
+msgid "A single :program:`mongod` instance cannot manage a data set that exceeds maximum virtual memory address space provided by the underlying operating system."
+msgstr ""
+
+#: ../source/reference/limits.txt:0
+# 13b5b2c93fa04055a9008f177b3c8d27
+msgid "Virtual Memory Limitations"
+msgstr ""
+
+#: ../source/reference/limits.txt:129
+# 095e216c2f014d0fa2a82464b376eefe
+msgid "Operating System"
+msgstr ""
+
+#: ../source/reference/limits.txt:130
+# 0cce4392413a4c028147800a2440e553
+msgid "Journaled"
+msgstr ""
+
+#: ../source/reference/limits.txt:131
+# 9f06ac634c1d4c3a83488ef64a693d5c
+msgid "Not Journaled"
+msgstr ""
+
+#: ../source/reference/limits.txt:132
+# f6387596449e4ebba68cc5c486dd9926
+msgid "Linux"
+msgstr ""
+
+#: ../source/reference/limits.txt:133
+#: ../source/reference/limits.txt:136
+# fb96450ccc234eb4a431293f04188aaa
+# 81fbe2f189174ed2bda19b7018112875
+msgid "64 terabytes"
+msgstr ""
+
+#: ../source/reference/limits.txt:134
+#: ../source/reference/limits.txt:137
+# 703dcaa092a94b23906bc38b598a9357
+# 84729396a33640119eadb78af82f19ab
+msgid "128 terabytes"
+msgstr ""
+
+#: ../source/reference/limits.txt:135
+# 35d450c5ea0f43e6a180c523d427a8d1
+msgid "Windows Server 2012 R2 and Windows 8.1"
+msgstr ""
+
+#: ../source/reference/limits.txt:138
+# 71126793eb88498a9c34bba1697768e4
+msgid "Windows (otherwise)"
+msgstr ""
+
+#: ../source/reference/limits.txt:139
+# 850944ae7b1b4369afa7ef352a5428dc
+msgid "4 terabytes"
+msgstr ""
+
+#: ../source/reference/limits.txt:140
+# 800921756c284be697fb3ab55d9a517a
+msgid "8 terabytes"
+msgstr ""
+
+#: ../source/reference/limits.txt:144
+# f3c1e2e0dfa04080b657decd21c3c551
+msgid "The maximum number of collections in a database is a function of the size of the namespace file and the number of indexes of collections in the database."
+msgstr ""
+
+#: ../source/reference/limits.txt:148
+# 97096e6979de43aebf2dc0e6c19010f8
+msgid "See :limit:`Number of Namespaces` for more information."
+msgstr ""
+
+#: ../source/reference/limits.txt:151
+# ce3398786f08487c9c2d447baaba76ee
+msgid "Replica Sets"
+msgstr ""
+
+#: ../source/reference/limits.txt:155
+# e6ee067f9d864397a3087c7d4b5bb356
+msgid "Replica sets can have no more than 12 members."
+msgstr ""
+
+#: ../source/reference/limits.txt:159
+# 33c6092aa92e494ba38e97e481a0537e
+msgid "Only 7 members of a replica set can have votes at any given time. See can vote :ref:`replica-set-non-voting-members` for more information"
+msgstr ""
+
+#: ../source/reference/limits.txt:166
+# e178210020ce4a39882b571b85332627
+msgid "If you do not explicitly specify an oplog size (i.e. with :setting:`~replication.oplogSizeMB` or :option:`--oplogSize <mongod --oplogSize>`) MongoDB will create an oplog that is no larger than 50 gigabytes."
+msgstr ""
+
+#: ../source/reference/limits.txt:174
+# 87eb911251924d2e9f0b9f9b7f1fd336
+msgid "Sharded Clusters"
+msgstr ""
+
+#: ../source/reference/limits.txt:176
+# 6b72d6d20ff949dda01583f78550e734
+msgid "Sharded clusters have the restrictions and thresholds described here."
+msgstr ""
+
+#: ../source/reference/limits.txt:181
+# 31476d22040f40b7b6911659cf85590e
+msgid "Sharding Operational Restrictions"
+msgstr ""
+
+#: ../source/reference/limits.txt:185
+# 8726a4c3736f47e38b83cd7e26123342
+msgid "The :dbcommand:`group` does not work with sharding. Use :dbcommand:`mapReduce` or :dbcommand:`aggregate` instead."
+msgstr ""
+
+#: ../source/reference/limits.txt:188
+# 23589d9572da43eeb772c43fe4e5461a
+msgid ":method:`db.eval()` is incompatible with sharded collections. You may use :method:`db.eval()` with un-sharded collections in a shard cluster."
+msgstr ""
+
+#: ../source/reference/limits.txt:192
+# eddf095348a94eadb0f87e99a627841a
+msgid ":query:`$where` does not permit references to the ``db`` object from the :query:`$where` function. This is uncommon in un-sharded collections."
+msgstr ""
+
+#: ../source/reference/limits.txt:196
+# 5fe6cfae42454e318c227f92cf0ee788
+msgid "The :update:`$isolated` update modifier does not work in sharded environments."
+msgstr ""
+
+#: ../source/reference/limits.txt:199
+# e8af0045af9f4ad8a3dfd015ce476ded
+msgid ":operator:`$snapshot` queries do not work in sharded environments."
+msgstr ""
+
+#: ../source/reference/limits.txt:201
+# 70c4af65a1d5435bbfc8712a22a718b3
+msgid "The :dbcommand:`geoSearch` command is not supported in sharded environments."
+msgstr ""
+
+#: ../source/reference/limits.txt:206
+# 5c0937036e4b406892e13a105187d40d
+msgid "MongoDB does not support :ref:`covered queries <covered-queries>` for sharded collections."
+msgstr ""
+
+#: ../source/reference/limits.txt:211
+# 73edce0dc40f46c388208e60b037e0fd
+msgid "For existing collections that hold documents, MongoDB supports enabling sharding on *any* collections that contains less than 256 gigabytes of data. MongoDB *may* be able to shard collections with as many as 400 gigabytes depending on the distribution of document sizes. The precise size of the limitation is a function of the chunk size and the data size."
+msgstr ""
+
+#: ../source/reference/limits.txt:218
+# 0627fd47eec346e5bda196f8167b3ead
+msgid "Sharded collections may have *any* size, after successfully enabling sharding."
+msgstr ""
+
+#: ../source/includes/fact-single-modification-in-sharded-collections.rst:1
+# 0689cd292b92444db944ba824ff6e69f
+msgid "All |single-modification-operation-names| operations for a sharded collection that specify the |single-modification-operation-option| option must include the :term:`shard key` *or* the ``_id`` field in the query specification. |single-modification-operation-names| operations specifying |single-modification-operation-option| in a sharded collection without the :term:`shard key` *or* the ``_id`` field return an error."
+msgstr ""
+
+#: ../source/reference/limits.txt:232
+# 54d49705dad544dd838bea8ecded5c71
+msgid "MongoDB does not support unique indexes across shards, except when the unique index contains the full shard key as a prefix of the index. In these situations MongoDB will enforce uniqueness across the full key, not a single field."
+msgstr ""
+
+#: ../source/reference/limits.txt:0
+#: ../source/reference/limits.txt:0
+# 12d419b79d0d42f69cd1e468663717c9
+# 38ff15588ba54ab794eae1ad47fd5365
+msgid "See"
+msgstr ""
+
+#: ../source/reference/limits.txt:243
+# 7094459ca0dd47aaa87572d051e16376
+msgid "Shard Key Limitations"
+msgstr ""
+
+#: ../source/reference/limits.txt:247
+# 44bdefb9ddaa4fd0a133541971b67179
+msgid "A shard key cannot exceed 512 bytes."
+msgstr ""
+
+#: ../source/reference/limits.txt:251
+# 74538cb42e4249de84714b8c22e08976
+msgid "A :term:`shard key` index can be an ascending index on the shard key, a compound index that start with the shard key and specify ascending order for the shard key, or a :doc:`hashed index </core/index-hashed>`."
+msgstr ""
+
+#: ../source/reference/limits.txt:256
+# 6795cdf2f9414516b2d9942d19427e76
+msgid "A :term:`shard key` index cannot be an index that specifies a :doc:`multikey index </core/index-multikey>`, a :doc:`text index </core/index-text>` or a :ref:`geospatial index <index-feature-geospatial>` on the :term:`shard key` fields."
+msgstr ""
+
+#: ../source/reference/limits.txt:263
+# 2b57dfcfc8fe4cf5bf3eeee2e74a9b99
+msgid "You cannot change a shard key after sharding the collection. If you must change a shard key:"
+msgstr ""
+
+#: ../source/reference/limits.txt:266
+# 29f1fa39f7954a38a7e16019016040d7
+msgid "Dump all data from MongoDB into an external format."
+msgstr ""
+
+#: ../source/reference/limits.txt:268
+# 87bcc74ec2414fb8b18240883580fa7e
+msgid "Drop the original sharded collection."
+msgstr ""
+
+#: ../source/reference/limits.txt:270
+# b872f1bd3d0746f3940e8f29e787dc6c
+msgid "Configure sharding using the new shard key."
+msgstr ""
+
+#: ../source/reference/limits.txt:272
+# 1a7437d9505143fa8fbfcf0b8885d22d
+msgid ":doc:`Pre-split </tutorial/create-chunks-in-sharded-cluster>` the shard key range to ensure initial even distribution."
+msgstr ""
+
+#: ../source/reference/limits.txt:275
+# 31f9320d35de47f5a9029a3d7e77ba63
+msgid "Restore the dumped data into MongoDB."
+msgstr ""
+
+#: ../source/reference/limits.txt:279
+# 99be604bb1d5489fa9f5a4cac23abdb6
+msgid "After you insert a document into a sharded collection, you cannot change the document's value for the field or fields that comprise the shard key. The :method:`~db.collection.update()` operation will not modify the value of a shard key in an existing document."
+msgstr ""
+
+#: ../source/reference/limits.txt:286
+# a4d3eb20246d4d5a90400eca0535c644
+msgid "For clusters with high insert volumes, a shard keys with monotonically increasing and decreasing keys can affect insert throughput. If your shard key is the ``_id`` field, be aware that the default values of the ``_id`` fields are :term:`ObjectIds <ObjectId>` which have generally increasing values."
+msgstr ""
+
+#: ../source/reference/limits.txt:292
+# ed2c63cc8f1440048244bd8844852a0f
+msgid "When inserting documents with monotonically increasing shard keys, all inserts belong to the same :term:`chunk` on a single :term:`shard`. The system will eventually divide the chunk range that receives all write operations and migrate its contents to distribute data more evenly. However, at any moment the cluster can direct insert operations only to a single shard, which creates an insert throughput bottleneck."
+msgstr ""
+
+#: ../source/reference/limits.txt:300
+# 326a62ed99b247ca8a7453364e694b12
+msgid "If the operations on the cluster are predominately read operations and updates, this limitation may not affect the cluster."
+msgstr ""
+
+#: ../source/reference/limits.txt:303
+# 801096ff52264ccdb8345e1723946149
+msgid "To avoid this constraint, use a :ref:`hashed shard key <sharding-hashed-sharding>` or select a field that does not increase or decrease monotonically."
+msgstr ""
+
+#: ../source/reference/limits.txt:307
+# d727ed500fd24068b58c18d9023a3b97
+msgid ":ref:`Hashed shard keys <sharding-hashed-sharding>` and :ref:`hashed indexes <index-type-hashed>` store hashes of keys with ascending values."
+msgstr ""
+
+#: ../source/reference/limits.txt:313
+# cb296254809941469b6feaabc69f2283
+msgid "Operations"
+msgstr ""
+
+#: ../source/reference/limits.txt:318
+# 885ce65dd48748328b806ace113fb9dd
+msgid "MongoDB will only return sorted results on fields without an index *if* the sort operation uses less than 32 megabytes of memory."
+msgstr ""
+
+#: ../source/includes/fact-agg-memory-limit.rst:10
+# c14c2ece1083403c96c383d3e082bdef
+msgid "Pipeline stages have a limit of 100 megabytes of RAM. If a stage exceeds this limit, MongoDB will produce an error. To allow for the handling of large datasets, use the ``allowDiskUse`` option to enable aggregation pipeline stages to write data to temporary files."
+msgstr ""
+
+#: ../source/includes/fact-agg-memory-limit.rst:15
+# 75bd22b7227f4b8db48e96e4ada6c626
+msgid ":ref:`sort-memory-limit` and :ref:`group-memory-limit`."
+msgstr ""
+
+#: ../source/includes/fact-geometry-hemisphere-limitation.rst:1
+# 9e839e6016f84912ab0d6032a2266b37
+msgid "Any geometry specified with :term:`GeoJSON` to |geo-operator-method| queries, **must** fit within a single hemisphere. MongoDB interprets geometries larger than half of the sphere as queries for the smaller of the complementary geometries."
+msgstr ""
+
+#: ../source/reference/limits.txt:339
+# ee44ab9a01044874a7af257c625f647b
+msgid ":doc:`Write commands </reference/command/nav-crud>` can accept no more than 1000 operations. The :method:`Bulk()` operations in the :program:`mongo` shell and comparable methods in the drivers do not have this limit."
+msgstr ""
+
+#: ../source/reference/limits.txt:345
+# f2250d5b13e24eb4b740c7c5842df249
+msgid "Naming Restrictions"
+msgstr ""
+
+#: ../source/reference/limits.txt:349
+# ef303037f5a4494ebdf6f83cf7cc80a9
+msgid "MongoDB does not permit database names that differ only by the case of the characters."
+msgstr ""
+
+#: ../source/reference/limits.txt:354
+# b45d2f88f9e64e42b2f91a67e601369d
+msgid ":ref:`rn-2.2-database-name-restriction-windows`."
+msgstr ""
+
+#: ../source/reference/limits.txt:357
+# f0fa9624129b4857bcfdac1b29a375b6
+msgid "For MongoDB deployments running on Windows, MongoDB will not permit database names that include any of the following characters:"
+msgstr ""
+
+#: ../source/reference/limits.txt:364
+#: ../source/reference/limits.txt:376
+# bac4e93494cb4ec9872e5de036f17d2f
+# c15d0ac3c8144593b9a10f44e8f91957
+msgid "Also, database names cannot contain the null character."
+msgstr ""
+
+#: ../source/reference/limits.txt:368
+# 2156d9692a284a639a230d034fca804f
+msgid "For MongoDB deployments running on Unix and Linux systems, MongoDB will not permit database names that include any of the following characters:"
+msgstr ""
+
+#: ../source/reference/limits.txt:380
+# 49f148ebad594165a7183930ebe0c564
+msgid "Database names cannot be empty and must have fewer than 64 characters."
+msgstr ""
+
+#: ../source/reference/limits.txt:387
+# 2b0fa0b5236f47bdb649c4369de3db37
+msgid "Collection names should begin with an underscore or a letter character, and *cannot*:"
+msgstr ""
+
+#: ../source/reference/limits.txt:390
+# 81b02d4610ae4c3c972333b7cbf082dd
+msgid "contain the ``$``."
+msgstr ""
+
+#: ../source/reference/limits.txt:392
+# b5bd62fac4f143bca0cacb4bb49e71e0
+msgid "be an empty string (e.g. ``\"\"``)."
+msgstr ""
+
+#: ../source/reference/limits.txt:394
+# 6784ce9231174f31b6eabb64ef338775
+msgid "contain the null character."
+msgstr ""
+
+#: ../source/reference/limits.txt:396
+# 26c8879ffdba4e4bbe82b8695d37b9b0
+msgid "begin with the ``system.`` prefix. (Reserved for internal use.)"
+msgstr ""
+
+#: ../source/reference/limits.txt:398
+# 94e625169b254afc874fe20e8d3fd3bc
+msgid "In the :program:`mongo` shell, use :method:`db.getCollection()` to specify collection names that might interact with the shell or are not valid JavaScript."
+msgstr ""
+
+#: ../source/reference/limits.txt:406
+# ebaae2df42874081b3c8c28b26abfa17
+msgid "Field names cannot contain dots (i.e. ``.``), dollar signs (i.e. ``$``), or null characters. See :ref:`faq-dollar-sign-escaping` for an alternate approach."
+msgstr ""
+

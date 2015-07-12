@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/update-field.txt:3
+# 1a5ce9b94b3e4f7db2601d67b699a30b
+msgid "Field Update Operators"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:2
+# 17b5444e92b74879adba1291559c2724
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:2
+# e4550423cdee4c1cbd5d49aa593c6024
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:4
+# 6e378eaeca1a472fa6fdd4e227b4bdfc
+msgid ":update:`$inc`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:4
+# 284900442ee948d7aac2457114a55cf1
+msgid "Increments the value of the field by the specified amount."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:6
+# 5ed1c4a00608411b8b36b6d24867642c
+msgid ":update:`$mul`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:6
+# a54352ad223c4220b71d4f79b42f4108
+msgid "Multiplies the value of the field by the specified amount."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:8
+# 2fd730eabb074b8c8b88d46a714e420c
+msgid ":update:`$rename`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:8
+# 8aa3cee7a44d41969ef4b392b53258b5
+msgid "Renames a field."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:10
+# 073133db9da947ae8c8980a15da52d7d
+msgid ":update:`$setOnInsert`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:10
+# dbce091de09d449c8e15a0d4d48f843e
+msgid "Sets the value of a field if an update results in an insert of a document. Has no effect on update operations that modify existing documents."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:12
+# 03ea5a6ec88546339b5c754a20d9b632
+msgid ":update:`$set`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:12
+# 4a716d72843d48c6b9c597c07d08ebdb
+msgid "Sets the value of a field in a document."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:14
+# d337dfe3e24b4605b94b284f5636d739
+msgid ":update:`$unset`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:14
+# 493b8a2ed2e54189ae71aaca0e172401
+msgid "Removes the specified field from a document."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:16
+# 5f38fa55b39a48e4acebe01f9842d70c
+msgid ":update:`$min`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:16
+# e59d4ff67844488cac2c7415dd78ba32
+msgid "Only updates the field if the specified value is less than the existing field value."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:18
+# 8ebb97f2f3354df8bafa8c8e1b16e4d5
+msgid ":update:`$max`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:18
+# b57e5893de8d4922b0737ccba07e10ee
+msgid "Only updates the field if the specified value is greater than the existing field value."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:20
+# 7ec3c657a4f743b499e890d478e17e28
+msgid ":update:`$currentDate`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-field.rst:20
+# ea9711680e644075bc2d2a7d41f07a57
+msgid "Sets the value of a field to current date, either as a Date or a Timestamp."
+msgstr ""
+

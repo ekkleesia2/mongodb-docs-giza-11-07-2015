@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/update-isolation.txt:3
+# 36387a62e0e94c77ae701d3cbcdc717d
+msgid "Isolation Update Operator"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-isolation.rst:2
+# 74a669ebe811476b94eb98263087ff9d
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-isolation.rst:2
+# 41a9fef0003d48099293cd09b00f2a55
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-isolation.rst:4
+# 26f900f9c9b74ff38c238450bfee4183
+msgid ":update:`$isolated`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-isolation.rst:4
+# 683fb14f0074497c8eadc46109bd99d3
+msgid "Modifies behavior of multi-updates to increase the isolation of the operation."
+msgstr ""
+

@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/administration/indexes-geo.txt:3
+# df2f12a4af4f426799c4dc17e54b2f4b
+msgid "Geospatial Index Tutorials"
+msgstr ""
+
+#: ../source/administration/indexes-geo.txt:7
+# c52d6a49bcae4b11a0d01f3f8ff22077
+msgid "Instructions for creating and querying ``2d``, ``2dsphere``, and haystack indexes."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:6
+# 2cbdd2001a0c4ca3b4fde28c5d88af10
+msgid ":doc:`/tutorial/build-a-2dsphere-index`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:4
+# c45fa6e74f534b158e80b71e15b166d3
+msgid "A ``2dsphere`` index supports data stored as both GeoJSON objects and as legacy coordinate pairs."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:12
+# 4570adcbbb3f4d3e976fdb79293fa56c
+msgid ":doc:`/tutorial/query-a-2dsphere-index`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:9
+# fc49d4438869431091d9fb17aeec015a
+msgid "Search for locations within, near, or intersected by a GeoJSON shape, or within a circle as defined by coordinate points on a sphere."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:17
+# cd408e168458491a9f8e6f7fdacd15e3
+msgid ":doc:`/tutorial/build-a-2d-index`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:15
+# 0d65fb3bceef43f4bffc34acec2c0264
+msgid "Create a ``2d`` index to support queries on data stored as legacy coordinate pairs."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:21
+# 40c4ac737ed44fbca415ccbd1d3da3c2
+msgid ":doc:`/tutorial/query-a-2d-index`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:20
+# 74077b38dfba487784033a6f5172ec61
+msgid "Search for locations using legacy coordinate pairs."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:27
+# efeddbf55d234d82b7ff44ea257f435c
+msgid ":doc:`/tutorial/build-a-geohaystack-index`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:24
+# 0a4943bc1d9f49f1bb4c4f1bb9d8dd89
+msgid "A haystack index is optimized to return results over small areas. For queries that use spherical geometry, a ``2dsphere`` index is a better option."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:31
+# 34f1b1d2727740ee8f2b8b418480f782
+msgid ":doc:`/tutorial/query-a-geohaystack-index`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:30
+# 1f9c38f174c44f369079e50613a81686
+msgid "Search based on location and non-location data within a small area."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:33
+# 2340c1b1e63c44ed9d600abba55042c1
+msgid ":doc:`/tutorial/calculate-distances-using-spherical-geometry-with-2d-geospatial-indexes`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-tutorial-geo.rst:34
+# dfda9b7f2fa546608a0eda3f89845a5f
+msgid "Convert distances to radians and back again."
+msgstr ""
+

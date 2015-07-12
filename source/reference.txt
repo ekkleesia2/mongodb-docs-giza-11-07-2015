@@ -1,0 +1,15 @@
+=========
+Reference
+=========
+
+.. default-domain:: mongodb
+
+.. include:: /includes/toc/dfn-list-reference-landing.rst
+
+.. seealso:: The :ref:`genindex` may provide useful insight into the
+   reference material in this manual. The :doc:`/reference/crud`
+   :doc:`/reference/data-models`, :doc:`/reference/sharding`,
+   :doc:`/reference/replication`, and :doc:`/reference/security`
+   contain additional reference material.
+
+.. include:: /includes/toc/reference-landing.rst

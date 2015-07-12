@@ -1,0 +1,16 @@
+file: /core/security-concepts-network
+description: |
+  Documentation on authentication, authorization, and encryption in MongoDB.
+---
+file: /core/security-concepts-access-control
+description: |
+  Documentation on users and roles in MongoDB.
+---
+file: /core/auditing
+description: |
+  Documentation on the auditing feature available with MongoDB Enterprise.
+---
+file: /core/security-concepts-external-env
+description: |
+  Documentation on the auditing feature available with MongoDB Enterprise.
+...

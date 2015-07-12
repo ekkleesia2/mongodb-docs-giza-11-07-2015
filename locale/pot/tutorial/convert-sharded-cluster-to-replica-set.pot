@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:3
+# 608666e5849843969733661e72de118d
+msgid "Convert Sharded Cluster to Replica Set"
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:7
+# 17f37c43c9354156b42cc7aeb6e77da4
+msgid "This tutorial describes the process for converting a :term:`sharded cluster` to a non-sharded :term:`replica set`. To convert a replica set into a sharded cluster :doc:`/tutorial/convert-replica-set-to-replicated-shard-cluster`. See the :doc:`/sharding` documentation for more information on sharded clusters."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:15
+# fa352f8c295945ffbb61ecdde34620d3
+msgid "Convert a Cluster with a Single Shard into a Replica Set"
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:17
+# 74ef805b370844e98bb979a4e4cd035b
+msgid "In the case of a :term:`sharded cluster` with only one shard, that shard contains the full data set. Use the following procedure to convert that cluster into a non-sharded :term:`replica set`:"
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:21
+# 85075f881129409a9b7427545e707b4c
+msgid "Reconfigure the application to connect to the primary member of the replica set hosting the single shard that system will be the new replica set."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:25
+# 4b0ad843dacf4076bb2f8d63dfb3e63c
+msgid "Optionally remove the :option:`--shardsrv <mongod --shardsvr>` option, if your :program:`mongod` started with this option."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:0
+# fb1fd4193fdd4a04970c0145dec1d506
+msgid "Tip"
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:32
+# 0251806ec3f34e85951a0de4395af8ce
+msgid "The single-shard cluster is now a non-sharded :term:`replica set` that will accept read and write operations on the data set."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:35
+# af9ab211dc044ff28ce41884be1ccd32
+msgid "You may now decommission the remaining sharding infrastructure."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:38
+# 5a9e317b2ace423bb82a565e153e1e06
+msgid "Convert a Sharded Cluster into a Replica Set"
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:40
+# b6d41bd03560407fa08c2272955112af
+msgid "Use the following procedure to transition from a :term:`sharded cluster` with more than one shard to an entirely new :term:`replica set`."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:43
+# 3b5ee6c62c3d417dbb524b9ba637f4e8
+msgid "With the :term:`sharded cluster` running, :doc:`deploy a new replica set <deploy-replica-set>` in addition to your sharded cluster. The replica set must have sufficient capacity to hold all of the data files from all of the current shards combined. Do not configure the application to connect to the new replica set until the data transfer is complete."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:50
+# fe22e1ebce2e462ba895f85a926facc6
+msgid "Stop all writes to the :term:`sharded cluster`. You may reconfigure your application or stop all :program:`mongos` instances. If you stop all :program:`mongos` instances, the applications will not be able to read from the database. If you stop all :program:`mongos` instances, start a temporary :program:`mongos` instance on that applications cannot access for the data migration procedure."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:57
+# ded140560587462daa0ecf2f7624aaa9
+msgid "Use :doc:`mongodump and mongorestore </tutorial/backup-with-mongodump/>` to migrate the data from the :program:`mongos` instance to the new :term:`replica set`."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:62
+# 5d0931d870be46ffbf7359d4c977a73f
+msgid "Not all collections on all databases are necessarily sharded. Do not solely migrate the sharded collections. Ensure that all databases and all collections migrate correctly."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:66
+# 9411daaa8f654aaa9f8d2411edfbd5f1
+msgid "Reconfigure the application to use the non-sharded :term:`replica set` instead of the :program:`mongos` instance."
+msgstr ""
+
+#: ../source/tutorial/convert-sharded-cluster-to-replica-set.txt:69
+# e327a5723fa44b05b660d57e62015a0c
+msgid "The application will now use the un-sharded :term:`replica set` for reads and writes. You may now decommission the remaining unused sharded cluster infrastructure."
+msgstr ""
+

@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:3
+# e1e1c91b4ff44d619767f4009181d8b4
+msgid "Write Scripts for the ``mongo`` Shell"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:7
+# 95f56a9f71e54aa0891aa79d92ff115c
+msgid "You can write scripts for the :program:`mongo` shell in JavaScript that manipulate data in MongoDB or perform administrative operation. For more information about the :program:`mongo` shell see :doc:`/administration/scripting`, and see the :ref:`running-js-scripts-in-mongo-on-mongod-host` section for more information about using these :program:`mongo` script."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:14
+# 03d5572f9bd84225919f4fdcc77a40a8
+msgid "This tutorial provides an introduction to writing JavaScript that uses the :program:`mongo` shell to access MongoDB."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:20
+# e6052be784d74045b0a9d13fc95a43ae
+msgid "Opening New Connections"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:22
+# 350040dcf39f498d88537cc5b16a4696
+msgid "From the :program:`mongo` shell or from a JavaScript file, you can instantiate database connections using the :method:`Mongo()` constructor:"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:32
+# 61221c061fa348ea8033052b48555364
+msgid "Consider the following example that instantiates a new connection to the MongoDB instance running on localhost on the default port and sets the global ``db`` variable to ``myDatabase`` using the :method:`~Mongo.getDB()` method:"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:42
+# a93fc54428584b83a29c3b90a223acac
+msgid "Additionally, you can use the :method:`connect()` method to connect to the MongoDB instance. The following example connects to the MongoDB instance that is running on ``localhost`` with the non-default port ``27020`` and set the global ``db`` variable:"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:52
+# 5d4001bd1e6d4aa3abcd88e8050c6ffd
+msgid "Differences Between Interactive and Scripted ``mongo``"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:54
+# 1455adfdd960451aab3479ef8dd07739
+msgid "When writing scripts for the :program:`mongo` shell, consider the following:"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:57
+# 530f0792537b4242b94d91e6f3723389
+msgid "To set the ``db`` global variable, use the :method:`~Mongo.getDB()` method or the :method:`connect()` method. You can assign the database reference to a variable other than ``db``."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:61
+# 06b0585631c04d689f319ce3a5b10909
+msgid "Write operations in the :program:`mongo` shell use the \"safe writes\" by default. If performing bulk operations, use the :method:`Bulk()` methods. See :ref:`write-methods-incompatibility` for more information."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:66
+# f87b5376540d42c49f090d02277b08c3
+msgid "Before MongoDB 2.6, call :method:`db.getLastError()` explicitly to wait for the result of :doc:`write operations </core/write-operations>`."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:71
+# 3667cf6667434f539665bea31867d299
+msgid "You **cannot** use any shell helper (e.g. ``use <dbname>``, ``show dbs``, etc.) inside the JavaScript file because they are not valid JavaScript."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:75
+# 8baae06123a440cdaf2fa8fa2076b2a2
+msgid "The following table maps the most common :program:`mongo` shell helpers to their JavaScript equivalents."
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:4
+# 638f4e949346443eb399e0f446a22c52
+msgid "Shell Helpers"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:6
+# 8cbf0e8165cf423d8b1e0cfd3b174ed5
+msgid "JavaScript Equivalents"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:8
+# d279477530dc4b35a8d16c6d6864b777
+msgid "``show dbs``, ``show databases``"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:16
+# 18e2fa57adfa4e7c8020426a5d9cd849
+msgid "``use <db>``"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:24
+# 810551d7672d4ad7873862496e2071c5
+msgid "``show collections``"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:32
+# 83afcf34a92b41eb8fd826763c10d181
+msgid "``show users``"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:40
+# 50bec65a2887411fb3c3f51ed0cb3a9d
+msgid "``show roles``"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:48
+# afcc788f09724528bc6ff099f3dab7a9
+msgid "``show log <logname>``"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:56
+# 597e1f956709498ea1c03c230476e398
+msgid "``show logs``"
+msgstr ""
+
+#: ../source/includes/table/helpers-to-javascript.rst:64
+# 6659068ca8a64404bb602d62b64622e2
+msgid "``it``"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:80
+# d5c7d1f49a434d509ea8554941281e8a
+msgid "In interactive mode, :program:`mongo` prints the results of operations including the content of all cursors. In scripts, either use the JavaScript ``print()`` function or the :program:`mongo` specific ``printjson()`` function which returns formatted JSON."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:0
+# 1d1793aa724846b8a0af4625df39fbfb
+msgid "Example"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:87
+# 76acf183a09741c58378effef952fb0f
+msgid "To print all items in a result cursor in :program:`mongo` shell scripts, use the following idiom:"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:100
+# 624a90ffaea3433195b61f0614284275
+msgid "Scripting"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:102
+# 9c430d7e59e64e919b59715b304d8b43
+msgid "From the system prompt, use :program:`mongo` to evaluate JavaScript."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:105
+# 83debfac99c0478d888e0ad57a075fec
+msgid "``--eval`` option"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:107
+# 1d8dbd332f7e4f82859338ed85ba00d6
+msgid "Use the :option:`--eval <mongo --eval>` option to :program:`mongo` to pass the shell a JavaScript fragment, as in the following:"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:114
+# e36525d5727a4bea9a1489cc17774bac
+msgid "This returns the output of :method:`db.getCollectionNames()` using the :program:`mongo` shell connected to the :program:`mongod` or :program:`mongos` instance running on port ``27017`` on the ``localhost`` interface."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:122
+# 0401bba5764840e090e0fdc0f477f0da
+msgid "Execute a JavaScript file"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:124
+# 3ae38e94c3af42ecbbbd731f284d7fa2
+msgid "You can specify a ``.js`` file to the :program:`mongo` shell, and :program:`mongo` will execute the JavaScript directly. Consider the following example:"
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:132
+# 6e82cd719e2e468b9094e6506c6b76ce
+msgid "This operation executes the ``myjsfile.js`` script in a :program:`mongo` shell that connects to the ``test`` :term:`database` on the :program:`mongod` instance accessible via the ``localhost`` interface on port ``27017``."
+msgstr ""
+
+#: ../source/tutorial/write-scripts-for-the-mongo-shell.txt:137
+# 18f06175eedb44719b7636e0049c9026
+msgid "Alternately, you can specify the mongodb connection parameters inside of the javascript file using the ``Mongo()`` constructor. See :ref:`mongo-shell-new-connections` for more information."
+msgstr ""
+
+#: ../source/includes/fact-execute-javascript-from-shell.rst:1
+# 522d352ecaf7400696cae2c194ee7108
+msgid "You can execute a ``.js`` file from within the :program:`mongo` shell, using the :method:`load()` function, as in the following:"
+msgstr ""
+
+#: ../source/includes/fact-execute-javascript-from-shell.rst:8
+# 023b4013232a4aa2aa94f482e74fef9d
+msgid "This function loads and executes the :file:`myjstest.js` file."
+msgstr ""
+
+#: ../source/includes/fact-execute-javascript-from-shell.rst:10
+# 2187773378664271a64970e3fdfac2cb
+msgid "The :method:`load()` method accepts relative and absolute paths. If the current working directory of the :program:`mongo` shell is :file:`/data/db`, and the :file:`myjstest.js` resides in the :file:`/data/db/scripts` directory, then the following calls within the :program:`mongo` shell would be equivalent:"
+msgstr ""
+
+#: ../source/includes/fact-execute-javascript-from-shell.rst:21
+# 088e230eb32143628123ce5d6817a0f8
+msgid "There is no search path for the :method:`load()` function. If the desired script is not in the current working directory or the full specified path, :program:`mongo` will not be able to access the file."
+msgstr ""
+

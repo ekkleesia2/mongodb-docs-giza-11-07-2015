@@ -1,0 +1,47 @@
+====================
+sh.shardCollection()
+====================
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. method:: sh.shardCollection(namespace, key, unique)
+
+   Shards a collection using the ``key`` as a the :term:`shard
+   key`. :method:`sh.shardCollection()` takes the following arguments:
+
+   .. include:: /includes/apiargs/method-sh.shardCollection-param.rst
+
+   .. todo:: add note about creating the shard key index if the
+      collection is empty or failing if the collection has data and no
+      shard key index.
+
+   .. versionadded:: 2.4
+      Use the form ``{field: "hashed"}`` to create a
+      :term:`hashed shard key <hashed shard key>`.
+      Hashed shard keys may not be compound indexes.
+
+Considerations
+--------------
+
+.. include:: /includes/fact-cannot-unshard-collection.rst
+
+Example
+-------
+
+Given the ``people`` collection in the ``records`` database, the
+following command shards the collection by the ``zipcode`` field:
+
+.. code-block:: javascript
+
+   sh.shardCollection("records.people", { zipcode: 1} )
+
+Additional Information
+----------------------
+
+:dbcommand:`shardCollection` for additional options,
+:doc:`/sharding` and :doc:`/core/sharding-introduction` for an
+overview of sharding, :doc:`/tutorial/deploy-shard-cluster` for a
+tutorial, and :ref:`sharding-shard-key` for choosing a shard key.

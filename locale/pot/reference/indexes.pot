@@ -1,0 +1,417 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/indexes.txt:3
+# e56809b97c35429d90f3e799c9f07011
+msgid "Indexing Reference"
+msgstr ""
+
+#: ../source/reference/indexes.txt:8
+# e91e4ffeba68486ca58e6f01528bbfe9
+msgid "Indexing Methods in the ``mongo`` Shell"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:2
+#: ../source/includes/toc/table-spec-indexes-commands.rst:2
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:2
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:2
+# d4af951fd99a40e88d3764819b2e2dfc
+# 0246ff96407c421fa599f25b34ef8b56
+# bde751c121934dac9d7b0985e515fa91
+# 637b4b1262254cf0a614180bb6a48628
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:2
+#: ../source/includes/toc/table-spec-indexes-commands.rst:2
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:2
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:2
+# 9e6bac6afcbb42ebae297b0d1ed4f3ae
+# a675cbe1be3846b48f589907745a3d6f
+# 5eeb82b9a9b5404d9e1661d125d91a20
+# c615053f3ee743be8ab4db83a6ce8e6f
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:4
+# 3689e70198a149c68c7140b2bc07c311
+msgid ":method:`db.collection.createIndex()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:4
+# 4c27a77674204fcc8155b1ca252bebaa
+msgid "Builds an index on a collection. Use :method:`db.collection.ensureIndex()`."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:6
+# 634d776c40b24622b64c40318c923981
+msgid ":method:`db.collection.dropIndex()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:6
+# fcc132046aaa4e44a0e18ebf69fc0427
+msgid "Removes a specified index on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:8
+# ac65624c5d724028ac4d252b8a6a46e0
+msgid ":method:`db.collection.dropIndexes()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:8
+# 85151ba7dabb468baf1b53824e75e982
+msgid "Removes all indexes on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:10
+# 1fced5eaf7e5470dbb63147460738266
+msgid ":method:`db.collection.ensureIndex()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:10
+# c30454d74cf54ac398028bc15bee8793
+msgid "Creates an index if it does not currently exist. If the index exists :method:`~db.collection.ensureIndex()` does nothing."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:12
+# 0819b205cbe94cc8b39a5065bce0de15
+msgid ":method:`db.collection.getIndexes()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:12
+# 9ee6b76863894e8abff96d05a8c4f139
+msgid "Returns an array of documents that describe the existing indexes on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:14
+# 3ded3b783dbe4713b240d2f72aa4d497
+msgid ":method:`db.collection.getIndexStats()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:14
+#: ../source/includes/toc/table-spec-indexes-methods.rst:16
+# e9d850d06ef74b69b4daa1aeb99620d1
+# eb31e3c0ae2c400b89e3066bd176461a
+msgid "Renders a human-readable view of the data collected by :dbcommand:`indexStats` which reflects B-tree utilization."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:16
+# 95e488b0ba044cc695290c2cc7a2a149
+msgid ":method:`db.collection.indexStats()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:18
+# c6d2376a20ed4aa0b5581104aba76a2a
+msgid ":method:`db.collection.reIndex()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:18
+# 772a46860f1345379285e21850c609df
+msgid "Rebuilds all existing indexes on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:20
+# 58c4b7995eb2465b85dc8f2c4cb1679a
+msgid ":method:`db.collection.totalIndexSize()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:20
+# 24bfda358a4d46a0bc7fb89fd477ef1a
+msgid "Reports the total size used by the indexes on a collection. Provides a wrapper around the :data:`~collStats.totalIndexSize` field of the :dbcommand:`collStats` output."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:22
+# 9e0061c2ebcc42718e525a8e781e4301
+msgid ":method:`cursor.explain()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:22
+# 326bb496ab744d5ead32e29ec3fd562c
+msgid "Reports on the query execution plan, including index use, for a cursor."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:24
+# ee1f2653970e4d3d886655702832452a
+msgid ":method:`cursor.hint()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:24
+# f9bddb1287bc469395a4513ab04e1b1c
+msgid "Forces MongoDB to use a specific index for a query."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:26
+# 0c17ea7671a1409f96ea2ec0b00d0f8f
+msgid ":method:`cursor.max()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:26
+# 9ac6da0163e54aaa89a79786675fd1b9
+msgid "Specifies an exclusive upper index bound for a cursor. For use with :method:`cursor.hint()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:28
+# 6a489d9cfaa040129b3c94ea38802199
+msgid ":method:`cursor.min()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:28
+# b4a23126fede43b2a5a59db8a4d399a7
+msgid "Specifies an inclusive lower index bound for a cursor. For use with :method:`cursor.hint()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:30
+# b2f17fc5ceb3487686234916d29e34c7
+msgid ":method:`cursor.snapshot()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-methods.rst:30
+# e37221f422044efdaaf3906ae6fb9931
+msgid "Forces the cursor to use the index on the ``_id`` field. Ensures that the cursor returns each document, with regards to the value of the ``_id`` field, only once."
+msgstr ""
+
+#: ../source/reference/indexes.txt:13
+# fd0e38165a724f478aa560e26a373dda
+msgid "Indexing Database Commands"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:4
+# 111b4ecde89e456a9ceb3f06c114fdb2
+msgid ":dbcommand:`createIndexes`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:4
+# a6735c7708494c28948b61ddffcdf537
+msgid "Builds one or more indexes for a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:6
+# 32ceab286d244c0197c6a57dedb64204
+msgid ":dbcommand:`dropIndexes`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:6
+# 9c2b77ba7bf3430a94a285dad7d5b818
+msgid "Removes indexes from a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:8
+# 8ce2b7e4aae4473e808814bfe11a3d91
+msgid ":dbcommand:`compact`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:8
+# 1cfa4b1d91d34f6594130049944fe640
+msgid "Defragments a collection and rebuilds the indexes."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:10
+# 534770aff0f7438e8a307b1ce4d29bca
+msgid ":dbcommand:`reIndex`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:10
+# 111729d70b8142d4a3236eea58ae4b6d
+msgid "Rebuilds all indexes on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:12
+# 091fc93d35ba4da1810441379a403c6a
+msgid ":dbcommand:`validate`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:12
+# 372a1ffaf3074dbfb7dd74029bf18512
+msgid "Internal command that scans for a collection's data and indexes for correctness."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:14
+# 2c38bb1f8eed421587b7bfbbdd831175
+msgid ":dbcommand:`indexStats`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:14
+# da97190c2e57472eb644e660eadae8bf
+msgid "Experimental command that collects and aggregates statistics on all indexes."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:16
+# 94ccf2c922574e92918a20589b9598bc
+msgid ":dbcommand:`geoNear`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:16
+# ba28243f26be40779319d02c89eb3424
+msgid "Performs a geospatial query that returns the documents closest to a given point."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:18
+# d9e355dce4de4e1caa6b805f4ca49dc1
+msgid ":dbcommand:`geoSearch`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:18
+# 3bffd34b0c6d4d0ebd29731e163cc2c6
+msgid "Performs a geospatial query that uses MongoDB's :term:`haystack index` functionality."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:20
+# 8a7a485dbc6b4233a0129b72c2398bd1
+msgid ":dbcommand:`geoWalk`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:20
+# c5dc676b7f3845fca7af69e2a330ee16
+msgid "An internal command to support geospatial queries."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:22
+# f1d07d64615a45aabaf915e7391049bd
+msgid ":dbcommand:`checkShardingIndex`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-commands.rst:22
+# 59ccb6df94ca45ffa766d7ecd47ffec9
+msgid "Internal command that validates index on shard key."
+msgstr ""
+
+#: ../source/reference/indexes.txt:18
+# f4fdef3346d24c10bcecb27532866524
+msgid "Geospatial Query Selectors"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:4
+# a45c35957a1447d0a98402fdd35c35f4
+msgid ":query:`$geoWithin`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:4
+# cc44ab7a9d9d4bf095da797ffc965dc3
+msgid "Selects geometries within a bounding :term:`GeoJSON` geometry."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:6
+# 4dcaedf61106475a904cfae3205dbe0f
+msgid ":query:`$geoIntersects`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:6
+# 2c21e86c7049449cac5acc27bbb1d95d
+msgid "Selects geometries that intersect with a :term:`GeoJSON` geometry."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:8
+# fd85b7cd4922448db5731524b8a095c5
+msgid ":query:`$near`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:8
+# 064d01357459447aadac7eaf19e65b64
+msgid "Returns geospatial objects in proximity to a point."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:10
+# 6df4e9a7783c474f9a416101c1a183a1
+msgid ":query:`$nearSphere`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-selectors.rst:10
+# 4c92fddc5ae9478d8ff93fc832f16ec6
+msgid "Returns geospatial objects in proximity to a point on a sphere."
+msgstr ""
+
+#: ../source/reference/indexes.txt:23
+# 050045272dac4f04a6c7c08debc85bb2
+msgid "Indexing Query Modifiers"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:4
+# 01f21c7831aa448d9a4a93409a8fdaa3
+msgid ":operator:`$explain`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:4
+# 7527138cba4f42d0848dcfbce761b860
+msgid "Forces MongoDB to report on query execution plans. See :method:`~cursor.explain()`."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:6
+# 493ec02a16d3432c92939fa8da02dce1
+msgid ":operator:`$hint`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:6
+# a40e980280dd414985b422f0d1d94900
+msgid "Forces MongoDB to use a specific index. See :method:`~cursor.hint()`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:8
+# e880afae5bc84e81969e3d6a857cc1dc
+msgid ":operator:`$max`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:8
+# e68f876f016e4e2fbbfc51dbf8570326
+msgid "Specifies an *exclusive* upper limit for the index to use in a query. See :method:`~cursor.max()`."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:10
+# faf0986e6254412f83f5540fc6f9a2d7
+msgid ":operator:`$min`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:10
+# 49b90164c58e43a6b52b4840df36e56f
+msgid "Specifies an *inclusive* lower limit for the index to use in a query. See :method:`~cursor.min()`."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:12
+# 9bbf48f93cd24cb19b868975b0a4830f
+msgid ":operator:`$returnKey`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:12
+# 7193be2c51424eee9139b927062641e8
+msgid "Forces the cursor to only return fields included in the index."
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:14
+# 2f69aa5a93cc4c32a190af09d71a3473
+msgid ":operator:`$snapshot`"
+msgstr ""
+
+#: ../source/includes/toc/table-spec-indexes-query-modifiers.rst:14
+# 25a6cc9fd14d4e28b6fb3dd3737ed850
+msgid "Forces the query to use the index on the ``_id`` field. See :method:`~cursor.snapshot()`."
+msgstr ""
+
+#: ../source/reference/indexes.txt:28
+# 561c4b775984414a972426122c4284f6
+msgid "Other Index References"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-reference.rst:4
+# c80453c883bd48db8ea91973e6f06171
+msgid ":doc:`/reference/text-search-languages`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-indexes-reference.rst:4
+# 73dcc35a5da1475abb07c30412bf932d
+msgid "Supported languages for :doc:`text indexes </core/index-text>` and :operator:`$text` query operations."
+msgstr ""
+

@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/query-modifier.txt:3
+# 8f90061e48cc460fb4adf1771a0dbc07
+msgid "Query Modifiers"
+msgstr ""
+
+#: ../source/reference/operator/query-modifier.txt:8
+# f8e8dfdcbb5643d0a37e4f28efe058e0
+msgid "Introduction"
+msgstr ""
+
+#: ../source/reference/operator/query-modifier.txt:10
+# 3e48d3ab5a49413fb42ca08fb195f50c
+msgid "In addition to the :doc:`MongoDB Query Operators </reference/operator>`, there are a number of \"meta\" operators that let you modify the output or behavior of a query. On the server, MongoDB treats the query and the options as a single object. The :program:`mongo` shell and driver interfaces may provide :ref:`cursor methods <js-query-cursor-methods>` that wrap these options. When possible, use these methods; otherwise, you can add these options using either of the following syntax:"
+msgstr ""
+
+#: ../source/reference/operator/query-modifier.txt:25
+# 9f9d0cc19e9c4bc984dabea126cf6b3f
+msgid "Operators"
+msgstr ""
+
+#: ../source/reference/operator/query-modifier.txt:28
+# 2f55e511613240ad87640012863156fc
+msgid "Modifiers"
+msgstr ""
+
+#: ../source/reference/operator/query-modifier.txt:30
+# e44f717ba393482c8adc7adc3381d329
+msgid "Many of these operators have corresponding :ref:`methods in the shell <js-query-cursor-methods>`. These methods provide a straightforward and user-friendly interface and are the preferred way to add these options."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:2
+#: ../source/includes/toc/table-operator-sort-order.rst:2
+# fba3e82865c34f7ea73381e1e49edd21
+# c6792b9c3f58434d994968ba036a59b7
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:2
+#: ../source/includes/toc/table-operator-sort-order.rst:2
+# 7d4ad6f669164d979b850e8829c1b6cd
+# bef8578bda784675b3fd6e51a9b3cd7c
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:4
+# 966aafd58e8c4d28aa666b02dd2fd72e
+msgid ":operator:`$comment`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:4
+# 793a4476ee7b454a8d6b39ff5ea55632
+msgid "Adds a comment to the query to identify queries in the :term:`database profiler` output."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:6
+# 94b0a89c73694e88b5ff03dcac3a64bb
+msgid ":operator:`$explain`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:6
+# 980b01c449914288bfd7ff6a40a5f21f
+msgid "Forces MongoDB to report on query execution plans. See :method:`~cursor.explain()`."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:8
+# 6830b6b805fa472e85735d94260c7c09
+msgid ":operator:`$hint`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:8
+# 238c6791a84e41d794773972cb2eb2cc
+msgid "Forces MongoDB to use a specific index. See :method:`~cursor.hint()`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:10
+# 16b36c3f11164c46aa7d2b6f12c8a477
+msgid ":operator:`$maxScan`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:10
+# d8054051629b4bcc997c1da2c72c61dd
+msgid "Limits the number of documents scanned."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:12
+# 67f9b1691ed84110b26fc5d792012b6e
+msgid ":operator:`$maxTimeMS`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:12
+# 438e1dea2c564b21bcd0cb75dd3d4b1b
+msgid "Specifies a cumulative time limit in milliseconds for processing operations on a cursor. See :method:`~cursor.maxTimeMS()`."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:14
+# 4bd5b0c1e572498c8f38a1ba270b9e8a
+msgid ":operator:`$max`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:14
+# 592196ff9a9e4d0097bb18f7efe609c3
+msgid "Specifies an *exclusive* upper limit for the index to use in a query. See :method:`~cursor.max()`."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:16
+# 8dec53f3306442adaf0184a4b8f88834
+msgid ":operator:`$min`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:16
+# 10a004139ce6468c8562fded6f6a47ec
+msgid "Specifies an *inclusive* lower limit for the index to use in a query. See :method:`~cursor.min()`."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:18
+# 88e5fa26a4f74dbc99a94627cc7d083d
+msgid ":operator:`$orderby`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:18
+# a0c024597c26420d8dfed3739e474717
+msgid "Returns a cursor with documents sorted according to a sort specification. See :method:`~cursor.sort()`."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:20
+# e19e187014bc49faa3ff07df504f2607
+msgid ":operator:`$returnKey`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:20
+# 478bfda3e0d34b1682f89add0605702c
+msgid "Forces the cursor to only return fields included in the index."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:22
+# c3f5d1c8dcb6410d819c9e9a94a4969a
+msgid ":operator:`$showDiskLoc`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:22
+# 03b4faa005b143029d33359271b42ec5
+msgid "Modifies the documents returned to include references to the on-disk location of each document."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:24
+# ae90a9837bd84c5994b69c83a89bf175
+msgid ":operator:`$snapshot`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:24
+# 176278a6eca74c46bf3aaa3b8221b7ef
+msgid "Forces the query to use the index on the ``_id`` field. See :method:`~cursor.snapshot()`."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:26
+# 016d4f1b753b4517938bd0bd09de23cf
+msgid ":operator:`$query`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-meta.rst:26
+# d6dacc56a136477590e65fda3869b8e4
+msgid "Wraps a query document."
+msgstr ""
+
+#: ../source/reference/operator/query-modifier.txt:39
+# 5cbb1e31cfa34990a9df3583bcb48a23
+msgid "Sort Order"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-sort-order.rst:4
+# 0712dfc1ea434789bd610b4028862163
+msgid ":operator:`$natural`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-sort-order.rst:4
+# 67239d646cce46d48da9d427f0173631
+msgid "A special sort order that orders documents using the order of documents on disk."
+msgstr ""
+

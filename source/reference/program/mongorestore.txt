@@ -1,0 +1,192 @@
+.. _mongorestore:
+
+================
+``mongorestore``
+================
+
+.. default-domain:: mongodb
+.. |tool-binary| replace:: mongorestore
+
+Synopsis
+--------
+
+The :program:`mongorestore` program writes data from a binary database
+dump created by :program:`mongodump` to a MongoDB
+instance. :program:`mongorestore` can create a new database or add
+data to an existing database.
+
+:program:`mongorestore` can write data to either `mongod` or :program:`mongos`
+instances, in addition to writing directly to MongoDB data files
+without an active :program:`mongod`.
+
+Behavior
+--------
+
+If you restore to an existing database, :program:`mongorestore` will
+only insert into the existing database, and does not perform updates
+of any kind. If existing documents have the same value ``_id`` field
+in the target database and collection,
+:program:`mongorestore` will *not* overwrite those documents.
+
+Remember the following properties of :program:`mongorestore` behavior:
+
+- :program:`mongorestore` recreates indexes recorded by
+  :program:`mongodump`.
+
+- all operations are inserts, not updates.
+
+- :program:`mongorestore` does not wait for a response from a
+  :program:`mongod` to ensure that the MongoDB process has received or
+  recorded the operation.
+
+  The :program:`mongod` will record any errors to its log that occur
+  during a restore operation, but :program:`mongorestore` will not
+  receive errors.
+
+.. include:: /includes/warning-mongodump-compatibility-2.2.rst
+
+.. versionadded:: 3.0.0
+   :program:`mongorestore` also accepts input via standard input.
+
+Required Access
+---------------
+
+Restore Collection Data
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/access-mongorestore-collections.rst
+
+Restore Users and User Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/access-mongorestore-users.rst
+
+Options
+-------
+
+.. versionchanged:: 3.0.0
+   :program:`mongorestore` removed the ``--filter``, ``--dbpath``, and the
+   ``--noobjcheck`` options.
+
+.. binary:: mongorestore
+
+.. program:: mongorestore
+
+.. include:: /includes/option/option-mongorestore-help.rst
+
+.. include:: /includes/option/option-mongorestore-verbose.rst
+
+.. include:: /includes/option/option-mongorestore-quiet.rst
+
+.. include:: /includes/option/option-mongorestore-version.rst
+
+.. include:: /includes/option/option-mongorestore-host.rst
+
+.. include:: /includes/option/option-mongorestore-port.rst
+
+.. include:: /includes/option/option-mongorestore-ipv6.rst
+
+.. include:: /includes/option/option-mongorestore-ssl.rst
+
+.. include:: /includes/option/option-mongorestore-sslCAFile.rst
+
+.. include:: /includes/option/option-mongorestore-sslPEMKeyFile.rst
+
+.. include:: /includes/option/option-mongorestore-sslPEMKeyPassword.rst
+
+.. include:: /includes/option/option-mongorestore-sslCRLFile.rst
+
+.. include:: /includes/option/option-mongorestore-sslAllowInvalidCertificates.rst
+
+.. include:: /includes/option/option-mongorestore-sslAllowInvalidHostnames.rst
+
+.. include:: /includes/option/option-mongorestore-sslFIPSMode.rst
+
+.. include:: /includes/option/option-mongorestore-username.rst
+
+.. include:: /includes/option/option-mongorestore-password.rst
+
+.. include:: /includes/option/option-mongorestore-authenticationDatabase.rst
+
+.. include:: /includes/option/option-mongorestore-authenticationMechanism.rst
+
+.. include:: /includes/option/option-mongorestore-gssapiServiceName.rst
+
+.. include:: /includes/option/option-mongorestore-gssapiHostName.rst
+
+.. include:: /includes/option/option-mongorestore-db.rst
+
+.. include:: /includes/option/option-mongorestore-collection.rst
+
+.. include:: /includes/option/option-mongorestore-objcheck.rst
+
+.. include:: /includes/option/option-mongorestore-drop.rst
+
+.. include:: /includes/option/option-mongorestore-oplogReplay.rst
+
+.. include:: /includes/option/option-mongorestore-oplogLimit.rst
+
+.. include:: /includes/option/option-mongorestore-keepIndexVersion.rst
+
+.. include:: /includes/option/option-mongorestore-noIndexRestore.rst
+
+.. include:: /includes/option/option-mongorestore-noOptionsRestore.rst
+
+.. include:: /includes/option/option-mongorestore-restoreDbUsersAndRoles.rst
+
+.. include:: /includes/option/option-mongorestore-w.rst
+
+.. include:: /includes/option/option-mongorestore-writeConcern.rst
+
+.. include:: /includes/option/option-mongorestore-maintainInsertionOrder.rst
+
+.. include:: /includes/option/option-mongorestore-numParallelCollections.rst
+
+.. include:: /includes/option/option-mongorestore-numInsertionWorkersPerCollection.rst
+
+.. include:: /includes/option/option-mongorestore-stopOnError.rst
+
+.. _mongorestore-path-option:
+
+.. include:: /includes/option/option-mongorestore-<path>.rst
+
+.. include:: /includes/option/option-mongorestore-dir.rst
+
+Use
+---
+
+For an overview of :program:`mongorestore` usage, see
+:doc:`/tutorial/backup-and-restore-tools`.
+
+For an overview of :program:`mongodump`, which provides the related
+inverse functionality, see the :doc:`mongodump` document.
+
+Consider the following example:
+
+.. code-block:: sh
+
+   mongorestore --collection people --db accounts dump/accounts/people.bson
+
+Here, :program:`mongorestore` reads the database dump in the ``dump/``
+sub-directory of the current directory, and restores *only* the
+documents in the collection named ``people`` from the database named
+``accounts``. :program:`mongorestore` restores data to the instance
+running on the localhost interface on port ``27017``.
+
+In the following example, :program:`mongorestore` restores a database
+dump located at ``/opt/backup/mongodump-2011-10-24``, to a database
+running on port ``37017`` on the host
+``mongodb1.example.net``. The :program:`mongorestore` command authenticates to
+the MongoDB instance using the username ``user`` and the
+password ``pass``, as follows:
+
+.. code-block:: sh
+
+   mongorestore --host mongodb1.example.net --port 37017 --username user --password pass /opt/backup/mongodump-2011-10-24
+
+You can also *pipe* data directly into to :program:`mongorestore`
+through standard input, as in the following example:
+
+.. code-block:: sh
+
+   zcat /opt/backup/mongodump-2014-12-03/accounts.people.bson.gz | mongorestore --collection people --db accounts -

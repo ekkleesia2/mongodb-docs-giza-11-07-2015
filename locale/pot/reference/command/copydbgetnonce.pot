@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/copydbgetnonce.txt:3
+# 95ab384caae04cdd9af29437990f5c15
+msgid "copydbgetnonce"
+msgstr ""
+
+#: ../source/reference/command/copydbgetnonce.txt:9
+# 12d172684de1483b831da4a5cb13f6da
+msgid "Client libraries use :dbcommand:`copydbgetnonce` to get a one-time password for use with the :dbcommand:`copydb` command."
+msgstr ""
+
+#: ../source/reference/command/copydbgetnonce.txt:14
+# 275b6d1d9d534889a61f8e814feb1a88
+msgid "This command obtains a write lock on the affected database and will block other operations until it has completed; however, the write lock for this operation is short lived."
+msgstr ""
+

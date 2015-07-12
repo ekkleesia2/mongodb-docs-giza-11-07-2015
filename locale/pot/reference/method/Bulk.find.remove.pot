@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/Bulk.find.remove.txt:3
+# 410b4912f8324163bed658d8fbdaf393
+msgid "Bulk.find.remove()"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:8
+# 05fc6923d1df431e93fa0960ab169d4c
+msgid "Description"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:14
+# 2f6c44c488f04b6f9e508bd144b60481
+msgid "Adds a remove operation to a bulk operations list. Use the :method:`Bulk.find()` method to specify the condition that determines which documents to remove. The :method:`Bulk.find.remove()` method removes all matching documents in the collection. To limit the remove to a single document, see :method:`Bulk.find.removeOne()`."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:22
+# 0cfbac1f53be4a1bb9c823344e926d74
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:24
+# f9c429712cf5433085643c21cb393f5e
+msgid "The following example initializes a :method:`Bulk()` operations builder for the ``items`` collection and adds a remove operation to the list of operations. The remove operation removes all documents in the collection where the ``status`` equals ``\"D\"``:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:37
+# b05502595c8d4bda93abeea54e464775
+msgid ":method:`db.collection.initializeUnorderedBulkOp()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:39
+# 0e1bed5316c94e4dbf9848c39ada61c9
+msgid ":method:`db.collection.initializeOrderedBulkOp()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:41
+# 6aa3f68164a14d1b9ad661aa0886fa3a
+msgid ":method:`Bulk.find()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:43
+# fdb131a53a6b4c4f8693fc1065e6eb22
+msgid ":method:`Bulk.find.removeOne()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.remove.txt:45
+# 92826c0c0d8941f3be17a350995e0b95
+msgid ":method:`Bulk.execute()`"
+msgstr ""
+

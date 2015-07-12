@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:3
+# d6b4fe9466f0486cbfb07a097b83e087
+msgid "Mongo.getReadPrefMode()"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:9
+# 51c43839832f4e2cbde9e86a16f6939e
+msgid "The current :term:`read preference` mode for the :method:`Mongo() <db.getMongo()>` connection object."
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:12
+# 0dc7881e7aae45b284fc7a599b3e22c3
+msgid "See :doc:`/core/read-preference` for an introduction to read preferences in MongoDB. Use :method:`~Mongo.getReadPrefMode()` to return the current read preference mode, as in the following example:"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:21
+# b12a0fd9404747f2a983d381213fe381
+msgid "Use the following operation to return and print the current read preference mode:"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:28
+# a55deb8eecea4e2694bff5b3093d7a00
+msgid "This operation will return one of the following read preference modes:"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:31
+# 2b8d6892e8e04737a311da1e86fbdff0
+msgid ":readmode:`primary`"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:32
+# e3a71974ae17409d8e6609c375a861fc
+msgid ":readmode:`primaryPreferred`"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:33
+# 3776b9d6de1f43a898ae0d4cd769e745
+msgid ":readmode:`secondary`"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:34
+# d3a48a876c5f4951b8bd4346a494e036
+msgid ":readmode:`secondaryPreferred`"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:35
+# 4384d37359014947b1cadd2b2b807c70
+msgid ":readmode:`nearest`"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getReadPrefMode.txt:37
+# cc263b38d05b4d6aa7c508c3900e9c9c
+msgid ":doc:`/core/read-preference`, :method:`~cursor.readPref()`, :method:`~Mongo.setReadPref()`, and :method:`~Mongo.getReadPrefTagSet()`."
+msgstr ""
+

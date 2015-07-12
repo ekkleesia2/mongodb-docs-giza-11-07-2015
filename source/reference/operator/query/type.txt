@@ -1,0 +1,117 @@
+=====
+$type
+=====
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. query:: $type
+
+   *Syntax*: ``{ field: { $type: <BSON type> } }``
+
+   :query:`$type` selects the documents where the *value* of the
+   ``field`` is an instance of the specified numeric :term:`BSON`
+   type. This is useful when dealing with highly unstructured data
+   where data types are not predictable.
+
+   .. include:: /includes/warning-mixing-types.rst
+
+Behavior
+--------
+
+Available Types
+~~~~~~~~~~~~~~~
+
+Refer to the following table for the available :term:`BSON` types
+and their corresponding numbers.
+
+.. include:: /includes/fact-bson-types.rst
+
+Minimum and Maximum Values
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``MinKey`` and ``MaxKey`` compare less than and greater than all
+other possible :term:`BSON` element values, respectively, and exist
+primarily for internal use.
+
+To query if a field value is a ``MinKey``, you must use :query:`$type` with
+``-1`` as in the following example:
+
+.. code-block:: javascript
+
+   db.collection.find( { field: { $type: -1 } } );
+
+Arrays
+~~~~~~
+
+When applied to arrays, :query:`$type` matches any **inner** element that is of the
+specified type. Without :term:`projection` this means that the entire array
+will match if **any** element has the right type. With projection, the
+results will include just those
+elements of the requested type.
+
+Examples
+--------
+
+Querying by Data Type
+~~~~~~~~~~~~~~~~~~~~~
+
+Consider the following query:
+
+.. code-block:: javascript
+
+   db.inventory.find( { tags: { $type : 2 } } );
+
+This will list all documents containing a ``tags`` field that is either a string
+or an array holding at least one string. If you only want to list documents where
+``tags`` is an array, you could use :query:`$where`:
+
+.. code-block:: javascript
+
+   db.inventory.find( { $where : "Array.isArray(this.tags)" } );
+
+Queries that use :query:`$where` requires a complete collection scan
+and uses :ref:`Server-side JavaScript <server-side-javascript>`.
+
+``MinKey`` and ``MaxKey``
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following operation sequence demonstrates both type comparison *and* the
+special ``MinKey`` and ``MaxKey`` values:
+
+.. code-block:: javascript
+
+   > db.test.insert( [ { x : 3 },
+                     { x : 2.9 },
+                     { x : new Date() },
+                     { x : true },
+                     { x : MaxKey },
+                     { x : MinKey } ] );
+
+   > db.test.find().sort( { x : 1 } );
+   { "_id" : ObjectId("4b031563ce8de6586fb002cb"), "x" : { $minKey : 1 } }
+   { "_id" : ObjectId("4b03155dce8de6586fb002c7"), "x" : 2.9 }
+   { "_id" : ObjectId("4b03154cce8de6586fb002c6"), "x" : 3 }
+   { "_id" : ObjectId("4b031566ce8de6586fb002c9"), "x" : true }
+   { "_id" : ObjectId("4b031563ce8de6586fb002c8"), "x" : ISODate("2012-07-25T23:42:03Z") }
+   { "_id" : ObjectId("4b031563ce8de6586fb002ca"), "x" : { $maxKey : 1 } }
+
+Minimum Shard Key
+~~~~~~~~~~~~~~~~~
+
+To query for the minimum value of a :term:`shard key` of a
+:term:`sharded cluster`, use the following operation when
+connected to the :program:`mongos`:
+
+.. code-block:: javascript
+
+   use config
+   db.chunks.find( { "min.shardKey": { $type: -1 } } )
+
+Additional Information
+----------------------
+
+:method:`~db.collection.find()`, :method:`~db.collection.insert()`,
+:query:`$where`, :term:`BSON`, :term:`shard key`, :term:`sharded cluster` .

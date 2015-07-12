@@ -1,0 +1,92 @@
+=====================
+db.createCollection()
+=====================
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. method:: db.createCollection(name, options)
+
+   Creates a new collection explicitly.
+
+   Because MongoDB creates a collection implicitly when the collection
+   is first referenced in a command, this method is used primarily for
+   creating new :term:`capped collections <capped collection>`. This is
+   also used to pre-allocate space for an ordinary collection.
+
+   The :method:`db.createCollection()` method has the following prototype form:
+
+   .. code-block:: javascript
+
+      db.createCollection(<name>, { capped: <boolean>,
+                                    autoIndexId: <boolean>,
+                                    size: <number>,
+                                    max: <number>,
+                                    storageEngine: <document> } )
+
+   The :method:`db.createCollection()` method has the following parameters:
+
+   .. include:: /includes/apiargs/method-db.createCollection-param.rst
+
+   The ``options`` document creates a capped collection or preallocates
+   space in a new ordinary collection. The ``options`` document contains
+   the following fields:
+
+   .. include:: /includes/apiargs/method-db.createCollection-options-param.rst
+
+Examples
+--------
+
+Create a Capped Collection
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Capped collections
+have maximum size or document counts that prevent them from growing
+beyond maximum thresholds. All capped collections must specify a maximum
+size and may also specify a maximum document count. MongoDB removes
+older documents if a collection reaches the maximum size limit before it
+reaches the maximum document count. Consider the following example:
+
+.. code-block:: javascript
+
+   db.createCollection("log", { capped : true, size : 5242880, max : 5000 } )
+
+This command creates a collection named ``log`` with a maximum size of 5
+megabytes and a maximum of 5000 documents.
+
+The following command simply pre-allocates a 2-gigabyte, uncapped
+collection named ``people``:
+
+.. code-block:: javascript
+
+   db.createCollection("people", { size: 2147483648 } )
+
+This command provides a wrapper around the database command
+:dbcommand:`create`. See :doc:`/core/capped-collections` for more
+information about capped collections.
+
+.. _create-collection-storage-engine-options:
+
+Specify Storage Engine Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 3.0
+
+You can specify collection-specific storage engine configuration
+options when you create a collection with
+:method:`db.createCollection()`. Consider the following operation:
+
+.. code-block:: javascript
+
+   db.createCollection( 
+      "users", 
+      { storageEngine: { wiredTiger: { configString: "<option>=<setting>" } } }
+   )
+
+This operation creates a new collection named ``users`` with a
+specific configuration string that MongoDB will pass to the
+``wiredTiger`` storage engine. See the `WiredTiger documentation of
+collection level options <http://source.wiredtiger.com/2.4.1/struct_w_t___s_e_s_s_i_o_n.html#a358ca4141d59c345f401c58501276bbb>`_
+for specific ``wiredTiger`` options.

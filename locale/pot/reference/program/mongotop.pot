@@ -1,0 +1,405 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/program/mongotop.txt:5
+# 63b018b8596348d2a7cd11a30305b437
+msgid "``mongotop``"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:12
+# 8c79ac63e8584395b9cbd27e0b76ad05
+msgid "Synopsis"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:14
+# 90766ee1bbca4143baa80e225a094575
+msgid ":program:`mongotop` provides a method to track the amount of time a MongoDB instance spends reading and writing data. :program:`mongotop` provides statistics on a per-collection level. By default, :program:`mongotop` returns values every second."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:19
+# 723ae25eb699402baff178758f24b41e
+msgid "In order to connect to a :program:`mongod` that enforces authorization with the :option:`--auth <mongod --auth>` option, the :option:`--username <mongotop --username>` and :option:`--password <mongotop --password>` options must be used, and the user specified must have the :authaction:`serverStatus` and :authaction:`top` privileges."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:26
+# 8e6037a6eb3c440d807672d80346f41f
+msgid "The most appropriate built-in role that has these privileges is :authrole:`clusterMonitor`."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:31
+# 8c6d5e5efbf04d229b228902268d6350
+msgid "For more information about monitoring MongoDB, see :doc:`/administration/monitoring`."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:34
+# 586384c316d84187b5d8a880f876b0d0
+msgid "For additional background on various other MongoDB status outputs see:"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:37
+# ab49834e83c641a59cda5260d4a61c0f
+msgid ":doc:`/reference/command/serverStatus`"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:38
+# 13e61b32c3074c0aa1415acf3f7727b6
+msgid ":doc:`/reference/command/replSetGetStatus`"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:39
+# 3c19ee0a818446d4baa90ff64abd8757
+msgid ":doc:`/reference/command/dbStats`"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:40
+# 64da38ab477441f79fb1fe162ec09c51
+msgid ":doc:`/reference/command/collStats`"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:42
+# bdf71ef6467a4127b26545c648c2bc02
+msgid "For an additional utility that provides MongoDB metrics see :doc:`mongostat </reference/program/mongostat>`."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:48
+# cbe0725b433740e3806578635c4733f3
+msgid "Options"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-help.rst:3
+# 727a90f5cd5e4860be341ab1697826b8
+msgid "Returns information on the options and use of :program:`mongotop`."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-verbose.rst:3
+# 560937384f0442fe992e9670a124e18a
+msgid "Increases the amount of internal reporting returned on standard output or in log files. Increase the verbosity with the ``-v`` form by including the option multiple times, (e.g. ``-vvvvv``.)"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-quiet.rst:3
+# c265ffbb939f4272a1a1d579cae82124
+msgid "Runs the :program:`mongotop` in a quiet mode that attempts to limit the amount of output."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-quiet.rst:6
+# e460b11591e64312bf129246ee715f0b
+msgid "This option suppresses:"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-quiet.rst:8
+# 87947a05ba9845afa4a5cf01752ae1eb
+msgid "output from :term:`database commands <database command>`"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-quiet.rst:10
+# b02f45409881401c959d254776d14765
+msgid "replication activity"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-quiet.rst:12
+# a97558c40112474aabdacba52b872f65
+msgid "connection accepted events"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-quiet.rst:14
+# 027bb975b99b4b1f8b197114571ce53b
+msgid "connection closed events"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-version.rst:3
+# c30caa6c9b054e4085e2ce6a5588f045
+msgid "Returns the :program:`mongotop` release number."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-host.rst:3
+# ae58e77768fe418789bc659565cec029
+msgid "*Default*: localhost:27017"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-host.rst:5
+# 062f561fb851473e8528c09ada6b3c4c
+msgid "Specifies a resolvable hostname for the :program:`mongod` to which to connect. By default, the :program:`mongotop` attempts to connect to a MongoDB instance running on the localhost on port number ``27017``."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-host.rst:9
+# 7151c74649bb48ea9579ae77ae1b33a1
+msgid "To connect to a replica set, specify the :setting:`replica set name <~replication.replSetName>` and a seed list of set members. Use the following form:"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-host.rst:17
+# 8a67f93298114f2a905c3130118bca98
+msgid "You can always connect directly to a single MongoDB instance by specifying the host and port number directly."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-port.rst:3
+# 53bc18270008410c97f986a9c7416ff3
+msgid "*Default*: 27017"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-port.rst:5
+# 307689606d7e4f9bb79518c1b1aed479
+msgid "Specifies the TCP port on which the MongoDB instance listens for client connections."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-ipv6.rst:3
+# 7817227bb6ad4c778dda432331905ee3
+msgid "Enables IPv6 support and allows the :program:`mongotop` to connect to the MongoDB instance using an IPv6 network. All MongoDB programs and processes disable IPv6 support by default."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-ssl.rst:5
+# 372426d3a9d545a58da23cb8484397c5
+msgid "Enables connection to a :program:`mongod` or :program:`mongos` that has SSL support enabled."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-ssl.rst:8
+#: ../source/includes/option/option-mongotop-sslCAFile.rst:9
+#: ../source/includes/option/option-mongotop-sslPEMKeyFile.rst:14
+#: ../source/includes/option/option-mongotop-sslPEMKeyPassword.rst:14
+#: ../source/includes/option/option-mongotop-sslCRLFile.rst:9
+#: ../source/includes/option/option-mongotop-sslAllowInvalidCertificates.rst:10
+#: ../source/includes/option/option-mongotop-sslFIPSMode.rst:9
+# ff97d0ea15cb4b84a549bab00fa18830
+# 586b3690fbee4dfaab1c0687b6c2b06b
+# 720080c87c164a62bdb5a4f4ce23f02d
+# 08b97e846a094b3898a251601ba11ccd
+# 5c3aa6f6ea004f94ba2615bc7d16d23c
+# 62c5599ac6a34a4eaae09dd8da780b5b
+# 4e39b4a59f4148feb024d76bdb2c7d22
+msgid "The default distribution of MongoDB does not contain support for SSL. For more information on MongoDB and SSL, see :doc:`/tutorial/configure-ssl`."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-sslCAFile.rst:5
+# 07fef376ac2145498c8920cb5133ecb2
+msgid "Specifies the :file:`.pem` file that contains the root certificate chain from the Certificate Authority. Specify the file name of the :file:`.pem` file using relative or absolute paths."
+msgstr ""
+
+#: ../source/includes/warning-always-use-sslCAFile-for-mongo.rst:3
+# 51b4342fc2ca41419c579091a55bcb29
+msgid "If the :program:`mongo` shell or any other tool that connects to :program:`mongos` or :program:`mongod` is run without :option:`--sslCAFile <mongod --sslCAFile>`, it will not attempt to validate server certificates. This results in vulnerability to expired :program:`mongod` and :program:`mongos` certificates as well as to foreign processes posing as valid :program:`mongod` or :program:`mongos` instances. Ensure that you *always* specify the CA file against which server certificates should be validated in cases where intrusion is a possibility."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-sslPEMKeyFile.rst:5
+# a0f716a92b6a4558be67c46a444410b5
+msgid "Specifies the :file:`.pem` file that contains both the SSL certificate and key. Specify the file name of the :file:`.pem` file using relative or absolute paths."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-sslPEMKeyFile.rst:9
+# 01f7c4bdb79e4a4a8b8501eb10bd503d
+msgid "This option is required when using the :option:`--ssl` option to connect to a :program:`mongod` or :program:`mongos` that has :setting:`~net.ssl.CAFile` enabled *without* :setting:`~net.ssl.weakCertificateValidation`."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-sslPEMKeyPassword.rst:5
+# 5f12979b1bb441049cc505d5e8f56fe3
+msgid "Specifies the password to de-crypt the certificate-key file (i.e. :option:`--sslPEMKeyFile`). Use the :option:`--sslPEMKeyPassword` option only if the certificate-key file is encrypted. In all cases, the :program:`mongotop` will redact the password from all logging and reporting output."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-sslPEMKeyPassword.rst:10
+# acb1e8c7746a47a8ac51ff1cdc823aa6
+msgid "If the private key in the PEM file is encrypted and you do not specify the :option:`--sslPEMKeyPassword` option, the :program:`mongotop` will prompt for a passphrase. See :ref:`ssl-certificate-password`."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-sslCRLFile.rst:5
+# c973aeb577774f428dd9bbd85a336be7
+msgid "Specifies the :file:`.pem` file that contains the Certificate Revocation List. Specify the file name of the :file:`.pem` file using relative or absolute paths."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-sslAllowInvalidCertificates.rst:5
+# 26ca2394f8b243bc85e0e58688d00cb3
+msgid "Bypasses the validation checks for server certificates and allows the use of invalid certificates. When using the :setting:`~net.ssl.allowInvalidCertificates` setting, MongoDB logs as a warning the use of the invalid certificate."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-sslFIPSMode.rst:5
+# f5e33d1b322e431eb2703eb96e4e12c1
+msgid "Directs the :program:`mongotop` to use the FIPS mode of the installed OpenSSL library. Your system must have a FIPS compliant OpenSSL library to use the :option:`--sslFIPSMode` option."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-username.rst:3
+# 9544891e5c444c1dbccd8ab7d4f91b54
+msgid "Specifies a username with which to authenticate to a MongoDB database that uses authentication. Use in conjunction with the ``--password`` and ``--authenticationDatabase`` options."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-password.rst:3
+# f666c8005c4a4be28a5432cfa2bae3c4
+msgid "Specifies a password with which to authenticate to a MongoDB database that uses authentication. Use in conjunction with the ``--username`` and ``--authenticationDatabase`` options."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationDatabase.rst:5
+# 0a226a55436b49cb83eeeef123cbfd70
+msgid "Specifies the database that holds the user's credentials. If you do not specify an authentication database, the :program:`mongotop` assumes that the database specified as the argument to the :option:`--db` option holds the user's credentials."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:3
+# 4c51c988f99b4ad4b2f051ba3b916edd
+msgid "*Default*: MONGODB-CR"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:7
+# 15a038a7b4a044869c9e05ee64e94363
+msgid "Added support for the ``PLAIN`` and ``MONGODB-X509`` authentication mechanisms."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:11
+# 1d035e43d989432d96f2510fefaaf9f0
+msgid "Specifies the authentication mechanism the :program:`mongotop` instance uses to authenticate to the :program:`mongod` or :program:`mongos`."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:18
+# 7794ac76f44848e39d9b4fe2b5d201e8
+msgid "Value"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:20
+# 17f36cfc4ac64b7c8932ba1101510b77
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:22
+# 8c803452094a48b3aba69191cf1a2c77
+msgid "MONGODB-CR"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:24
+# 710e1d19dc3f4c01b5433c2394a698df
+msgid "MongoDB challenge/response authentication."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:26
+# fbb419f5b2ac4f3ca4f87da841e8c60e
+msgid "MONGODB-X509"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:28
+# e562b6023b92430484c77bc31492f8b8
+msgid "MongoDB SSL certificate authentication."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:30
+# 523c7383a58c4c9389e3eac3ad1f4391
+msgid "PLAIN"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:32
+# 104df1c3184349a3ba4d29eb15adcf8b
+msgid "External authentication using LDAP. You can also use ``PLAIN`` for authenticating in-database users. ``PLAIN`` transmits passwords in plain text. This mechanism is available only in `MongoDB Enterprise <http://www.mongodb.com/products/mongodb-enterprise>`_."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:38
+# aee1dc809ae045388e66feca7c5de702
+msgid "GSSAPI"
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-authenticationMechanism.rst:40
+# 1f888b309d4f4783b0923b7118751239
+msgid "External authentication using Kerberos. This mechanism is available only in `MongoDB Enterprise <http://www.mongodb.com/products/mongodb-enterprise>`_."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-locks.rst:3
+# 2f563380b2d645a98d42a9b3f191af94
+msgid "Toggles the mode of :program:`mongotop` to report on use of per-database :ref:`locks <locks>`. These data are useful for measuring concurrent operations and lock percentage."
+msgstr ""
+
+#: ../source/includes/option/option-mongotop-<sleeptime>.rst:3
+# e83b28246a2a4c1aaf43674039015907
+msgid "The final argument is the length of time, in seconds, that :program:`mongotop` waits in between calls. By default :program:`mongotop` returns data every second."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:97
+# 6016328ce0d3463aa5d1f60ef7ae4a67
+msgid "Fields"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:99
+# 90ac7bd4d382463b859286995d85030a
+msgid ":program:`mongotop` returns time values specified in milliseconds (ms.)"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:102
+# e7b2d793eac444a49305700f7c5a0ac6
+msgid ":program:`mongotop` only reports active namespaces or databases, depending on the :option:`--locks` option. If you don't see a database or collection, it has received no recent activity. You can issue a simple operation in the :program:`mongo` shell to generate activity to affect the output of :program:`mongotop`."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:110
+# 467b1050d4474d159ad386dd44927745
+msgid "Contains the database namespace, which combines the database name and collection."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:113
+# e8f598db62dd45c389856864a88ddc7f
+msgid "If you use the :option:`--locks`, the :data:`~mongotop.ns` field does not appear in the :program:`mongotop` output."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:121
+# 2875b4e7f35b416aaf251a0ebd309cee
+msgid "Contains the name of the database. The database named ``.`` refers to the global lock, rather than a specific database."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:124
+# c95ab18d6680471888ee7a3f1e585cb1
+msgid "This field does not appear unless you have invoked :program:`mongotop` with the :option:`--locks` option."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:129
+# fb1c789d255c43ca8dcd3530a509eceb
+msgid "Provides the total amount of time that this :program:`mongod` spent operating on this namespace."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:134
+# 34c6e4c271894b1792b691fc9a068bda
+msgid "Provides the amount of time that this :program:`mongod` spent performing read operations on this namespace."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:139
+# 33c52df874c145d28ee135970eb3f3e3
+msgid "Provides the amount of time that this :program:`mongod` spent performing write operations on this namespace."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:144
+# fc7415b9f6d54bb2899d015905727e51
+msgid "Provides a time stamp for the returned data."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:147
+# d45cd2b4250349fd83495fc1eb9957e5
+msgid "Use"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:149
+# 312966f77bb041bab3e9d9d3e8844c4f
+msgid "By default :program:`mongotop` connects to the MongoDB instance running on the localhost port ``27017``. However, :program:`mongotop` can optionally connect to remote :program:`mongod` instances. See the :ref:`mongotop options <mongotop-options>` for more information."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:155
+# f1a998c90fbd42eb8dd2deeb7db9916c
+msgid "To force :program:`mongotop` to return less frequently specify a number, in seconds at the end of the command. In this example, :program:`mongotop` will return every 15 seconds."
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:163
+# 9d5e49d972fe43efa43996e1e5e975cc
+msgid "This command produces the following output:"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:184
+# b175417db7c7439b97c63a89be90e703
+msgid "To return a :program:`mongotop` report every 5 minutes, use the following command:"
+msgstr ""
+
+#: ../source/reference/program/mongotop.txt:191
+# 6889b63790ee43f5b822dfbb7e669f19
+msgid "To report the use of per-database locks, use :option:`mongotop --locks`, which produces the following output:"
+msgstr ""
+

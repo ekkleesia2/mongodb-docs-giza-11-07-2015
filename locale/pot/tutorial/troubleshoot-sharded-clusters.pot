@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:3
+# 78d18af670a04d69b8916cf075089e9b
+msgid "Troubleshoot Sharded Clusters"
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:7
+# 0a3b3a988df84f27882e8c03de6cdac9
+msgid "This section describes common strategies for troubleshooting :term:`sharded cluster` deployments."
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:13
+# 0c0ce6cdf5954ab69032b8c88f9b83dd
+msgid "Config Database String Error"
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:17
+# 750e1139cf5144c699c7aaa2a8fbe2f5
+msgid "Start all :program:`mongos` instances in a sharded cluster with an identical :setting:`~sharding.configDB` string. If a :program:`mongos` instance tries to connect to the sharded cluster with a :setting:`~sharding.configDB` string that does not *exactly* match the string used by the other :program:`mongos` instances, including the order of the hosts, the following errors occur:"
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:27
+# e618b8b65de84d61a83c9b82bd1dc5c1
+msgid "And:"
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:33
+# e3cd62ed665944c3ba989daa900af6de
+msgid "To solve the issue, restart the :program:`mongos` with the correct string."
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:37
+# 2451cb0eec4a4726ad3512fb26e3c7e9
+msgid "Cursor Fails Because of Stale Config Data"
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:41
+# 028a22305f3e44c4a2f6232ff5104510
+msgid "A query returns the following warning when one or more of the :program:`mongos` instances has not yet updated its cache of the cluster's metadata from the :term:`config database`:"
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:49
+# c83345f1ac5346349686e5b54810d59b
+msgid "This warning *should* not propagate back to your application. The warning will repeat until all the :program:`mongos` instances refresh their caches. To force an instance to refresh its cache, run the :dbcommand:`flushRouterConfig` command."
+msgstr ""
+
+#: ../source/tutorial/troubleshoot-sharded-clusters.txt:55
+# 750a94c0337d401b8fb617b72683d762
+msgid "Avoid Downtime when Moving Config Servers"
+msgstr ""
+
+#: ../source/includes/fact-use-cnames-for-config-servers.rst:1
+# b0242a931e364c0094810278e1d8f375
+msgid "Use CNAMEs to identify your config servers to the cluster so that you can rename and renumber your config servers without downtime."
+msgstr ""
+

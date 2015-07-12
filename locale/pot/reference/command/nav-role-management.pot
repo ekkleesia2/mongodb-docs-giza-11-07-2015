@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/nav-role-management.txt:3
+# 39e56fe329da479796fab30c35e2205b
+msgid "Role Management Commands"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:2
+# edb3f9f484ad4dc2965fa1e835fc6788
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:2
+# 0d6df70e45f84812adae7b71a3be54de
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:4
+# ca7555c93c8f43498dc4006d4c06a2e7
+msgid ":dbcommand:`createRole`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:4
+# a9cd075f10dd46989cd7c8f0eac68c24
+msgid "Creates a role and specifies its privileges."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:6
+# 5b24115363a54506b71dbd9ec0a67b50
+msgid ":dbcommand:`updateRole`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:6
+# d73f3bdfa77a4319bcaf83291e49c65a
+msgid "Updates a user-defined role."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:8
+# 5d31075ecba64e06a903db149df30446
+msgid ":dbcommand:`dropRole`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:8
+# 55f98093ccf44f3980fa13f810a9d6b6
+msgid "Deletes the user-defined role."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:10
+# 9b6b5845f86245679c55db0e23af8602
+msgid ":dbcommand:`dropAllRolesFromDatabase`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:10
+# 2099a75a7b5d480296ff0050e60b6e25
+msgid "Deletes all user-defined roles from a database."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:12
+# 8ffbd95d02d24970b6646559fc0d8558
+msgid ":dbcommand:`grantPrivilegesToRole`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:12
+# 2ee9e7cd5d4a430cb5b7f0ff9fd4fa28
+msgid "Assigns privileges to a user-defined role."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:14
+# 75e8b9eac0384537bc73f327b6b75bed
+msgid ":dbcommand:`revokePrivilegesFromRole`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:14
+# afb9335a1fba47678cd043b34f5f2482
+msgid "Removes the specified privileges from a user-defined role."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:16
+# c3cc2921cbd145a68fc1028fa8939729
+msgid ":dbcommand:`grantRolesToRole`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:16
+# 3892954afb8f44ca8815e43ceb386986
+msgid "Specifies roles from which a user-defined role inherits privileges."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:18
+# 403dd772a531443aafc63858ff9f30dc
+msgid ":dbcommand:`revokeRolesFromRole`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:18
+# 762f12615f954a0dacb79d1615694664
+msgid "Removes specified inherited roles from a user-defined role."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:20
+# d2cea7974f50403f907ac60a10f17463
+msgid ":dbcommand:`rolesInfo`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:20
+# 1b261f3e091846a6b2c8f685c2d7f57f
+msgid "Returns information for the specified role or roles."
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:22
+# a7dd20d669ce460f979dbc121b9e98f2
+msgid ":dbcommand:`invalidateUserCache`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-role-management.rst:22
+# da0ecb9be7504068a34bdb96910e7025
+msgid "Flushes the in-memory cache of user information, including credentials and roles."
+msgstr ""
+

@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/deploy-config-servers.txt:3
+# 99547022ea744d0bb8d82889f9ef8946
+msgid "Deploy Three Config Servers for Production Deployments"
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:7
+# 6b5ab6e04f6f47f5964dc6e20645892e
+msgid "This procedure converts a test deployment with only one :ref:`config server <sharding-config-server>` to a production deployment with three config servers."
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:0
+# e2ae5f55933b4135bba43990c98fe273
+msgid "Tip"
+msgstr ""
+
+#: ../source/includes/fact-use-cnames-for-config-servers.rst:1
+# cd8dbc8c18154d3983b12e39b6e19bbc
+msgid "Use CNAMEs to identify your config servers to the cluster so that you can rename and renumber your config servers without downtime."
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:15
+# 50377e0ff76e4ac0900d8b951a27a6fc
+msgid "For redundancy, all production :doc:`sharded clusters </core/sharding-introduction>` should deploy three config servers on three different machines. Use a single config server only for testing deployments, never for production deployments. When you shift to production, upgrade immediately to three config servers."
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:21
+# 30613e360e06468c9cb4c5cd6236ff6a
+msgid "To convert a test deployment with one config server to a production deployment with three config servers:"
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:24
+# 0e448cef983249f0b94caea7e7e82d51
+msgid "Shut down all existing MongoDB processes in the cluster. This includes:"
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:27
+# 348d5a119b2b46f7a38146df2f0a8ead
+msgid "all :program:`mongod` instances or :term:`replica sets <replica set>` that provide your shards."
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:30
+# 1c1ad8b78e34485b8abb715a984ae781
+msgid "all :program:`mongos` instances in your cluster."
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:32
+# 93f45208d90740e3a0bd75e204cca9e8
+msgid "Copy the entire :setting:`~storage.dbPath` file system tree from the existing config server to the two machines that will provide the additional config servers. These commands, issued on the system with the existing :ref:`config-database`, ``mongo-config0.example.net`` may resemble the following:"
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:43
+# b61a3d5919a841fd9d8c8ff418b034f9
+msgid "Start all three config servers, using the same invocation that you used for the single config server."
+msgstr ""
+
+#: ../source/tutorial/deploy-config-servers.txt:50
+# 494b8927263b4d2298a481d49d9190be
+msgid "Restart all shard :program:`mongod` and :program:`mongos` processes."
+msgstr ""
+

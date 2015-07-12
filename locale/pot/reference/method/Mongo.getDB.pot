@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/Mongo.getDB.txt:3
+# bb4f1f4cec6043acb84615292ff65ec8
+msgid "Mongo.getDB()"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getDB.txt:8
+# 1b783b50995a45e1ba2c1ec5c94b26cd
+msgid "Description"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getDB.txt:12
+# 8747cc1ac8254b798f3557f6390ce954
+msgid "Provides access to database objects from the :program:`mongo` shell or from a JavaScript file."
+msgstr ""
+
+#: ../source/reference/method/Mongo.getDB.txt:15
+# abce3cb79d624392a5e9044c65b63642
+msgid "The :method:`Mongo.getDB()` method has the following parameter:"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getDB.txt:20
+# 7fbe63b651294f0e9ecaff06e237b8d0
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getDB.txt:22
+# c5f9aa491180466e839b5f0a80e6112f
+msgid "The following example instantiates a new connection to the MongoDB instance running on the localhost interface and returns a reference to ``\"myDatabase\"``:"
+msgstr ""
+
+#: ../source/reference/method/Mongo.getDB.txt:30
+# 183367ddd206453db44e20c8e2a8b06f
+msgid ":method:`Mongo()` and :doc:`/reference/method/connect`"
+msgstr ""
+

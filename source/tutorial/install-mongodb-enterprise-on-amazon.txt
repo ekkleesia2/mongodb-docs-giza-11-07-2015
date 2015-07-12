@@ -1,0 +1,41 @@
+==============================================
+Install MongoDB Enterprise on Amazon Linux AMI
+==============================================
+
+.. default-domain:: mongodb
+
+Overview
+--------
+
+Use this tutorial to install :products:`MongoDB Enterprise
+</mongodb-enterprise-advanced?jmp=docs>` on Amazon Linux
+AMI. MongoDB Enterprise is available on select platforms and contains
+support for several features related to security and monitoring.
+
+.. include:: /includes/fact-installation-64bit.rst
+
+Prerequisites
+-------------
+To install all of MongoDB's dependencies, run the following command:
+
+.. include:: /includes/fact-redhat-7-dependencies.rst
+
+Install MongoDB Enterprise
+--------------------------
+
+.. note::
+
+   The Enterprise packages include an example SNMP configuration file
+   named ``mongod.conf``. This file is not a MongoDB configuration file.
+
+.. include:: /includes/steps/install-mongodb-enterprise-on-amazon.rst
+
+Run MongoDB Enterprise
+----------------------
+
+.. |mongod-user| replace:: ``mongod``
+.. |mongod-datadir| replace:: ``/data/db``
+
+.. include:: /includes/fact-installation-directories.rst
+
+.. include:: /includes/steps/run-mongodb-on-linux.rst

@@ -1,0 +1,16 @@
+.. index:: sharded clusters
+.. _sharding-sharded-cluster:
+
+=========================
+Sharded Cluster Tutorials
+=========================
+
+.. default-domain:: mongodb
+
+The following tutorials provide instructions for administering
+:term:`sharded clusters <sharded cluster>`. For a higher-level
+overview, see :doc:`/sharding`.
+
+.. include:: /includes/toc/dfn-list-spec-sharded-cluster-tutorials-landing.rst
+
+.. include:: /includes/toc/sharded-cluster-tutorials-landing.rst

@@ -1,0 +1,110 @@
+====================
+``2dsphere`` Indexes
+====================
+
+.. default-domain:: mongodb
+
+.. versionadded:: 2.4
+
+Overview
+--------
+
+A ``2dsphere`` index supports queries that calculate geometries on an
+earth-like sphere. ``2dsphere`` index supports all MongoDB geospatial
+queries: queries for inclusion, intersection and proximity. See the
+:doc:`/reference/operator/query-geospatial` for the query operators
+that support geospatial queries.
+
+The ``2dsphere`` index supports data stored as :doc:`GeoJSON
+</reference/geojson>` objects and as legacy coordinate pairs (See also
+:ref:`2dsphere-data-restrictions`). For legacy coordinate pairs, the
+index converts the data to GeoJSON :ref:`geojson-point`. For details on
+the supported GeoJSON objects, see :doc:`/reference/geojson`.
+
+The default datum for an earth-like sphere is :term:`WGS84`.
+Coordinate-axis order is **longitude, latitude**.
+
+.. _2dsphere-v2:
+
+``2dsphere (Version 2)``
+------------------------
+
+.. versionchanged:: 2.6
+
+MongoDB 2.6 introduces a version 2 of ``2dsphere`` indexes. Version 2
+is the default version of ``2dsphere`` indexes created in MongoDB 2.6
+and later series. To override the default version 2 and create a
+version 1 index, include the option ``{ "2dsphereIndexVersion": 1 }``
+when creating the index.
+
+``sparse`` Property
+~~~~~~~~~~~~~~~~~~~
+
+.. versionchanged:: 2.6
+
+``2dsphere (Version 2)`` indexes are :doc:`sparse </core/index-sparse>`
+by default and ignores the :doc:`sparse: true </core/index-sparse>`
+option. If a document lacks a ``2dsphere`` index field (or the field is
+``null`` or an empty array), MongoDB does not add an entry for the
+document to the index. For inserts, MongoDB inserts the document but
+does not add to the ``2dsphere`` index.
+
+For a compound index that includes a ``2dsphere`` index key along with
+keys of other types, only the ``2dsphere`` index field determines
+whether the index references a document.
+
+Earlier versions of MongoDB only support ``2dsphere (Version 1)``
+indexes. ``2dsphere (Version 1)`` indexes are *not* sparse by default
+and will reject documents with ``null`` location fields.
+
+Additional GeoJSON Objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``2dsphere (Version 2)`` includes support for additional GeoJSON
+object: :ref:`geojson-multipoint`, :ref:`geojson-multilinestring`,
+:ref:`geojson-multipolygon`, and :ref:`geojson-geometrycollection`. For
+details on all supported GeoJSON objects, see :doc:`/reference/geojson`.
+
+Considerations
+--------------
+
+``geoNear`` and ``$geoNear`` Restrictions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. |first-geo-index| replace:: ``2dsphere`` index
+.. |second-geo-index| replace:: :doc:`2d </core/2d>` index
+.. include:: /includes/fact-limitation-one-geo-index-per-collection.rst
+
+Shard Key Restrictions
+~~~~~~~~~~~~~~~~~~~~~~
+
+You cannot use a ``2dsphere`` index as a shard key when sharding a
+collection. However, you can create and maintain a geospatial index on
+a sharded collection by using a different field as the shard key.
+
+.. _2dsphere-data-restrictions:
+
+``2dsphere`` Indexed Field Restrictions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/geo-data-limit-for-2dsphere.rst
+
+Create a ``2dsphere`` Index
+---------------------------
+
+To create a ``2dsphere`` index, use the
+:method:`db.collection.createIndex()` method, specifying the location
+field as the key and specify the string literal ``"2dsphere"`` as the
+index type:
+
+.. code-block:: javascript
+
+   db.collection.createIndex( { <location field> : "2dsphere" } )
+
+Unlike a compound :doc:`2d </core/2d>` index which can reference one
+location field and one other field, a :ref:`compound
+<index-type-compound>` ``2dsphere`` index can reference multiple
+location and non-location fields.
+
+For more information on creating ``2dspshere`` indexes, see
+:doc:`/tutorial/build-a-2dsphere-index`.

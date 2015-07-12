@@ -1,0 +1,19 @@
+==================
+db.getCollection()
+==================
+
+.. default-domain:: mongodb
+
+Description
+-----------
+
+.. method:: db.getCollection(name)
+
+   Returns a collection name. This is useful for a collection whose name
+   might interact with the shell itself, such names that begin with
+   ``_`` or that mirror the :doc:`database commands
+   </reference/command>`.
+
+   The :method:`db.getCollection()` method has the following parameter:
+
+   .. include:: /includes/apiargs/method-db.getCollection-param.rst

@@ -1,0 +1,16 @@
+===========
+replSetTest
+===========
+
+.. default-domain:: mongodb
+
+.. dbcommand:: replSetTest
+
+   :dbcommand:`replSetTest` is internal diagnostic command used for regression
+   tests that supports replica set functionality.
+
+   .. |dbcommand| replace:: :dbcommand:`replSetTest`
+   .. include:: /includes/note-enabletestcommands.rst
+
+
+   .. slave-ok, admin-only

@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/aggregation-commands-comparison.txt:3
+# 8c034c8988cc4dc09c03c9e45d21efca
+msgid "Aggregation Commands Comparison"
+msgstr ""
+
+#: ../source/reference/aggregation-commands-comparison.txt:7
+# 9c64421114544439b9bd391537d5f102
+msgid "The following table provides a brief overview of the features of the MongoDB aggregation commands."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:6
+# fd437f49b26a4dfca711a41cbb54ceee
+msgid ":dbcommand:`aggregate`"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:8
+# 67c0c8c3eb854eec9180a6b48ccfe19b
+msgid ":dbcommand:`mapReduce`"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:10
+# 5f4052f6296c42e0aa9afe7b045fe8b2
+msgid ":dbcommand:`group`"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:12
+# cc13e4e996ba41ab81d6b158e3acd008
+msgid "**Description**"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:16
+# 63b58ba9e5c54a568f1ec75333b620a1
+msgid "Designed with specific goals of improving performance and usability for aggregation tasks."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:19
+# a20ff718cdea4eeb9bcb177da660d634
+msgid "Uses a \"pipeline\" approach where objects are transformed as they pass through a series of pipeline operators such as :pipeline:`$group`,  :pipeline:`$match`, and :pipeline:`$sort`."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:23
+# 3d688c1a7c9545b7af15d716dedbb6bd
+msgid "See :doc:`/reference/operator/aggregation` for more information on the pipeline operators."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:27
+# cce0456c7e6740838636bb6aaa61a4d4
+msgid "Implements the Map-Reduce aggregation for processing large data sets."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:30
+# 1aca187c68a246a7b621b0901a6c163d
+msgid "Provides grouping functionality."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:32
+# c3c7656211cc4c7397300ba5b3ac9960
+msgid "Is slower than the :dbcommand:`aggregate` command and has less functionality than the :dbcommand:`mapReduce` command."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:36
+# e37fdec96114472a81be1c09c4b7daa2
+msgid "**Key Features**"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:38
+# 83ee4c07244c4de885b610a7426b6d7d
+msgid "Pipeline operators can be repeated as needed."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:40
+# bf83d584c7994950b248f4ea3cf1423b
+msgid "Pipeline operators need not produce one output document for every input document."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:43
+# 64a7e83b334349438ebeb06f05995dcf
+msgid "Can also generate new documents or filter out documents."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:46
+# bbff69f0252c4363b71a22e4e5c26210
+msgid "In addition to grouping operations, can perform complex aggregation tasks as well as perform incremental aggregation on continuously growing datasets."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:50
+# 7be0d4a450474d21a62bff5d85cbaff8
+msgid "See :doc:`/tutorial/map-reduce-examples/` and :doc:`/tutorial/perform-incremental-map-reduce/`."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:54
+# c4af0395c73c44e59f55b99dc2345579
+msgid "Can either group by existing fields or with a custom ``keyf`` JavaScript function, can group by calculated fields."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:57
+# 1db20f61c7834dc4a4ca150d5d9fb2b2
+msgid "See :dbcommand:`group` for information and example using the ``keyf`` function."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:61
+# 0c58d5170d95498ebe0c088ffea7e8f5
+msgid "**Flexibility**"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:63
+# bf0f0648f75d4a4fb2eaab7606d3c189
+msgid "Limited to the operators and expressions supported by the aggregation pipeline."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:66
+# 044264f846934de39f8aeec3cde531ac
+msgid "However, can add computed fields, create new virtual sub-objects, and extract sub-fields into the top-level of results by using the :pipeline:`$project` pipeline operator."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:70
+# 411e215dae9d46b5b48e9825148dc9cd
+msgid "See :pipeline:`$project` for more information as well as :doc:`/reference/operator/aggregation` for more information on all the available pipeline operators."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:75
+# 3285b89567614dc989a17623c0c2e29e
+msgid "Custom ``map``, ``reduce`` and ``finalize`` JavaScript functions offer flexibility to aggregation logic."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:78
+# 0d65095426f44d88aa8149e7aadbe554
+msgid "See :dbcommand:`mapReduce` for details and restrictions on the functions."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:82
+# e771273c87d343848b5f5b5edd7e537c
+msgid "Custom ``reduce`` and ``finalize`` JavaScript functions offer flexibility to grouping logic."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:85
+# da5f4bfa7b3f49adac6dc77e4868dfa4
+msgid "See :dbcommand:`group` for details and restrictions on these functions."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:89
+# 89eb106c147b4682ace35586df686b89
+msgid "**Output Results**"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:91
+# d71dab9aeeeb439393f5580fcb7aa260
+msgid "Returns results in various options (inline as a document that contains the result set, a cursor to the result set) or stores the results in a collection."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:95
+# 7209df3781414a94b840832910ad95bc
+msgid "The result is subject to the :ref:`BSON Document size <limit-bson-document-size>` limit if returned inline as a document that contains the result set."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:101
+# bf2420d149294b7ca9aa7de6c81cf78b
+msgid "Can return results as a cursor or store the results to a collection."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:105
+# 869fa9f723164ca7928dd6ffd5cdc18b
+msgid "Returns results in various options (inline, new collection, merge, replace, reduce). See :dbcommand:`mapReduce` for details on the output options."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:109
+# d07fc1e71201441cb585ca74ddb1f1a5
+msgid "Provides much better support for sharded map-reduce output than previous versions."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:114
+# 18a01fe01a9647cf8dffbc7ff1d582f2
+msgid "Returns results inline as an array of grouped items."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:116
+# db95e47a057e4a89b8466d8a238ebc31
+msgid "The result set must fit within the :ref:`maximum BSON document size limit <limit-bson-document-size>`."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:119
+# 57b471e2278e4598aced04c230f1b09b
+msgid "The returned array can contain at most 20,000 elements; i.e. at most 20,000 unique groupings. Previous versions had a limit of 10,000 elements."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:125
+# 3ed1cfd4c2884fd9b3ba34977bf673e8
+msgid "**Sharding**"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:127
+#: ../source/includes/table/aggregation-xref.rst:129
+# 0a8a81a3656c455b9542a7b0e88eff36
+# b85225baf8824952813f27d431550d60
+msgid "Supports non-sharded and sharded input collections."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:131
+# 4ea2d62e33d94cabb8e2245c3a18ec57
+msgid "Does **not** support sharded collection."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:134
+# 3c2a6e4078124ffb914526cf62bc701c
+msgid "**Notes**"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:138
+#: ../source/includes/table/aggregation-xref.rst:141
+# 1efb7ab71a5246bbb8be65245f74e6a4
+# eb1d745891fb41a7afb7d1465327f3ea
+msgid "Prior to 2.4, JavaScript code executed in a single thread."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:144
+# 816b6286961d404380793a1c15ea7bf2
+msgid "**More Information**"
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:146
+# 0e002397ee784ce1b46d9ee29b492ffc
+msgid "See :doc:`/core/aggregation-pipeline` and :dbcommand:`aggregate`."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:149
+# 01fb07ca3b894908827e927bbfa519f0
+msgid "See :doc:`/core/map-reduce` and :dbcommand:`mapReduce`."
+msgstr ""
+
+#: ../source/includes/table/aggregation-xref.rst:152
+# f6f12a6429244556a99006c72d755c1f
+msgid "See :dbcommand:`group`."
+msgstr ""
+

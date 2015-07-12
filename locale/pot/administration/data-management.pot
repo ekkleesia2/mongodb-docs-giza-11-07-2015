@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/administration/data-management.txt:3
+# bc5c3d22d6dd44cab62ee0d4f8b608a1
+msgid "Data Management"
+msgstr ""
+
+#: ../source/administration/data-management.txt:7
+# ff3e8d48aa0e421ba95c67ae71c04313
+msgid "These document introduce data management practices and strategies for MongoDB deployments, including strategies for managing multi-data center deployments, managing larger file stores, and data lifecycle tools."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-data-management.rst:8
+# 8c556b0f834743c99dd94a843dcf8156
+msgid ":doc:`/data-center-awareness`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-data-management.rst:4
+# dfc27f0751d3496ea3a5ce6cbdab5a05
+msgid "Presents the MongoDB features that allow application developers and database administrators to configure their deployments to be more data center aware or allow operational and location-based separation."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-data-management.rst:14
+# 962f99952e16428eb4f0af913db2cc27
+msgid ":doc:`/core/capped-collections`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-data-management.rst:11
+# bc27c71438e74a159313e64187fcf23e
+msgid "Capped collections provide a special type of size-constrained collections that preserve insertion order and can support high volume inserts."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-data-management.rst:19
+# 1aa16abe67d1403a81f16b14743a7e6f
+msgid ":doc:`/tutorial/expire-data`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-data-management.rst:17
+# ae2b2376404c4bfa8b2f68c8f1d46951
+msgid "TTL collections make it possible to automatically remove data from a collection based on the value of a timestamp and are useful for managing data like machine generated event data that are only useful for a limited period of time."
+msgstr ""
+

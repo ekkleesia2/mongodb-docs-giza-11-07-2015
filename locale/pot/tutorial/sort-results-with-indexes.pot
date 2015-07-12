@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/sort-results-with-indexes.txt:6
+# 11abcc503c42441ea8c5d0f374f1c058
+msgid "Use Indexes to Sort Query Results"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:10
+# 780fe7ab202e4bf88be5a4cbe4339252
+msgid "In MongoDB, sort operations can obtain the sort order by retrieving documents based on the ordering in an index. If the query planner cannot obtain the sort order from an index, it will sort the results in memory. Sort operations that use an index often have better performance than those that do not use an index. In addition, sort operations that do *not* use an index will abort when they use 32 megabytes of memory."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:18
+# 6065974e838842b296a761664f855e71
+msgid "Sort with a Single Field Index"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:20
+# 2fd107717c1c4e6f873aa72f488563c8
+msgid "If an ascending or a descending index is on a single field, the sort operation on the field can be in either direction."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:23
+# 719dbf3f2ae14cfebf646cdfbc9999a2
+msgid "For example, create an ascending index on the field ``a`` for a collection ``records``:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:30
+# f1fccbde32e34406bdc704387ff59b55
+msgid "This index can support an ascending sort on ``a``:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:36
+# 2da4cfbfd8924f758c1fb127138ad671
+msgid "The index can also support the following descending sort on ``a`` by traversing the index in reverse order:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:44
+# cf43d917d5bc475987803d0f46388a6d
+msgid "Sort on Multiple Fields"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:46
+# e11977e9031947a49d42321c56643fb6
+msgid "Create a :ref:`compound index <index-type-compound>` to support sorting on multiple fields."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:49
+# c3ebce8a423d49e0a9cc285aa34276f4
+msgid "You can specify a sort on all the keys of the index or on a subset; however, the sort keys must be listed in the *same order* as they appear in the index. For example, an index key pattern ``{ a: 1, b: 1 }`` can support a sort on ``{ a: 1, b: 1 }`` but *not* on ``{ b: 1, a: 1 }``."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:55
+# d17a1e9dc0f34596b7fcaf12bfb2708c
+msgid "The sort must specify the *same sort direction* (i.e.ascending/descending) for all its keys as the index key pattern or specify the *reverse sort direction* for all its keys as the index key pattern. For example, an index key pattern ``{ a: 1, b: 1 }`` can support a sort on ``{ a: 1, b: 1 }`` and ``{ a: -1, b: -1 }`` but *not* on ``{ a: -1, b: 1 }``."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:65
+# 0d715a1d4540431dba7d44f1384d5efb
+msgid "Sort and Index Prefix"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:67
+# 81f538621f1a4fa5a778cbaf8d41d68f
+msgid "If the sort keys correspond to the index keys or an index *prefix*, MongoDB can use the index to sort the query results. A *prefix* of a compound index is a subset that consists of one or more keys at the start of the index key pattern."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:72
+# 4a35cbf1296a42249c7f471a44bd03e4
+msgid "For example, create a compound index on the ``data`` collection:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:78
+# 238cc84354b545d09d63ac24f22072e4
+msgid "Then, the following are prefixes for that index:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:86
+# 1731b8d13a8a4b79b67b672a7d0aaca0
+msgid "The following query and sort operations use the index prefixes to sort the results. These operations do not need to sort the result set in memory."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:94
+#: ../source/tutorial/sort-results-with-indexes.txt:152
+# b34f1c24a24340698b1ca271b0efeef7
+# be9f51f5c11b4f53ba3595474c537510
+msgid "Example"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:96
+#: ../source/tutorial/sort-results-with-indexes.txt:154
+# 61512a1b8c474a31a68e2b79e3380f7c
+# d248307c75fe484798ee9d6245caf5e6
+msgid "Index Prefix"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:98
+# 320c4d05eec24051a2397e75de293d36
+msgid "``db.data.find().sort( { a: 1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:100
+#: ../source/tutorial/sort-results-with-indexes.txt:104
+# 0772cfa10fd345a3a430785705777d4a
+# 2abb6145903a4e38b4183841b8830c73
+msgid "``{ a: 1 }``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:102
+# 0703bad14bf34446af2c15245ecd3904
+msgid "``db.data.find().sort( { a: -1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:106
+# d66b48f1099c498dbad79a9d366b4625
+msgid "``db.data.find().sort( { a: 1, b: 1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:108
+#: ../source/tutorial/sort-results-with-indexes.txt:112
+#: ../source/tutorial/sort-results-with-indexes.txt:120
+#: ../source/tutorial/sort-results-with-indexes.txt:166
+# 8eb89dd19e3e4aefa62bbc30764d6635
+# 2ffba4d6101645c9ba2b43fff411e204
+# 0935f0e302e7411a98d36a9e020779e7
+# 94dd8eaf112e4f92bf0ebd7f49875e2e
+msgid "``{ a: 1, b: 1 }``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:110
+# c8e48ffeaaa6487497470c907b779395
+msgid "``db.data.find().sort( { a: -1, b: -1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:114
+# f2cde97ea42a46d089777c2802aae0ef
+msgid "``db.data.find().sort( { a: 1, b: 1, c: 1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:116
+#: ../source/tutorial/sort-results-with-indexes.txt:162
+# 3d0c521122fb439c8a4ebe6757926e8b
+# f4e326cbc0944793a9b1b438e149ad81
+msgid "``{ a: 1, b: 1, c: 1 }``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:118
+# 0fb635c8d29444d2ad556e4529ffee34
+msgid "``db.data.find( { a: { $gt: 4 } } ).sort( { a: 1, b: 1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:122
+# 6e9d59b6fa474dbbb4176b0e93191cea
+msgid "Consider the following example in which the prefix keys of the index appear in both the query predicate and the sort:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:129
+# 7033b7db529a480db0182c385c12b56c
+msgid "In such cases, MongoDB can use the index to retrieve the documents in order specified by the sort. As the example shows, the index prefix in the query predicate can be different from the prefix in the sort."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:134
+# e1c5a56b6ba34a9ab1e3bc2d8981b1c7
+msgid "Sort and Non-prefix Subset of an Index"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:136
+# 6c8b870674f74be294c5457f26be8db5
+msgid "An index can support sort operations on a non-prefix subset of the index key pattern. To do so, the query must include **equality** conditions on all the prefix keys that precede the sort keys."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:140
+# 1018202580a9474cb26483e3c4ec7ba5
+msgid "For example, the collection ``data`` has the following index:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:146
+# 72fea2fa7cb843eaaa0a0354d4b7a2cb
+msgid "The following operations can use the index to get the sort order:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:156
+# bab27260742d4d05ac48f8ad1bfcff89
+msgid "``db.data.find( { a: 5 } ).sort( { b: 1, c: 1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:158
+# a826a950ec014537a866443a72c458e3
+msgid "``{ a: 1 , b: 1, c: 1 }``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:160
+# 835810cc42b64f8fa9aad7c6bd281f1e
+msgid "``db.data.find( { b: 3, a: 4 } ).sort( { c: 1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:164
+# cc9d936a8986481aaddb83378d97e8f6
+msgid "``db.data.find( { a: 5, b: { $lt: 3} } ).sort( { b: 1 } )``"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:168
+# f70a1c810a4c45d3b37d428ad34ade25
+msgid "As the last operation shows, only the index fields *preceding* the sort subset must have the equality conditions in the query document; the other index fields may specify other conditions."
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:172
+# 481c55be00be41389049245e0cee8029
+msgid "If the query does **not** specify an equality conditions on an index prefix that precedes or overlaps with the sort specification, the operation will **not** efficiently use the index. For example, the following operations specify a sort document of ``{ c: 1 }``, but the query documents do not contain equality matches on the preceding index fields ``a`` and ``b``:"
+msgstr ""
+
+#: ../source/tutorial/sort-results-with-indexes.txt:184
+# 74f96448067d4334b3b3b7e69716ec7f
+msgid "These operations **will not** efficiently use the index ``{ a: 1, b: 1, c: 1, d: 1 }`` and may not even use the index to retrieve the documents."
+msgstr ""
+

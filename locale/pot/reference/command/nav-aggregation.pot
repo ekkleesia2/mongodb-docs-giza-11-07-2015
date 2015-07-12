@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/nav-aggregation.txt:3
+# c173795989c44ba9ad26336df7d86931
+msgid "Aggregation Commands"
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:2
+# 79f2f0c0965142cf999e3a157af5067e
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:2
+# 99cc2c1466da42ceb16917004b63a17e
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:4
+# 598ae4b177194bd69e1b9999fedb3026
+msgid ":dbcommand:`aggregate`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:4
+# 384321b12d0a4986ad4d53d1bde7ec92
+msgid "Performs :doc:`aggregation tasks </core/aggregation>` such as group using the aggregation framework."
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:6
+# 4e58febf68f243ba9f2633cbf012625c
+msgid ":dbcommand:`count`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:6
+# f1141666ba92401da191f02ccf03c1e8
+msgid "Counts the number of documents in a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:8
+# 0b863ff740c24ac5b457caba36e328d1
+msgid ":dbcommand:`distinct`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:8
+# 4b46fd1264ab49498921a2e4f800ff9f
+msgid "Displays the distinct values found for a specified key in a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:10
+# 6882d4c6ec924fb291efcaaef1c4a6b3
+msgid ":dbcommand:`group`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:10
+# ec2627e48f2f4d0a8977f4d46a121ccd
+msgid "Groups documents in a collection by the specified key and performs simple aggregation."
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:12
+# 2714b834d19c4d1aace15021958ba852
+msgid ":dbcommand:`mapReduce`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-aggregation.rst:12
+# 99ea1752bd19467583445d2c034a93fb
+msgid "Performs :doc:`map-reduce </core/map-reduce>` aggregation for large data sets."
+msgstr ""
+
+#: ../source/reference/command/nav-aggregation.txt:11
+# 13cba3e24d6747209597ebfa026e252a
+msgid "For a detailed comparison of the different approaches, see :doc:`/reference/aggregation-commands-comparison`."
+msgstr ""
+

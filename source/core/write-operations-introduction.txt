@@ -1,0 +1,239 @@
+.. index:: write operations
+.. index:: crud; write operations
+
+=========================
+Write Operations Overview
+=========================
+
+.. default-domain:: mongodb
+
+A write operation is any operation that creates or modifies data in the
+MongoDB instance. In MongoDB, write operations target a single
+:term:`collection`. All write operations in MongoDB are atomic on the
+level of a single :term:`document`.
+
+There are three classes of write operations in MongoDB: :ref:`insert
+<write-op-insert>`, :ref:`update <write-op-update>`, and :ref:`remove
+<write-op-remove>`. Insert operations add new data to a collection.
+Update operations modify existing data, and remove operations delete
+data from a collection. No insert, update, or remove can affect more
+than one document atomically.
+
+For the update and remove operations, you can specify criteria, or
+conditions, that identify the documents to update or remove. These
+operations use the same query syntax to specify the criteria as
+:doc:`read operations </core/read-operations>`.
+
+MongoDB allows applications to determine the acceptable level of
+acknowledgement required of write operations. See
+:doc:`/core/write-concern` for more information.
+
+.. _write-op-insert:
+
+Insert
+------
+
+In MongoDB, the :method:`db.collection.insert()` method adds new
+:term:`documents <document>` to a collection.
+
+The following diagram highlights the components of a MongoDB insert
+operation:
+
+.. include:: /images/crud-annotated-mongodb-insert.rst
+
+The following diagram shows the same query in SQL:
+
+.. include:: /images/crud-annotated-sql-insert.rst
+
+.. example::
+
+   The following operation inserts a new document into the ``users``
+   collection. The new document has four fields ``name``, ``age``, and
+   ``status``, and an ``_id`` field. MongoDB always adds the ``_id``
+   field to the new document if that field does not exist.
+
+   .. code-block:: javascript
+
+      db.users.insert(
+         {
+            name: "sue",
+            age: 26,
+            status: "A"
+         }
+      )
+
+For more information and examples, see :method:`db.collection.insert()`.
+
+Insert Behavior
+~~~~~~~~~~~~~~~
+
+If you add a new document *without* the :term:`_id` field, the client
+library or the :program:`mongod` instance adds an ``_id`` field and
+populates the field with a unique :term:`ObjectId <objectid>`.
+
+If you specify the ``_id`` field, the value must be unique within the
+collection. For operations with :ref:`write concern <write-concern>`,
+if you try to create a document with a duplicate ``_id`` value,
+:program:`mongod` returns a duplicate key exception.
+
+Other Methods to Add Documents
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can also add new documents to a collection using methods that have
+an :ref:`upsert <write-operations-upsert-behavior>` option. If the option
+is set to ``true``, these methods will either modify existing documents
+or add a new document when no matching documents exist for the query.
+For more information, see :ref:`write-operations-upsert-behavior`.
+
+.. _write-op-update:
+
+Update
+------
+
+In MongoDB, the :method:`db.collection.update()` method modifies
+existing :term:`documents <document>` in a :term:`collection`. The
+:method:`db.collection.update()` method can accept query criteria to
+determine which documents to update as well as an options document that
+affects its behavior, such as the ``multi`` option to update multiple
+documents.
+
+Operations performed by an update are atomic within a single document. For
+example, you can safely use the :update:`$inc` and :update:`$mul` operators to
+modify frequently-changed fields in concurrent applications.
+
+The following diagram highlights the components of a MongoDB update
+operation:
+
+.. include:: /images/crud-annotated-mongodb-update.rst
+
+The following diagram shows the same query in SQL:
+
+.. include:: /images/crud-annotated-sql-update.rst
+
+.. example::
+
+   .. code-block:: javascript
+
+      db.users.update(
+         { age: { $gt: 18 } },
+         { $set: { status: "A" } },
+         { multi: true }
+      )
+
+   This update operation on the ``users`` collection sets the
+   ``status`` field to ``A`` for the documents that match the criteria
+   of ``age`` greater than ``18``.
+
+For more information, see :method:`db.collection.update()` and
+:ref:`update() Examples <update-method-examples>`.
+
+.. _update-multiple-documents:
+
+Default Update Behavior
+~~~~~~~~~~~~~~~~~~~~~~~
+
+By default, the :method:`db.collection.update()` method updates a
+**single** document. However, with the ``multi`` option,
+:method:`~db.collection.update()` can update all documents in a
+collection that match a query.
+
+The :method:`db.collection.update()` method either updates specific
+fields in the existing document or replaces the document. See
+:method:`db.collection.update()` for details as well as examples.
+
+.. include:: /includes/fact-update-field-order.rst
+
+.. _write-operations-upsert-behavior:
+
+Update Behavior with the ``upsert`` Option
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If the :method:`~db.collection.update()` method includes :ref:`upsert:
+true <upsert-parameter>` *and* no documents match the query portion of
+the update operation, then the update operation creates a new document.
+If there are matching documents, then the update operation with the
+:ref:`upsert: true <upsert-parameter>` modifies the matching document
+or documents.
+
+By specifying :term:`upsert: true <upsert>`, applications can indicate,
+in a *single* operation, that if no matching documents are found for
+the update, an insert should be performed. See
+:method:`~db.collection.update()` for details on performing an
+:ref:`upsert <upsert-parameter>`.
+
+.. versionchanged:: 2.6
+
+   In 2.6, the new :method:`Bulk()` methods and the underlying
+   :dbcommand:`update` command allow you to perform many updates with
+   ``upsert: true`` operations in a single call.
+
+If you create documents using the ``upsert`` option to
+:method:`~db.collection.update()` consider using a :ref:`a unique index
+<update-with-unique-indexes>` to prevent duplicated operations.
+
+.. _write-op-remove:
+
+Remove
+------
+
+In MongoDB, the :method:`db.collection.remove()` method deletes
+documents from a collection. The :method:`db.collection.remove()`
+method accepts a query criteria to determine which documents to remove.
+
+The following diagram highlights the components of a MongoDB remove
+operation:
+
+.. include:: /images/crud-annotated-mongodb-remove.rst
+
+The following diagram shows the same query in SQL:
+
+.. include:: /images/crud-annotated-sql-delete.rst
+
+.. example::
+
+   .. code-block:: javascript
+
+      db.users.remove(
+         { status: "D" }
+      )
+
+   This delete operation on the ``users`` collection removes all
+   documents that match the criteria of ``status`` equal to ``D``.
+
+For more information, see :method:`db.collection.remove()` method and
+:doc:`/tutorial/remove-documents`.
+
+Remove Behavior
+~~~~~~~~~~~~~~~
+
+By default, :method:`db.collection.remove()` method removes all
+documents that match its query. However, the method can accept a flag
+to limit the delete operation to a single document.
+
+.. _write-operations-isolation:
+
+Isolation of Write Operations
+-----------------------------
+
+The modification of a single document is always atomic, even if the
+write operation modifies multiple embedded documents *within* that
+document. No other operations are atomic. 
+
+If a write operation modifies multiple documents, the operation as a
+whole is not atomic, and other operations may interleave. You can,
+however, attempt to isolate a write operation that affects multiple
+documents using the :doc:`isolation operator
+</reference/operator/update/isolated>`.
+
+For more information :doc:`/core/write-operations-atomicity`.
+
+Additional Methods
+------------------
+
+The :method:`db.collection.save()` method can either update an existing
+document or insert a document if the document cannot be found by the
+``_id`` field. See :method:`db.collection.save()` for more information
+and examples.
+
+MongoDB also provides methods to perform write operations in bulk. See
+:method:`Bulk()` for more information.

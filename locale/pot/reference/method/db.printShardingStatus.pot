@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/db.printShardingStatus.txt:3
+# 0b5e963e5dc04dfeaf689e0b8561c94f
+msgid "db.printShardingStatus()"
+msgstr ""
+
+#: ../source/reference/method/db.printShardingStatus.txt:8
+# 2b8f4e3484de4a90804ca4bde4a60832
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/db.printShardingStatus.txt:12
+# d7a2418e70644e3f8daeacc2421363c5
+msgid "Prints a formatted report of the sharding configuration and the information regarding existing chunks in a :term:`sharded cluster`."
+msgstr ""
+
+#: ../source/reference/method/db.printShardingStatus.txt:15
+# bc06490660a145bda3e6eb6476d8d60b
+msgid "Only use :method:`db.printShardingStatus()` when connected to a :program:`mongos` instance."
+msgstr ""
+
+#: ../source/reference/method/db.printShardingStatus.txt:18
+# ba29306e62434699a8b31ca0369d0220
+msgid "The :method:`db.printShardingStatus()` method has the following parameter:"
+msgstr ""
+
+#: ../source/reference/method/db.printShardingStatus.txt:23
+# a5318a6b66164a4d94f5bc6e63e2fb92
+msgid "See :doc:`/reference/method/sh.status` for details of the output."
+msgstr ""
+
+#: ../source/includes/note-method-does-not-return-json.rst:3
+# 6bc767e003264456ab3ed5ef71132442
+msgid "The |method| in the :program:`mongo` shell does **not** return :term:`JSON`. Use |method| for manual inspection, and |method-alternative| in scripts."
+msgstr ""
+
+#: ../source/reference/method/db.printShardingStatus.txt:30
+# 3a25b9ba7511498fa09df1e15a45ab2e
+msgid ":method:`sh.status()`"
+msgstr ""
+

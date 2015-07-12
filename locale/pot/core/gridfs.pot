@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/core/gridfs.txt:5
+#: ../source/core/gridfs.txt:1
+#: ../source/core/gridfs.txt:37
+#: ../source/core/gridfs.txt:79
+# ad324f306a27402b8571ac0641007fdf
+# 237f604300fb4a5c853001aee662be10
+# f902fa6f79c6436280a9f21b0b747ec0
+# b4857c78da0b4442bf7f464eb2ba2b37
+msgid "GridFS"
+msgstr ""
+
+#: ../source/core/gridfs.txt:9
+# 33a8aef8213d4d21a08a547a991f082b
+msgid ":term:`GridFS` is a specification for storing and retrieving files that exceed the :term:`BSON`\\-document :ref:`size limit <limit-bson-document-size>` of 16MB."
+msgstr ""
+
+#: ../source/core/gridfs.txt:13
+# f82544b026524cbcbf000d5a0d851356
+msgid "Instead of storing a file in a single document, GridFS divides a file into parts, or chunks, [#chunk-disambiguation]_ and stores each of those chunks as a separate document. By default GridFS limits chunk size to 255k. GridFS uses two collections to store files. One collection stores the file chunks, and the other stores file metadata."
+msgstr ""
+
+#: ../source/core/gridfs.txt:19
+# cf0e90e27e444a3995cef19a172cfb3e
+msgid "When you query a GridFS store for a file, the driver or client will reassemble the chunks as needed. You can perform range queries on files stored through GridFS.  You also can access information from arbitrary sections of files, which allows you to \"skip\" into the middle of a video or audio file."
+msgstr ""
+
+#: ../source/core/gridfs.txt:25
+# 2d7958f40fbc4f0590ed0263f58a819c
+msgid "GridFS is useful not only for storing files that exceed 16MB but also for storing any files for which you want access without having to load the entire file into memory. For more information on the indications of GridFS, see :ref:`faq-developers-when-to-use-gridfs`."
+msgstr ""
+
+#: ../source/core/gridfs.txt:30
+# 0d497f6260c940659083be4b519af28b
+msgid "The use of the term *chunks* in the context of GridFS is not related to the use of the term *chunks* in the context of sharding."
+msgstr ""
+
+#: ../source/core/gridfs.txt:34
+# 9f52461881f84fc880eb6ed3cc0c2f52
+msgid "The default chunk size changed from 256k to 255k."
+msgstr ""
+
+#: ../source/core/gridfs.txt:41
+# d1d41fdcec914b17b738ae38d3dbb313
+msgid "Implement GridFS"
+msgstr ""
+
+#: ../source/core/gridfs.txt:43
+# 54b00628d592411096fe5db782298df4
+msgid "To store and retrieve files using :term:`GridFS`, use either of the following:"
+msgstr ""
+
+#: ../source/core/gridfs.txt:45
+# 8270dd27780548d28f7e165aabad3aa3
+msgid "A MongoDB driver. See the :doc:`drivers</applications/drivers>` documentation for information on using GridFS with your driver."
+msgstr ""
+
+#: ../source/core/gridfs.txt:48
+# a985e1cb9f54409b8dbafd5e65aab585
+msgid "The :program:`mongofiles` command-line tool in the :program:`mongo` shell. See :doc:`/reference/program/mongofiles`."
+msgstr ""
+
+#: ../source/core/gridfs.txt:52
+# a38ebf1dc5ae495abe71a6f9487ed1e0
+msgid "GridFS Collections"
+msgstr ""
+
+#: ../source/core/gridfs.txt:54
+# e7ffb323d6974a3f9cd086431ffd4a96
+msgid ":term:`GridFS` stores files in two collections:"
+msgstr ""
+
+#: ../source/core/gridfs.txt:56
+# 7127e76691254d5aaa6205a9528cd4a7
+msgid "``chunks`` stores the binary chunks. For details, see :ref:`gridfs-chunks-collection`."
+msgstr ""
+
+#: ../source/core/gridfs.txt:59
+# e2a51ebbd5d648899dd0758148846ed7
+msgid "``files`` stores the file's metadata. For details, see :ref:`gridfs-files-collection`."
+msgstr ""
+
+#: ../source/core/gridfs.txt:62
+# 6f9aceb14f134980b72b38a1a8b8ac5f
+msgid "GridFS places the collections in a common bucket by prefixing each with the bucket name. By default, GridFS uses two collections with names prefixed by ``fs`` bucket:"
+msgstr ""
+
+#: ../source/core/gridfs.txt:66
+# f1d31c9970a448ee8ca6747f09387a9f
+msgid "``fs.files``"
+msgstr ""
+
+#: ../source/core/gridfs.txt:67
+# d941a845ffe64cbfa49c43e4a5c5f3c2
+msgid "``fs.chunks``"
+msgstr ""
+
+#: ../source/core/gridfs.txt:69
+# fba78a0cbad84d908f3f9215d5adc901
+msgid "You can choose a different bucket name than ``fs``, and create multiple buckets in a single database."
+msgstr ""
+
+#: ../source/core/gridfs.txt:72
+# dfa75d2064244d2bb9ea5f6fa1287220
+msgid "Each document in the ``chunks`` collection represents a distinct chunk of a file as represented in the GridFS store. Each chunk is identified by its unique :term:`ObjectId` stored in its ``_id`` field."
+msgstr ""
+
+#: ../source/core/gridfs.txt:76
+# a97e94e083744fc6a4298a70b2d71fbb
+msgid "For descriptions of all fields in the ``chunks`` and ``files`` collections, see :doc:`/reference/gridfs`."
+msgstr ""
+
+#: ../source/core/gridfs.txt:83
+# 28c220eb08bb49b08c64dd5518efcadd
+msgid "GridFS Index"
+msgstr ""
+
+#: ../source/core/gridfs.txt:85
+# 894badfe22ed41fa9c5e3d0dc3914a77
+msgid ":term:`GridFS` uses a :term:`unique <unique index>`, :term:`compound <compound index>` index on the ``chunks`` collection for the ``files_id`` and ``n`` fields. The ``files_id`` field contains the ``_id`` of the chunk's \"parent\" document. The ``n`` field contains the sequence number of the chunk. GridFS numbers all chunks, starting with 0. For descriptions of the documents and fields in the ``chunks`` collection, see :doc:`/reference/gridfs`."
+msgstr ""
+
+#: ../source/core/gridfs.txt:93
+# e207037073094b87bce5bb04cea44aaa
+msgid "The GridFS index allows efficient retrieval of chunks using the ``files_id`` and ``n`` values, as shown in the following example:"
+msgstr ""
+
+#: ../source/core/gridfs.txt:100
+# b842c1f143124fdd8452a21b068aff16
+msgid "See the relevant :doc:`driver </applications/drivers>` documentation for the specific behavior of your GridFS application. If your driver does not create this index, issue the following operation using the :program:`mongo` shell:"
+msgstr ""
+
+#: ../source/core/gridfs.txt:110
+# 3efb5d6c6c56459c88f6b83f9e9075d4
+msgid "Example Interface"
+msgstr ""
+
+#: ../source/core/gridfs.txt:112
+# fa9125e7db0847e2b2ba0b0cdb3df676
+msgid "The following is an example of the GridFS interface in Java. The example is for demonstration purposes only. For API specifics, see the relevant :doc:`driver </applications/drivers>` documentation."
+msgstr ""
+
+#: ../source/core/gridfs.txt:116
+# 78526e2a586b460c9ae8edc432ec878a
+msgid "By default, the interface must support the default GridFS bucket, named ``fs``, as in the following:"
+msgstr ""
+
+#: ../source/core/gridfs.txt:127
+# a73bddd6cada48738cdcfe1d5e29aaa3
+msgid "Optionally, interfaces may support other additional GridFS buckets as in the following example:"
+msgstr ""
+
+#: ../source/core/gridfs.txt:37
+# f902fa6f79c6436280a9f21b0b747ec0
+msgid "initialize"
+msgstr ""
+
+#: ../source/core/gridfs.txt:79
+# b4857c78da0b4442bf7f464eb2ba2b37
+msgid "index"
+msgstr ""
+

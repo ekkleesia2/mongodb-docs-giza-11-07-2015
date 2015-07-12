@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/aggregation-group.txt:3
+# e908374507e648bd887b0d65e53364f4
+msgid "Group Accumulator Operators"
+msgstr ""
+
+#: ../source/includes/intro-aggregation-accumulator.rst:1
+# a2bce74fa65541dd970bd0c476afc4cc
+msgid "Accumulators, available only for the :pipeline:`$group` stage, compute values by combining documents that share the same group key. Accumulators take as input a single expression, evaluating the expression once for each input document, and maintain their state for the group of documents."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:2
+# 05e6300da1b542c78d0135ef6539c0f1
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:2
+# 6f47477c01234db595f2dc0357ed8bbc
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:4
+# 51990f60248a4408bfb080c599e93e02
+msgid ":group:`$sum`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:4
+# f83cd1e99bb44e979f67f1a0602e8870
+msgid "Returns a sum for each group. Ignores non-numeric values."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:8
+# f469a9e68e7045ba8007ee05ee1f0fda
+msgid ":group:`$avg`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:8
+# 6a1c823fd8a54cd4a28acf2c70f9a51a
+msgid "Returns an average for each group. Ignores non-numeric values."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:11
+# 86942aae47944c13aab0a9456a3cd637
+msgid ":group:`$first`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:11
+# 1083905ff1b84922854ef38bf5bf9255
+msgid "Returns a value from the first document for each group. Order is only defined if the documents are in a defined order."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:15
+# 070a49580041487aa6a840645874aa62
+msgid ":group:`$last`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:15
+# 23d4c059abf0413487c5f0840780c187
+msgid "Returns a value from the last document for each group. Order is only defined if the documents are in a defined order."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:19
+# 11d760cc37de4582b8f6dbde11886bcd
+msgid ":group:`$max`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:19
+# 0e21d3eb18824e5db8437118d224ffe2
+msgid "Returns the highest expression value for each group."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:22
+# 6f1a6631a8b94e2ca3c56c9ab81658d8
+msgid ":group:`$min`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:22
+# e422d1798bc649c5b671e32a535a856f
+msgid "Returns the lowest expression value for each group."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:25
+# c678e6772666473e8095d56c33d58e34
+msgid ":group:`$push`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:25
+# a79799e6ac9644d8877b87382c157e28
+msgid "Returns an array of expression values for each group."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:28
+# 6b7e41e25db84296a6d960d0a111c1a6
+msgid ":group:`$addToSet`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-group.rst:28
+# 152754523eb149a7a356062ae0346b48
+msgid "Returns an array of *unique* expression values for each group. Order of the array elements is undefined."
+msgstr ""
+

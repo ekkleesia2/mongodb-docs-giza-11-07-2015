@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/replication.txt:3
+# 60391c080b904178accb2fc920b8e4d5
+msgid "Replication"
+msgstr ""
+
+#: ../source/replication.txt:7
+# 99aca9315a2042808965a3b51de85918
+msgid "A *replica set* in MongoDB is a group of :program:`mongod` processes that maintain the same data set. Replica sets provide redundancy and high availability, and are the basis for all production deployments. This section introduces replication in MongoDB as well as the components and architecture of replica sets. The section also provides tutorials for common tasks related to replica sets."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:4
+# 2b1025aa84da4288b7cd70d0c51caa19
+msgid ":doc:`/core/replication-introduction`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:4
+# db0d91f2b34743cdab11b3d00dc067db
+msgid "An introduction to replica sets,  their behavior, operation, and use."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:26
+# e80678b00fc345f3aa3c2f3bf8baf5ff
+msgid ":doc:`/core/replication`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:7
+# 539df85ec87b45179c79a0e8a748687a
+msgid "The core documentation of replica set operations, configurations, architectures and behaviors."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:10
+# 193995f2b40a486b9e1c71a503322288
+msgid ":doc:`/core/replica-set-members`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:10
+# 3d0257fad1d9463bb6a3eacd92742cbf
+msgid "Introduces the components of replica sets."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:15
+# 42ea7ccadfc3463a8011a371c65df463
+msgid ":doc:`/core/replica-set-architectures`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:13
+# bc9a7805ffc04b029ac81d67bcf9dec9
+msgid "Introduces architectural considerations related to replica sets deployment planning."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:20
+# 682c755380d94740b8dc39edaa371714
+msgid ":doc:`/core/replica-set-high-availability`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:18
+# 6940c10e40c6437c8e4ec0030e6108c0
+msgid "Presents the details of the automatic failover and recovery process with replica sets."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:26
+# e212e2d20cb84c8d81f29ba7355dfbb6
+msgid ":doc:`/applications/replication`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:23
+# 6b3560de58ba4f379f121cd3ad5a2fb1
+msgid "Presents the semantics for targeting read and write operations to the replica set, with an awareness of location and set configuration."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:29
+# 687734c1f72c494fba63bf5387e12a80
+msgid ":doc:`/administration/replica-sets`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:29
+# d0707e1ffcd5439a9526d659b399d6d9
+msgid "Tutorials for common tasks related to the use and maintenance of replica sets."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:31
+# b1cf04f5c9ab4c2e8f63bb450ca72102
+msgid ":doc:`/reference/replication`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-spec-replication-landing.rst:32
+# c639bb5eba564f659e3519ae29904bbf
+msgid "Reference for functions and operations related to replica sets."
+msgstr ""
+

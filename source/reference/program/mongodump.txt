@@ -1,0 +1,155 @@
+.. _mongodump:
+
+=============
+``mongodump``
+=============
+
+.. default-domain:: mongodb
+
+.. |tool-binary| replace:: mongodump
+
+Synopsis
+--------
+
+:program:`mongodump` is a utility for creating a binary export of the
+contents of a database. Consider using this utility as part of an
+effective :doc:`backup strategy </core/backups>`. Use
+:program:`mongodump` in conjunction with :program:`mongorestore` to
+restore databases.
+
+:program:`mongodump` can read data from either :program:`mongod` or :program:`mongos`
+instances.
+
+.. seealso:: :program:`mongorestore`,
+   :doc:`/tutorial/backup-sharded-cluster-with-database-dumps`
+   and :doc:`/core/backups`.
+
+Behavior
+--------
+
+.. include:: /includes/fact-mongodump-local-database.rst
+
+.. include:: /includes/warning-mongodump-compatibility-2.2.rst
+
+When running :program:`mongodump` against a :program:`mongos` instance
+where the :term:`sharded cluster` consists of :term:`replica sets <replica
+set>`, the :term:`read preference` of the operation will prefer reads
+from :term:`secondary` members of the set.
+
+.. include:: /includes/warning-fsync-lock-mongodump.rst
+
+.. include:: /includes/fact-mongodump-overwrite-files.rst
+
+Required Access
+---------------
+
+Back Up Collections
+~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/access-mongodump-collections.rst
+
+Back Up Users
+~~~~~~~~~~~~~
+
+.. include:: /includes/access-mongodump-users.rst
+
+Options
+-------
+
+.. include:: /includes/extracts/fact-3.0-tools-drop-dbpath-support-mongodump.rst
+
+.. binary:: mongodump
+
+.. program:: mongodump
+
+.. include:: /includes/option/option-mongodump-help.rst
+
+.. include:: /includes/option/option-mongodump-verbose.rst
+
+.. include:: /includes/option/option-mongodump-quiet.rst
+
+.. include:: /includes/option/option-mongodump-version.rst
+
+.. include:: /includes/option/option-mongodump-host.rst
+
+.. include:: /includes/option/option-mongodump-port.rst
+
+.. include:: /includes/option/option-mongodump-ipv6.rst
+
+.. include:: /includes/option/option-mongodump-ssl.rst
+
+.. include:: /includes/option/option-mongodump-sslCAFile.rst
+
+.. include:: /includes/option/option-mongodump-sslPEMKeyFile.rst
+
+.. include:: /includes/option/option-mongodump-sslPEMKeyPassword.rst
+
+.. include:: /includes/option/option-mongodump-sslCRLFile.rst
+
+.. include:: /includes/option/option-mongodump-sslAllowInvalidCertificates.rst
+
+.. include:: /includes/option/option-mongodump-sslAllowInvalidHostnames.rst
+
+.. include:: /includes/option/option-mongodump-sslFIPSMode.rst
+
+.. include:: /includes/option/option-mongodump-username.rst
+
+.. include:: /includes/option/option-mongodump-password.rst
+
+.. include:: /includes/option/option-mongodump-authenticationDatabase.rst
+
+.. include:: /includes/option/option-mongodump-authenticationMechanism.rst
+
+.. include:: /includes/option/option-mongodump-gssapiServiceName.rst
+
+.. include:: /includes/option/option-mongodump-gssapiHostName.rst
+
+.. include:: /includes/option/option-mongodump-db.rst
+
+.. include:: /includes/option/option-mongodump-collection.rst
+
+.. include:: /includes/option/option-mongodump-query.rst
+
+.. include:: /includes/option/option-mongodump-forceTableScan.rst
+
+.. include:: /includes/option/option-mongodump-out.rst
+
+.. include:: /includes/option/option-mongodump-repair.rst
+
+.. include:: /includes/option/option-mongodump-oplog.rst
+
+.. include:: /includes/option/option-mongodump-dumpDbUsersAndRoles.rst
+
+.. include:: /includes/option/option-mongodump-excludeCollection.rst
+
+.. include:: /includes/option/option-mongodump-excludeCollectionsWithPrefix.rst
+
+.. _mongodump-behavior:
+
+Use
+---
+
+For an overview of :program:`mongodump` usage, see
+:doc:`/tutorial/backup-and-restore-tools`
+
+For an overview of :program:`mongorestore`, which provides the related inverse
+functionality, see the :doc:`mongorestore` document.
+
+The following command creates a dump file that contains only the
+collection named ``collection`` in the database named ``test``. In
+this case the database is running on the local interface on port
+``27017``:
+
+.. code-block:: sh
+
+   mongodump  --db test --collection collection
+
+In the next example, :program:`mongodump` creates a database dump
+located at ``/opt/backup/mongodump-2011-10-24``, from a database
+running on port ``37017`` on the host ``mongodb1.example.net`` and
+authenticating using the username ``user`` and the password
+``pass``, as follows:
+
+.. code-block:: sh
+
+   mongodump --host mongodb1.example.net --port 37017 --username user --password pass --out /opt/backup/mongodump-2011-10-24

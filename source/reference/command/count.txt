@@ -1,0 +1,127 @@
+=====
+count
+=====
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. dbcommand:: count
+
+   Counts the number of documents in a collection. Returns a document
+   that contains this count and as well as the command status.
+   :dbcommand:`count` has the following form:
+
+   .. versionchanged:: 2.6
+      :dbcommand:`count` now accepts the ``hint`` option to specify an
+      index.
+
+   .. code-block:: javascript
+
+      { count: <collection>, query: <query>, limit: <limit>, skip: <skip>, hint: <hint> }
+
+   :dbcommand:`count` has the following fields:
+
+   .. include:: /includes/apiargs/dbcommand-count-field.rst
+
+   MongoDB also provides the :method:`~cursor.count()` and
+   :method:`db.collection.count()` wrapper methods in the
+   :program:`mongo` shell.
+
+Behavior
+--------
+
+.. include:: /includes/extracts/fact-count-on-sharded-clusters-cmd-count.rst
+
+Examples
+--------
+
+The following sections provide examples of the :dbcommand:`count`
+command.
+
+Count All Documents
+~~~~~~~~~~~~~~~~~~~
+
+The following operation counts the number of all documents in the
+``orders`` collection:
+
+.. code-block:: javascript
+
+   db.runCommand( { count: 'orders' } )
+
+In the result, the ``n``, which represents the count, is ``26``,
+and the command status ``ok`` is ``1``:
+
+.. code-block:: javascript
+
+   { "n" : 26, "ok" : 1 }
+
+Count Documents That Match a Query
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following operation returns a count of the documents in the
+``orders`` collection where the value of the ``ord_dt`` field is
+greater than ``Date('01/01/2012')``:
+
+.. code-block:: javascript
+
+   db.runCommand( { count:'orders',
+                    query: { ord_dt: { $gt: new Date('01/01/2012') } }
+                  } )
+
+In the result, the ``n``, which represents the count, is ``13``
+and the command status ``ok`` is ``1``:
+
+.. code-block:: javascript
+
+   { "n" : 13, "ok" : 1 }
+
+Skip Documents in Count
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The following operation returns a count of the documents in the
+``orders`` collection where the value of the ``ord_dt`` field is
+greater than ``Date('01/01/2012')`` and skip the first ``10`` matching
+documents:
+
+.. code-block:: javascript
+
+   db.runCommand( { count:'orders',
+                    query: { ord_dt: { $gt: new Date('01/01/2012') } },
+                    skip: 10 }  )
+
+In the result, the ``n``, which represents the count, is ``3`` and
+the command status ``ok`` is ``1``:
+
+.. code-block:: javascript
+
+   { "n" : 3, "ok" : 1 }
+
+Specify the Index to Use
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following operation uses the index ``{ status: 1 }`` to return a
+count of the documents in the ``orders`` collection where the value of
+the ``ord_dt`` field is greater than ``Date('01/01/2012')`` and the
+``status`` field is equal to ``"D"``:
+
+.. code-block:: javascript
+
+   db.runCommand(
+      {
+        count:'orders',
+        query: {
+                 ord_dt: { $gt: new Date('01/01/2012') },
+                 status: "D"
+               },
+        hint: { status: 1 }
+      }
+   )
+
+In the result, the ``n``, which represents the count, is ``1`` and
+the command status ``ok`` is ``1``:
+
+.. code-block:: javascript
+
+   { "n" : 1, "ok" : 1 }

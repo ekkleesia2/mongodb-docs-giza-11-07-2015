@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/query/all.txt:3
+# d5236aeb9db2416fa846dbf4d02f16d7
+msgid "$all"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:9
+# fe1a8e5521eb4a7a8419476fc03885bd
+msgid "The :query:`$all` operator selects the documents where the value of a field is an array that contains all the specified elements. To specify an :query:`$all` expression, use the following prototype:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:20
+# 6e019134304f44f5a80cbd48aff83e70
+msgid "Behavior"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:23
+# abe8adf03f594bcf9d7edfd4075c16f5
+msgid "Equivalent to ``$and`` Operation"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:27
+# 5f4deff388394fc38e9ce07754746d9b
+msgid "The :query:`$all` is equivalent to an :query:`$and` operation of the specified values; i.e. the following statement:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:34
+# 3b9da7265327452f8043b870dd4c6dea
+msgid "is equivalent to:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:41
+# 19e8a42b54da4bb5a8d0d7c014a0f261
+msgid "Nested Array"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:45
+# f267ea9d1f414c50999685de67ce3298
+msgid "When passed an array of a nested array (e.g. ``[ [ \"A\" ] ]`` ), :query:`$all` can now match documents where the field contains the nested array as an element (e.g. ``field: [ [ \"A\" ], ... ]``), *or* the field equals the nested array (e.g. ``field: [ \"A\" ]``)."
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:50
+# b25dfad4a3884f8b9874c8590b5a0710
+msgid "For example, consider the following query [#illustrative]_:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:56
+# 0d4fcbc288da498d84108229ce6e0bf0
+msgid "The query is equivalent to:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:62
+# 1278d3ba95d6422eade0e26bb1906248
+msgid "which is equivalent to:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:68
+# 403c37bdd4ce4ceb93e4c3bf4222af23
+msgid "As such, the :query:`$all` expression can match documents where the ``tags`` field is an array that contains the nested array ``[ \"ssl\", \"security\" ]`` or is an array that equals the nested array:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:77
+# 3f635ee8a53f41a2a1668d558015a685
+msgid "This behavior for :query:`$all` allows for more matches than previous versions of MongoDB. Earlier version could only match documents where the field contains the nested array."
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:82
+# efa4eae7e538480eb59efbc362a24cae
+msgid "The :query:`$all` expression with a *single* element is for illustrative purposes since the :query:`$all` expression is unnecessary if matching only a single element. Instead, when matching a single element, a \"contains\" expression (i.e. ``arrayField: element`` ) is more suitable."
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:89
+# 74092fa8deb84c619aec64c1f21a959d
+msgid "Performance"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:91
+# b3e0d76ec6d34d00b5f4751b0efe073b
+msgid "Queries that use the :query:`$all` operator must scan all the documents that match the first element in the :query:`$all` expression. As a result, even with an index to support the query, the operation may be long running, particularly when the first element in the :query:`$all` expression is not very selective."
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:98
+# 8ec1b76f49dc4864b11e25ac153e2c02
+msgid "Examples"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:100
+# 2b0032701d334da28b060ff66cb8f0e9
+msgid "The following examples use the ``inventory`` collection that contains the documents:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:148
+# a6bed63cf4154474b104f4a0747fd5b4
+msgid "Use ``$all`` to Match Values"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:150
+# 70920e7cb1ed4cf3a6932e64c7974dc4
+msgid "The following operation uses the :query:`$all` operator to query the ``inventory`` collection for documents where the value of the ``tags`` field is an array whose elements include ``appliance``, ``school``, and ``book``:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:159
+# 2715d01af9f0469498305502268a5ae5
+msgid "The above query returns the following documents:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:186
+# b705ec389ef948a9aaf8a14e961dabb9
+msgid "Use ``$all`` with ``$elemMatch``"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:188
+# 27b5bb2f719c4a01837c088a412a99e5
+msgid "If the field contains an array of documents, you can use the :query:`$all` with the :query:`$elemMatch` operator."
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:191
+# bbfd5159158d4cef995ca984a554f089
+msgid "The following operation queries the ``inventory`` collection for documents where the value of the ``qty`` field is an array whose elements match the :query:`$elemMatch` criteria:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:204
+# 55f1842bbe6441a9872491a8d3378934
+msgid "The query returns the following documents:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:228
+# f22231a601c8428d8905f08d2e1d8592
+msgid "The :query:`$all` operator exists to support queries on arrays. But you may use the :query:`$all` operator to select against a non-array ``field``, as in the following example:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:236
+# ff8cce01decf4e79a0cd1a55ac063a3e
+msgid "**However**, use the following form to express the same query:"
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:242
+# b97f5e4c0e8d44fb9d30ff902a3a63c1
+msgid "Both queries will select all documents in the ``inventory`` collection where the value of the ``qty`` field equals ``50``."
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:249
+# 45a3c1a444e84f83a96c556cf294f829
+msgid "In most cases, MongoDB does not treat arrays as sets. This operator provides a notable exception to this approach."
+msgstr ""
+
+#: ../source/reference/operator/query/all.txt:253
+# 6e0c25f1e55540459a65cbad4dde4221
+msgid ":method:`~db.collection.find()`, :method:`~db.collection.update()`, and :update:`$set`."
+msgstr ""
+

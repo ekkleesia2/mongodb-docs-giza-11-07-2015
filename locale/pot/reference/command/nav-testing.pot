@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/nav-testing.txt:3
+# b5f956bf1ef243518052a115e8351d0d
+msgid "Testing Commands"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:2
+# ae771c06e3ac4e249c576c2a3f2aac0c
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:2
+# 80df1789978b4debbbf4f035accbc87e
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:4
+# 7814c7a84f1743b4bff22f963922a635
+msgid ":dbcommand:`testDistLockWithSkew`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:4
+#: ../source/includes/toc/table-command-testing.rst:6
+# 647efa2a1f354065834420ed2376ad2e
+# 7ab759100c4d4d42af3fe433d1db26e6
+msgid "Internal command. Do not call this directly."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:6
+# 6c7dbdbc56144b4c80fa590c66ce2296
+msgid ":dbcommand:`testDistLockWithSyncCluster`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:8
+# 5b95d62366484a6280c5b7473f3692a3
+msgid ":dbcommand:`captrunc`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:8
+# 01bc92c2a0cd495b8a966de3bd1648ae
+msgid "Internal command. Truncates capped collections."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:10
+# 69cc3523213140ed8dcf0975a9623928
+msgid ":dbcommand:`emptycapped`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:10
+# de7bb9bb01bd4632982cd4459e6712b9
+msgid "Internal command. Removes all documents from a capped collection."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:12
+# 7ba392d2fc0648a4a6fd2ae0c3f049bf
+msgid ":dbcommand:`godinsert`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:12
+# 091f267143ae46aab3fee6f3b96ba184
+msgid "Internal command for testing."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:14
+# 908fad524b8b4e2592a74914555741f1
+msgid ":dbcommand:`_hashBSONElement`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:14
+# ed3bbda2185b409c9c588d8786bac8f0
+msgid "Internal command. Computes the MD5 hash of a BSON element."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:16
+# 87f7721468bc4fa3bc066af80069d542
+msgid ":dbcommand:`_journalLatencyTest`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:16
+# afc0491780414a50b60b803dc1180cea
+msgid "Tests the time required to write and perform a file system sync for a file in the journal directory."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:18
+# 621abde4b40344f6ac158a376dc4effe
+msgid ":dbcommand:`sleep`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:18
+# a9562e706506441d9ef572c00f6bb66f
+msgid "Internal command for testing. Forces MongoDB to block all operations."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:20
+# d67e782d9c7c4ebe9ac1252ef5e2e3b0
+msgid ":dbcommand:`replSetTest`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:20
+# af6be99a5ae14c27bb3ec604c5e692a4
+msgid "Internal command for testing replica set functionality."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:22
+# f0970ea55ec64ab3b900bf32a6fc7a05
+msgid ":dbcommand:`forceerror`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:22
+# a3dfae7eb3af4ee78fb70a2be5bb4fc8
+msgid "Internal command for testing. Forces a user assertion exception."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:24
+# c4358b24e2ac42e690c96657e770b4f0
+msgid ":dbcommand:`skewClockCommand`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:24
+# 215bd8c1999e4dd0961fac4ac320578f
+msgid "Internal command. Do not call this command directly."
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:26
+# 4fa7f40f56c3406ebc0cd0f1898d5684
+msgid ":dbcommand:`configureFailPoint`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-testing.rst:26
+# 999cca6c6cb146908d2f8426c9106dd6
+msgid "Internal command for testing. Configures failure points."
+msgstr ""
+

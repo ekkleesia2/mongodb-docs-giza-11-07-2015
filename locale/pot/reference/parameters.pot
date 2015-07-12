@@ -1,0 +1,607 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/parameters.txt:3
+# cbffd7ae4aab4c1d9fafaf31e2071132
+msgid "MongoDB Server Parameters"
+msgstr ""
+
+#: ../source/reference/parameters.txt:8
+# dc73a829659f4cab91a3f3c145997264
+msgid "Synopsis"
+msgstr ""
+
+#: ../source/reference/parameters.txt:10
+# 261923795a144eab803ba4a56b57545a
+msgid "MongoDB provides a number of configuration options that are accessible via the :option:`--setParameter <mongod --setParameter>` option to :program:`mongod`. This document documents all of these options."
+msgstr ""
+
+#: ../source/reference/parameters.txt:14
+# 68a71b9bae6144d0b06fb54e99159a3c
+msgid "For additional run time configuration options, see :doc:`/reference/configuration-options` and :doc:`Manual Page for mongod </reference/program/mongod>`."
+msgstr ""
+
+#: ../source/reference/parameters.txt:19
+# 1c1d11d68c804b4aabb796a98e616767
+msgid "Parameters"
+msgstr ""
+
+#: ../source/reference/parameters.txt:25
+# e3ca2f6119e9400082a860c9f3848a52
+msgid "Specify ``0`` to disable localhost authentication bypass.  Enabled by default."
+msgstr ""
+
+#: ../source/reference/parameters.txt:28
+# 882b629a36cc46f1886fc6ff66b427e4
+msgid ":parameter:`enableLocalhostAuthBypass` is not available using :dbcommand:`setParameter` database command. Use the :setting:`setParameter` option in the configuration file or the :option:`--setParameter <mongod --setParameter>` option on the command line."
+msgstr ""
+
+#: ../source/reference/parameters.txt:38
+# 26b28772056443b5810988a096effaa1
+msgid ":parameter:`enableTestCommands` enables a set of internal commands useful for internal testing operations. :parameter:`enableTestCommands` is only available when starting :program:`mongod` and you cannot use :dbcommand:`setParameter` to modify this parameter. Consider the following :program:`mongod` invocation, which sets :parameter:`enableTestCommands`:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:50
+# a03180665f5244218040c78c6b979a4f
+msgid ":parameter:`enableTestCommands` provides access to the following internal commands:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:53
+# ddcff4679f7d43b59d8f13eeb75f9e8c
+msgid ":dbcommand:`captrunc`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:54
+# a44f194e2841490eba7b5060c604ab16
+msgid ":dbcommand:`configureFailPoint`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:55
+# 7fd789c7f5b7444c83dd38d440fce83b
+msgid ":dbcommand:`emptycapped`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:56
+# 04dcf5332b234e4588aa61f0d264b448
+msgid ":dbcommand:`godinsert`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:57
+# f5fd871d2bff46d3b21f03b1bfccb6ea
+msgid ":dbcommand:`_hashBSONElement`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:58
+# 7812c1bc40104ac898b048203b7c9a9e
+msgid ":dbcommand:`journalLatencyTest`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:59
+# 450b1f138c464d8588d33efe771dd90b
+msgid ":dbcommand:`replSetTest`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:60
+# 5ac3a2c866c7493ea81df29233e5866d
+msgid ":dbcommand:`_skewClockCommand`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:61
+# ee7ec6f182ac4e59ae35e6526d027673
+msgid ":dbcommand:`sleep`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:62
+# 2df3fe41aed640e6ac6d4f5fb9cf8c62
+msgid ":dbcommand:`_testDistLockWithSkew`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:63
+# 9fd803eb10a040c2bbd890cc20463333
+msgid ":dbcommand:`_testDistLockWithSyncCluster`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:67
+# dfd4bfe0cc2f4afaa945121aa7c47ae2
+msgid "Specify an integer between ``1`` and ``500`` signifying the number of milliseconds (ms) between journal commits."
+msgstr ""
+
+#: ../source/reference/parameters.txt:70
+# c7c96bb9769a4ab68b4e2c3ab0bb597c
+msgid "Consider the following example which sets the :parameter:`journalCommitInterval` to ``200`` ms:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:77
+# 5e3b9f4a408447c885d4f2880f2a2606
+msgid ":setting:`~storage.journal.commitIntervalMs`."
+msgstr ""
+
+#: ../source/reference/parameters.txt:83
+# cd6e77476d2e49cf929a12ea34de247b
+msgid "Specify ``1`` to enable logging of userids."
+msgstr ""
+
+#: ../source/reference/parameters.txt:85
+# 4516a7b3c14e488f8af21cdae03994ab
+msgid "Disabled by default."
+msgstr ""
+
+#: ../source/reference/parameters.txt:89
+# ceca8ad837f64bbfb137e9496a641040
+msgid "Specify an integer between ``0`` and ``5`` signifying the verbosity of the logging, where ``5`` is the most verbose."
+msgstr ""
+
+#: ../source/reference/parameters.txt:92
+# 05c03241dfad4daf92a9b64e41e059e1
+msgid "Consider the following example which sets the :parameter:`logLevel` to ``2``:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:102
+# 9a9b088ad8fe405690f68efccb2a3a47
+msgid ":setting:`~systemLog.verbosity`."
+msgstr ""
+
+#: ../source/reference/parameters.txt:106
+# fbeec5938edd444e81788a2cf4812fe2
+msgid "Specify whether **all** queries must use indexes. If ``1``, MongoDB will not execute queries that require a table scan and will return an error."
+msgstr ""
+
+#: ../source/reference/parameters.txt:110
+# e4fa6dd800b64ac48d3eaf2a304acae6
+msgid "Consider the following example which sets :parameter:`notablescan` to ``1`` or true:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:117
+# 60360b8d966e4a528f3f783615a11bc3
+msgid "Setting :parameter:`notablescan` to ``1`` can be useful for testing application queries, for example, to identify queries that scan an entire collection and cannot use an index."
+msgstr ""
+
+#: ../source/reference/parameters.txt:121
+# 174000bd77744723a834d39b829196d2
+msgid "To detect unindexed queries without ``notablescan``, consider reading the :doc:`/tutorial/evaluate-operation-performance` and :doc:`/tutorial/optimize-query-performance-with-indexes-and-projections` sections and using the :parameter:`logLevel` parameter, :doc:`/reference/program/mongostat` and :ref:`profiling <database-profiling>`."
+msgstr ""
+
+#: ../source/reference/parameters.txt:128
+# 7c2adaeea6b046aa8efc5e5d0addbd99
+msgid "Don't run production :program:`mongod` instances with :parameter:`notablescan` because preventing table scans can potentially affect queries in all databases, including administrative queries."
+msgstr ""
+
+#: ../source/reference/parameters.txt:136
+# 1f2adae6c34e4278a969777317ccf25b
+msgid "Use :parameter:`replIndexPrefetch` in conjunction with :setting:`~replication.replSetName` when configuring a replica set. The default value is ``all`` and available options are:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:141
+# ff048897bfec4cbab65dfb43287cd4fd
+msgid "``none``"
+msgstr ""
+
+#: ../source/reference/parameters.txt:142
+# 7f70c8ca84c6432e80903236ffec6335
+msgid "``all``"
+msgstr ""
+
+#: ../source/reference/parameters.txt:143
+# 32cff52cbe624522989bb757d92256a6
+msgid "``_id_only``"
+msgstr ""
+
+#: ../source/reference/parameters.txt:145
+# 298406946eb04235a58750b6ffd6653a
+msgid "By default :term:`secondary` members of a :term:`replica set` will load all indexes related to an operation into memory before applying operations from the oplog. You can modify this behavior so that the secondaries will only load the ``_id`` index. Specify ``_id_only`` or ``none`` to prevent the :program:`mongod` from loading *any* index into memory."
+msgstr ""
+
+#: ../source/reference/parameters.txt:156
+# b2adef93d7334d5aaf56b6fddb81867d
+msgid "Specify the number of oplog entries to apply as a single batch. :parameter:`replApplyBatchSize` must be an integer between 1 and 1024. The default value is 1. This option only applies to master/slave configurations and is valid only on a :program:`mongod` started with the ``--slave`` command line option."
+msgstr ""
+
+#: ../source/reference/parameters.txt:162
+# 08b3c2d5595040158b8067dab993f15f
+msgid "Batch sizes must be ``1`` for members with :option:`slavedelay <mongod --slavedelay>` configured."
+msgstr ""
+
+#: ../source/reference/parameters.txt:169
+# 144208d0c8d44d85b533a624256424f6
+msgid ":parameter:`saslHostName` overrides MongoDB's default hostname detection for the purpose of configuring SASL and Kerberos authentication."
+msgstr ""
+
+#: ../source/reference/parameters.txt:173
+# 6a3e963449da4dd6a6d06fc995adc10b
+msgid ":parameter:`saslHostName` does not affect the hostname of the :program:`mongod` or :program:`mongos` instance for any purpose beyond the configuration of SASL and Kerberos."
+msgstr ""
+
+#: ../source/reference/parameters.txt:177
+# 6bae26475eea4b078d1b80c831c91aba
+msgid "You can only set :parameter:`saslHostName` during start-up, and cannot change this setting using the :dbcommand:`setParameter` database command."
+msgstr ""
+
+#: ../source/reference/parameters.txt:183
+# 64b32be024e54cb195a5a173401b1a93
+msgid ":parameter:`saslHostName` supports Kerberos authentication and is only included in MongoDB Enterprise. For Linux systems, see :doc:`/tutorial/control-access-to-mongodb-with-kerberos-authentication` for more information."
+msgstr ""
+
+#: ../source/reference/parameters.txt:198
+# cfecf0f3f6014f1091410108ff38552f
+msgid ":parameter:`supportCompatibilityFormPrivilegeDocuments` has no effect in 2.6 and will be removed in 2.8."
+msgstr ""
+
+#: ../source/reference/parameters.txt:202
+# e1559efbe76443628bd0885a15d51011
+msgid ":parameter:`supportCompatibilityFormPrivilegeDocuments` is not available using :dbcommand:`setParameter` database command. Use the :setting:`setParameter` option in the configuration file or the :option:`--setParameter <mongod --setParameter>` option on the command line."
+msgstr ""
+
+#: ../source/reference/parameters.txt:210
+# 9ae757a4267f4b0e91546d6a79091ea8
+msgid "Specify the interval in seconds between :term:`fsync` operations where :program:`mongod` flushes its working memory to disk. By default, :program:`mongod` flushes memory to disk every 60 seconds. In almost every situation you should not set this value and use the default setting."
+msgstr ""
+
+#: ../source/reference/parameters.txt:216
+# 884b35cc861f4e4ba144031d29649495
+msgid "Consider the following example which sets the ``syncdelay`` to ``60`` seconds:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:223
+# 3742ba0e50fe46be80ae814cd450869a
+msgid ":setting:`~storage.syncPeriodSecs` and :parameter:`journalCommitInterval`."
+msgstr ""
+
+#: ../source/reference/parameters.txt:230
+# d5870eb032b744348d6d7c167a46a564
+msgid "Configures :program:`mongod` log full stack traces on assertions or errors. If ``1``, :program:`mongod` will log full stack traces on assertions or errors."
+msgstr ""
+
+#: ../source/reference/parameters.txt:234
+# e552a67bc6c34eee914feb47f31ce9a1
+msgid "Consider the following example which sets the ``traceExceptions`` to ``true``:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:241
+# c2aeee679710467a9b20249f590c2d04
+msgid ":setting:`systemLog.traceAllExceptions`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:245
+# ed725180767749c2896396d8a7a78215
+msgid "Sets quiet logging mode. If ``1``, :program:`mongod` will go into a quiet logging mode which will not log the following events/activities:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:249
+# 3a9d695160064ac18b806c386dd8beff
+msgid "connection events;"
+msgstr ""
+
+#: ../source/reference/parameters.txt:251
+# 39f88f064b214a2a9f499d3b46df02c7
+msgid "the :dbcommand:`drop` command, the :dbcommand:`dropIndexes` command, the :dbcommand:`diagLogging` command, the :dbcommand:`validate` command, and the :dbcommand:`clean` command; and"
+msgstr ""
+
+#: ../source/reference/parameters.txt:257
+# 2a4cbb535aa94466ba2ce10c05e35a1f
+msgid "replication synchronization activities."
+msgstr ""
+
+#: ../source/reference/parameters.txt:259
+# 5c799531fab54159baa97b447251f297
+msgid "Consider the following example which sets the ``quiet`` to ``1``:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:267
+# 508072ca7fe745a18f3d30911593bbd8
+msgid ":setting:`~systemLog.quiet`"
+msgstr ""
+
+#: ../source/reference/parameters.txt:271
+# 2b8ddc9795d04267812b8525bad30310
+msgid "MongoDB enables the text search feature by default. Manual enabling of this feature is unnecessary."
+msgstr ""
+
+#: ../source/reference/parameters.txt:275
+# b284fe5704914a3facc7fb445ab19f34
+msgid "Enables the :doc:`text search </core/index-text>` feature. When manually enabling, you must enable on **each and every** :program:`mongod` for replica sets."
+msgstr ""
+
+#: ../source/reference/parameters.txt:281
+# 136bdb0bfe6d4f12a4d1654c1da6f6d7
+msgid "and 2.4.2"
+msgstr ""
+
+#: ../source/reference/parameters.txt:283
+# 0b6ef2bb6dfd4258a726929812fbb3d0
+msgid "Changes the behavior of the connection pool that :program:`mongos` uses to connect to the shards. As a result, each :program:`mongos` should need to maintain fewer connections to each shard. When enabled, the :program:`mongos` will release a connection into the thread pool *after* each read operation or command."
+msgstr ""
+
+#: ../source/reference/parameters.txt:289
+# 20954e6a71f64c099451d8ebcf775b15
+msgid "For applications that do not use the :ref:`default <write-concern-acknowledged>`, :ref:`journaled <write-concern-replica-journaled>`, or :ref:`replica acknowledged <write-concern-replica-acknowledged>` write concern modes of the driver, :parameter:`releaseConnectionsAfterResponse` will affect the meaning of :dbcommand:`getLastError`."
+msgstr ""
+
+#: ../source/reference/parameters.txt:296
+# 412f16d0e43b4fc683889f9c0b3e53b7
+msgid "If an application allows read operations in between write operations and :dbcommand:`getLastError` calls, the resulting :dbcommand:`getLastError` will **not** report on the success of the proceeding write operation."
+msgstr ""
+
+#: ../source/reference/parameters.txt:301
+# 632964a325054b04a0bf7ce0c20b7a24
+msgid "Use with caution."
+msgstr ""
+
+#: ../source/reference/parameters.txt:303
+# a067ee2d9b174d50a9bb8bc656997c2c
+msgid "To enable, use the following command while connected to a :program:`mongos`:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:310
+# 61cf3e2f37d64460a07ed6aa614d2ced
+msgid "Alternately, you may start the :program:`mongos` instance with the following run-time option:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:317
+# 792e2ddf05264e9da7423aff6a56ea24
+msgid "To change this policy for the entire cluster, you must set :parameter:`releaseConnectionsAfterResponse` on each :program:`mongos` instance in the cluster."
+msgstr ""
+
+#: ../source/reference/parameters.txt:325
+#: ../source/reference/parameters.txt:358
+# f15dac866e8144deb12d35713d50e4cb
+# a997d53d44834e7a98c238e2ac1fee81
+msgid "*Default*: 200"
+msgstr ""
+
+#: ../source/reference/parameters.txt:327
+# b0d11f72c48e47738bd50f0ee4630f54
+msgid ":program:`mongos` instances reuse connections to the shards to service multiple requests. However, in some situations very active :program:`mongos` instances may need to maintain a pool larger than the default maximum of 200 connections."
+msgstr ""
+
+#: ../source/reference/parameters.txt:332
+# 3822aca6efd04af4b865b535e92b8480
+msgid "The :parameter:`connPoolMaxShardedConnectionsPerHost` value defines the size of the largest connection pool that :program:`mongos` instances will maintain for communication to the shards. The size of a pool does not prevent :program:`mongos` instances from creating additional connections, but *does* prevent the connection pools from retaining connections above this limit."
+msgstr ""
+
+#: ../source/reference/parameters.txt:339
+# 114529dc3e0e4463849ae68cef182a7e
+msgid "Increase the :parameter:`connPoolMaxShardedConnectionsPerHost` value **only** if the number of connections in a connection pool has a high level of churn, or if the total number of created connections increase."
+msgstr ""
+
+#: ../source/reference/parameters.txt:344
+# 8264da92678c44d69f70f387e434b3aa
+msgid ":parameter:`connPoolMaxShardedConnectionsPerHost` only applies for :program:`mongos` instances. You can only set :parameter:`connPoolMaxShardedConnectionsPerHost` during start up in the config file or on the command line, as follows to increase the size of the connection pool:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:360
+# a21ffdc7d37545858d26f588fa38784e
+msgid ":program:`mongod` maintains connection pools for outgoing connections to other :program:`mongod` instances to maximize connection reuse."
+msgstr ""
+
+#: ../source/reference/parameters.txt:364
+# 5e8153b55f1c4b1f9ca72e75e8b2bf28
+msgid "The :parameter:`connPoolMaxConnectionsPerHost` value defines the size of the largest connection pool that :program:`mongod` instances will maintain for inter-process communication. The size of a pool does not prevent a :program:`mongod` from creating additional connections, but *does* prevent a connection pool from retaining connections in excess of the value of :parameter:`connPoolMaxConnectionsPerHost`."
+msgstr ""
+
+#: ../source/reference/parameters.txt:372
+# df6da3c261b14d5c81c0039bdaafd3d3
+msgid "**Only** adjust this setting if your driver does *not* pool connections and you're using authentication in the context of a sharded cluster."
+msgstr ""
+
+#: ../source/reference/parameters.txt:376
+# dd5cdca6edff41a3aaded6e1a23bf50b
+msgid ":parameter:`connPoolMaxShardedConnectionsPerHost` applies to :program:`mongod` instances only. You can only set :parameter:`connPoolMaxShardedConnectionsPerHost` during start up in the config file or on the command line, as follows to increase the size of the connection pool:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:388
+# 1ff863e24b5b4024b05fa09ab5db8281
+msgid "Added support for the ``PLAIN`` and ``MONGODB-X509`` authentication mechanisms."
+msgstr ""
+
+#: ../source/reference/parameters.txt:392
+# 9afa2665358440a9bd17f87c9767accb
+msgid "Specifies the list of authentication mechanisms the server accepts. Set this to one or more of the following values. If you specify multiple values, use a comma-separated list and no spaces. For descriptions of the authentication mechanisms, see :doc:`/core/authentication`."
+msgstr ""
+
+#: ../source/reference/parameters.txt:401
+# bc26431e2ed04f51afa05d0cd94a44e7
+msgid "Value"
+msgstr ""
+
+#: ../source/reference/parameters.txt:403
+# 49338d1cc04a4a8ebea10616992a9a78
+msgid "Description"
+msgstr ""
+
+#: ../source/reference/parameters.txt:405
+# db3855253a1647a5b78684e2ff5286f7
+msgid "MONGODB-CR"
+msgstr ""
+
+#: ../source/reference/parameters.txt:407
+# 380588a48b234b31bf51017f6e8e693c
+msgid "MongoDB challenge/response authentication."
+msgstr ""
+
+#: ../source/reference/parameters.txt:409
+# d78f13e9b9974cdf944a2dd2b67c762d
+msgid "MONGODB-X509"
+msgstr ""
+
+#: ../source/reference/parameters.txt:411
+# b4380e78409845edbc1c1532930c48df
+msgid "MongoDB SSL certificate authentication."
+msgstr ""
+
+#: ../source/reference/parameters.txt:413
+# be0c71b951e34d8eb08bbdd1f918ce7f
+msgid "PLAIN"
+msgstr ""
+
+#: ../source/reference/parameters.txt:415
+# 9a970430ffc64669814b4ed65afee3ff
+msgid "External authentication using LDAP. You can also use ``PLAIN`` for authenticating in-database users. ``PLAIN`` transmits passwords in plain text. This mechanism is available only in `MongoDB Enterprise <http://www.mongodb.com/products/mongodb-enterprise>`_."
+msgstr ""
+
+#: ../source/reference/parameters.txt:421
+# 1c4147916b5046bb9e19e50b3c70cd7d
+msgid "GSSAPI"
+msgstr ""
+
+#: ../source/reference/parameters.txt:423
+# 2f09ae7e707c4cdea05e80bca96c3b78
+msgid "External authentication using Kerberos. This mechanism is available only in `MongoDB Enterprise <http://www.mongodb.com/products/mongodb-enterprise>`_."
+msgstr ""
+
+#: ../source/reference/parameters.txt:434
+# b4b7a451f0334878a75cfa7abdeb9345
+msgid "For example, to specify ``PLAIN`` as the authentication mechanism, use the following command:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:443
+# 77563417ce804bb6afc4045af60ba305
+msgid "Available only in MongoDB Enterprise (except MongoDB Enterprise for Windows)."
+msgstr ""
+
+#: ../source/reference/parameters.txt:445
+# d37abf1af2814f9e853afdaef8505dee
+msgid "Specify the path to the Unix Domain Socket of the ``saslauthd`` instance to use for proxy authentication."
+msgstr ""
+
+#: ../source/reference/parameters.txt:452
+# 6fd0dc01bb1b401eabe38ab2288d675d
+msgid "Set the :setting:`net.ssl.mode` to either ``preferSSL`` or ``requireSSL``. Useful during :doc:`rolling upgrade to SSL </tutorial/upgrade-cluster-to-ssl>` to minimize downtime."
+msgstr ""
+
+#: ../source/includes/fact-ssl-supported.rst:1
+#: ../source/includes/fact-ssl-supported.rst:1
+# 9bf42d65a72f4e869959b97891c2f1bf
+# 372eb92984a546cb86a51b15461062dd
+msgid "The `default distribution of MongoDB <http://www.mongodb.org/downloads>`_ does **not** contain support for SSL. To use SSL you can either compile MongoDB with SSL support or use |ent-build|. See :doc:`/tutorial/configure-ssl` for more information about SSL and MongoDB."
+msgstr ""
+
+#: ../source/reference/parameters.txt:466
+# 3436f171178a44e1b3c51a4f975b1379
+msgid "Set the :setting:`~security.clusterAuthMode` to either ``sendX509`` or ``x509``. Useful during :ref:`rolling upgrade to use x509 for membership authentication <upgrade-to-x509-internal-authentication>` to minimize downtime."
+msgstr ""
+
+#: ../source/reference/parameters.txt:481
+# 20e1b1dc958e4741a5ee3b00062c62ce
+msgid "To support :doc:`TTL Indexes </core/index-ttl>`, :program:`mongod` instances have a background thread that is responsible for deleting documents from collections with TTL indexes."
+msgstr ""
+
+#: ../source/reference/parameters.txt:485
+# e7c982357e1a4b698eca608c77321d9a
+msgid "To disable this worker thread for a :program:`mongod`, set :parameter:`ttlMonitorEnabled` to ``false``, as in the following operations:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:493
+# 2eaf7a22180b4a059a259f30c1969ceb
+msgid "Alternately, you may disable the thread at run-time by starting the :program:`mongod` instance with the following option:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:504
+# 2ca1af1abbec4ab99d94b1e03b237aa1
+msgid "Allows users to override the default :doc:`Kerberos </tutorial/control-access-to-mongodb-with-kerberos-authentication>` service name component of the :doc:`Kerberos </tutorial/control-access-to-mongodb-with-kerberos-authentication>` principal name, on a per-instance basis. If unspecified, the default value is ``mongodb``."
+msgstr ""
+
+#: ../source/reference/parameters.txt:511
+# 38bbfaa5a7ab482bb4aa5249dbd02292
+msgid "MongoDB only permits setting :parameter:`saslServiceName` at startup. The :dbcommand:`setParameter` command can not change this setting."
+msgstr ""
+
+#: ../source/reference/parameters.txt:515
+# e4df75320def40f780b7c3a5ee41a55b
+msgid ":parameter:`saslServiceName` is only available in MongoDB Enterprise."
+msgstr ""
+
+#: ../source/reference/parameters.txt:520
+# 49ab89096cc84cab96e88c8a8280b927
+msgid "Ensure that your driver supports alternate service names."
+msgstr ""
+
+#: ../source/reference/parameters.txt:526
+# ee6fff59320343c991d904ea302e2f20
+msgid "*Default*: ``true``."
+msgstr ""
+
+#: ../source/reference/parameters.txt:528
+# 1424a944033f438aae0c8ac045e3b43a
+msgid ":program:`mongod` uses an allocation strategy called :collflag:`usePowerOf2Sizes` where each record has a size, in bytes that is a power of 2 (e.g. 32, 64, 128, 256, 512...16777216.) The minimum allocation for a document is 32 bytes."
+msgstr ""
+
+#: ../source/reference/parameters.txt:533
+# 2df31e4d464d44cea811a2759b2eae9d
+msgid "MongoDB stores documents in contiguous spaces on disk, and each record includes both the document itself and some additional space to allow the document to grow slightly through updates."
+msgstr ""
+
+#: ../source/reference/parameters.txt:537
+# 16e5a9e2d6734877855251696cef21f0
+msgid "By default, all *new* collections, created after 2.6 use the :collflag:`usePowerOf2Sizes` strategy. To revert to the prior *exact fit allocation* strategy, set :parameter:`newCollectionsUsePowerOf2Sizes` to ``false``."
+msgstr ""
+
+#: ../source/reference/parameters.txt:543
+# a76ac40a0704455a9d2964edb92be52d
+msgid "New collections include those: created during :ref:`initial sync <replica-set-initial-sync>`, as well as those created by the :program:`mongorestore` and :program:`mongoimport` tools, by running :program:`mongod` with the :option:`--repair <mongod --repair>` option, as well as the :dbcommand:`restoreDatabase` command."
+msgstr ""
+
+#: ../source/reference/parameters.txt:550
+# 832e72286b89490784e347f5aa9a7405
+msgid "Issue the following command to change the allocation strategy for a running :program:`mongod` instance:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:557
+# d32f9935e8544f0a982262e6502ea455
+msgid "You can also set :parameter:`newCollectionsUsePowerOf2Sizes`  at run-time with the following operation."
+msgstr ""
+
+#: ../source/reference/parameters.txt:568
+# 3d51ebf1e2994e0f9b252b665c1d08db
+msgid "*Default*: 600."
+msgstr ""
+
+#: ../source/reference/parameters.txt:570
+# 0682863d34f14b7eb8e03e1fe7e87485
+msgid "On a :program:`mongos` instance, this specifies the amount of time in seconds to allow before the :program:`mongos` instance purges the in-memory cache of user objects. The cache includes the users' credentials and roles."
+msgstr ""
+
+#: ../source/reference/parameters.txt:575
+# eff75ae294f04ac0ae0e4c8b5436321e
+msgid "This parameter has a minimum value of ``30`` seconds and a maximum value of ``86400`` seconds (24 hours)."
+msgstr ""
+
+#: ../source/reference/parameters.txt:582
+# 16edb4b834a34f239c43f7edce295467
+msgid "In MongoDB 2.6, if you attempt to insert or update a document so that the value of an indexed field is longer than the :limit:`Index Key Length Limit <Index Key>`, the operation will fail and return an error to the client. In previous versions of MongoDB, these operations would successfully insert or modify a document but the index or indexes would not include references to the document."
+msgstr ""
+
+#: ../source/reference/parameters.txt:590
+# 555678648988479e9a6e12cd6a4e6080
+msgid "To avoid this issue, consider using :doc:`hashed indexes </core/index-hashed>` or indexing a computed value. If you have an existing data set and want to disable this behavior so you can upgrade and then gradually resolve these indexing issues, you can use:parameter:`failIndexKeyTooLong` to disable this behavior."
+msgstr ""
+
+#: ../source/reference/parameters.txt:596
+# e6f04ceb9aa447bc9b8f700ebf19e46d
+msgid ":parameter:`failIndexKeyTooLong` defaults to ``true``. When ``false``, a 2.6 :program:`mongod` instance will provide the 2.4 behavior."
+msgstr ""
+
+#: ../source/reference/parameters.txt:600
+# 63ab5d611cb84131a2e60b39c69f90df
+msgid "Issue the following command to disable the index key length validation: for a running:program:`mongod` instance:"
+msgstr ""
+
+#: ../source/reference/parameters.txt:607
+# 4687304886bf4f0782627e9304764b97
+msgid "You can also set :parameter:`failIndexKeyTooLong`  at run-time with the following operation."
+msgstr ""
+

@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/db.runCommand.txt:3
+# 26e9b8a85aab4ad48485d9f709a4d369
+msgid "db.runCommand()"
+msgstr ""
+
+#: ../source/reference/method/db.runCommand.txt:8
+# a0c9df5738d34fa7895da443842cf08b
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/db.runCommand.txt:12
+# cc0fe935b678498e970c7742e4f2d557
+msgid "Provides a helper to run specified :doc:`database commands </reference/command>`. This is the preferred method to issue database commands, as it provides a consistent interface between the shell and drivers."
+msgstr ""
+
+#: ../source/reference/method/db.runCommand.txt:19
+# f486ac0c45d243a486cb67b198ab7983
+msgid "To specify a time limit in milliseconds, see :doc:`/tutorial/terminate-running-operations`."
+msgstr ""
+
+#: ../source/reference/method/db.runCommand.txt:24
+# 552acc4d8e0b417f9df06cb49bc0498b
+msgid "Behavior"
+msgstr ""
+
+#: ../source/reference/method/db.runCommand.txt:26
+# 3aa44001157e4e14a72494bd77e2a28e
+msgid ":method:`db.runCommand()` runs the command in the context of the current database. Some commands are only applicable in the context of the ``admin`` database, and you must change your ``db`` object to before running these commands."
+msgstr ""
+

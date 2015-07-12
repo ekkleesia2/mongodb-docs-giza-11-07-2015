@@ -1,0 +1,67 @@
+=====================
+$unwind (aggregation)
+=====================
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. pipeline:: $unwind
+
+   Deconstructs an array field from the input documents to output a
+   document for *each* element. Each output document is the input
+   document with the value of the array field replaced by the element.
+
+   The :pipeline:`$unwind` stage has the following prototype form:
+
+   .. code-block:: javascript
+
+      { $unwind: <field path> }
+
+   To specify a field path, prefix the field name with a dollar sign
+   ``$`` and enclose in quotes.
+
+Behaviors
+---------
+
+:pipeline:`$unwind` has the following behaviors:
+
+- If a value in the field specified by the field path is *not* an
+  array, :method:`db.collection.aggregate()` generates an error.
+
+- If you specify a path for a field that does not exist in an input
+  document, the pipeline ignores the input document and will not output
+  documents for that input document.
+
+- If the array holds an empty array (``[]``) in an input document, the
+  pipeline ignores the input document and will not output
+  documents for that input document.
+
+Examples
+--------
+
+Consider an ``inventory`` with the following document:
+
+.. code-block:: javascript
+
+   { "_id" : 1, "item" : "ABC1", sizes: [ "S", "M", "L"] }
+
+The following aggregation uses the :pipeline:`$unwind` stage to output
+a document for each element in the ``sizes`` array:
+
+.. code-block:: javascript
+
+   db.inventory.aggregate( [ { $unwind : "$sizes" } ] )
+
+The operation returns the following results:
+
+.. code-block:: javascript
+
+   { "_id" : 1, "item" : "ABC1", "sizes" : "S" }
+   { "_id" : 1, "item" : "ABC1", "sizes" : "M" }
+   { "_id" : 1, "item" : "ABC1", "sizes" : "L" }
+
+Each document is identical to the input document except for the value
+of the ``sizes`` field which now holds a value from the original
+``sizes`` array.

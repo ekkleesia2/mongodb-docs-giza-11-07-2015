@@ -1,0 +1,14 @@
+==========
+fuzzFile()
+==========
+
+.. default-domain:: mongodb
+
+Description
+-----------
+
+.. method:: fuzzFile(filename)
+
+   For internal use.
+
+   .. include:: /includes/apiargs/method-fuzzFile-param.rst

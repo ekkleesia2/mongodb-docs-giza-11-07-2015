@@ -1,0 +1,19 @@
+===========
+db.killOp()
+===========
+
+.. default-domain:: mongodb
+
+Description
+-----------
+
+.. method:: db.killOp(opid)
+
+   Terminates an operation as specified by the operation ID. To find
+   operations and their corresponding IDs, see :method:`db.currentOp()`.
+
+   The :method:`db.killOp()` method has the following parameter:
+
+   .. include:: /includes/apiargs/method-db.killOp-param.rst
+
+   .. include:: /includes/warning-terminating-operations.rst

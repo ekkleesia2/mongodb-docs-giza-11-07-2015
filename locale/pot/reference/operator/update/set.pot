@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/update/set.txt:3
+# cf47a9ef10264223877a6977697ad422
+msgid "$set"
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:9
+# 52c3fe18300346d29d6d3f0fe81fed64
+msgid "The :update:`$set` operator replaces the value of a field to the specified value. If the field does not exist, the :update:`$set` operator will add the field with the specified value."
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:13
+# cba828d9dc424b7c8a6d758c9a60139d
+msgid "The :update:`$set` operator expression has the following form:"
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:19
+# 8a02a112eac44bba87a9d9ea6a063bfa
+msgid "To access fields in embedded documents, use the :term:`dot notation`."
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:22
+# 4a5b2262b4ac48faa3a914b23855d632
+msgid "Examples"
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:24
+# 8dc6d0c9dda24531a1766bd51f48ec06
+msgid "By default, :method:`db.collection.update()` method updates the first document that matches the update condition. Use the ``multi`` option to update all matching documents."
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:29
+# 474a697172ce41d6ae40c9982fcb97fa
+msgid "Update a Single Document"
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:31
+# 3d96d0a192cb4101b4be8dc1d439a0cd
+msgid "Consider a collection ``products`` with the following document:"
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:37
+# 3252aba48e17438b8175b360659daff7
+msgid "The following operation uses the :update:`$set` operator to update the value of the ``quantity`` field to ``500``, ``instock`` field to ``true``, and ``make`` field in the ``details`` document to ``\"ZYX\"`` for the *first* document where the field ``sku`` has the value ``\"abc123\"``:"
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:51
+# 53bb4a1e16aa462bafdc5ee0b1ec8775
+msgid "Update Multiple Documents"
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:53
+# 437432f59f62405ea8fb43070ceba152
+msgid "To update all matching documents in the collection, specify ``multi: true`` option in the :method:`~db.collection.update()` method, as in the following example which sets the value of the field ``instock`` to ``true`` for all documents in the ``products`` collection where the ``quantity`` field is greater than (i.e. :query:`$gt`) ``0`` :"
+msgstr ""
+
+#: ../source/reference/operator/update/set.txt:67
+# 8a39dd2823294a83aad83bc96e9525ea
+msgid "For more examples, see :method:`~db.collection.update()`."
+msgstr ""
+

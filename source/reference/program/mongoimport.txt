@@ -1,0 +1,125 @@
+.. _mongoimport:
+
+===============
+``mongoimport``
+===============
+
+.. default-domain:: mongodb
+.. |tool-binary| replace:: mongoimport
+
+Synopsis
+--------
+
+The :program:`mongoimport` tool imports content from an
+:doc:`Extended JSON </reference/mongodb-extended-json>`, CSV, or TSV export
+created by :program:`mongoexport`, or potentially, another third-party export
+tool.
+
+See :ref:`human-intelligible-exports` for more in-depth usage overview, and the
+:doc:`mongoexport` document for more information regarding
+:program:`mongoexport`, which provides the inverse "exporting" capability.
+
+Considerations
+--------------
+
+.. include:: /includes/fact-type-fidelity-loss.rst
+
+.. include:: /includes/fact-type-fidelity-loss-example.rst
+
+Required Access
+---------------
+
+In order to connect to a :program:`mongod` that enforces authorization
+with the :option:`--auth <mongod --auth>` option, you must use the
+:option:`--username <mongoexport --username>` and :option:`--password
+<mongoexport --password>` options. The connecting user must
+possess, at a minimum, the :authrole:`readWrite` role on the database
+into which they are importing data.
+
+Options
+-------
+
+.. include:: /includes/extracts/fact-3.0-tools-drop-dbpath-support-mongoimport.rst
+
+.. binary:: mongoimport
+
+.. program:: mongoimport
+
+.. include:: /includes/option/option-mongoimport-help.rst
+
+.. include:: /includes/option/option-mongoimport-verbose.rst
+
+.. include:: /includes/option/option-mongoimport-quiet.rst
+
+.. include:: /includes/option/option-mongoimport-version.rst
+
+.. include:: /includes/option/option-mongoimport-host.rst
+
+.. include:: /includes/option/option-mongoimport-port.rst
+
+.. include:: /includes/option/option-mongoimport-ipv6.rst
+
+.. include:: /includes/option/option-mongoimport-ssl.rst
+
+.. include:: /includes/option/option-mongoimport-sslCAFile.rst
+
+.. include:: /includes/option/option-mongoimport-sslPEMKeyFile.rst
+
+.. include:: /includes/option/option-mongoimport-sslPEMKeyPassword.rst
+
+.. include:: /includes/option/option-mongoimport-sslCRLFile.rst
+
+.. include:: /includes/option/option-mongoimport-sslAllowInvalidCertificates.rst
+
+.. include:: /includes/option/option-mongoimport-sslAllowInvalidHostnames.rst
+
+.. include:: /includes/option/option-mongoimport-sslFIPSMode.rst
+
+.. include:: /includes/option/option-mongoimport-username.rst
+
+.. include:: /includes/option/option-mongoimport-password.rst
+
+.. include:: /includes/option/option-mongoimport-authenticationDatabase.rst
+
+.. include:: /includes/option/option-mongoimport-authenticationMechanism.rst
+
+.. include:: /includes/option/option-mongoimport-gssapiServiceName.rst
+
+.. include:: /includes/option/option-mongoimport-gssapiHostName.rst
+
+.. include:: /includes/option/option-mongoimport-db.rst
+
+.. include:: /includes/option/option-mongoimport-collection.rst
+
+.. include:: /includes/option/option-mongoimport-fields.rst
+
+.. include:: /includes/option/option-mongoimport-fieldFile.rst
+
+.. include:: /includes/option/option-mongoimport-ignoreBlanks.rst
+
+.. include:: /includes/option/option-mongoimport-type.rst
+
+.. include:: /includes/option/option-mongoimport-file.rst
+
+.. include:: /includes/option/option-mongoimport-drop.rst
+
+.. include:: /includes/option/option-mongoimport-headerline.rst
+
+.. include:: /includes/option/option-mongoimport-upsert.rst
+
+.. include:: /includes/option/option-mongoimport-upsertFields.rst
+
+.. include:: /includes/option/option-mongoimport-stopOnError.rst
+
+.. include:: /includes/option/option-mongoimport-jsonArray.rst
+
+.. include:: /includes/option/option-mongoimport-maintainInsertionOrder.rst
+
+.. include:: /includes/option/option-mongoimport-numInsertionWorkers.rst
+
+.. include:: /includes/option/option-mongoimport-writeConcern.rst
+
+Use
+---
+
+.. include:: /includes/fact-mongoimport-usage.rst

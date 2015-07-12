@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/default-mongodb-port.txt:3
+# 7edf490b14244c3aab93b34c8a9e6e48
+msgid "Default MongoDB Port"
+msgstr ""
+
+#: ../source/reference/default-mongodb-port.txt:7
+# 5b46f4bc2cfa43c0b23a97e4c605c297
+msgid "The following table lists the default ports used by MongoDB:"
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:4
+# 76989519f6cd4e53b9839b4e0380de49
+msgid "Default Port"
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:6
+# de2b58aade9e45e49e054deeb7e9a827
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:8
+# fb411a89f826474e9203ebebf71215d4
+msgid "``27017``"
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:10
+# ee8a30d7805e4a719bd7452787e07a8d
+msgid "The default port for :program:`mongod` and :program:`mongos` instances. You can change this port with :setting:`~net.port` or :option:`--port <mongod --port>`."
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:15
+# 118a61196c694a6eb3f5f2bb5804a259
+msgid "``27018``"
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:17
+# 57a91d90f9d6470d853bade3c76e1bda
+msgid "The default port when running with :option:`--shardsvr <mongod --shardsvr>` runtime operation or the ``shardsvr`` value for the :setting:`~sharding.clusterRole` setting in a configuration file."
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:22
+# e26da028c54642868d34edbe5772bb71
+msgid "``27019``"
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:24
+# 6a9ea4c94eeb4c57afc0b6d00086a58d
+msgid "The default port when running with :option:`--configsvr <mongod --configsvr>` runtime operation or the ``configsvr`` value for the :setting:`~sharding.clusterRole` setting in a configuration file."
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:29
+# 9259411d52d44d8c9b02ac91d1dad1e0
+msgid "``28017``"
+msgstr ""
+
+#: ../source/includes/table/default-mongodb-port.rst:31
+# bea67cacbe08468183f77e655b2cb8ac
+msgid "The default port for the web status page. The web status page is always accessible at a port number that is ``1000`` greater than the port determined by :setting:`~net.port`."
+msgstr ""
+

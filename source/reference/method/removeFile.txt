@@ -1,0 +1,16 @@
+============
+removeFile()
+============
+
+.. default-domain:: mongodb
+
+Description
+-----------
+
+.. method:: removeFile(filename)
+
+   Removes the specified file from the local file system.
+
+   The :method:`removeFile()` method has the following parameter:
+
+   .. include:: /includes/apiargs/method-removeFile-param.rst

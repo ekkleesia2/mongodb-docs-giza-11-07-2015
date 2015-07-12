@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/administration/sharded-cluster-data.txt:3
+# 00bf784f87db4312b117147b09205ccb
+msgid "Sharded Cluster Data Management"
+msgstr ""
+
+#: ../source/administration/sharded-cluster-data.txt:7
+# e2642533b61a4d09ba143bb4e1e9ea94
+msgid "The following documents provide information in managing data in sharded clusters."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:6
+# b51ab40a15d7401d9748a14cd3d1cbe7
+msgid ":doc:`/tutorial/create-chunks-in-sharded-cluster`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:4
+# 1f84f8080fdf40178fc0f79e4d6d2e92
+msgid "Create chunks, or *pre-split* empty collection to ensure an even distribution of chunks during data ingestion."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:10
+# d24104d8daa4486783743e5df68c02c5
+msgid ":doc:`/tutorial/split-chunks-in-sharded-cluster`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:9
+# 89b9cc510290497a89a06c46aee994f0
+msgid "Manually create chunks in a sharded collection."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:14
+# a72af2a7dab045dabceaff7e2248885c
+msgid ":doc:`/tutorial/migrate-chunks-in-sharded-cluster`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:13
+# 265294069a7e42cdbe4f57f244b47221
+msgid "Manually migrate chunks without using the automatic balance process."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:18
+# a79424fe698940dfbbd9d8e769d9f9db
+msgid ":doc:`/tutorial/merge-chunks-in-sharded-cluster`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:17
+# 2205947527a64956bc98acad51968ac3
+msgid "Use the :dbcommand:`mergeChunks` to manually combine chunk ranges."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:22
+# 0521572cbf684f91ac81edd180cfc36d
+msgid ":doc:`/tutorial/modify-chunk-size-in-sharded-cluster`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:21
+# 893839e3bdb049a1b0ddd51e6a5e292f
+msgid "Modify the default chunk size in a sharded collection"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:27
+# 1479bb3e2a9b4482aa171e06a4d8d70d
+msgid ":doc:`/core/tag-aware-sharding`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:25
+# 96836e358f8445e795258b5cb5be3362
+msgid "Tags associate specific ranges  of :term:`shard key` values with specific shards for use in managing deployment patterns."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:32
+# 975ad955b66b4162a43b51deb27ff95d
+msgid ":doc:`/tutorial/administer-shard-tags`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:30
+# d5f89c4e356c4f6b9183bf0c81efc777
+msgid "Use tags to associate specific ranges of shard key values with specific shards."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:37
+# ca643a21b3b04481a4e1b3cd114c7b2d
+msgid ":doc:`/tutorial/enforce-unique-keys-for-sharded-collections`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:35
+# 2ec0499fd31f4f88beaa02ee8b81becc
+msgid "Ensure that a field is always unique in all collections in a sharded cluster."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:39
+# b4f76bd0c22d4a7ea18e29e97fb2ef43
+msgid ":doc:`/tutorial/shard-gridfs-data`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-sharded-cluster-data.rst:40
+# bb08e5a1ba204abbb0a90cd6252ec928
+msgid "Choose whether to shard GridFS data in a sharded collection."
+msgstr ""
+

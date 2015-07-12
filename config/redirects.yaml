@@ -1,0 +1,394 @@
+# Each redirect YAML document has the following schema:
+#
+#    from: "the path to the redirected URL"
+#    url-base: "the path to the new location for the resource"
+#    type: "currently this script only supports 'redirect', and
+#          ignores all documents with another type."
+#    code: "the HTTP redirect code. Raises exception if not 301, 302, 303."
+#    outputs: "a list of branches/paths beneath http://docs.mongodb.org/ to
+#             place this redirect. 'all', 'before-<branch>' and
+#             'after-<branch>' have special meaning.
+#
+# 'outputs' possibility:
+#
+# - 'all': generates redirects for all published branches, but *not* 'manual'.
+#
+# - '<branch>': generates redirects for a specific branch.
+#
+# - 'before-<branch>': generates redirects for all branches that
+#   reflect releases previous to the specified branch. (Inclusive.)
+#   bit of a misnomer -- it is up to and including
+#
+# - 'after-<branch>': generates redirects for all branches that
+#   reflect releases after the specified branch. (Non-inclusive.)
+#
+# All paths are relative to the ``source/`` directory.
+#
+########################################################################
+
+from: "/reference/command/getoptime"
+to: "/reference/command/nav-replication"
+type: 'redirect'
+code: 303
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: "/reference/command/closeAllDatabases"
+to: "/reference/command/nav-administration"
+type: 'redirect'
+code: 303
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/reference/operator/aggregation/dateToString'
+to: '/reference/operator/aggregation'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: /reference/method/db.addUser
+to: /reference/method/db.createUser
+type: 'redirect'
+code: 303
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/reference/log-messages'
+to: '/reference/configuration-options'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/reference/command/explain'
+to: '/reference/method/cursor.explain'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: "/reference/command/replSetGetConfig"
+to: "/reference/command/nav-replication"
+type: 'redirect'
+code: 303
+outputs:
+  - 'before-v2.6'
+---
+from: "/reference/command/repairCursor"
+to: "/reference/command/nav-administration"
+type: 'redirect'
+code: 303
+outputs:
+  - 'before-v2.6'
+---
+from: '/reference/method/db.collection.explain'
+to: '/reference/method/cursor.explain'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/reference/method/sh.removeTagRange'
+to: '/reference/method/js-sharding'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/reference/method/db.getLogComponents'
+to: '/reference/method'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/reference/method/db.setLogLevel'
+to: '/reference/method'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/reference/explain-results'
+to: '/reference/method/cursor.explain'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/reference/operator/query/eq'
+to: '/reference/operator/query'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+# 2.4 will still have text command
+# 2.6 will still have text command but with deprecation message
+# 3.0 and after will not have text command
+from: '/reference/command/text'
+to: '/reference/command/nav-crud'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.2'
+---
+# remove text in 3.0
+# 2.6 will still have text command but with deprecation message
+# after-xxx is not inclusive
+from: '/reference/command/text'
+to: '/reference/operator/query/text'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/reference/command/listCollections'
+to: '/reference/method/db.getCollectionNames'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/reference/method/db.getCollectionInfos'
+to: '/reference/method/db.getCollectionNames'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/administration/production-checklist'
+to: '/administration/production-notes'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/release-notes/3.0-changelog'
+to: '/release-notes'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/administration/production-checklist-development'
+to: '/administration/production-notes'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/administration/production-checklist-operations'
+to: '/administration/production-notes'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/core/import-export'
+to: '/core/backups'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+# This file got renamed
+from: '/tutorial/backup-with-mongodump'
+to: '/tutorial/backup-and-restore-tools'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/tutorial/backup-and-restore-tools'
+to: '/tutorial/backup-with-mongodump'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+from: '/administration/analyzing-mongodb-performance'
+to: '/administration/optimization'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.6'
+---
+# redirected in 3.0 to getting started
+# temp -- we should fix giza so that
+# we can use the external field to redirect with
+# the after-xxx outputs
+from: '/tutorial/getting-started'
+to: '/shell'
+type: 'redirect'
+code: 301
+outputs:
+  - { 'master': "http://docs.mongodb.org/getting-started" }
+  - { 'manual': "http://docs.mongodb.org/getting-started" }
+  - { 'v3.0': "http://docs.mongodb.org/getting-started" }
+---
+# redirected in 3.0 to getting started
+# temp -- we should fix giza so that
+# we can use the external field to redirect with
+# the after-xxx outputs
+from: '/tutorial/generate-test-data'
+to: '/shell'
+type: 'redirect'
+code: 301
+outputs:
+  - { 'master': "http://docs.mongodb.org/getting-started" }
+  - { 'manual': "http://docs.mongodb.org/getting-started" }
+  - { 'v3.0': "http://docs.mongodb.org/getting-started" }
+---
+# This file (exists only in 2.6 and 3.0) got renamed
+from: '/reference/transparent-huge-pages'
+to: '/tutorial/transparent-huge-pages'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.4'
+  - 'master'
+---
+# This file (exists only in 2.6 and 3.0) 
+from: '/tutorial/transparent-huge-pages'
+to: '/administration/production-notes'
+type: 'redirect'
+code: 301
+outputs:
+  - 'before-v2.4'
+---
+from: '/tutorial/perform-findAndModify-quorum-reads'
+to: '/reference/method/db.collection.findAndModify'
+code: 303
+type: redirect
+outputs:
+  - after-v2.2
+  - 'master'
+---
+from: '/tutorial/use-capped-collections-for-fast-writes-and-reads'
+to: '/core/crud-introduction'
+code: 303
+type: redirect
+outputs:
+  - after-v2.2
+  - 'master'
+---
+# before-<version> includes <version> as well
+from: '/administration/security-auditing'
+to: '/tutorial/configure-auditing'
+code: 303
+type: redirect
+outputs:
+  - before-v2.4
+---
+# before-<version> includes <version> as well
+from: '/tutorial/configure-audit-filters'
+to: '/tutorial/configure-auditing'
+code: 303
+type: redirect
+outputs:
+  - before-v2.4
+---
+# before-<version> includes <version> as well
+from: '/administration/security-user-role-management'
+to: '/administration/security-access-control'
+code: 303
+type: redirect
+outputs:
+  - before-v2.4
+---
+# before-<version> includes <version> as well
+from: '/core/security-concepts-access-control'
+to: '/core/security'
+code: 303
+type: redirect
+outputs:
+  - before-v2.6
+---
+# before-<version> includes <version> as well
+from: '/core/security-concepts-external-env'
+to: '/core/security'
+code: 303
+type: redirect
+outputs:
+  - before-v2.6
+---
+# before-<version> includes <version> as well
+from: '/core/security-concepts-network'
+to: '/core/security'
+code: 303
+type: redirect
+outputs:
+  - before-v2.6
+---
+# before-<version> includes <version> as well
+from: '/tutorial/manage-users-and-roles'
+to: '/administration/security-user-role-management'
+code: 303
+type: redirect
+outputs:
+  - before-v2.6
+---
+from: '/tutorial/add-user-to-database'
+to: '/tutorial/manage-users-and-roles'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/tutorial/assign-role-to-user'
+to: '/tutorial/manage-users-and-roles'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/tutorial/change-user-password'
+to: '/tutorial/manage-users-and-roles'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/tutorial/change-user-privileges'
+to: '/tutorial/manage-users-and-roles'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/tutorial/define-roles'
+to: '/tutorial/manage-users-and-roles'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/tutorial/verify-user-privileges'
+to: '/tutorial/manage-users-and-roles'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+---
+from: '/tutorial/view-roles'
+to: '/tutorial/manage-users-and-roles'
+type: 'redirect'
+code: 301
+outputs:
+  - 'after-v2.6'
+  - 'master'
+...

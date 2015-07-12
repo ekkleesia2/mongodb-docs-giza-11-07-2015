@@ -1,0 +1,15 @@
+====================
+testDistLockWithSkew
+====================
+
+.. default-domain:: mongodb
+
+.. dbcommand:: _testDistLockWithSkew
+
+   :dbcommand:`_testDistLockWithSkew` is an internal command. Do not call
+   directly.
+
+   .. admin-only
+
+   .. |dbcommand| replace:: :dbcommand:`_testDistLockWithSkew`
+   .. include:: /includes/note-enabletestcommands.rst

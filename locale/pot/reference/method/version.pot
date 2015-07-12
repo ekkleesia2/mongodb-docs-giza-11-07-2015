@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/version.txt:3
+# a5e08694b6e042a8a522a17632e6fd9a
+msgid "version()"
+msgstr ""
+
+#: ../source/reference/method/version.txt:9
+# 0ea1fe6c294e4f49b30a634dc9b549ed
+msgid "The version of the :program:`mongo` shell as a string."
+msgstr ""
+
+#: ../source/reference/method/version.txt:11
+# 47d38a518f70460880fa643837e07120
+msgid "In previous versions of the shell, :method:`version()` would print the version instead of returning a string."
+msgstr ""
+

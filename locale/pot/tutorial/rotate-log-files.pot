@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/rotate-log-files.txt:3
+# 31558297de6f4cc6864a0a29972c42d5
+msgid "Rotate Log Files"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:8
+# 6b998ef541264ff6aeea023ca6ea7ae1
+msgid "Overview"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:10
+# 05306b586884473793f10e2cc738fdce
+msgid "Log rotation using MongoDB's standard approach archives the current log file and starts a new one. To do this, the :program:`mongod` or :program:`mongos` instance renames the current log file by appending a UTC (GMT) timestamp to the filename, in :term:`ISODate` format. It then opens a new log file, closes the old log file, and sends all new log entries to the new log file."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:17
+# 3edd8c91c681417fafa4eddf858078a9
+msgid "MongoDB's standard approach to log rotation only rotates logs in response to the :dbcommand:`logRotate` command, or when the :program:`mongod` or :program:`mongos` process receives a ``SIGUSR1`` signal from the operating system."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:22
+# 85fff5002d2c487e94b0c82f566c1228
+msgid "Alternately, you may configure mongod to send log data to ``syslog``. In this case, you can take advantage of alternate logrotation tools."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:25
+# fb302c44a2ab427b8b749404f45c2b22
+msgid "For information on logging, see the :ref:`monitoring-standard-loggging` section."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:29
+# ee2f941ddef145b3b7bc6c0b19dfdfb4
+msgid "Log Rotation With MongoDB"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:31
+# 3677476fd4ea4ad4b0ba4bae4e7c5a86
+msgid "The following steps create and rotate a log file:"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:33
+# b6b35458748547db9026a9171a991936
+msgid "Start a :program:`mongod` with verbose logging, with appending enabled, and with the following log file:"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:40
+# 8b7278333e4e4ea38f3b8328b5ceb32b
+msgid "In a separate terminal, list the matching files:"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:46
+# 39ebc16c8ad0434ea6ed636038bcc569
+msgid "For results, you get:"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:52
+# e5892251da8040fd845656d9ad19cce1
+msgid "Rotate the log file using *one* of the following methods."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:54
+# db1ca79bfcda41dbbbc99ab66a6ab6cf
+msgid "From the :program:`mongo` shell, issue the :dbcommand:`logRotate` command from the ``admin`` database:"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:62
+# 113b81984d8746d5a0c0b9c99f0023de
+msgid "This is the only available method to rotate log files on Windows systems."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:65
+# ff9f240ac5f2438dbfec9d9f9351ba7f
+msgid "For Linux systems, rotate logs for a single process by issuing the following command:"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:72
+# 1e3aecef7d1d44f497924e6056f8bfa5
+msgid "List the matching files again:"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:78
+# 97225f433a4343ac99b762d99d3c1a3d
+msgid "For results you get something similar to the following. The timestamps will be different."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:85
+# aa1a862b4de64cc598167eb143f5f06e
+msgid "The example results indicate a log rotation performed at exactly ``11:30 pm`` on ``November 24th, 2011 UTC``, which is the local time offset by the local time zone. The original log file is the one with the timestamp. The new log is ``server1.log`` file."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:90
+# 658e26b1ae0f4582a32d635a6d308cac
+msgid "If you issue a second :dbcommand:`logRotate` command an hour later, then an additional file would appear when listing matching files, as in the following example:"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:98
+# 8447c8c2040e41448bef2d36764aa848
+msgid "This operation does not modify the ``server1.log.2011-11-24T23-30-00`` file created earlier, while ``server1.log.2011-11-25T00-30-00`` is the previous ``server1.log`` file, renamed. ``server1.log`` is a new, empty file that receives all new log output."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:105
+# c5fdc6a352514d39a3418813b964cac9
+msgid "Syslog Log Rotation"
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:109
+# ddc2342a1cd24ac187c9918dfd94f871
+msgid "To configure mongod to send log data to syslog rather than writing log data to a file, use the following procedure."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:112
+# 5638d2a1c6f04271b063d4ee7efeb632
+msgid "Start a :program:`mongod` with the :setting:`~systemLog.syslogFacility` option."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:114
+# 9447abd5dc2c4f3683e8296930134a3f
+msgid "Store and rotate the log output using your system's default log rotation mechanism."
+msgstr ""
+
+#: ../source/tutorial/rotate-log-files.txt:117
+# 5f095d604b5d4b1d8b910228adab58fd
+msgid "You cannot use :setting:`~systemLog.syslogFacility` with :setting:`systemLog.path`."
+msgstr ""
+

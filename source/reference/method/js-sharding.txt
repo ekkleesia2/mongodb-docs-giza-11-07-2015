@@ -1,0 +1,9 @@
+================
+Sharding Methods
+================
+
+.. default-domain:: mongodb
+
+.. include:: /includes/toc/table-method-sh.rst
+
+.. include:: /includes/toc/method-sh.rst

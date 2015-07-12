@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/db.removeUser.txt:3
+# 9df99cef2ae444e49bc6ca93ad838822
+msgid "db.removeUser()"
+msgstr ""
+
+#: ../source/reference/method/db.removeUser.txt:7
+# fcd39e920a6742f7aba3566cd94bf486
+msgid "Use :method:`db.dropUser()` instead of :method:`db.removeUser()`"
+msgstr ""
+
+#: ../source/reference/method/db.removeUser.txt:12
+# bb7ffd56336641a1946b225a9eb70027
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/db.removeUser.txt:16
+# 4b481ae6c72d44229dce58c6ae09927f
+msgid "Removes the specified username from the database."
+msgstr ""
+
+#: ../source/reference/method/db.removeUser.txt:18
+# 0af7c6463212494a9ba3d1c76b577fa7
+msgid "The :method:`db.removeUser()` method has the following parameter:"
+msgstr ""
+

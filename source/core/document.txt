@@ -1,0 +1,193 @@
+=========
+Documents
+=========
+
+.. default-domain:: mongodb
+
+MongoDB stores all data in documents, which are JSON-style data
+structures composed of field-and-value pairs:
+
+.. code-block:: javascript
+
+   { "item": "pencil", "qty": 500, "type": "no.2" }
+
+Most user-accessible data structures in MongoDB are documents,
+including:
+
+- All database records.
+
+- :doc:`Query selectors </core/read-operations>`, which define what records to
+  select for read, update, and delete operations.
+
+- :doc:`Update definitions </core/write-operations>`, which define what fields
+  to modify during an update.
+
+- :doc:`Index specifications </core/indexes>`, which define what
+  fields to index.
+
+- Data output by MongoDB for reporting and configuration, such as the
+  output of the :dbcommand:`serverStatus` and the :ref:`replica set
+  configuration document <replica-set-configuration-document>`.
+
+Document Format
+---------------
+
+MongoDB stores documents on disk in the :term:`BSON` serialization
+format. BSON is a binary representation of :term:`JSON` documents,
+though it contains more data types than JSON. For the BSON spec, see
+`bsonspec.org <http://bsonspec.org/>`_. See also
+:doc:`/reference/bson-types`.
+
+The :program:`mongo` JavaScript shell and the :doc:`MongoDB language
+drivers </applications/drivers>` translate between BSON and the
+language-specific document representation.
+
+.. _document-structure:
+
+Document Structure
+------------------
+
+MongoDB documents are composed of field-and-value pairs and have the
+following structure:
+
+.. code-block:: javascript
+
+   {
+      field1: value1,
+      field2: value2,
+      field3: value3,
+      ...
+      fieldN: valueN
+   }
+
+The value of a field can be any of the BSON :doc:`data types
+</reference/bson-types>`, including other documents, arrays, and arrays
+of documents. The following document contains values of varying types:
+
+.. code-block:: javascript
+
+   var mydoc = {
+                  _id: ObjectId("5099803df3f4948bd2f98391"),
+                  name: { first: "Alan", last: "Turing" },
+                  birth: new Date('Jun 23, 1912'),
+                  death: new Date('Jun 07, 1954'),
+                  contribs: [ "Turing machine", "Turing test", "Turingery" ],
+                  views : NumberLong(1250000)
+               }
+
+The above fields have the following data types:
+
+- ``_id`` holds an *ObjectId*.
+
+- ``name`` holds an *embedded document* that contains the fields
+  ``first`` and ``last``.
+
+- ``birth`` and ``death`` hold values of the *Date* type.
+
+- ``contribs`` holds an *array of strings*.
+
+- ``views`` holds a value of the *NumberLong* type.
+
+Field Names
+-----------
+
+Field names are strings.
+
+.. include:: /includes/fact-document-field-name-restrictions.rst
+
+BSON documents may have more than one field with the same name.
+Most :doc:`MongoDB interfaces </applications/drivers>`, however, represent MongoDB
+with a structure (e.g. a hash table) that does not support duplicate
+field names. If you need to manipulate documents that have more than one
+field with the same name, see the :doc:`driver documentation
+</applications/drivers>` for your driver.
+
+Some documents created by internal MongoDB processes may have duplicate
+fields, but *no* MongoDB process will *ever* add duplicate fields to an
+existing user document.
+
+Field Value Limit
+-----------------
+
+For :doc:`indexed collections </core/indexes-introduction>`, the values
+for the indexed fields have a
+:limit:`Maximum Index Key Length <Index Key Limit>` limit. See
+:limit:`Maximum Index Key Length <Index Key Limit>` for details.
+
+Document Limitations
+--------------------
+
+Documents have the following attributes:
+
+Document Size Limit
+~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-document-max-size.rst
+
+Document Field Order
+~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-update-field-order.rst
+   :start-after: order-of-document-fields
+
+.. _document-id-field:
+
+The ``_id`` Field
+-----------------
+
+The ``_id`` field has the following behavior and constraints:
+
+- By default, MongoDB creates a unique index on the ``_id`` field
+  during the creation of a collection.
+
+- The ``_id`` field is always the first field in the documents. If the
+  server receives a document that does not have the ``_id`` field
+  first, then the server will move the field to the beginning.
+
+- The ``_id`` field may contain values of any :doc:`BSON data type
+  </reference/bson-types>`, other than an array.
+
+  .. warning:: To ensure functioning replication, do not store values
+     that are of the BSON regular expression type in the ``_id``
+     field.
+
+     .. See :issue:`SERVER-9562` for more information.
+
+The following are common options for storing values for ``_id``:
+
+- Use an :doc:`ObjectId </reference/object-id>`.
+
+- Use a natural unique identifier, if available. This saves space and
+  avoids an additional index.
+
+- Generate an auto-incrementing number. See
+  :doc:`/tutorial/create-an-auto-incrementing-field`.
+
+- Generate a UUID in your application code. For a more efficient
+  storage of the UUID values in the collection and in the ``_id``
+  index, store the UUID as a value of the BSON ``BinData`` type.
+
+  .. include:: /includes/fact-bindata-storage-optimization.rst
+
+- Use your driver's BSON UUID facility to generate UUIDs. Be aware
+  that driver implementations may implement UUID serialization and
+  deserialization logic differently, which may not be fully compatible
+  with other drivers. See your :api:`driver documentation <>` for
+  information concerning UUID interoperability.
+
+.. include:: /includes/note-insert-id-field.rst
+
+.. _document-dot-notation:
+
+Dot Notation
+------------
+
+.. include:: /includes/fact-dot-notation.rst
+
+.. seealso::
+
+   - :ref:`read-operations-embedded-documents` for dot notation examples
+     with embedded documents.
+
+   - :ref:`read-operations-arrays` for dot notation examples with
+     arrays.

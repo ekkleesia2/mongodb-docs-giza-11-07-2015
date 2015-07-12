@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/nav-auditing.txt:3
+# 721fe519eb9d4474915ec914ba0e2708
+msgid "System Events Auditing Commands"
+msgstr ""
+
+#: ../source/includes/toc/table-command-audit.rst:2
+# 14c9846508a54157b9a9cc8b1b455090
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-command-audit.rst:2
+# 194105b269e6449488779503fe168ff6
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-command-audit.rst:4
+# 1df49ebf9350492f998209634351b9e9
+msgid ":dbcommand:`logApplicationMessage`"
+msgstr ""
+
+#: ../source/includes/toc/table-command-audit.rst:4
+# de5264c9ce954d31b8433c9b36fa931d
+msgid "Posts a custom message to the audit log."
+msgstr ""
+

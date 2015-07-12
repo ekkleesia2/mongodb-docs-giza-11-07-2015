@@ -1,0 +1,135 @@
+=======
+collMod
+=======
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. dbcommand:: collMod
+
+   .. versionadded:: 2.2
+
+   :dbcommand:`collMod` makes it possible to add flags to a collection
+   to modify the behavior of MongoDB. Flags include
+   :collflag:`usePowerOf2Sizes` and :collflag:`index`. The command
+   takes the following prototype form:
+
+   .. code-block:: javascript
+
+      db.runCommand( {"collMod" : <collection> , "<flag>" : <value> } )
+
+   In this command substitute ``<collection>`` with the name of a
+   collection in the current database, and ``<flag>`` and ``<value>``
+   with the flag and value you want to set.
+
+   Use the :data:`~collStats.userFlags` field in the
+   :method:`db.collection.stats()` output to check enabled collection
+   flags.
+
+.. Commenting out the following after DOCS-717, it does take
+   a lock but its to cover a very small metadata change.
+
+   This command obtains a write lock on the affected database
+   and will block other operations until it has completed.
+
+Flags
+-----
+
+TTL Collection Expiration Time
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. index:: expireAfterSeconds
+.. collflag:: index
+
+   The :collflag:`index` flag changes the expiration time of a
+   :doc:`TTL Collection </tutorial/expire-data>`.
+
+   Specify the key and new expiration time with a document of the form:
+
+   .. code-block:: javascript
+
+      {keyPattern: <index_spec>, expireAfterSeconds: <seconds> }
+
+   In this example, ``<index_spec>`` is an existing index in the
+   collection and ``seconds`` is the number of seconds to subtract
+   from the current time.
+
+   On success :dbcommand:`collMod` returns a document with fields
+   ``expireAfterSeconds_old`` and ``expireAfterSeconds_new`` set to
+   their respective values.
+
+   On failure, :dbcommand:`collMod` returns a document with ``no
+   expireAfterSeconds field to update`` if there is no existing
+   ``expireAfterSeconds`` field or ``cannot find index { **key**:
+   1.0 } for ns **namespace**`` if the specified ``keyPattern``
+   does not exist.
+
+Record Allocation
+~~~~~~~~~~~~~~~~~
+
+Disable All Record Padding
+``````````````````````````
+
+.. collflag:: noPadding
+
+   .. versionadded:: 3.0.0
+
+   :collflag:`noPadding` flag is available for the MMAPv1 storage
+   engine only.
+
+   :collflag:`noPadding` disables record padding for the collection.
+   Without padding, the record allocation size corresponds to the
+   document size, and any updates that results in document growth will
+   require a new allocation.
+
+   .. warning::
+
+      Only set :collflag:`noPadding` to ``true`` for collections whose
+      workloads have *no* update operations that cause documents to grow,
+      such as for collections with workloads that are insert-only. For
+      more information, see :ref:`exact-fit-allocation`.
+
+Powers of Two Record Allocation
+```````````````````````````````
+
+.. index:: document; space allocation
+.. index:: usePowerOf2Sizes
+.. _usePowerOf2Sizes:
+.. collflag:: usePowerOf2Sizes
+
+   .. deprecated:: 3.0.0
+
+   :collflag:`usePowerOf2Sizes` flag is available for the MMAPv1 storage
+   engine only.
+
+   :collflag:`usePowerOf2Sizes` has no effect on the allocation
+   strategy. MongoDB 3.0 uses the :ref:`power of 2 allocation
+   <power-of-2-allocation>` as the default record allocation strategy
+   for MMAPv1.
+
+   To disable the :ref:`power of 2 allocation <power-of-2-allocation>`
+   for a collection, use the :dbcommand:`collMod` command with the
+   :collflag:`noPadding` flag or the :method:`db.createCollection()`
+   method with the ``noPadding`` option. For more information, see
+   :ref:`3.0-mmapv1-padding`.
+
+Example: Change Expiration Value for Indexes
+--------------------------------------------
+
+To update the expiration value for a collection
+named ``sessions`` indexed on a ``lastAccess`` field from 30
+minutes to 60 minutes, use the following operation:
+
+.. code-block:: javascript
+
+   db.runCommand({collMod: "sessions",
+                  index: {keyPattern: {lastAccess:1},
+                          expireAfterSeconds: 3600}})
+
+Which will return the document:
+
+.. code-block:: javascript
+
+   { "expireAfterSeconds_old" : 1800, "expireAfterSeconds_new" : 3600, "ok" : 1 }

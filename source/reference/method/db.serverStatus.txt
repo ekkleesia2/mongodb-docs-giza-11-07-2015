@@ -1,0 +1,33 @@
+=================
+db.serverStatus()
+=================
+
+.. default-domain:: mongodb
+
+.. method:: db.serverStatus()
+
+   Returns a :term:`document` that provides an overview of the
+   database process's state.
+
+   .. include:: /includes/fact-3.0-serverStatus-output-change.rst
+
+   This command provides a wrapper around the database command
+   :dbcommand:`serverStatus`.
+
+   .. versionchanged:: 2.4
+      In 2.4 you can dynamically suppress portions of the
+      :method:`db.serverStatus()` output, or include suppressed
+      sections in a document passed to the :method:`db.serverStatus()`
+      method, as in the following example:
+
+   .. code-block:: javascript
+
+      db.serverStatus( { repl: 0, locks: 0 } )
+      db.serverStatus( { metrics: 0, locks: 0 } )
+
+   .. include:: /includes/extracts/example-server-status-projection-serverStatus.rst
+
+   .. seealso::
+      :doc:`/reference/command/serverStatus` for complete documentation
+      of the output of this function. For an example of the output, see
+      :doc:`/reference/server-status`.

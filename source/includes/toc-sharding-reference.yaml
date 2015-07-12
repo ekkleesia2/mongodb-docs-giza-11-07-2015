@@ -1,0 +1,5 @@
+file: /reference/config-database
+description: |
+  Complete documentation of the content of the ``local`` database
+  that MongoDB uses to store sharded cluster metadata.
+...

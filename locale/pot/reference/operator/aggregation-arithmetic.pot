@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/aggregation-arithmetic.txt:3
+# 91a8d8dc4dc1462ca4f2a9af1ef01ae3
+msgid "Arithmetic Aggregation Operators"
+msgstr ""
+
+#: ../source/includes/intro-aggregation-arithmetic.rst:1
+# 85fd63f3157d49cdafc5bd91a882790a
+msgid "Arithmetic expressions perform mathematic operations on numbers. Some arithmetic expressions can also support date arithmetic."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:2
+# beff99e4fe9e4804b970aafa53e35efa
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:2
+# e08d14addfb84794806709a22cc792c3
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:4
+# e65ebc8bdaec46ef8ca27cf39fe83f42
+msgid ":expression:`$add`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:4
+# 782176c562cb4513bcc1c02cb460a7db
+msgid "Adds numbers to return the sum, or adds numbers and a date to return a new date. If adding numbers and a date, treats the numbers as milliseconds. Accepts any number of argument expressions, but at most, one expression can resolve to a date."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:10
+# fed3dcb5994c447aadc2338b46bd25c1
+msgid ":expression:`$subtract`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:10
+# 665a5cb5022b491aa3f3b4296b7d6ce9
+msgid "Returns the result of subtracting the second value from the first. If the two values are numbers, return the difference. If the two values are dates, return the difference in milliseconds. If the two values are a date and a number in milliseconds, return the resulting date. Accepts two argument expressions. If the two values are a date and a number, specify the date argument first as it is not meaningful to subtract a date from a number."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:19
+# 7c54b77fd7614d89b5c815b1e9bc9015
+msgid ":expression:`$multiply`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:19
+# 9b422af5527549bd8141622abd478c99
+msgid "Multiplies numbers to return the product. Accepts any number of argument expressions."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:23
+# 269c2b81ba2b418cb6deb82a8faf318e
+msgid ":expression:`$divide`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:23
+# 4fa62159cf8e45a9aa01034d3f9d81f4
+msgid "Returns the result of dividing the first number by the second. Accepts two argument expressions."
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:27
+# b014e53e325f42ad85b7d7a222212d82
+msgid ":expression:`$mod`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-arithmetic.rst:27
+# ae92335adc694fb38c791c176cb60f9e
+msgid "Returns the remainder of the first number divided by the second. Accepts two argument expressions."
+msgstr ""
+

@@ -1,0 +1,193 @@
+=========
+collStats
+=========
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. dbcommand:: collStats
+
+   The :dbcommand:`collStats` command returns a variety of storage statistics
+   for a given collection. Use the following syntax:
+
+   .. code-block:: javascript
+
+      { collStats: "collection" , scale : 1024, verbose: true }
+
+   Specify the ``collection`` you want statistics for, and use the
+   ``scale`` argument to scale the output: a value of ``1024`` renders
+   the results in kilobytes. The ``verbose: true`` option increases reporting
+   for the ``mmapv1`` storage engine.
+
+   Examine the following example output, which uses the
+   :method:`db.collection.stats()` helper in the :program:`mongo`
+   shell.
+
+   .. code-block:: javascript
+
+      > db.users.stats()
+      {
+              "ns" : "app.users",             // namespace
+              "count" : 9,                    // number of documents
+              "size" : 432,                   // collection size in bytes
+              "avgObjSize" : 48,              // average object size in bytes
+              "storageSize" : 3840,           // (pre)allocated space for the collection in bytes
+              "nindexes" : 2,                 // number of indexes
+              "totalIndexSize" : 16384,       // total index size in bytes
+              "indexSizes" : {                // size of specific indexes in bytes
+                      "_id_" : 8192,
+                      "username" : 8192
+              },
+              // ...
+              "ok" : 1
+      }
+
+   .. note::
+
+      The scale factor rounds values to whole numbers. This can
+      produce unexpected results in some situations.
+
+   If :dbcommand:`collStats` operates on a :term:`capped collection`, then the
+   following fields will also be present:
+
+   .. code-block:: javascript
+
+      > db.users.stats()
+      {
+              // ...
+              "capped" : true,
+              "max" : NumberLong("9223372036854775807"),
+              "ok" : 1
+      }
+
+Output
+------
+
+.. data:: collStats.ns
+
+   The namespace of the current collection, which follows the format
+   ``[database].[collection]``.
+
+.. data:: collStats.count
+
+   The number of objects or documents in this collection.
+
+.. data:: collStats.size
+
+   The total size in memory of all records in a collection. This value does not
+   include the record header, which is 16 bytes per record, but *does*
+   include the record's :term:`padding`. Additionally
+   :data:`~collStats.size` does not include the size of any indexes
+   associated with the collection, which the
+   :data:`~collStats.totalIndexSize` field reports.
+
+   The ``scale`` argument affects this value.
+
+.. data:: collStats.avgObjSize
+
+   The average size of an object in the collection. The ``scale``
+   argument does not affect this value.
+
+.. data:: collStats.storageSize
+
+   The total amount of storage allocated to this collection for
+   :term:`document` storage. The ``scale`` argument affects this
+   value.
+
+   For ``mmapv1``, :data:`~collStats.storageSize` will not decrease
+   as you remove or shrink documents.
+
+   .. for MMAPv1: sum of all extents (no indexes or the $freelist)
+
+.. data:: collStats.numExtents
+
+   The total number of contiguously allocated data file regions.
+   Only present when using the ``mmapv1`` storage engine.
+
+.. data:: collStats.nindexes
+
+   The number of indexes on the collection. All collections have at
+   least one index on the :term:`_id` field.
+
+   .. versionchanged:: 2.2
+      Before 2.2, capped collections did not necessarily have an
+      index on the ``_id`` field, and some capped collections created
+      with pre-2.2 versions of :program:`mongod` may not have an
+      ``_id`` index.
+
+.. data:: collStats.lastExtentSize
+
+   The size of the last extent allocated. The ``scale`` argument
+   affects this value. Only present when using the ``mmapv1`` storage
+   engine.
+
+.. data:: collStats.paddingFactor
+
+   .. deprecated:: 3.0.0
+      :data:`~collStats.paddingFactor` is no longer used in 3.0.0, and
+      remains hard coded to 1.0 for compatibility only.
+
+   :data:`~collStats.paddingFactor` only appears when using the
+   ``mmapv1`` storage engine.
+
+.. data:: collStats.userFlags
+
+   .. versionadded:: 2.2
+
+   A number that indicates the user-set flags on the collection.
+   :data:`~collStats.userFlags` only appears when using the ``mmapv1``
+   storage engine.
+
+   .. versionchanged:: 3.0.0
+      :data:`~collStats.userFlags` reports on the
+      :collflag:`usePowerOf2Sizes` and the :collflag:`noPadding`
+      flags.
+
+   .. include:: /includes/list-collection-user-flags.rst
+
+.. data:: collStats.totalIndexSize
+
+   The total size of all indexes. The ``scale`` argument affects this
+   value.
+
+.. data:: collStats.indexSizes
+
+   This field specifies the key and size of every existing index on
+   the collection. The ``scale`` argument affects this value.
+
+.. data:: collStats.capped
+
+   This field will be "true" if the collection is
+   :term:`capped <capped collection>`.
+
+.. data:: collStats.max
+
+   Shows the maximum number of documents that may be present in a
+   :term:`capped collection`.
+
+.. data:: collStats.maxSize
+
+   Shows the maximum size of a :term:`capped collection`.
+
+.. data:: collStats.wiredTiger
+
+   .. versionadded:: 3.0.0
+
+   :data:`~collStats.wiredTiger` only appears when using the
+   ``wiredTiger`` storage engine. This document contains data reported
+   directly by the WiredTiger engine and other data for internal
+   diagnostic use.
+
+.. data:: collStats.indexDetails
+
+   .. versionadded:: 3.0.0
+
+   A document that reports data from the storage engine for each index
+   in the collection.
+
+   The fields in this document are the names of the indexes, while the
+   values themselves are documents that contain statistics for the
+   index provided by the storage engine. These statistics are for
+   internal diagnostic use.

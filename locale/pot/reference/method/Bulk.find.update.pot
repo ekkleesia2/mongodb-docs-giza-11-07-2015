@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/Bulk.find.update.txt:3
+# 9b2cec3b12194a65846b3c9219ce6430
+msgid "Bulk.find.update()"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:8
+# 89152489d21f46ca8f151f154d8537a1
+msgid "Description"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:14
+# 9f2d5de32aae4f33aaefab20432f1d8f
+msgid "Adds a ``multi`` update operation to a bulk operations list. The method updates specific fields in existing documents."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:17
+# 6813fe3a0b0e4c718f8ce8b6a5d5ed2c
+msgid "Use the :method:`Bulk.find()` method to specify the condition that determines which documents to update. The :method:`Bulk.find.update()` method updates all matching documents. To specify a single document update, see :method:`Bulk.find.updateOne()`."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:23
+# a27e1ea414cc4fc3828306b1320aea00
+msgid ":method:`Bulk.find.update()` accepts the following parameter:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:27
+# 84b24ab1f6e6472eada592f80702978d
+msgid "To specify :term:`upsert: true <upsert>` for this operation, see :method:`Bulk.find.upsert()`. With :method:`Bulk.find.upsert()`, if no documents match the :method:`Bulk.find()` query condition, the update operation inserts only a single document."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:33
+# 569d169ad82548d58bfe58bcf92dff5b
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:35
+# 2aa1560945514310accff1cbdbe73b00
+msgid "The following example initializes a :method:`Bulk()` operations builder for the ``items`` collection, and adds various ``multi`` update operations to the list of operations."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:48
+# e8b6f427a8a74051b3dac83ad7306399
+msgid ":method:`db.collection.initializeUnorderedBulkOp()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:50
+# 8dcfc2ab1b114382ace8f92e9acbebfc
+msgid ":method:`db.collection.initializeOrderedBulkOp()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:52
+# e6411bcc757d461087b2363fe4b54555
+msgid ":method:`Bulk.find()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:54
+# 8bedead216e4476e9225cd9700e8fff5
+msgid ":method:`Bulk.find.updateOne()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:56
+# 2f6779c67b34413e9b7d7550e700eea1
+msgid ":method:`Bulk.execute()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.update.txt:58
+# 77e6e0feea2b44d88264131b48e2ee17
+msgid ":ref:`All Bulk Methods <bulk-methods>`"
+msgstr ""
+

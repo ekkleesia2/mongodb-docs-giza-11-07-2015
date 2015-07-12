@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/UUID.txt:3
+# bcc1f06019ce4a1ba3dd26ba6ee3a13e
+msgid "UUID()"
+msgstr ""
+
+#: ../source/reference/method/UUID.txt:8
+# a468c7570adc42a693ee6f2e02bf727f
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/UUID.txt:12
+# 0dcda6f7e4824c70a87ff6a886d1f1e7
+msgid "Generates a BSON UUID object."
+msgstr ""
+
+#: ../source/reference/method/UUID.txt:16
+# 3930f880fcde45f782219c1644027633
+msgid "A BSON UUID object."
+msgstr ""
+
+#: ../source/reference/method/UUID.txt:19
+# 6de694ba652c4d3a8f75062256d4d0a8
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/method/UUID.txt:21
+# 80250c9823c7428593a64e7076e42d1f
+msgid "Create a 32 byte hexadecimal string:"
+msgstr ""
+
+#: ../source/reference/method/UUID.txt:27
+# 0277e0a6fe204e9aaa83d1925ca749ac
+msgid "Convert it to the BSON UUID subtype:"
+msgstr ""
+

@@ -1,0 +1,23 @@
+===================
+sh.removeShardTag()
+===================
+
+.. default-domain:: mongodb
+
+Definition
+----------
+
+.. method:: sh.removeShardTag(shard, tag)
+
+   .. versionadded:: 2.2
+
+   Removes the association between a tag and a shard. Only issue
+   :method:`sh.removeShardTag()` when connected to a :program:`mongos`
+   instance.
+
+   .. include:: /includes/apiargs/method-sh.removeShardTag-param.rst
+
+   .. seealso::
+
+      :method:`sh.addShardTag()`,
+      :method:`sh.addTagRange()`

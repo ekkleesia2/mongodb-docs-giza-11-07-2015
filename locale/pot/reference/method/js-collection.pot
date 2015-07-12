@@ -1,0 +1,370 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/js-collection.txt:3
+# abab08ca98214ce1af689e6e74fb4751
+msgid "Collection Methods"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:2
+# 968496b462ea40bb9e572f36d30ee1af
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:2
+# 23376a0de3d44bd7be3385f46da28e5c
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:4
+# 5d4d97e1b6a14817acf03f0da0364494
+msgid ":method:`db.collection.aggregate()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:4
+# 428643a677f8484f997fa679846239c7
+msgid "Provides access to the :doc:`aggregation pipeline </core/aggregation>`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:6
+# 9f57da736c2f41ffa176c2ccbfded5ea
+msgid ":method:`db.collection.count()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:6
+# 20796c906fd44ba58a7e2d471d03d643
+msgid "Wraps :dbcommand:`count` to return a count of the number of documents in a collection or matching a query."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:8
+# 7329acb723a94e4d858c23f05d82b46d
+msgid ":method:`db.collection.copyTo()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:8
+# f4a04aab9a9d446a9cd969973615dd5f
+msgid "Wraps :dbcommand:`eval` to copy data between collections in a single MongoDB instance."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:10
+# bb1339f0ddfc412681165f6ce320ae4b
+msgid ":method:`db.collection.createIndex()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:10
+# 4556212450304c409a2ee002e9c53b70
+msgid "Builds an index on a collection. Use :method:`db.collection.ensureIndex()`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:12
+# 213f13dd588c4131bc06fa169bb7c770
+msgid ":method:`db.collection.getIndexStats()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:12
+#: ../source/includes/toc/table-method-collection.rst:14
+# c4d931d7dd3048fc8ab1f4a5077a3ea4
+# 8ab4cdec180b44a5a5be06ffbf9b4e8b
+msgid "Renders a human-readable view of the data collected by :dbcommand:`indexStats` which reflects B-tree utilization."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:14
+# 4a4c8e22f9f342b88b57eb0884cf63dc
+msgid ":method:`db.collection.indexStats()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:16
+# 9af24a55580146e4adad4369abe46b39
+msgid ":method:`db.collection.dataSize()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:16
+# 1b47809340514fe7ac201212b4987d8e
+msgid "Returns the size of the collection. Wraps the :data:`~collStats.size` field in the output of the :dbcommand:`collStats`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:18
+# 4a0a6a55b53e4b66a2960a17fb6ae215
+msgid ":method:`db.collection.distinct()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:18
+# 7842f340263b42a38700ec3b2592800d
+msgid "Returns an array of documents that have distinct values for the specified field."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:20
+# 0b6c5249974d4b86b979e101928033c5
+msgid ":method:`db.collection.drop()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:20
+# 4d1fd9efc3804bd68a07a3688b41316e
+msgid "Removes the specified collection from the database."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:22
+# a91be4a3573e44388cdec0cba0df794e
+msgid ":method:`db.collection.dropIndex()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:22
+# c01464bb10b5444bb0b7260323470dd6
+msgid "Removes a specified index on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:24
+# 9b7bbdcc3aa543d3963b4fa847deaaba
+msgid ":method:`db.collection.dropIndexes()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:24
+# 5581a86a3e7c4c4eb780230f6c06ad73
+msgid "Removes all indexes on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:26
+# df4eefbda6874b309a33ec12fc3163ee
+msgid ":method:`db.collection.ensureIndex()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:26
+# c7f18fd26f394f19a7e2af0904b1508b
+msgid "Creates an index if it does not currently exist. If the index exists :method:`~db.collection.ensureIndex()` does nothing."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:28
+# 921d39e4e4b9468da4188dcfa16bfd28
+msgid ":method:`db.collection.find()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:28
+# 18ead21283314d83b072175bfffa0a5e
+msgid "Performs a query on a collection and returns a cursor object."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:30
+# af32b77907384ec7ac96fc74f05b9d22
+msgid ":method:`db.collection.findAndModify()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:30
+# b5d7bfa80c4e4ffc8db56d6cc98f256b
+msgid "Atomically modifies and returns a single document."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:32
+# 87b95af9778b418a9d0f7a1b25e473eb
+msgid ":method:`db.collection.findOne()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:32
+# 579e6c3cf0384f9192b7f99dad3648e7
+msgid "Performs a query and returns a single document."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:34
+# a07dd3438bb745bebca9b1ab83e1e5f4
+msgid ":method:`db.collection.getIndexes()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:34
+# 8b4ba8b2d8f64008a74c9dc40ea6881e
+msgid "Returns an array of documents that describe the existing indexes on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:36
+# 03e0de9c7c73443e91014d6d4fae8262
+msgid ":method:`db.collection.getShardDistribution()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:36
+# f38df9cdf02145ee8c6fe8f62ad3617e
+msgid "For collections in sharded clusters, :method:`db.collection.getShardDistribution()` reports data of :term:`chunk` distribution."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:38
+# 67bee081cce542d5906793557c6e44be
+msgid ":method:`db.collection.getShardVersion()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:38
+# f9bfa91a53c44b85bf18b837ac38c5db
+msgid "Internal diagnostic method for shard cluster."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:40
+# 394f3a76e5a944e5b582775ceb9a4694
+msgid ":method:`db.collection.group()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:40
+# 865113740cb04320864cd1026f67a1a5
+msgid "Provides simple data aggregation function. Groups documents in a collection by a key, and processes the results. Use :method:`~db.collection.aggregate()` for more complex data aggregation."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:42
+# 6b9c37f5923a49d5bdf4af18738508ae
+msgid ":method:`db.collection.initializeOrderedBulkOp()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:42
+# cfdc59207e6247cc989f4a6778b05ec4
+msgid "Initializes a :method:`Bulk()` operations builder for an ordered list of operations."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:44
+# 7853b67c480c4e0186f84277f93a8af8
+msgid ":method:`db.collection.initializeUnorderedBulkOp()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:44
+# cc6a2991f97446f8b6ea6389aa637478
+msgid "Initializes a :method:`Bulk()` operations builder for an unordered list of operations."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:46
+# 71b9b32ab56d4fec9ed761c8bc9282a3
+msgid ":method:`db.collection.insert()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:46
+# 2f1daa95087149c0bea85d6cbdc9333c
+msgid "Creates a new document in a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:48
+# 20b0ed3e065248a9b569427824813303
+msgid ":method:`db.collection.isCapped()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:48
+# 2b808d6937414c7dbe5fdac1c1c77201
+msgid "Reports if a collection is a :term:`capped collection`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:50
+# 939dd68a67294fbd84f430333e4cd4d2
+msgid ":method:`db.collection.mapReduce()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:50
+# 43c78d5fb5854b1c9d843846c7384aa6
+msgid "Performs map-reduce style data aggregation."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:52
+# 4826acfd6ec04650a9609cc36449c685
+msgid ":method:`db.collection.reIndex()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:52
+# 025b49fa8ca64636978bfe073fc47615
+msgid "Rebuilds all existing indexes on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:54
+# b99dad8d6eca4240bda8f3299fe42cf1
+msgid ":method:`db.collection.remove()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:54
+# 1ec7ea551b144ddfb811c20eb7c81f91
+msgid "Deletes documents from a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:56
+# 6dcc38cfc2534cf8a64510647048ec04
+msgid ":method:`db.collection.renameCollection()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:56
+# 788e5e1e00354f22907fc2667aac6a0c
+msgid "Changes the name of a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:58
+# f215241ccf1541d5bb3f145974f741c1
+msgid ":method:`db.collection.save()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:58
+# d33e8ac493344b3ea9f2750348c5ce3c
+msgid "Provides a wrapper around an :method:`~db.collection.insert()` and :method:`~db.collection.update()` to insert new documents."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:60
+# efc308e45cda4a29a7a72bd8624ae7bc
+msgid ":method:`db.collection.stats()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:60
+# 3b6b4d0c91b24283a1d65f9aab089692
+msgid "Reports on the state of a collection. Provides a wrapper around the :dbcommand:`collStats`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:62
+# 632dc504e4e944c0803eb167d0048232
+msgid ":method:`db.collection.storageSize()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:62
+# dd2a9e5ef3a84babaf886fd002bdba2e
+msgid "Reports the total size used by the collection in bytes. Provides a wrapper around the :data:`~collStats.storageSize` field of the :dbcommand:`collStats` output."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:64
+# fc56c6d0bea848c29dd5b242b4208807
+msgid ":method:`db.collection.totalSize()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:64
+# e854a632ce164092a99a688ff3a9b5ab
+msgid "Reports the total size of a collection, including the size of all documents and all indexes on a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:66
+# 643afee26df94d528eac97e29cd5f78a
+msgid ":method:`db.collection.totalIndexSize()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:66
+# c40dd183dc0d4ecf9d1ac94282a03700
+msgid "Reports the total size used by the indexes on a collection. Provides a wrapper around the :data:`~collStats.totalIndexSize` field of the :dbcommand:`collStats` output."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:68
+# 0de8172d20b14c47a157f19eef32702b
+msgid ":method:`db.collection.update()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:68
+# c45ced541d83486494b78c4346c97650
+msgid "Modifies a document in a collection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:70
+# ab7b06446c0f4c9c8929f77cadace1dd
+msgid ":method:`db.collection.validate()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-collection.rst:70
+# a36f83bf3bbd4937a19f230d2a4ab266
+msgid "Performs diagnostic operations on a collection."
+msgstr ""
+

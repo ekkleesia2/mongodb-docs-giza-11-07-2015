@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/Bulk.find.upsert.txt:3
+# 6d20a2b201004e54ac533b62d41848a9
+msgid "Bulk.find.upsert()"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:8
+# 6a2287738977402da39c2f652d5b942f
+msgid "Description"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:14
+# 7538bf5b17f24c349d3110892abfffe8
+msgid "Sets the :term:`upsert` option to true for an update or a replacement operation and has the following syntax:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:23
+# 98cb33eeafee424cb9018a5ff8af1460
+msgid "With the ``upsert`` option set to ``true``, if no matching documents exist for the :method:`Bulk.find()` condition, then the update or the replacement operation performs an insert. If a matching document does exist, then the update or replacement operation performs the specified update or replacement."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:29
+# 7a3d66eefa6843b3abd3a2a7c4202064
+msgid "Use :method:`Bulk.find.upsert()` with the following write operations:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:31
+# bad52746080c4a5290da7dcedfe4c34a
+msgid ":method:`Bulk.find.replaceOne()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:33
+# 380df2908ed9425c8ab1d175c302d881
+msgid ":method:`Bulk.find.updateOne()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:35
+# a152a9f093d6429bb1fcf570e64dca37
+msgid ":method:`Bulk.find.update()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:38
+# 665eafae467c4bdb9441bdbc64fb7122
+msgid "Behavior"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:40
+# 3b2adb1ea3634ae99a4f16dca8a1c7b1
+msgid "The following describe the insert behavior of various write operations when used in conjunction with :method:`Bulk.find.upsert()`."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:44
+# d3070197345d41b294e560e92896f84a
+msgid "Insert for ``Bulk.find.replaceOne()``"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:46
+# cb219daf470e4512a310edbfd01498b2
+msgid "The :method:`Bulk.find.replaceOne()` method accepts, as its parameter, a replacement document that only contains field and value pairs:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:61
+# b69fa7b78b124dc090eeedadb0cda488
+msgid "If the replacement operation with the :method:`Bulk.find.upsert()` option performs an insert, the inserted document is the replacement document. If the replacement document does not specify an ``_id`` field, MongoDB adds the ``_id`` field:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:76
+# 0bf6173e4dcb42d698b4fbb27727af3f
+msgid "Insert for ``Bulk.find.updateOne()``"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:78
+# 3e6cb8ef2bee4959ad677115d537cf42
+msgid "The :method:`Bulk.find.updateOne()` method accepts, as its parameter, an ``<update>`` document that contains only field and value pairs or only :ref:`update operator <update-operators>` expressions."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:83
+# c6bd41acea27468088dce4d79f9e6bb2
+msgid "Field and Value Pairs"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:85
+# 56679e8a0c7e43b0a11e3b15f615753b
+msgid "If the ``<update>`` document contains only field and value pairs:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:100
+# 878dd6ebb66e43a5972cad2950214dea
+msgid "Then, if the update operation with the :method:`Bulk.find.upsert()` option performs an insert, the inserted document is the ``<update>`` document. If the update document does not specify an ``_id`` field, MongoDB adds the ``_id`` field:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:116
+# af2daad54b7041f1b1c89f5dfd21c273
+msgid "Update Operator Expressions"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:118
+# f84aaeba851d440a86eb0f3ee5785110
+msgid "If the ``<update>`` document contains contains only :ref:`update operator <update-operators>` expressions:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:133
+# b451581d46804b279e01b0bfeb6c2ba1
+msgid "Then, if the update operation with the :method:`Bulk.find.upsert()` option performs an insert, the update operation inserts a document with field and values from the ``<query>`` document of the :method:`Bulk.find()` method and then applies the specified update from the ``<update>`` document:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:151
+#: ../source/reference/method/Bulk.find.upsert.txt:194
+# 4427081b1c46474c9df69f06e2828789
+# b1772d23d458460aad39125a48aca298
+msgid "If neither the ``<query>`` document nor the ``<update>`` document specifies an ``_id`` field, MongoDB adds the ``_id`` field."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:155
+# 9db516a8c6b04f38a0e85bf4399538b1
+msgid "Insert for ``Bulk.find.update()``"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:157
+# 760ffae3e39d471881de6f133d564474
+msgid "When using :method:`~Bulk.find.upsert()` with the multiple document update method :method:`Bulk.find.update()`, if no documents match the query condition, the update operation inserts a *single* document."
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:161
+# 0ce730abe18948afb41da1cb477f9e28
+msgid "The :method:`Bulk.find.update()` method accepts, as its parameter, an ``<update>`` document that contains *only* :ref:`update operator <update-operators>` expressions:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:177
+# 962d7f1150a14c01a91ca193b4f2ee5c
+msgid "Then, if the update operation with the :method:`Bulk.find.upsert()` option performs an insert, the update operation inserts a single document with the fields and values from the ``<query>`` document of the :method:`Bulk.find()` method and then applies the specified update from the ``<update>`` document:"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:199
+# 42b45c8d1606444fb20a40c141ce46b5
+msgid ":method:`db.collection.initializeUnorderedBulkOp()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:201
+# 8afbc6be8f9b4f53bbf3f83da5cc53bf
+msgid ":method:`db.collection.initializeOrderedBulkOp()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:203
+# 05d51d80165e4394834438dc757529e2
+msgid ":method:`Bulk.find()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:205
+# 036a35786f3a4578bc9e63504d9e7fcc
+msgid ":method:`Bulk.execute()`"
+msgstr ""
+
+#: ../source/reference/method/Bulk.find.upsert.txt:207
+# 58509bbb5126406a9b2c0c6eb9bf41b2
+msgid ":ref:`All Bulk Methods <bulk-methods>`"
+msgstr ""
+

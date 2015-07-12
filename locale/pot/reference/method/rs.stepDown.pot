@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/rs.stepDown.txt:3
+# 481a647d41ff46d3bcd0d4a55eaa3ba0
+msgid "rs.stepDown()"
+msgstr ""
+
+#: ../source/reference/method/rs.stepDown.txt:8
+# d471601958b44598826d2cdbc963fd32
+msgid "Description"
+msgstr ""
+
+#: ../source/reference/method/rs.stepDown.txt:12
+# 311acfdb55a04e27aa09f469ae77c21e
+msgid "Forces the current :term:`replica set` member to step down as :term:`primary` and then attempt to avoid election as primary for the designated number of seconds. Produces an error if the current member is not the primary."
+msgstr ""
+
+#: ../source/reference/method/rs.stepDown.txt:17
+# 93e7f7c759f54e798837690b55a4f159
+msgid "The :method:`rs.stepDown()` method has the following parameter:"
+msgstr ""
+
+#: ../source/reference/method/rs.stepDown.txt:21
+# 104bbc8d17764e2daad61c62badbf637
+msgid "This function disconnects the shell briefly and forces a reconnection as the replica set renegotiates which member will be primary. As a result, the shell will display an error even if this command succeeds."
+msgstr ""
+
+#: ../source/reference/method/rs.stepDown.txt:26
+# 9141338a2d6c4e14b3c23a3a58c594b0
+msgid ":method:`rs.stepDown()` provides a wrapper around the :term:`database command` :dbcommand:`replSetStepDown`."
+msgstr ""
+

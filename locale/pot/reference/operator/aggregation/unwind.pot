@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/aggregation/unwind.txt:3
+# a94fac1c10a449b1a5334b4c66cdf5ea
+msgid "$unwind (aggregation)"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:8
+# e7b5c641a1de4ffd89279026f6b5bddf
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:12
+# 5302f84e6e464eee92ccb312451c67b0
+msgid "Deconstructs an array field from the input documents to output a document for *each* element. Each output document is the input document with the value of the array field replaced by the element."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:16
+# 5d3adc60f9a643caa98c53afa516ae88
+msgid "The :pipeline:`$unwind` stage has the following prototype form:"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:22
+# 9440c39ed8d24b6c8d1b7669f1d1d89e
+msgid "To specify a field path, prefix the field name with a dollar sign ``$`` and enclose in quotes."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:26
+# 140d457f72af4aa98eb975042709a8a0
+msgid "Behaviors"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:28
+# 31492fa0019d4531975bc97b7283ba30
+msgid ":pipeline:`$unwind` has the following behaviors:"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:30
+# 4506859107164fd7aad7049b26f178bd
+msgid "If a value in the field specified by the field path is *not* an array, :method:`db.collection.aggregate()` generates an error."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:33
+# 6007e63f74204f45b68e2dba86ba6a00
+msgid "If you specify a path for a field that does not exist in an input document, the pipeline ignores the input document and will not output documents for that input document."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:37
+# afd2677ce3734710853b6dad9ea01987
+msgid "If the array holds an empty array (``[]``) in an input document, the pipeline ignores the input document and will not output documents for that input document."
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:42
+# fe3d3aaf460d4ac1a86993edb2558822
+msgid "Examples"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:44
+# d7c4425b208b43a9bc586592921c822f
+msgid "Consider an ``inventory`` with the following document:"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:50
+# ff7ffc0a620144f7a0840dc9a7b08235
+msgid "The following aggregation uses the :pipeline:`$unwind` stage to output a document for each element in the ``sizes`` array:"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:57
+# a1a9095f1b1f483b82aa39dc64a3e575
+msgid "The operation returns the following results:"
+msgstr ""
+
+#: ../source/reference/operator/aggregation/unwind.txt:65
+# 71bb887016e0430f803d7b21ee0ed5ed
+msgid "Each document is identical to the input document except for the value of the ``sizes`` field which now holds a value from the original ``sizes`` array."
+msgstr ""
+

@@ -1,0 +1,408 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/db.currentOp.txt:3
+# 5bd4c4432f754ef2936b39a1189efa06
+msgid "db.currentOp()"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:8
+# f2f0f55bfd11425b8692caf59fbef06e
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:12
+# 9148dfda554042f48e3b01aaa61420b1
+msgid "Returns a :term:`document` that contains information on in-progress operations for the database instance."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:15
+# d8bbe0002b3542ffa849478a16e71219
+msgid ":method:`db.currentOp()` method has the following form:"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:21
+# e6a27f3156eb42e7b1f9c072274befcb
+msgid "The :method:`db.currentOp()` method can take the following *optional* argument:"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:29
+# 70bbacc5f4154b20ab29ee419eba767d
+msgid "Behavior"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:31
+# 7c3da1b4d7784c2593c67bbebff21b9a
+msgid "If you pass in ``true`` to :method:`db.currentOp()`, the method returns information on all operations, including operations on idle connections and system operations."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:39
+# b2b563b31aa640abbeee9142719d2a53
+msgid "Passing in ``true`` is equivalent to passing in a query document of ``{ '$all': true }``."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:42
+# 226b9f5a0c594424b7a0b66b8f93a741
+msgid "If you pass a query document to :method:`db.currentOp()`, the output returns information only for the current operations that match the query. You can query on the :ref:`currentOp-output-fields`. See :ref:`currentOp-examples`."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:47
+# af36031336684fd79b56bb98f66bbe08
+msgid "You can also specify ``{ '$all': true }`` query document to return information on all in-progress operations, including operations on idle connections and system operations. If you specify in the query document other conditions as well as ``'$all': true``, only the ``'$all': true`` applies."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:54
+# 61eaed93b86f468780b34b818df4d24d
+msgid "Access Control"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:56
+# faa9b5f36c634f46b956892d731bf51d
+msgid "On systems running with :setting:`~security.authorization`, a user must have access that includes the :authaction:`inprog` action."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:62
+# 7af1c6dc9402416cae660021ab06a2e6
+msgid "Examples"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:64
+# ecdcae23efe24df48e96aabf3d1b3d2e
+msgid "The following examples use the :method:`db.currentOp()` method with various query documents to filter the output."
+msgstr ""
+
+#: ../source/includes/example-filter-current-op.rst:1
+# 813e5b3caa1440dab3b221d2259a2965
+msgid "Return all write operations waiting for a lock:"
+msgstr ""
+
+#: ../source/includes/example-filter-current-op.rst:17
+# f63f256e688b40e884b0e289df05691c
+msgid "Return all active running operations that have never yielded:"
+msgstr ""
+
+#: ../source/includes/example-filter-current-op.rst:29
+# ff7a6ea5e8634cf4b4f9498f162e6481
+msgid "Return all active queries for database ``db1`` that have been running longer than 3 seconds:"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:70
+# 0090156f3ad84afcb5ce6d71a85925bc
+msgid "Output Example"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:72
+# 80f0531820344826926eb2f67773a9c9
+msgid "The following is an example of :method:`db.currentOp()` output."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:127
+# cdf8a0d0868d4e94839edf9eddaf734a
+msgid "Output Fields"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:131
+# 7580f517bbec4cf48b7d9687bb9646ae
+msgid "The identifier for the operation. You can pass this value to :method:`db.killOp()` in the :program:`mongo` shell to terminate the operation."
+msgstr ""
+
+#: ../source/includes/warning-terminating-operations.rst:3
+# 9fb4ad3f4de94fc8a35fe9d539f7c35a
+msgid "Terminate running operations with extreme caution. Only use :method:`db.killOp()` to terminate operations initiated by clients and *do not* terminate internal database operations."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:139
+# 545004864234478181aa3e64c5482cf2
+msgid "A boolean value specifying whether the operation has started. Value is ``true`` if the operation has started or ``false`` if the operation is queued and waiting for a lock to run. :data:`~currentOp.active` may be ``true`` even if the operation has yielded to another operation."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:147
+# 4aec0af6c721401cb3438c2b54001bb7
+msgid "The duration of the operation in seconds. MongoDB calculates this value by subtracting the current time from the start time of the operation."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:151
+#: ../source/reference/method/db.currentOp.txt:162
+# d5d2090e2e88407a80235e8d578fa977
+# 7eaf383b9a4841578e789584dc3991a9
+msgid "Only appears if the operation is running, (i.e. if :data:`~currentOp.active` is ``true``)."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:158
+# 6ba8ee7a3953432fa20e4a173735a6c8
+msgid "The duration of the operation in microseconds. MongoDB calculates this value by subtracting the current time from the start time of the operation."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:167
+# 354becf6686b4104b5dea4c93f01a1f3
+msgid "A string that identifies the type of operation. The possible values are:"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:170
+# 1edc47caf28f4b32821918c5f81d4996
+msgid "``\"none\"``"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:171
+# 8f909b61bb834baaa147815ff90d77a2
+msgid "``\"update\"``"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:172
+# f7b293ea539144718228d1d64810f474
+msgid "``\"insert\"``"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:173
+# 677b5967ef47484cac559d61b8ed0512
+msgid "``\"query\"``"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:174
+# ea67174d8b024d1bb61daa2909ed4fab
+msgid "``\"getmore\"``"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:175
+# 61548e38036d49aaa242009db09273fe
+msgid "``\"remove\"``"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:176
+# c011c8dc2d5f48a299d926530a550bf1
+msgid "``\"killcursors\"``"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:178
+# 22ee731c44c445c69f2f907659854358
+msgid "The ``\"query\"`` type includes operations that use the :dbcommand:`insert`, :dbcommand:`update`, and :dbcommand:`delete` commands. Write operations that do not use the aforementioned write commands will show with the appropriate ``\"insert\"``, ``\"update\"``, or ``\"remove\"`` value."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:186
+# 2cb017483d9447e2864bc97c211e2cf9
+msgid "The :term:`namespace` the operation targets. A namespace consists of the :term:`database` name and the :term:`collection` name concatenated with a dot (``.``); i.e., ``\"<database>.<collection>\"``."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:192
+# 2a372db7393b4e7da15f3d21c9ae21e4
+msgid "Contains the document to be inserted for operations with :data:`~currentOp.op` value of ``\"insert\"``. Only appears for operations with :data:`~currentOp.op` value ``\"insert\"``."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:196
+# c03c7bdc1b09406fa7e3acd69e8b9fcb
+msgid "Insert operations such as :method:`db.collection.insert()` that use the :dbcommand:`insert` command will have :data:`~currentOp.op` value of ``\"query\"``."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:202
+# 0eb413c750c1494586c9a3f7a22de537
+msgid "A document containing information on current operation if :data:`~currentOp.op` value is *not* ``\"insert\"``. :data:`~currentOp.query` does not appear for :data:`~currentOp.op` of type ``\"insert\"``."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:207
+# 31179dada51e4aedaf62cc182f5fbc22
+msgid "Write operations that use the :dbcommand:`insert`, :dbcommand:`update`, and :dbcommand:`delete` commands have :data:`~currentOp.op` value of ``\"query\"`` and the corresponding :data:`~currentOp.query` contains information on these operations."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:212
+# 424e73e171724c1496e15de01f25c95b
+msgid "For example, the following :data:`~currentOp.query` field contains information for an update operation:"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:238
+# d9cd26d19a824385928bce4d82b15478
+msgid "The document can be empty for :data:`~currentOp.op` types such as ``\"getmore\"``."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:243
+# cfadc739ded84c0bbc04d3d3f2c0dec5
+msgid "A string that contains the query plan to help debug slow queries."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:247
+# 45af37950f854638a33f45c535200809
+msgid "The IP address (or hostname) and the ephemeral port of the client connection where the operation originates. If your ``inprog`` array has operations from many different clients, use this string to relate operations to clients."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:252
+# 8e0314b20aee48e7be8681c1a5be55f4
+msgid "For some commands, including :dbcommand:`findAndModify` and :method:`db.eval()`, the client will be ``0.0.0.0:0``, rather than an actual client."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:258
+# 53407fda7f3f473eabcfc49ad52d7d4c
+msgid "A description of the client. This string includes the :data:`~currentOp.connectionId`."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:263
+# 3c7b5abe3f9e40f2a22192cd92fa7151
+msgid "An identifier for the thread that services the operation and its connection."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:268
+# b18e477f5db04ac2a466733b465a4117
+msgid "An identifier for the connection where the operation originated."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:275
+# aa4872dfae1d4e6e83cc5552cb3e5f0b
+msgid "The :data:`~currentOp.locks` document reports by databases the types of locks the operation currently holds. The possible lock types are:"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:278
+#: ../source/reference/method/db.currentOp.txt:353
+# 793b5d341afa4b998b20ed0007278473
+# 3b1c9ba887864c27ac69d6c2d193efa0
+msgid "``R`` represents the global read lock,"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:279
+#: ../source/reference/method/db.currentOp.txt:354
+# f0ebdb6d6f45488ca936410e4c01a92f
+# 6a5ceb44962e4196b69a948a65a2ec1a
+msgid "``W`` represents the global write lock,"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:280
+#: ../source/reference/method/db.currentOp.txt:355
+# 07d2f112d72e4ef19196ca436da38ab4
+# f7f34b414432478ab871447c5ff27326
+msgid "``r`` represents the database specific read lock, and"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:281
+#: ../source/reference/method/db.currentOp.txt:356
+# 3d8415b9c62f45c2a00e9ca80e1dad78
+# e4026969785a4314a84cd4a7a4433508
+msgid "``w`` represents the database specific write lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:285
+# 8dd15e9a6be94ed2bb35eeb656f22c0d
+msgid ":data:`~currentOp.locks.^` reports on the use of the global lock for the :program:`mongod` instance. All operations must hold the global lock for some phases of operation."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:291
+# cd307a5b003f4da7b79afb51d005f388
+msgid ":data:`~currentOp.locks.^local` reports on the lock for the ``local`` database. MongoDB uses the ``local`` database for a number of operations, but the most frequent use of the ``local`` database is for the :term:`oplog` used in replication."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:298
+# 3beeb28df6b54b3093016a5cadfadd13
+msgid ":data:`locks.^\\<database\\> <currentOp.locks.^<database>>` reports on the lock state for the database that this operation targets."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:303
+# adc523887b094f4d8ad6cabbc8bc9518
+msgid "Returns a boolean value. :data:`~currentOp.waitingForLock` is ``true`` if the operation is waiting for a lock and ``false`` if the operation has the required lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:309
+# 06908be5bc884c96a38c432ad69fdd39
+msgid "The :data:`~currentOp.msg` provides a message that describes the status and progress of the operation. In the case of indexing or mapReduce operations, the field reports the completion percentage."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:315
+# 3d0ad16e95fd4178a2a9d304438a574f
+msgid "Reports on the progress of mapReduce or indexing operations. The :data:`~currentOp.progress` fields corresponds to the completion percentage in the :data:`~currentOp.msg` field. The :data:`~currentOp.progress` specifies the following information:"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:322
+# 23dbb7180c8a4bf299195ff977304963
+msgid "Reports the number completed."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:326
+# 7d502e2c92ca4664a51a200d8d18d3d4
+msgid "Reports the total number."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:330
+# 3035c3fb8a8c433383faec196a9836b4
+msgid "Returns ``true`` if the operation is currently flagged for termination.  When the operation encounters its next safe termination point, the operation will terminate."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:336
+# 290e66e7bdd14e489dab10f769e0ca3a
+msgid ":data:`~currentOp.numYields` is a counter that reports the number of times the operation has yielded to allow other operations to complete."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:339
+# f5f595df440a423abb9fd2469732e4a0
+msgid "Typically, operations yield when they need access to data that MongoDB has not yet fully read into memory. This allows other operations that have data in memory to complete quickly while MongoDB reads in data for the yielding operation."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:348
+# 119935fa7756456ba61e36faef841879
+msgid "The :data:`~currentOp.lockStats` document reflects the amount of time the operation has spent both acquiring and holding locks. :data:`~currentOp.lockStats` reports data on a per-lock type, with the following possible lock types:"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:360
+# 5fb42e42f5e24a70bcf2807d168c81e7
+msgid "The :data:`~currentOp.timeLockedMicros` document reports the amount of time the operation has spent holding a specific lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:363
+# 7aff81ac65b248fdafca7c14575d0045
+msgid "For operations that require more than one lock, like those that lock the ``local`` database to update the :term:`oplog`, then the values in this document can be longer than this value may be longer than the total length of the operation (i.e. :data:`~currentOp.secs_running`.)"
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:371
+# fbe48826b63a408eb65dbe154d05d567
+msgid "Reports the amount of time in microseconds the operation has held the global read lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:376
+# b3b843d3634d4763affa38201408d2c6
+msgid "Reports the amount of time in microseconds the operation has held the global write lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:381
+# 69abae3c201e467b835fa89aac65fc63
+msgid "Reports the amount of time in microseconds the operation has held the database specific read lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:386
+# 19437c90a00b472b8ed9ece3239d99cf
+msgid "Reports the amount of time in microseconds the operation has held the database specific write lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:391
+# f5f4953a9b364872b6a401c3b1d9f5c9
+msgid "The :data:`~currentOp.timeAcquiringMicros` document reports the amount of time the operation has spent *waiting* to acquire a specific lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:396
+# fa7cdbff507940b9aaf9a68b46155a35
+msgid "Reports the mount of time in microseconds the operation has waited for the global read lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:401
+# fb6af9877378415ba7902416ec1d7a2d
+msgid "Reports the mount of time in microseconds the operation has waited for the global write lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:406
+# aad3dbe4b1da452e86330d1e1cacf415
+msgid "Reports the mount of time in microseconds the operation has waited for the database specific read lock."
+msgstr ""
+
+#: ../source/reference/method/db.currentOp.txt:411
+# a5e68c86c1a243dabc142a9f196936f3
+msgid "Reports the mount of time in microseconds the operation has waited for the database specific write lock."
+msgstr ""
+

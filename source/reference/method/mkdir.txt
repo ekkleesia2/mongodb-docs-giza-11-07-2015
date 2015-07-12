@@ -1,0 +1,20 @@
+=======
+mkdir()
+=======
+
+.. default-domain:: mongodb
+
+Description
+-----------
+
+.. method:: mkdir(path)
+
+   Creates a directory at the specified path. This method creates
+   the entire path specified if the enclosing directory or
+   directories do not already exit.
+
+   This method is equivalent to :command:`mkdir -p` with BSD or GNU utilities.
+
+   The :method:`mkdir()` method has the following parameter:
+
+   .. include:: /includes/apiargs/method-mkdir-param.rst

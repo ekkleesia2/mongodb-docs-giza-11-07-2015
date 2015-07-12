@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/getLastError.txt:3
+# d05a9ad954e8476a9b4275571bf24411
+msgid "getLastError"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:8
+# fd29e6e0889747c2b8f74c792b68b4ba
+msgid "Definition"
+msgstr ""
+
+#: ../source/includes/fact-2.6-wc-gle-change.rst:3
+# 813f198812604e938cb66a0c8c5af6b0
+msgid "A new protocol for :ref:`write operations <rel-notes-write-operations>` integrates write concerns with the write operations, eliminating the need for a separate |gle|. Write methods now return the status of the write operation, including error information."
+msgstr ""
+
+#: ../source/includes/fact-2.6-wc-gle-change.rst:9
+# 41ee490eff62432b988f646c3208e9f0
+msgid "In previous versions, clients typically used the |gle| in combination with the write operations to ensure that the write succeeds."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:16
+# 82552698d5ad4c90b327cf3b5482a30d
+msgid "Returns the error status of the preceding write operation on the *current connection*."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:19
+# 5824f59e695f46709695fec17151c3f5
+msgid ":dbcommand:`getLastError` uses the following prototype form:"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:25
+# 8a0cf3ef0eb94559be194f3172461be7
+msgid ":dbcommand:`getLastError` uses the following fields:"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:29
+# 1efcdfbace694fb2bd577a6ea6b85e68
+msgid ":doc:`Write Concern </core/write-concern>`, :doc:`/reference/write-concern`, and :ref:`replica-set-write-concern`."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:33
+# 81bd357615504b34be9a54bf12078209
+msgid "Output"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:35
+# 9ccbf218f3d74a4e9ba2d3b472cdaaf9
+msgid "Each :dbcommand:`~db.collection.getLastError()` command returns a document containing a subset of the fields listed below."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:40
+# f4e833ff99574ca581f522bbe3b2f934
+msgid ":data:`~getLastError.ok` is ``true`` when the :dbcommand:`getLastError` command completes successfully."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:43
+# 68fa4380fb8c42b7b6377cf6b2f611d4
+msgid "A value of ``true`` does *not* indicate that the preceding operation did not produce an error."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:48
+# 350ba2b0193441e78f5694ae3e035cc7
+msgid ":data:`~getLastError.err` is ``null`` unless an error occurs. When there was an error with the preceding operation, ``err`` contains a textual description of the error."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:54
+# 77fef93a79fe436e833cd1bed7c8d84f
+msgid ":data:`~getLastError.code` reports the preceding operation's error code."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:59
+# 7da0d17c5d4f44cba2dcc1f38cc85111
+msgid "The identifier of the connection."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:63
+# 6475bbddcfd847fbafa2d44a05470fed
+msgid "When issued against a replica set member and the preceding operation was a write or update, :data:`~getLastError.lastOp` is the *optime* timestamp in the :term:`oplog`  of the change."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:69
+# 0206dc12786c4159af9bfe8728df6ed2
+msgid ":data:`~getLastError.n` reports the number of documents updated or removed, if the preceding operation was an update or remove operation."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:75
+# a49a0b95063f48d4a07ae8090b4ba970
+msgid "When issued against a sharded cluster after a write operation, :data:`~getLastError.shards` identifies the shards targeted in the write operation. :data:`~getLastError.shards` is present in the output only if the write operation targets multiple shards."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:82
+# 8384e9be0be4421a90ff657b54d10bf1
+msgid "When issued against a sharded cluster after a write operation, identifies the shard targeted in the write operation. :data:`~getLastError.singleShard` is only present if the write operation targets exactly one shard."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:89
+# c6daabc7e9c347858c9c9e1036599ccf
+msgid ":data:`~getLastError.updatedExisting` is ``true`` when an update affects at least one document and does not result in an :term:`upsert`."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:95
+# 2955352308904d27ab2699b7e6690039
+msgid "If the update results in an insert, :data:`~getLastError.upserted` is the value of ``_id`` field of the document."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:98
+# 59411fb1b460457b868f3297af53480e
+msgid "Earlier versions of MongoDB included :data:`~getLastError.upserted` only if ``_id`` was an :term:`ObjectId <objectid>`."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:105
+# 08b9cd60261043bca5eb6824fb5e3afe
+msgid "If set, ``wnote`` indicates that the preceding operation's error relates to using the ``w`` parameter to :dbcommand:`getLastError`."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:0
+# daf1813ebe88467da2d89ee90cfbaad3
+msgid "See"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:113
+# d7301d4a06ce4e7a87d10340270b04b1
+msgid ":data:`~getLastError.wtimeout` is ``true`` if the :dbcommand:`getLastError` timed out because of the ``wtimeout`` setting to :dbcommand:`getLastError`."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:119
+# 32eeaadd6d8141599a8d802dd4f7c752
+msgid "If the preceding operation specified a timeout using the ``wtimeout`` setting to :dbcommand:`getLastError`, then :data:`~getLastError.waited` reports the number of milliseconds :dbcommand:`getLastError` waited before timing out."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:126
+# ef0132c3c8154c26a4bd512106d72b7c
+msgid ":data:`getLastError.wtime` is the number of milliseconds spent waiting for the preceding operation to complete. If :dbcommand:`getLastError` timed out, :data:`~getLastError.wtime` and :dbcommand:`getLastError.waited` are equal."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:134
+# 6c41af8f82154d8e98a5de32c4e74b91
+msgid "Examples"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:137
+# adb4e53746054ca09ad40442dc92a135
+msgid "Confirm Replication to Two Replica Set Members"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:139
+# 904feb66361946cc8280dab1de6d57fa
+msgid "The following example ensures the operation has replicated to two members (the primary and one other member):"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:147
+# 9a23fbf1c0004779ae1ab1e2d0d266bb
+msgid "Confirm Replication to a Majority of a Replica Set"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:149
+# 4bb8fa05a8e9471d89be360580d5d44d
+msgid "The following example ensures the write operation has replicated to a majority of the configured members of the set."
+msgstr ""
+
+#: ../source/includes/fact-master-slave-majority.rst:1
+# 1f0453e19c2e4472ad466f142e2eade9
+msgid "In :doc:`Master/Slave </core/master-slave>` deployments, MongoDB treats ``w: \"majority\"`` as equivalent to ``w: 1``. In earlier versions of MongoDB, ``w: \"majority\"`` produces an error in :doc:`master/slave </core/master-slave>` deployments."
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:159
+# 17f84f00ca5343f7a994268cf99118fb
+msgid "Set a Timeout for a ``getLastError`` Response"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:161
+# 88e5f6b47a9b4a89abd5160c78008b34
+msgid "Unless you specify a timeout, a :dbcommand:`getLastError` command may block forever if MongoDB cannot satisfy the requested write concern. To specify a timeout of 5000 milliseconds, use an invocation that resembles the following:"
+msgstr ""
+
+#: ../source/reference/command/getLastError.txt:170
+# 22a3c9a692a7416db56e3b1a8430eb2f
+msgid "When ``wtimeout`` is ``0``, the :dbcommand:`getLastError` operation will never time out."
+msgstr ""
+

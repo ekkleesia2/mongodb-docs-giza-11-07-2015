@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command/distinct.txt:3
+# 7710ca79476441aa84f36d4e21c3365d
+msgid "distinct"
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:8
+# b11ef654a1b44ed9b41256f21be4aa9e
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:12
+# e575996b41c94ca4b5ea9080a1c0167e
+msgid "Finds the distinct values for a specified field across a single collection. :dbcommand:`distinct` returns a document that contains an array of the distinct values. The return document also contains a subdocument with query statistics and the query plan."
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:17
+# 791cfcc6efd44e90a235cc7d3f4ea51e
+msgid "When possible, the :dbcommand:`distinct` command uses an index to find documents and return values."
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:20
+# e4c3f97ee7c04380be4948cca572b9b2
+msgid "The command takes the following form:"
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:26
+# 0142f4b99af445c19affde87ab104cb2
+msgid "The command contains the following fields:"
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:31
+# 8197cc23aaeb48218d651afe35466551
+msgid "Examples"
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:33
+# c26e4a4d7fa14f92ab48f17aa0603076
+msgid "Return an array of the distinct values of the field ``ord_dt`` from all documents in the ``orders`` collection:"
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:40
+# 0e3f2664032c498fb111904cdecf2d08
+msgid "Return an array of the distinct values of the field ``sku`` in the subdocument ``item`` from all documents in the ``orders`` collection:"
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:47
+# df26510600ee46ed9bf355c15aedfc7b
+msgid "Return an array of the distinct values of the field ``ord_dt`` from the documents in the ``orders`` collection where the ``price`` is greater than ``10``:"
+msgstr ""
+
+#: ../source/reference/command/distinct.txt:60
+# d5a9b3540989404db84e2ec201e612e7
+msgid "MongoDB also provides the shell wrapper method :method:`db.collection.distinct()` for the :dbcommand:`distinct` command. Additionally, many MongoDB :term:`drivers <driver>` also provide a wrapper method. Refer to the specific driver documentation."
+msgstr ""
+

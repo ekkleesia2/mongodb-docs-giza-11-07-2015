@@ -1,0 +1,9 @@
+===================
+Replication Methods
+===================
+
+.. default-domain:: mongodb
+
+.. include:: /includes/toc/table-method-rs.rst
+
+.. include:: /includes/toc/method-rs.rst

@@ -1,0 +1,9 @@
+====================
+Projection Operators
+====================
+
+.. default-domain:: mongodb
+
+.. include:: /includes/toc/table-operator-projection.rst
+
+.. include:: /includes/toc/operator-projection.rst

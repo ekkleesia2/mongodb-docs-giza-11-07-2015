@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/update-array.txt:3
+# b497073bde6a419db7866d5eb5045e02
+msgid "Array Update Operators"
+msgstr ""
+
+#: ../source/reference/operator/update-array.txt:8
+# 83e33cc122ef4a9f963f8c5001c96239
+msgid "Update Operators"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:2
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:2
+# 7e34169abf904c159963d791873752c6
+# 3cacaff8a3a74afe846d52659e7a2060
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:2
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:2
+# 3bb430723ba048aca702211371826a99
+# e54423fa69504b4591e4dbf0c11409fc
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:4
+# 60b4128058cc44fdbd5a15f347776976
+msgid ":update:`$`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:4
+# 89d14cb9a170413387a4d41666c9c6cc
+msgid "Acts as a placeholder to update the first element that matches the query condition in an update."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:6
+# 1e3d05731b54438c9b886205d5e77e76
+msgid ":update:`$addToSet`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:6
+# ba8ec91a5b044fbe98a4c29dc5e9236b
+msgid "Adds elements to an array only if they do not already exist in the set."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:8
+# f03ee4f331704959afbdc0422202e82f
+msgid ":update:`$pop`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:8
+# e4e472e5f50a49d98480a865eda6bcfc
+msgid "Removes the first or last item of an array."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:10
+# 8615189e6c7d443fa12ddc739ab9452d
+msgid ":update:`$pullAll`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:10
+# f3247dd263944baf96e90ae7012b46bf
+msgid "Removes all matching values from an array."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:12
+# c946659f76fe4611a22a7c4f725bf698
+msgid ":update:`$pull`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:12
+# 7ab71dc64cef45ef83a3b7045e58cac4
+msgid "Removes all array elements that match a specified query."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:14
+# 80500d451da84c0a8bca83a6002e2880
+msgid ":update:`$pushAll`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:14
+# b2265f502ade441bb7bbf73d4f2fead8
+msgid "*Deprecated.* Adds several items to an array."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:16
+# 704d94fd72d14800905fdbdd69e9838d
+msgid ":update:`$push`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array.rst:16
+# f2bfc2f0baf640b9936c22b2e8c14200
+msgid "Adds an item to an array."
+msgstr ""
+
+#: ../source/reference/operator/update-array.txt:15
+# 24bf097852a64d9da53af6bdbc984cde
+msgid "Update Operator Modifiers"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:4
+# 52faa74e8fe4475da678314aee237fd2
+msgid ":update:`$each`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:4
+# 2bb802430b9f43249d313c847c001689
+msgid "Modifies the :update:`$push` and :update:`$addToSet` operators to append multiple items for array updates."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:6
+# 2a890754997c478b8f25d51f25348875
+msgid ":update:`$slice`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:6
+# c2167303d4b04e828720d496f2a883db
+msgid "Modifies the :update:`$push` operator to limit the size of updated arrays."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:8
+# 5bb9912e9a824443ad324c99740157a6
+msgid ":update:`$sort`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:8
+# 1263851513784343bc99db60ff4019ab
+msgid "Modifies the :update:`$push` operator to reorder documents stored in an array."
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:10
+# ba98f0d785d04fc3aae6204dd2846cf5
+msgid ":update:`$position`"
+msgstr ""
+
+#: ../source/includes/toc/table-operator-update-array-modifiers.rst:10
+# 14262ec9070144299b80f4fc2ed5b541
+msgid "Modifies the :update:`$push` operator to specify the position in the array to add elements."
+msgstr ""
+

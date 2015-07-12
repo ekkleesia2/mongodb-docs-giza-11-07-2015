@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/core/backups.txt:3
+# c537512e26ce485dbd78f2a43ca9412c
+msgid "MongoDB Backup Methods"
+msgstr ""
+
+#: ../source/core/backups.txt:7
+# 5092c1f87ef34c8fa6509ecf22d2dc4a
+msgid "When deploying MongoDB in production, you should have a strategy for capturing and restoring backups in the case of data loss events. There are several ways to back up MongoDB clusters:"
+msgstr ""
+
+#: ../source/core/backups.txt:11
+# 335e713480a54563b3971d282a63f58f
+msgid ":ref:`backup-with-file-copies`"
+msgstr ""
+
+#: ../source/core/backups.txt:12
+# a1805aa8a31f4f1fa9aec401378ec000
+msgid ":ref:`backup-with-mongodump`"
+msgstr ""
+
+#: ../source/core/backups.txt:13
+# 54db1c4008b14206935446e89c473d06
+msgid ":ref:`backup-with-mms`"
+msgstr ""
+
+#: ../source/core/backups.txt:14
+# df347f4a587841ce922a26220796b336
+msgid ":ref:`backup-with-mms-onprem`"
+msgstr ""
+
+#: ../source/core/backups.txt:19
+# 9f87ddb98db64787b87a8c3ccb8c2695
+msgid "Backup by Copying Underlying Data Files"
+msgstr ""
+
+#: ../source/core/backups.txt:21
+# 0852de4c978d43509bb0f6ad55401e2f
+msgid "You can create a backup by copying MongoDB's underlying data files."
+msgstr ""
+
+#: ../source/core/backups.txt:24
+# 8da44002dcdd4cdda2bac9cfff1cd27d
+msgid "If the volume where MongoDB stores data files supports point in time snapshots, you can use these snapshots to create backups of a MongoDB system at an exact moment in time."
+msgstr ""
+
+#: ../source/core/backups.txt:28
+# dec99bf2579d4f3d88790865adaf9607
+msgid "File systems snapshots are an operating system volume manager feature, and are not specific to MongoDB. The mechanics of snapshots depend on the underlying storage system. For example, if you use Amazon’s EBS storage system for EC2 supports snapshots. On Linux the LVM manager can create a snapshot."
+msgstr ""
+
+#: ../source/core/backups.txt:34
+# 03cc98cfa86c425e8b52bcd35c5ece44
+msgid "To get a correct snapshot of a running :program:`mongod` process, you must have journaling enabled and the journal must reside on the same logical volume as the other MongoDB data files. Without journaling enabled, there is no guarantee that the snapshot will be consistent or valid."
+msgstr ""
+
+#: ../source/core/backups.txt:40
+# bf3048ab8f52460b9e8306311caeb6e3
+msgid "To get a consistent snapshot of a sharded system, you must disable the balancer and capture a snapshot from every shard and a config server at approximately the same moment in time."
+msgstr ""
+
+#: ../source/core/backups.txt:44
+# 38ad0f3203804bb595d8032fd778c024
+msgid "If your storage system does not support snapshots, you can copy the files directly using ``cp``, ``rsync``, or a similar tool. Since copying multiple files is not an atomic operation, you must stop all writes to the :program:`mongod` before copying the files. Otherwise, you will copy the files in an invalid state."
+msgstr ""
+
+#: ../source/core/backups.txt:50
+# 398aaa55dcb94804a29fb98e3005acfe
+msgid "Backups produced by copying the underlying data do not support point in time recovery for replica sets and are difficult to manage for larger sharded clusters. Additionally, these backups are larger because they include the indexes and duplicate underlying storage padding and fragmentation. :program:`mongodump`, by contrast, creates smaller backups."
+msgstr ""
+
+#: ../source/core/backups.txt:57
+# a204f2f836674e1580ddf58d378549da
+msgid "For more information, see the :doc:`/tutorial/backup-with-filesystem-snapshots` and :doc:`/tutorial/backup-sharded-cluster-with-filesystem-snapshots` for complete instructions on using LVM to create snapshots. Also see :ecosystem:`Back up and Restore Processes for MongoDB on Amazon EC2 </tutorial/backup-and-restore-mongodb-on-amazon-ec2>`."
+msgstr ""
+
+#: ../source/core/backups.txt:67
+# 76dd11a969f24ed0ad8c892db7a6c258
+msgid "Backup with ``mongodump``"
+msgstr ""
+
+#: ../source/core/backups.txt:69
+# fb3526b7027c48a49b5e6b0b21f1db55
+msgid "The :program:`mongodump` tool reads data from a MongoDB database and creates high fidelity BSON files. The :program:`mongorestore` tool can populate a MongoDB database with the data from these BSON files. These tools are simple and efficient for backing up small MongoDB deployments, but are not ideal for capturing backups of larger systems."
+msgstr ""
+
+#: ../source/core/backups.txt:76
+# 70b02b2f05894d5fbdbb1faf63dcb235
+msgid ":program:`mongodump` and :program:`mongorestore` can operate against a running :program:`mongod` process, and can manipulate the underlying data files directly. By default, :program:`mongodump` does not capture the contents of the :doc:`local database </reference/local-database>`."
+msgstr ""
+
+#: ../source/core/backups.txt:81
+# 287414fad0ca44deaf501eb53cb56f98
+msgid ":program:`mongodump` only captures the documents in the database. The resulting backup is space efficient, but :program:`mongorestore` or :program:`mongod` must rebuild the indexes after restoring data."
+msgstr ""
+
+#: ../source/core/backups.txt:85
+# d693dcccc2e34af5858c704193266fbb
+msgid "When connected to a MongoDB instance, :program:`mongodump` can adversely affect :program:`mongod` performance. If your data is larger than system memory, the queries will push the working set out of memory."
+msgstr ""
+
+#: ../source/core/backups.txt:90
+# 06a2618bc6944781bc7e597cb7d356c3
+msgid "To mitigate the impact of :program:`mongodump` on the performance of the replica set, use :program:`mongodump` to capture backups from a :doc:`secondary </core/replica-set-secondary>` member of a replica set. Alternatively, you can shut down a secondary and use :program:`mongodump` with the data files directly. If you shut down a secondary to capture data with :program:`mongodump` ensure that the operation can complete before its oplog becomes too stale to continue replicating."
+msgstr ""
+
+#: ../source/core/backups.txt:99
+# 186662ed7ae84e2f8a68bd17e9772150
+msgid "For replica sets, :program:`mongodump` also supports a point in time feature with the :option:`--oplog <mongodump --oplog>` option. Applications may continue modifying data while :program:`mongodump` captures the output. To restore a point in time backup created with :option:`--oplog <mongodump --oplog>`, use :program:`mongorestore` with the :option:`--oplogReplay <mongorestore --oplogReplay>` option."
+msgstr ""
+
+#: ../source/core/backups.txt:107
+# f7b015c385b543d79ece9e54d2f33631
+msgid "If applications modify data while :program:`mongodump` is creating a backup, :program:`mongodump` will compete for resources with those applications."
+msgstr ""
+
+#: ../source/core/backups.txt:111
+# a3ab2b7826264d60959bb84d5c130619
+msgid "See :doc:`/tutorial/backup-with-mongodump`, :doc:`/tutorial/backup-small-sharded-cluster-with-mongodump`, and :doc:`/tutorial/backup-sharded-cluster-with-database-dumps` for more information."
+msgstr ""
+
+#: ../source/core/backups.txt:119
+# 40d87203a8b243c0a6387315cd8ceae8
+msgid "MongoDB Management Service (MMS) Cloud Backup"
+msgstr ""
+
+#: ../source/core/backups.txt:121
+# 994a86699fae403da7e1367301fd5825
+msgid "The `MongoDB Management Service <https://mms.10gen.com/?pk_campaign=MongoDB-Org&pk_kwd=Backup-Docs>`_ supports backup and restore for MongoDB deployments."
+msgstr ""
+
+#: ../source/core/backups.txt:125
+# 202a309c275b45b98855749ee70792ee
+msgid "MMS continually backs up MongoDB replica sets and sharded systems by reading the oplog data from your MongoDB cluster."
+msgstr ""
+
+#: ../source/core/backups.txt:128
+# 7f579a77c53d4b02815ede420542c8b5
+msgid "MMS Backup offers point in time recovery of MongoDB replica sets and a consistent snapshot of sharded systems."
+msgstr ""
+
+#: ../source/core/backups.txt:131
+# 3a839ae76acb434b98d531cae16c13f1
+msgid "MMS achieves point in time recovery by storing oplog data so that it can create a restore for any moment in time in the last 24 hours for a particular replica set."
+msgstr ""
+
+#: ../source/core/backups.txt:135
+# 19d633b839ac4ba4bd5355da44b8779d
+msgid "For sharded systems, MMS does not provide restores for arbitrary moments in time. MMS does provide periodic consistent snapshots of the entire sharded cluster. Sharded cluster snapshots are difficult to achieve with other MongoDB backup methods."
+msgstr ""
+
+#: ../source/core/backups.txt:140
+# 6354a396508b41209dcbd77557abf0aa
+msgid "To restore a MongoDB cluster from an MMS Backup snapshot, you download a compressed archive of your MongoDB data files and distribute those files before restarting the :program:`mongod` processes."
+msgstr ""
+
+#: ../source/core/backups.txt:144
+# a68a871b0b4444b398ec4a3a188e1704
+msgid "To get started with MMS Backup `sign up for MMS <http://mms.mongodb.com>`_, and consider the complete documentation of MMS see the  :mms:`MMS Manual </>`."
+msgstr ""
+
+#: ../source/core/backups.txt:152
+# 6d73a52acd5249ab997c28d6c093fa74
+msgid "MongoDB Management Service (MMS) On Prem Backup Software"
+msgstr ""
+
+#: ../source/core/backups.txt:154
+# ff6524b2f34c41abb7ba394694f18586
+msgid "MongoDB Subscribers can install and run the same core software that powers :ref:`backup-with-mms` on their own infrastructure. The On Prem version of MMS, has similar functionality as the cloud version and is available with Standard and Enterprise subscriptions."
+msgstr ""
+
+#: ../source/core/backups.txt:159
+# 6bc24bb82b224811bb0b1aa76f73e6ae
+msgid "For more information about On Prem MMS see the `MongoDB subscription <https://www.mongodb.com/products/subscriptions>`_ page and the `MMS On Prem Manual <https://mms.mongodb.com/help-hosted/current/>`_."
+msgstr ""
+
+#: ../source/core/backups.txt:164
+# f57834eba1df413489cd917bec690d55
+msgid "Further Reading"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:7
+# 719dba2b55fe4f588ef7ea03dc67e2ba
+msgid ":doc:`/tutorial/backup-with-filesystem-snapshots`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:4
+# 7d50b8732cbd4205ba2382be2f81426d
+msgid "An outline of procedures for creating MongoDB data set backups using system-level file snapshot tool, such as :term:`LVM` or native storage appliance tools."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:13
+# a6b5937f11854982a5a2f798de7f1a90
+msgid ":doc:`/tutorial/restore-replica-set-from-backup`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:10
+# 59e879c481e040debeb81a2331dfd503
+msgid "Describes procedure for restoring a replica set from an archived backup such as a :program:`mongodump` or `MMS Backup <https://mms.mongodb.com/?pk_campaign=mongodb-docs-admin-tutorials>`_ file."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:18
+# 53b731f4ab054edab36012ebb5b7e2f6
+msgid ":doc:`/tutorial/backup-with-mongodump`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:16
+# 78d4e8302a614d65a23779005c0b3f7c
+msgid "The procedure for writing the contents of a database to a BSON (i.e. binary) dump file for backing up MongoDB databases."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:23
+# 610e6bd345d4498b83a9ffd561820426
+msgid ":doc:`/administration/backup-sharded-clusters`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:21
+# 6d8018b0bb4a4a298d90574230079a97
+msgid "Detailed procedures and considerations for backing up sharded clusters and single shards."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:26
+# 94e4f4389c53427fbd8d6490190735ae
+msgid ":doc:`/tutorial/recover-data-following-unexpected-shutdown`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-administration-backup-and-recovery.rst:26
+# aa9fcd82860b44a495259b22c255d169
+msgid "Recover data from MongoDB data files that were not properly closed or have an invalid state."
+msgstr ""
+

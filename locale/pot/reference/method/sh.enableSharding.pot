@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/sh.enableSharding.txt:3
+# 45543020b146498d80fd2ddaa3ad59cb
+msgid "sh.enableSharding()"
+msgstr ""
+
+#: ../source/reference/method/sh.enableSharding.txt:8
+# 722eff568a9a4bc2a95e1419af8b7256
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/sh.enableSharding.txt:12
+# cb44c2c10f2a4235a7742a0e8e138174
+msgid "Enables sharding on the specified database. This does not automatically shard any collections but makes it possible to begin sharding collections using :method:`sh.shardCollection()`."
+msgstr ""
+
+#: ../source/reference/method/sh.enableSharding.txt:16
+# 0cf7dde1a30b414687eaf6a29b953c85
+msgid "The :method:`sh.enableSharding()` method has the following parameter:"
+msgstr ""
+
+#: ../source/reference/method/sh.enableSharding.txt:20
+# 1111e5115f44400684132ef1c54778d0
+msgid ":method:`sh.shardCollection()`"
+msgstr ""
+

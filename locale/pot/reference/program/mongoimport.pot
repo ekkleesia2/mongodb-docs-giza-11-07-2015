@@ -1,0 +1,445 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/program/mongoimport.txt:5
+# 4f19c7837b8542f69f1a63230db89142
+msgid "``mongoimport``"
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:11
+# 21245cb7d12442ba9a4e36229952faed
+msgid "Synopsis"
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:13
+# cc21befa7eb444d68ae6e4f7704f6aa6
+msgid "The :program:`mongoimport` tool provides a route to import content from a JSON, CSV, or TSV export created by :program:`mongoexport`, or potentially, another third-party export tool. See the :doc:`/core/import-export` document for a more in depth usage overview, and the :doc:`mongoexport` document for more information regarding :program:`mongoexport`, which provides the inverse \"exporting\" capability."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:22
+# 66f8764a00ff47599d9298e6fe342387
+msgid "Considerations"
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:24
+# d29ef4173a8e40c5a9ab799667507ffc
+msgid "Do not use :program:`mongoimport` and :program:`mongoexport` for full instance, production backups because they will not reliably capture data type information. Use :program:`mongodump` and :program:`mongorestore` as described in :doc:`/core/backups` for this kind of functionality."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:30
+# b42f811a12654a209aaaa0ec494b188a
+msgid ":program:`mongoimport` is single-threaded and inserts one document at a time into MongoDB. Custom import tools for data ingestion may have better performance for specific workloads."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:35
+# dd9e80a695bc4b5c85bc26bb8b4ec3fe
+msgid "Options"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-help.rst:3
+# 6e58e6d1a1dd4a5486c395fd4c368c3f
+msgid "Returns information on the options and use of :program:`mongoimport`."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-verbose.rst:3
+# 48b69d755a50441ea59f06dc5f50c1d1
+msgid "Increases the amount of internal reporting returned on standard output or in log files. Increase the verbosity with the ``-v`` form by including the option multiple times, (e.g. ``-vvvvv``.)"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-quiet.rst:3
+# 942733b97f0245b4a90ef648a5c6374f
+msgid "Runs the :program:`mongoimport` in a quiet mode that attempts to limit the amount of output."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-quiet.rst:6
+# d6b2195a6c7b4a669ff79bc0de36641b
+msgid "This option suppresses:"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-quiet.rst:8
+# e04a226cda8f4968877dd7d21a4584f4
+msgid "output from :term:`database commands <database command>`"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-quiet.rst:10
+# f7432c5bbaba4b9bb551278d4f7e4b62
+msgid "replication activity"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-quiet.rst:12
+# 5e0ceca29ccf4a14bdebaa11960dfc7b
+msgid "connection accepted events"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-quiet.rst:14
+# 5283b819ce134fed829ee40abbd09b67
+msgid "connection closed events"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-version.rst:3
+# 43bc65f3260f4fdaaac679076f3e8308
+msgid "Returns the :program:`mongoimport` release number."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-host.rst:3
+# 4346b2e042ab4225b8e2a71373fb0608
+msgid "*Default*: localhost:27017"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-host.rst:5
+# 631bcab6b41d41d8b70d2c2e62393629
+msgid "Specifies a resolvable hostname for the :program:`mongod` to which to connect. By default, the :program:`mongoimport` attempts to connect to a MongoDB instance running on the localhost on port number ``27017``."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-host.rst:9
+# a463f19653434fa6878f56a7e589bcb1
+msgid "To connect to a replica set, specify the :setting:`replica set name <~replication.replSetName>` and a seed list of set members. Use the following form:"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-host.rst:17
+# 8163ca035492442cab1a1cf7761e20c9
+msgid "You can always connect directly to a single MongoDB instance by specifying the host and port number directly."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-port.rst:3
+# 9febce57f98e421f8ee6036318e601ee
+msgid "*Default*: 27017"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-port.rst:5
+# 220c5ce98e574732aa3954eaff420bd4
+msgid "Specifies the TCP port on which the MongoDB instance listens for client connections."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-ipv6.rst:3
+# 42e65eedf1a8430bb89e85a6f4ca32c3
+msgid "Enables IPv6 support and allows the :program:`mongoimport` to connect to the MongoDB instance using an IPv6 network. All MongoDB programs and processes disable IPv6 support by default."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-ssl.rst:5
+# 18615ad1df5a4a03b1988994d249f30d
+msgid "Enables connection to a :program:`mongod` or :program:`mongos` that has SSL support enabled."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-ssl.rst:8
+#: ../source/includes/option/option-mongoimport-sslCAFile.rst:9
+#: ../source/includes/option/option-mongoimport-sslPEMKeyFile.rst:14
+#: ../source/includes/option/option-mongoimport-sslPEMKeyPassword.rst:14
+#: ../source/includes/option/option-mongoimport-sslCRLFile.rst:9
+#: ../source/includes/option/option-mongoimport-sslAllowInvalidCertificates.rst:10
+#: ../source/includes/option/option-mongoimport-sslFIPSMode.rst:9
+# a59c0439ba954dd0a3f3303157fae7f0
+# 42308fc8fa164a79bf4d483cb5673af0
+# 7e70785f10bc4366900cf0825e3dcf45
+# f036df89db244ace89776d1b5511c5c8
+# 06b0c76364694ca481cd22b79f4c041c
+# 43991179728d4d798de8c96ff402ac3a
+# 6aa2f0f0c19947acbd2a8c4a92cc5e0a
+msgid "The default distribution of MongoDB does not contain support for SSL. For more information on MongoDB and SSL, see :doc:`/tutorial/configure-ssl`."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-sslCAFile.rst:5
+# 67c8fa4770fc4e8eb8564a87128e6d3a
+msgid "Specifies the :file:`.pem` file that contains the root certificate chain from the Certificate Authority. Specify the file name of the :file:`.pem` file using relative or absolute paths."
+msgstr ""
+
+#: ../source/includes/warning-always-use-sslCAFile-for-mongo.rst:3
+# e27e8067dafc48beab0c3f5f620c5182
+msgid "If the :program:`mongo` shell or any other tool that connects to :program:`mongos` or :program:`mongod` is run without :option:`--sslCAFile <mongod --sslCAFile>`, it will not attempt to validate server certificates. This results in vulnerability to expired :program:`mongod` and :program:`mongos` certificates as well as to foreign processes posing as valid :program:`mongod` or :program:`mongos` instances. Ensure that you *always* specify the CA file against which server certificates should be validated in cases where intrusion is a possibility."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-sslPEMKeyFile.rst:5
+# 5f6c0c5d1cdf4eec9108e04ecfdbe8cb
+msgid "Specifies the :file:`.pem` file that contains both the SSL certificate and key. Specify the file name of the :file:`.pem` file using relative or absolute paths."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-sslPEMKeyFile.rst:9
+# ffc76e9c054f49a9a87b383c45aff1b3
+msgid "This option is required when using the :option:`--ssl` option to connect to a :program:`mongod` or :program:`mongos` that has :setting:`~net.ssl.CAFile` enabled *without* :setting:`~net.ssl.weakCertificateValidation`."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-sslPEMKeyPassword.rst:5
+# 4349aece134a4be78276b512f32e11c4
+msgid "Specifies the password to de-crypt the certificate-key file (i.e. :option:`--sslPEMKeyFile`). Use the :option:`--sslPEMKeyPassword` option only if the certificate-key file is encrypted. In all cases, the :program:`mongoimport` will redact the password from all logging and reporting output."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-sslPEMKeyPassword.rst:10
+# bb64d8e6f9114442b15702501d7b35a4
+msgid "If the private key in the PEM file is encrypted and you do not specify the :option:`--sslPEMKeyPassword` option, the :program:`mongoimport` will prompt for a passphrase. See :ref:`ssl-certificate-password`."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-sslCRLFile.rst:5
+# 42aee582dfeb44e49eac26ae4221b289
+msgid "Specifies the :file:`.pem` file that contains the Certificate Revocation List. Specify the file name of the :file:`.pem` file using relative or absolute paths."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-sslAllowInvalidCertificates.rst:5
+# 3a3bc3d35a254b05a062bfb64d54a279
+msgid "Bypasses the validation checks for server certificates and allows the use of invalid certificates. When using the :setting:`~net.ssl.allowInvalidCertificates` setting, MongoDB logs as a warning the use of the invalid certificate."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-sslFIPSMode.rst:5
+# 5dfddb0130894994ae145d9aa3f8bdb5
+msgid "Directs the :program:`mongoimport` to use the FIPS mode of the installed OpenSSL library. Your system must have a FIPS compliant OpenSSL library to use the :option:`--sslFIPSMode` option."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-username.rst:3
+# 717f9a0b1596485ea787b73ee82d6e14
+msgid "Specifies a username with which to authenticate to a MongoDB database that uses authentication. Use in conjunction with the ``--password`` and ``--authenticationDatabase`` options."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-password.rst:3
+# 9a6dd3e8d0ae4d64b1b4650e80eaa1c5
+msgid "Specifies a password with which to authenticate to a MongoDB database that uses authentication. Use in conjunction with the ``--username`` and ``--authenticationDatabase`` options."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationDatabase.rst:5
+# 95c0513dc8884f7aaa7eb214d738423d
+msgid "Specifies the database that holds the user's credentials. If you do not specify an authentication database, the :program:`mongoimport` assumes that the database specified as the argument to the :option:`--db` option holds the user's credentials."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:3
+# c29e9ae055e14cdebce3bf5662b1744f
+msgid "*Default*: MONGODB-CR"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:7
+# 9798387204ac49fb85171ce6685f014f
+msgid "Added support for the ``PLAIN`` and ``MONGODB-X509`` authentication mechanisms."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:11
+# 778e9c094def4fa4a87a26f212361354
+msgid "Specifies the authentication mechanism the :program:`mongoimport` instance uses to authenticate to the :program:`mongod` or :program:`mongos`."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:18
+# 30743fd7795a4f3e901e9fbee8513c23
+msgid "Value"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:20
+# d254c9aab274419aa77b01f3d2a1a599
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:22
+# 60b42ca11cb94480bc574589883f1b21
+msgid "MONGODB-CR"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:24
+# 20755c2d5e0c408b8ce1ae702ad62ba5
+msgid "MongoDB challenge/response authentication."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:26
+# ec986db162b44718ad68952361b7ba92
+msgid "MONGODB-X509"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:28
+# 3d74a33add1245ce97609d039167e139
+msgid "MongoDB SSL certificate authentication."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:30
+# c8d81fab4033444a922fa1e3e1888f8d
+msgid "PLAIN"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:32
+# 5e8f4a22325542de988bbf9c985f1211
+msgid "External authentication using LDAP. You can also use ``PLAIN`` for authenticating in-database users. ``PLAIN`` transmits passwords in plain text. This mechanism is available only in `MongoDB Enterprise <http://www.mongodb.com/products/mongodb-enterprise>`_."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:38
+# 755f4bcee4ea45dba4d229964d817776
+msgid "GSSAPI"
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-authenticationMechanism.rst:40
+# 45117727563b48b697bfead642ae651f
+msgid "External authentication using Kerberos. This mechanism is available only in `MongoDB Enterprise <http://www.mongodb.com/products/mongodb-enterprise>`_."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-dbpath.rst:3
+# 8cb336519dbd461f8ee9066c5b39d2ed
+msgid "Specifies the directory of the MongoDB data files. The :option:`--dbpath` option lets the :program:`mongoimport` attach directly to the local data files without going through a running :program:`mongod`. When run with :option:`--dbpath`, the :program:`mongoimport` locks access to the data files. No :program:`mongod` can access the files while the :program:`mongoimport` process runs."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-directoryperdb.rst:3
+# f318588fe62042c4965cb269376c6276
+msgid "When used in conjunction with the corresponding option in :program:`mongod`, allows the :program:`mongoimport` to access data from MongoDB instances that use an on-disk format where every database has a distinct directory. This option is only relevant when specifying the :option:`--dbpath` option."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-journal.rst:3
+# d03b0f6a1cc842cfb2c6d357eaef0d70
+msgid "Enables the durability :term:`journal` to ensure data files remain valid and recoverable. This option applies only when you specify the :option:`--dbpath` option. The :program:`mongoimport` enables journaling by default on 64-bit builds of versions after 2.0."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-db.rst:3
+# 0e8583ad527541689fdc2a83b714c34d
+msgid "Specifies the name of the database on which to run the :program:`mongoimport`."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-collection.rst:3
+# b6b3c7ce61494b85b36fc9e99658d9ea
+msgid "Specifies the collection to import."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-collection.rst:5
+# b3313b9814424cd4847f949d3c58271a
+msgid "If you do not specify :option:`--collection`, :program:`mongoimport` takes the collection name from the input filename. MongoDB omits the extension of the file from the collection name, if the input file has an extension."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-fields.rst:3
+# c313cad2bee54880b7aa1ce5cb4bfd9a
+msgid "Specify a comma separated list of field names when importing :term:`csv` or :term:`tsv` files that do not have field names in the first (i.e. header) line of the file."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-fieldFile.rst:3
+# 575ee924562a42539564b3e99b7a6510
+msgid "As an alternative to :option:`--fields`, the :option:`--fieldFile` option allows you to specify a file that holds a list of field names if your :term:`csv` or :term:`tsv` file does not include field names in the first line of the file (i.e. header). Place one field per line."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-ignoreBlanks.rst:3
+# a5646255b6c340c0b285fbe0c56e0668
+msgid "Ignores empty fields in :term:`csv` and :term:`tsv` exports. If not specified, :program:`mongoimport` creates fields without values in imported documents."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-type.rst:3
+# 5f7103855d784a90b2f717dad21cfba4
+msgid "Specifies the file type to import. The default format is :term:`JSON`, but it's possible to import :term:`csv` and :term:`tsv` files."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-type.rst:6
+# 9c3d3b03839840489f12753af59a5435
+msgid "The ``csv`` parser accepts that data that complies with RFC :rfc:`4180`. As a result, backslashes are *not* a valid escape character. If you use double-quotes to enclose fields in the CSV data, you must escape internal double-quote marks by prepending another double-quote."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-file.rst:3
+# 764c141247b749c9b65326d7b2117973
+msgid "Specifies the location and name of a file containing the data to import. If you do not specify a file, :program:`mongoimport` reads data from standard input (e.g. \"stdin\")."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-drop.rst:3
+# ffcad6fad33f45308ec3e011e6433082
+msgid "Modifies the import process so that the target instance drops every collection before importing the collection from the input."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-headerline.rst:3
+# f1591563443e4e55b842143816c89dd4
+msgid "If using :option:`--type csv <mongoimport --type>` or :option:`--type tsv <mongoimport --type>`, uses the first line as field names. Otherwise, :program:`mongoimport` will import the first line as a distinct document."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-upsert.rst:3
+# 1daf63ae98ce4b71af0b6d9f84181ff3
+msgid "Modifies the import process to update existing objects in the database if they match an imported object, while inserting all other objects."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-upsert.rst:7
+# 7bb272d2f4a14684a81028d026fbf9d4
+msgid "If you do not specify a field or fields using the :option:`--upsertFields` :program:`mongoimport` will upsert on the basis of the ``_id`` field."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-upsertFields.rst:3
+# e40926afaa554b7189c0e58ad48ee682
+msgid "Specifies a list of fields for the query portion of the :term:`upsert`. Use this option if the ``_id`` fields in the existing documents don't match the field in the document, but another field or field combination can uniquely identify documents as a basis for performing upsert operations."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-upsertFields.rst:9
+# 799af213760f403989ae7a6a8411b052
+msgid "To ensure adequate performance, indexes should exist for this field or fields."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-stopOnError.rst:5
+# d6d703271eb04ad887f71e84d58fc88b
+msgid "Forces :program:`mongoimport` to halt the import operation at the first error rather than continuing the operation despite errors."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-jsonArray.rst:3
+# abdcae6e501b4ab0b33164d20a3bf291
+msgid "Accepts the import of data expressed with multiple MongoDB documents within a single :term:`JSON` array."
+msgstr ""
+
+#: ../source/includes/option/option-mongoimport-jsonArray.rst:6
+# 51467fcf473240febb5a38b0a0adaa73
+msgid "Used in conjunction with :option:`mongoexport --jsonArray` to import data written as a single :term:`JSON` array. Limited to imports of 16 MB or smaller."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:110
+# e04b1fc513154c15a760f5598465e17e
+msgid "Use"
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:112
+# fae34218af254920bab9559127dbfd0c
+msgid "In this example, :program:`mongoimport` imports the :term:`csv` formatted data in the ``/opt/backups/contacts.csv`` into the collection ``contacts`` in the ``users`` database on the MongoDB instance running on the localhost port numbered ``27017``. :program:`mongoimport` determines the name of files using the first line in the CSV file, because of the :option:`--headerline <mongoimport --headerline>`:"
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:124
+# d5d67c2fea5143fd89b879362cee812d
+msgid "Since :program:`mongoimport` uses the input file name, without the extension, as the collection name if ``-c`` or ``--collection`` is unspecified. The following following example is equivalent:"
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:132
+# dd946b5a07044420952fcd227778b84c
+msgid "In the following example, :program:`mongoimport` imports the data in the :term:`JSON` formatted file ``contacts.json`` into the collection ``contacts`` on the MongoDB instance running on the localhost port number 27017."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:141
+# 3e6560305a0841ce9a5c6dee107e1a5b
+msgid "In the next example, :program:`mongoimport` takes data passed to it on standard input (i.e. with a ``|`` pipe.)  and imports it into the MongoDB datafiles located at ``/srv/mongodb/``. if the import process encounters an error, the :program:`mongoimport` will halt because of the :option:`--stopOnError <mongoimport --stopOnError>` option."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:151
+# e913e77a08aa45f0b8aac28f01bff058
+msgid "In the final example, :program:`mongoimport` imports data from the file ``/opt/backups/mdb1-examplenet.json`` into the collection ``contacts`` within the database ``marketing`` on a remote MongoDB database. This :program:`mongoimport` accesses the :program:`mongod` instance running on the host ``mongodb1.example.net`` over port ``37017``, which requires the username ``user`` and the password ``pass``."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:166
+# c4e351809d314030995108d7e029e78a
+msgid "Type Fidelity"
+msgstr ""
+
+#: ../source/includes/warning-type-fidelity-loss.rst:3
+# 179f32188a4c4e6c9caa253ace384f26
+msgid ":program:`mongoimport` and :program:`mongoexport` do not reliably preserve all rich :term:`BSON` data types because :term:`JSON` can only represent a subset of the types supported by BSON. As a result, data exported or imported with these tools may lose some measure of fidelity. See :doc:`/reference/mongodb-extended-json` for more information."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:170
+# cce4be3840364ee4a9604945ba2f27c3
+msgid "JSON can only represent a subset of the types supported by BSON. To preserve type information, :program:`mongoimport` accepts :doc:`strict mode representation </reference/mongodb-extended-json>` for certain types."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:175
+# 179b6768953d40ce8feb3b423f532068
+msgid "For example, to preserve type information for BSON types :bsontype:`data_date` and :bsontype:`data_numberlong` during :program:`mongoimport`, the data should be in strict mode representation, as in the following:"
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:184
+# 1e75d02b57f14cfaae1e67bcbd643307
+msgid "For the :bsontype:`data_numberlong` type, :program:`mongoimport` converts into a float during the import."
+msgstr ""
+
+#: ../source/reference/program/mongoimport.txt:187
+# 2dc1fa15df264059af5b025ce0047fab
+msgid "See :doc:`/reference/mongodb-extended-json` for a complete list of these types and the representations used."
+msgstr ""
+

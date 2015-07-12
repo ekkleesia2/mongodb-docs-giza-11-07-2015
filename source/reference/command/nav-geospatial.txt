@@ -1,0 +1,9 @@
+===================
+Geospatial Commands
+===================
+
+.. default-domain:: mongodb
+
+.. include:: /includes/toc/table-command-geospatial.rst
+
+.. include:: /includes/toc/command-geospatial.rst

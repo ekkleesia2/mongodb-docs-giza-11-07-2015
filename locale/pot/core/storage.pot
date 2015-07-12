@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/core/storage.txt:3
+# 72eed3273fea4bf29ab61ff03546aa2e
+msgid "Storage"
+msgstr ""
+
+#: ../source/core/storage.txt:8
+# d0ae20c7b4234bb9a69b84642e335744
+msgid "Data Model"
+msgstr ""
+
+#: ../source/core/storage.txt:10
+# 46431bb0172d4e5697e187ea2962915c
+msgid "MongoDB stores data in the form of :term:`BSON` documents, which are rich mappings of keys, or field names, to values. BSON supports a rich collection of types, and fields in BSON documents may hold arrays of values or embedded documents. All documents in MongoDB must be less than 16MB, which is the :limit:`BSON document size <BSON Document Size>`."
+msgstr ""
+
+#: ../source/core/storage.txt:16
+# 72386c58ed4845029923bf867dfd84dc
+msgid "Every document in MongoDB is stored in a *record* which contains the document itself and extra space, or :term:`padding`, which allows the document to grow as the result of updates."
+msgstr ""
+
+#: ../source/core/storage.txt:20
+# 0493216a1d0f4d74928a23fd43ed4eb0
+msgid "All records are contiguously located on disk, and when a document becomes larger than the allocated record, MongoDB must allocate a new record. New allocations require MongoDB to move a document and update all indexes that refer to the document, which takes more time than in-place updates and leads to storage fragmentation."
+msgstr ""
+
+#: ../source/core/storage.txt:27
+# 3834f7742a4143619346d5beb4cff6f7
+msgid "All records are part of a :term:`collection`, which is a logical grouping of documents in a MongoDB database. The documents in a collection share a set of indexes, and typically these documents share common fields and structure."
+msgstr ""
+
+#: ../source/core/storage.txt:32
+# b948ea5287e640fda9aa428dc1f636bc
+msgid "In MongoDB the :term:`database` construct is a group of related collections. Each database has a distinct set of data files and can contain a large number of collections. Also, each database has one distinct write lock, that blocks operations to the database during write operations. A single MongoDB deployment may have many databases."
+msgstr ""
+
+#: ../source/core/storage.txt:40
+# 9ad1357f6b2d4274bed4a1f7579e6dd5
+msgid "Journal"
+msgstr ""
+
+#: ../source/core/storage.txt:42
+# a6f0f2fb724c481aa7768ac45e6f4216
+msgid "In order to ensure that all modifications to a MongoDB data set are durably written to disk, MongoDB records all modifications to a journal that it writes to disk more frequently than it writes the data files. The journal allows MongoDB to successfully recover data from data files after a :program:`mongod` instance exits without flushing all changes."
+msgstr ""
+
+#: ../source/core/storage.txt:49
+# 81e973d5665349e282923f7703a4713d
+msgid "See :doc:`/core/journaling` for more information about the journal in MongoDB."
+msgstr ""
+
+#: ../source/core/storage.txt:55
+# 51b1e6ab33774033973f0c4768d4c2bd
+msgid "Record Allocation Strategies"
+msgstr ""
+
+#: ../source/core/storage.txt:57
+# 9e6c1d091a1f4a78a3d05ebda57eec0e
+msgid "MongoDB supports multiple record allocation strategies that determine how :program:`mongod` adds padding to a document when creating a record. Because documents in MongoDB may grow after insertion and all records are contiguous on disk, the padding can reduce the need to relocate documents on disk following updates. Relocations are less efficient than in-place updates, and can lead to storage fragmentation. As a result, all padding strategies trade additional space for increased efficiency and decreased fragmentation."
+msgstr ""
+
+#: ../source/core/storage.txt:66
+# 35f052b6438d4d768c6202fd325e45e4
+msgid "Different allocation strategies support different kinds of workloads: the :ref:`power of 2 allocations <power-of-2-allocation>` are more efficient for insert/update/delete workloads; while :ref:`exact fit allocations <exact-fit-allocation>` is ideal for collections *without* update and delete workloads."
+msgstr ""
+
+#: ../source/core/storage.txt:75
+# b0dbf3ade3c24e66950f382568d8fb7e
+msgid "Power of 2 Sized Allocations"
+msgstr ""
+
+#: ../source/core/storage.txt:77
+# 31e09c5608fe4e10a0ac22a5abf69506
+msgid "For all new collections, :collflag:`usePowerOf2Sizes` became the default allocation strategy. To change the default allocation strategy, use the :parameter:`newCollectionsUsePowerOf2Sizes` parameter."
+msgstr ""
+
+#: ../source/core/storage.txt:82
+# 2bdde164d6b745e080031f6f2ba0016b
+msgid ":program:`mongod` uses an allocation strategy called :collflag:`usePowerOf2Sizes` where each record has a size in bytes that is a power of 2 (e.g. 32, 64, 128, 256, 512...16777216.) The smallest allocation for a document is 32 bytes. The power of 2 sizes allocation strategy has two key properties:"
+msgstr ""
+
+#: ../source/core/storage.txt:88
+# 34253868ee53453fb6188ea1d267754c
+msgid "there are a limited number of record allocation sizes, which makes it easier for :program:`mongod` to reuse existing allocations, which will reduce fragmentation in some cases."
+msgstr ""
+
+#: ../source/core/storage.txt:92
+# ed849bd6ad7d4c7d95d6bdfcabc1105b
+msgid "in many cases, the record allocations are significantly larger than the documents they hold. This allows documents to grow while minimizing or eliminating the chance that the :program:`mongod` will need to allocate a new record if the document grows."
+msgstr ""
+
+#: ../source/core/storage.txt:97
+# 0971536185f748daa42482c3bd239836
+msgid "The :collflag:`usePowerOf2Sizes` strategy does not *eliminate* document reallocation as a result of document growth, but it minimizes its occurrence in many common operations."
+msgstr ""
+
+#: ../source/core/storage.txt:104
+# 83c789df8da24d65b97c953b283f7c54
+msgid "Exact Fit Allocation"
+msgstr ""
+
+#: ../source/core/storage.txt:106
+# 47d6fcb36fbf4b6588713664a067052a
+msgid "The exact fit allocation strategy allocates record sizes based on the size of the document and an additional *padding factor*. Each collection has its own padding factor, which defaults to ``1`` when you insert the first document in a collection. MongoDB dynamically adjusts the padding factor up to ``2`` depending on the rate of growth of the documents over the life of the collection."
+msgstr ""
+
+#: ../source/core/storage.txt:113
+# 27b58dd862d741e699208f70cee45fec
+msgid "To estimate total record size, compute the product of the padding factor and the size of the document. That is:"
+msgstr ""
+
+#: ../source/core/storage.txt:123
+# b8849540105f4e3492f8457b21ea0b02
+msgid "The size of each record in a collection reflects the size of the padding factor at the time of allocation. See the :data:`~collStats.paddingFactor` field in the output of :method:`db.collection.stats()` to see the current padding factor for a collection."
+msgstr ""
+
+#: ../source/core/storage.txt:129
+# 793d353ebed748899717bc6ca2a42bce
+msgid "On average, this exact fit allocation strategy uses less storage space than the :collflag:`usePowerOf2Sizes` strategy but will result in higher levels of storage fragmentation if documents grow beyond the size of their initial allocation."
+msgstr ""
+
+#: ../source/core/storage.txt:134
+# cb00a4f828dc4fdb9e8814d36e8ef61c
+msgid "The :dbcommand:`compact` and :dbcommand:`repairDatabase` operations remove padding by default, as do the :program:`mongodump` and :program:`mongorestore`. :dbcommand:`compact` does allow you to specify a padding for records during compaction."
+msgstr ""
+
+#: ../source/core/storage.txt:140
+# 60db157ee853465c8e9eb54cc3cb0474
+msgid "Capped Collections"
+msgstr ""
+
+#: ../source/core/storage.txt:142
+# 6399df32460e449d979712ad36a4f82b
+msgid ":term:`Capped collections <capped collection>` are fixed-size collections that support high-throughput operations that store records in insertion order. Capped collections work like circular buffers: once a collection fills its allocated space, it makes room for new documents by overwriting the oldest documents in the collection."
+msgstr ""
+
+#: ../source/core/storage.txt:148
+# 21bb6edf5fc44b0cbf3d6859f46bdb37
+msgid "See :doc:`/core/capped-collections` for more information."
+msgstr ""
+

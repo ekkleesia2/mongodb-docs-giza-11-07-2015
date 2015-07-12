@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/js-constructor.txt:3
+# 5b217313e0524b3489fdb7519fe2c44a
+msgid "Object Constructors and Methods"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:2
+# 84fdd9d18d3c45389f3e9b5c4980564d
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:2
+# 0149e4d80515416486022ab495115620
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:4
+# 44dae107ad664d8480b05ccf9a78e3de
+msgid ":method:`Date()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:4
+# 82d962fd7d6e48a5bdb5227b663fc65f
+msgid "Creates a date object. By default creates a date object including the current date."
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:6
+# 598bf394aa3347e5899e4a9664611564
+msgid ":method:`UUID()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:6
+# a31ff788794040c687a12ab5624eba5d
+msgid "Converts a 32-byte hexadecimal string to the UUID BSON subtype."
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:8
+# 178aedb3a49e4fc5af7067b7c1756a45
+msgid ":method:`ObjectId.getTimestamp()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:8
+# 3d4dff2bf0d740199a85f7e20e88f48b
+msgid "Returns the timestamp portion of an :term:`ObjectId`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:10
+# 4ea4cf7c6f6f428b8f50f36752b14c53
+msgid ":method:`ObjectId.toString()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:10
+# 15cfaf10043e405ea98ee178dc18c6e5
+msgid "Displays the string representation of an :term:`ObjectId`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:12
+# db0752927e624bfd98c21818e59a13f1
+msgid ":method:`ObjectId.valueOf()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:12
+# e44d99facf68491585643f33fa0018e3
+msgid "Displays the ``str`` attribute of an ObjectId as a hexadecimal string."
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:14
+# 79a42c2152e04cbfb850bab48427e954
+msgid ":method:`WriteResult()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:14
+# 5bef21b66f3f4f83828113a8226b84be
+msgid "Wrapper around the result set from write methods."
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:16
+# d59a9899e88d4311977bccfeeaccdcca
+msgid ":method:`WriteResult.hasWriteError()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:16
+# e43ed0ebaaf94af7a7ed8ca96ff2d7d9
+msgid "Returns a boolean specifying whether the results include :data:`WriteResult.writeError`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:18
+# 28f0d896ed7645018437ace98bc0460b
+msgid ":method:`WriteResult.hasWriteConcernError()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:18
+# f0030008690b4298972ac8d2893748f5
+msgid "Returns a boolean specifying whether whether the results include :data:`WriteResult.writeConcernError`."
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:20
+# fd57d13c7be5407db6d89490fda3794f
+msgid ":method:`BulkWriteResult()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-constructor.rst:20
+# 7321e6b338e341b7933349766b7a0008
+msgid "Wrapper around the result set from :method:`Bulk.execute()`."
+msgstr ""
+

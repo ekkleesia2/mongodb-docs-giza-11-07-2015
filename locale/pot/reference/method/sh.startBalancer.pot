@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/sh.startBalancer.txt:3
+# 1f91e5c0d1ad4e59bcf1a6c7d700a8fd
+msgid "sh.startBalancer()"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:8
+# 52381981da43444183af1a231b174bfb
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:12
+# 7b70491d28ce4fbd83b0e53f9dc82166
+msgid "Enables the balancer in a sharded cluster and waits for balancing to initiate."
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:19
+# 41e2fc4a99a64f3b856d60f5fdea9cc2
+msgid ":method:`sh.enableBalancing()`"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:20
+# bcd0d60faef64d55bf66a6a50372a1e6
+msgid ":method:`sh.disableBalancing()`"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:21
+# 947dc7eb43704c56815fd6815624f286
+msgid ":method:`sh.getBalancerHost()`"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:22
+# f0e61bcb0d1e42bb8647df4f8efd6194
+msgid ":method:`sh.getBalancerState()`"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:23
+# d7077a1e64894114817a0266ef960680
+msgid ":method:`sh.isBalancerRunning()`"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:24
+# 9ca6cd9a554445fea51d93828f9326cb
+msgid ":method:`sh.setBalancerState()`"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:25
+# d1b0aa66c5804883950fc7caf25c7588
+msgid ":method:`sh.stopBalancer()`"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:26
+# 77f1fd135ba840dab8c53ba15d2b604a
+msgid ":method:`sh.waitForBalancer()`"
+msgstr ""
+
+#: ../source/reference/method/sh.startBalancer.txt:27
+# 4f02a22267454b2a833984f4545beaed
+msgid ":method:`sh.waitForBalancerOff()`"
+msgstr ""
+

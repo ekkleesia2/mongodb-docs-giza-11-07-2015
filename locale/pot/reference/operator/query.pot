@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/query.txt:3
+# bf70ec7c19784a5fbe8ceacd22c5e1e4
+msgid "Query and Projection Operators"
+msgstr ""
+
+#: ../source/reference/operator/query.txt:10
+# 984db447415e46e1bbfbb69a76ae3c04
+msgid "Query Selectors"
+msgstr ""
+
+#: ../source/reference/operator/query.txt:13
+# 8924a041c0d0426aa90d19a4a8ca6c02
+msgid "Comparison"
+msgstr ""
+
+#: ../source/reference/operator/query.txt:28
+# 6655d91a538a4bcc9b28b621b84f4274
+msgid "Logical"
+msgstr ""
+
+#: ../source/reference/operator/query.txt:42
+# 71cd68b46e274910ad8631c6968db9de
+msgid "Element"
+msgstr ""
+
+#: ../source/reference/operator/query.txt:56
+# bd594488fe55455a9d2705a722c1ffed
+msgid "Evaluation"
+msgstr ""
+
+#: ../source/reference/operator/query.txt:70
+# 93dbd4485eb340eeacbe9c06080d2f7d
+msgid "Geospatial"
+msgstr ""
+
+#: ../source/reference/operator/query.txt:84
+# 56cd5b94893c423caffd179fa9adc551
+msgid "Array"
+msgstr ""
+
+#: ../source/reference/operator/query.txt:98
+# d669ab38a7374aaf9af4d762b13f8069
+msgid "Projection Operators"
+msgstr ""
+

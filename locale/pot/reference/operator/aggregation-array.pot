@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/aggregation-array.txt:3
+# 7bd7a4f1114e451c8c58188282338f6d
+msgid "Array Aggregation Operators"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-array.rst:2
+# 5d490238359a4af998e9c82fed1d3407
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-array.rst:2
+# 6abc2297851c4dd89fe99db102dcd69e
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-array.rst:4
+# cd30280a98b249c1afa501bf4b48025a
+msgid ":expression:`$size`"
+msgstr ""
+
+#: ../source/includes/toc/table-aggregation-array.rst:4
+# 10fdd306995b4ecbbfcf29f9592c5844
+msgid "Returns the number of elements in the array. Accepts a single expression as argument."
+msgstr ""
+

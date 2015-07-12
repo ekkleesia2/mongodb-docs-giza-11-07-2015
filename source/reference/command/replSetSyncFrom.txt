@@ -1,0 +1,30 @@
+===============
+replSetSyncFrom
+===============
+
+.. default-domain:: mongodb
+
+Description
+-----------
+
+.. dbcommand:: replSetSyncFrom
+
+   .. versionadded:: 2.2
+
+   Explicitly configures which host the current :program:`mongod` pulls
+   :term:`oplog` entries from. This operation is useful for testing
+   different patterns and in situations where a set member is not
+   replicating from the desired host.
+
+   The :dbcommand:`replSetSyncFrom` command has the following form:
+
+   .. code-block:: javascript
+
+      { replSetSyncFrom: "hostname<:port>" }
+
+   The :dbcommand:`replSetSyncFrom` command has the following field:
+
+   .. include:: /includes/apiargs/command-replSetSyncFrom-field.rst
+
+   For more information the use of :dbcommand:`replSetSyncFrom`, see
+   :doc:`/tutorial/configure-replica-set-secondary-sync-target`.

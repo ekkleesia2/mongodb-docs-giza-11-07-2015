@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference.txt:3
+# 24ac78b14f024c729d34951a3453a103
+msgid "Reference"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:5
+# d16b931b29e84b6b9541765d511ee981
+msgid ":doc:`/reference/operator`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:4
+# a59e0c7c6a3e41958e4acde380bf5c6b
+msgid "Documentation of query, update, projection, and aggregation framework operators."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:9
+# 007ada4d1bf24e07a15a541737fb8c61
+msgid ":doc:`/reference/command`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:8
+# 718aa766c45c41a9b2af8deb4215b462
+msgid "Documentation of all MongoDB :term:`database commands <database command>` operations, syntax, and use."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:13
+# 5126def59f5f45ce9089aad82c43c7b2
+msgid ":doc:`/reference/method`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:12
+# 1b05be7bbd314adf9d430e8bb0a72272
+msgid "Documentation of all JavaScript methods and helpers in the :program:`mongo` shell."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:17
+# 23c299c2c88145da9985d94437b920e7
+msgid ":doc:`/reference/program`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:16
+# 362431e9cd8a4bb2a68cf46e4b7e32fa
+msgid "Documentation of :program:`mongod` and :program:`mongos` and all other tools distributed with MongoDB."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:21
+# fd0de79e2bd140f899ae7a1f8a72f940
+msgid ":doc:`/reference/configuration-options`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:20
+# 29caddbbd2ab4e7698f59e2708a24219
+msgid "Full documentation of the configuration file and available run-time operations."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:27
+# df2afe55353f4c3c84941bb5fa3fa44f
+msgid ":doc:`/reference/parameters`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:24
+# 7209baf047004dea8a3b0ac248527669
+msgid "Documentation of all :program:`mongod` and :program:`mongos` parameters that are available in the :dbcommand:`setParameter` (command) and :setting:`setParameter` run-time interface."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:31
+# 95283dffcd784ccc95bd83d843afe766
+msgid ":doc:`/reference/limits`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:30
+# 867ebc5b15404e5a99b665dcdd5482a8
+msgid "A list of important limits and thresholds imposed by MongoDB."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:37
+# 0109a69397dc4b919ee75196bdd4dc6f
+msgid ":doc:`/reference/connection-string`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:34
+# 031a6e13559140ab9f06a47a850907ed
+msgid "The complete specification of the MongoDB connection string format that the drivers use to describe connections to MongoDB deployments."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:42
+# aef5f28432e744a69a81b6e09995f6f4
+msgid ":doc:`/reference/mongodb-extended-json`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:40
+# 02fbdf87f4a847b88cb798413f1739b1
+msgid "Describes the :term:`JSON` super set used to express BSON documents in the :program:`mongo` shell and other MongoDB tools."
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:44
+# e091bf66273b4ceeb9889e3b4c9bbfce
+msgid ":doc:`/reference/glossary`"
+msgstr ""
+
+#: ../source/includes/toc/dfn-list-reference-landing.rst:45
+# 0eff09579e9f41bebfbe991f75912098
+msgid "A glossary of common terms and concepts specific to MongoDB."
+msgstr ""
+
+#: ../source/reference.txt:9
+# a140a69741fd4ebb948f39bf3f7189f9
+msgid "The :ref:`genindex` may provide useful insight into the reference material in this manual. The :doc:`/reference/crud` :doc:`/reference/data-models`, :doc:`/reference/sharding`, :doc:`/reference/replication`, and :doc:`/reference/security` contain additional reference material."
+msgstr ""
+

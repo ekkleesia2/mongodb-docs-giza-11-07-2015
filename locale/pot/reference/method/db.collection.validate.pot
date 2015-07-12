@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/db.collection.validate.txt:3
+# 559ef58a45a54d26b84957fd673312cd
+msgid "db.collection.validate()"
+msgstr ""
+
+#: ../source/reference/method/db.collection.validate.txt:8
+# a9e38536669441858cf06b68e264312c
+msgid "Description"
+msgstr ""
+
+#: ../source/reference/method/db.collection.validate.txt:12
+# 9f56c596c0e741c08291277b2ebf05bb
+msgid "Validates a collection. The method scans a collection's data structures for correctness and returns a single :term:`document` that describes the relationship between the logical collection and the physical representation of the data."
+msgstr ""
+
+#: ../source/reference/method/db.collection.validate.txt:17
+# 01d2c2f2b18845c29729ed3bb5dba318
+msgid "The :method:`~db.collection.validate()` method has the following parameter:"
+msgstr ""
+
+#: ../source/reference/method/db.collection.validate.txt:22
+# 2d5a4578960743cf9634b308f431e145
+msgid "The :method:`~db.collection.validate()` method output provides an in-depth view of how the collection uses storage. Be aware that this command is potentially resource intensive and may impact the performance of your MongoDB instance."
+msgstr ""
+
+#: ../source/reference/method/db.collection.validate.txt:28
+# 1457a988a0ff4a948dc0fe68b493a7a0
+msgid "The :method:`~db.collection.validate()` method is a wrapper around the :dbcommand:`validate` :term:`database command`."
+msgstr ""
+
+#: ../source/reference/method/db.collection.validate.txt:32
+# 9d808d33535747419f3de89a7e3c765b
+msgid ":doc:`/reference/command/validate`"
+msgstr ""
+

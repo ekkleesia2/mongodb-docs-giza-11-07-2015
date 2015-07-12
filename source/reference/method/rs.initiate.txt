@@ -1,0 +1,28 @@
+=============
+rs.initiate()
+=============
+
+.. default-domain:: mongodb
+
+Description
+-----------
+
+.. method:: rs.initiate(configuration)
+
+   Initiates a :term:`replica set`. Optionally takes a configuration
+   argument in the form of a :term:`document` that holds the
+   configuration of a replica set.
+
+   The :method:`rs.initiate()` method has the following parameter:
+
+   .. include:: /includes/apiargs/method-rs.initiate-param.rst
+
+   The :method:`rs.initiate()` method provides a wrapper around the
+   ":dbcommand:`replSetInitiate`" :term:`database command`.
+
+Replica Set Configuration
+-------------------------
+
+See :doc:`/administration/replica-set-member-configuration` and
+:doc:`/reference/replica-configuration` for examples of replica set
+configuration and invitation objects.

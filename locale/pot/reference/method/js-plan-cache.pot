@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/js-plan-cache.txt:3
+# fca59d44900946a5972ec20eb7924469
+msgid "Query Plan Cache Methods"
+msgstr ""
+
+#: ../source/reference/method/js-plan-cache.txt:7
+# 95020bf41210421ca028aabe60fdf2ab
+msgid "The PlanCache methods are only accessible from a collection's plan cache object. To retrieve the plan cache object, use the :method:`db.collection.getPlanCache()` method."
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:2
+# 8bbd8db5e70a43b4838203ed70a26ea4
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:2
+# a5978c055e7e4d1ab3f45f8fdd8f4248
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:4
+# 27ac740fb99b412dbdeb3bbbfb9c17f7
+msgid ":method:`db.collection.getPlanCache()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:4
+# 88a392837cbe4d4ea9d962feacede813
+msgid "Returns an interface to access the query plan cache object and associated PlanCache methods for a collection.\""
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:8
+# 4098d5cdb92748859a19ff0c07b457e3
+msgid ":method:`PlanCache.help()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:8
+# 22fd0df2d6b14a7f9f847ef022a3c6ac
+msgid "Displays the methods available for a collection's query plan cache. Accessible through the plan cache object of a specific collection, i.e. ``db.collection.getPlanCache().help()``."
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:13
+# 3015822e23534650b40c93544765b2e9
+msgid ":method:`PlanCache.listQueryShapes()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:13
+# 7d7aa30dc0e54f319d8e3f53c22cefb0
+msgid "Displays the query shapes for which cached query plans exist. Accessible through the plan cache object of a specific collection, i.e. ``db.collection.getPlanCache().listQueryShapes()``."
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:18
+# 6d7028f35a6d48e5a61a60742cd3cf47
+msgid ":method:`PlanCache.getPlansByQuery()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:18
+# 1fe8da613ea449dcaf6b28f400513f81
+msgid "Displays the cached query plans for the specified query shape. Accessible through the plan cache object of a specific collection, i.e. ``db.collection.getPlanCache().getPlansByQuery()``."
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:23
+# f3a5260d26524910b969bcba0ad81aeb
+msgid ":method:`PlanCache.clearPlansByQuery()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:23
+# 02bc1605715e4928bee2441664a27580
+msgid "Clears the cached query plans for the specified query shape. Accessible through the plan cache object of a specific collection, i.e. ``db.collection.getPlanCache().clearPlansByQuery()``"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:28
+# e821a34eaf1343459005bbeae3c892cf
+msgid ":method:`PlanCache.clear()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-plan-cache.rst:28
+# 12a12fd833484c078e1c620038232fe4
+msgid "Clears all the cached query plans for a collection. Accessible through the plan cache object of a specific collection, i.e. ``db.collection.getPlanCache().clear()``."
+msgstr ""
+

@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/db.getPrevError.txt:3
+# bf9c38523d4c4923a09f503e60dea151
+msgid "db.getPrevError()"
+msgstr ""
+
+#: ../source/reference/method/db.getPrevError.txt:9
+# 78c95b0d94814badb355ce675164885f
+msgid "A status document, containing the errors."
+msgstr ""
+
+#: ../source/reference/method/db.getPrevError.txt:13
+# 2ded49e07ebd4fb8ac7efa31a089a0ca
+msgid "This output reports all errors since the last time the database received a :dbcommand:`resetError` (also :method:`db.resetError()`) command."
+msgstr ""
+
+#: ../source/reference/method/db.getPrevError.txt:17
+# 0b7bed2376ee4e4c938b69530102a8e6
+msgid "This method provides a wrapper around the :dbcommand:`getPrevError` command."
+msgstr ""
+

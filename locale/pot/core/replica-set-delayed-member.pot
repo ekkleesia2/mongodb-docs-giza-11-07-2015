@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/core/replica-set-delayed-member.txt:8
+# 669d001c597b43209012f97a03d43ea8
+msgid "Delayed Replica Set Members"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:12
+# f2679a7509694467bda346a37d4e00ba
+msgid "Delayed members contain copies of a :term:`replica set's <replica set>` data set. However, a delayed member's data set reflects an earlier, or delayed, state of the set. For example, if the current time is 09:52 and a member has a delay of an hour, the delayed member has no operation more recent than 08:52."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:18
+# 89b843214a254d4e80d372dbb30374c9
+msgid "Because delayed members are a \"rolling backup\" or a running \"historical\" snapshot of the data set, they may help you recover from various kinds of human error. For example, a delayed member can make it possible to recover from unsuccessful application upgrades and operator errors including dropped databases and collections."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:25
+# 2ab14b999a6343ccbca6083e7796c672
+msgid "Considerations"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:28
+# 3c169b3d8e88402ab7eea092b447c784
+msgid "Requirements"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:30
+# df1036b739d345448fc5ba49b9626728
+msgid "Delayed members:"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:32
+# 4aae8aecb33c4596ba917fd5b3c3635e
+msgid "**Must be** :ref:`priority 0 <replica-set-secondary-only-members>` members. Set the priority to 0 to prevent a delayed member from becoming primary."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:36
+# da321d1402164f71b4e17ded4ece860e
+msgid "**Should be** :ref:`hidden <replica-set-hidden-members>` members. Always prevent applications from seeing and querying delayed members."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:40
+# 253b807a1f9f478ab44f6a7e6f852c7d
+msgid "*do* vote in :term:`elections <election>` for primary."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:43
+# e168fd0faf7042768ca68dd1f04144ef
+msgid "Behavior"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:45
+# 8e1cef60a77849299780402a6429a726
+msgid "Delayed members apply operations from the :term:`oplog` on a delay. When choosing the amount of delay, consider that the amount of delay:"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:48
+# 180fd5dfb85c413db0fadd0a7508d29c
+msgid "must be is equal to or greater than your maintenance windows."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:50
+# 7f1c4d9bf65b4ba0a852769e98479794
+msgid "must be *smaller* than the capacity of the oplog. For more information on oplog size, see :ref:`replica-set-oplog-sizing`."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:54
+# def033a05da94ebb857dbc69fc720a66
+msgid "Sharding"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:56
+# 79713df89c1b429c8dbcadd34ace7b60
+msgid "In sharded clusters, delayed members have limited utility when the :term:`balancer` is enabled. Because delayed members replicate chunk migrations with a delay, the state of delayed members in a sharded cluster are not useful for recovering to a previous state of the sharded cluster if any migrations occur during the delay window."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:63
+# c3ac2eff1b8b40509e28876bf61daa66
+msgid "Example"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:65
+# cacb544d5f3b48ecaa47955c0bc22661
+msgid "In the following 5-member replica set, the primary and all secondaries have copies of the data set. One member applies operations with a delay of 3600 seconds, or an hour. This delayed member is also *hidden* and is a *priority 0 member*."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:73
+# 9839e71f8dde43f78a9c1b6b556347b2
+msgid "Configuration"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:75
+# 23e2acf8e8df4025a9b0104bcf1d2fae
+msgid "A delayed member has its :data:`~local.system.replset.members[n].priority` equal to ``0``, :data:`~local.system.replset.members[n].hidden` equal to ``true``, and its :data:`~local.system.replset.members[n].slaveDelay` equal to the number of seconds of delay:"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:91
+# b2a1cbeb779946fab1773689be8c6cd0
+msgid "To configure a delayed member, see :doc:`/tutorial/configure-a-delayed-replica-set-member`."
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:1
+# 3549f75a9343477c93dc6fe2b0da5cc7
+msgid "replica set members"
+msgstr ""
+
+#: ../source/core/replica-set-delayed-member.txt:1
+# 3549f75a9343477c93dc6fe2b0da5cc7
+msgid "delayed"
+msgstr ""
+

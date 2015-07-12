@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:3
+# f9252846e3eb4690bdbd4206bce04c1c
+msgid "PlanCache.getPlansByQuery()"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:8
+# cacb4a19bff34420b3e34ff685ef2ed6
+msgid "Definition"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:12
+# de2bd79ab3834bdda2634e6180cf7edc
+msgid "Displays the cached query plans for the specified :term:`query shape`."
+msgstr ""
+
+#: ../source/includes/fact-query-optimizer-cache-behavior.rst:1
+# 924ff4a87648428fb8e43e1de5695aab
+msgid "The query optimizer only caches the plans for those query shapes that can have more than one viable plan."
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:17
+# ce5069c4594d48ceacac11545d912c5a
+msgid "The method is only available from the :method:`plan cache object <db.collection.getPlanCache()>` of a specific collection; i.e."
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:24
+# bc3d4eadf3b843008849b5e476cfa697
+msgid "The :method:`PlanCache.getPlansByQuery()` method accepts the following parameters:"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:29
+# 82fed0c03c3f4f9098b46bbecdcab352
+msgid "Array of cached query plans for a query shape."
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:31
+# bc5c309b5d924e5a8a1df9465b77c72d
+msgid "To see the query shapes for which cached query plans exist, use the :method:`PlanCache.listQueryShapes()` method."
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:35
+# f8e78eebd8ac4602ae60481a7f13f870
+msgid "Required Access"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:37
+# bc76626f1a59423585ae8d7a007b1a46
+msgid "On systems running with :setting:`~security.authorization`, a user must have access that includes the :authaction:`planCacheRead` action."
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:41
+# 948dd088b142488fa3dda02b52a985c6
+msgid "Example"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:43
+# 451f6893b1674554885b066c665c9278
+msgid "If a collection ``orders`` has the following query shape:"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:53
+# 1ed5941ba8d24ba28d18c2a3fa505cda
+msgid "The following operation displays the query plan cached for the shape:"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:65
+# d7502a8c41704bdeba18bffd48b28831
+msgid ":method:`db.collection.getPlanCache()`"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:66
+# c1e189297bfd43cfb4b694acbf1f8686
+msgid ":method:`PlanCache.listQueryShapes()`"
+msgstr ""
+
+#: ../source/reference/method/PlanCache.getPlansByQuery.txt:67
+# 0a5308c6a19c489f96623c1b5b7c1d4d
+msgid ":method:`PlanCache.help()`"
+msgstr ""
+

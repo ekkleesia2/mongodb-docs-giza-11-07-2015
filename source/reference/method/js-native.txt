@@ -1,0 +1,9 @@
+==============
+Native Methods
+==============
+
+.. default-domain:: mongodb
+
+.. include:: /includes/toc/table-method-native.rst
+
+.. include:: /includes/toc/method-native.rst

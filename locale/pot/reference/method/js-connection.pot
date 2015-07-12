@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/method/js-connection.txt:3
+# 2a80bd8a3c60402ea2a435626e99b938
+msgid "Connection Methods"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:2
+# efd5a7fc228b4c40ab21e67c570353d7
+msgid "Name"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:2
+# 3f394763bd7c4c41a1c27f3df1c045c1
+msgid "Description"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:4
+# c7d9028fd52f4a2e9d0ccd49d76d140b
+msgid ":method:`Mongo.getDB()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:4
+# bdb39235f8684993ab9b57b28fe30b58
+msgid "Returns a database object."
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:6
+# cdc35f998c604232bcf037c811a4ba92
+msgid ":method:`Mongo.getReadPrefMode()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:6
+# 82e9e3f8a5544488b20462c87361bdbd
+msgid "Returns the current read preference mode for the MongoDB connection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:8
+# 8d4dd66d6ade47278778aa96c6e12733
+msgid ":method:`Mongo.getReadPrefTagSet()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:8
+# 8295148b248b443ebc583664e5c5043e
+msgid "Returns the read preference tag set for the MongoDB connection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:10
+# febbc5a23f56413c8b51dedb2a8a8ac2
+msgid ":method:`Mongo.setReadPref()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:10
+# 0551f5647c9d49fd86c21e70022c80d6
+msgid "Sets the :term:`read preference` for the MongoDB connection."
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:12
+# 7696c97f65f84e3ebf0fead3118844d6
+msgid ":method:`Mongo.setSlaveOk()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:12
+# 0d4d5525ba5346de9900e76fc4377489
+msgid "Allows operations on the current connection to read from :term:`secondary` members."
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:14
+# c30198346787461dacc578c3e421d565
+msgid ":method:`Mongo()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:14
+# 293cae58c81c4134b3a01c118ba8f6c6
+msgid "Creates a new connection object."
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:16
+# 8ee01ba2a1174370866c21c41f715fe3
+msgid ":method:`connect()`"
+msgstr ""
+
+#: ../source/includes/toc/table-method-connection.rst:16
+# 3616e03f97ec430ebb8741a839ee7248
+msgid "Connects to a MongoDB instance and to a specified database on that instance."
+msgstr ""
+

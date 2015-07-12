@@ -1,0 +1,123 @@
+==============================
+Query and Projection Operators
+==============================
+
+.. default-domain:: mongodb
+
+.. _query-selectors:
+
+Query Selectors
+---------------
+
+Comparison
+~~~~~~~~~~
+
+.. only:: website
+
+   .. include:: /includes/fact-comparison-order.rst
+   .. include:: /includes/toc/table-operator-query-comparison.rst
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/operator/query-comparison
+
+Logical
+~~~~~~~
+
+.. only:: website
+
+   .. include:: /includes/toc/table-operator-query-logical.rst
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/operator/query-logical
+
+Element
+~~~~~~~
+
+.. only:: website
+
+   .. include:: /includes/toc/table-operator-query-element.rst
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/operator/query-element
+
+Evaluation
+~~~~~~~~~~
+
+.. only:: website
+
+   .. include:: /includes/toc/table-operator-query-evaluation.rst
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/operator/query-evaluation
+
+Geospatial
+~~~~~~~~~~
+
+.. only:: website
+
+   .. include:: /includes/toc/table-operator-query-geospatial.rst
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/operator/query-geospatial
+
+Array
+~~~~~
+
+.. only:: website
+
+   .. include:: /includes/toc/table-operator-query-array.rst
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/operator/query-array
+
+Comments
+~~~~~~~~
+
+.. only:: website
+
+   .. include:: /includes/toc/table-operator-query-comment.rst
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/operator/query/comment
+
+Projection Operators
+--------------------
+
+.. only:: website
+
+   .. include:: /includes/toc/table-operator-projection.rst
+
+.. class:: hidden
+
+   .. toctree::
+      :titlesonly:
+
+      /reference/operator/projection

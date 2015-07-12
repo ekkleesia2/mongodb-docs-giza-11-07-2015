@@ -1,0 +1,37 @@
+==============================
+Replace Disabled Config Server
+==============================
+
+.. default-domain:: mongodb
+
+Overview
+--------
+
+Sharded clusters use a group of three config servers to store cluster
+meta data, and all three config servers must be available to support
+cluster metadata changes that include chunk splits and migrations. If
+one of the config servers is unavailable or inoperable you must
+replace it as soon as possible.
+
+This procedure replaces an inoperable
+:ref:`config server <sharding-config-server>` in a
+:doc:`sharded cluster </core/sharding>`. Use this procedure only
+to replace a config server that has become inoperable (e.g. hardware
+failure).
+
+This process assumes that the hostname of the instance will not change.
+If you must change the hostname of the instance, use the procedure to
+:doc:`migrate a config server and use a new hostname
+<migrate-config-servers-with-different-hostnames>`.
+
+Considerations
+--------------
+
+In the course of this procedure *never* remove a config server from the
+:setting:`~sharding.configDB` parameter on any of the :program:`mongos`
+instances.
+
+Procedure
+---------
+
+.. include:: /includes/steps/replace-disabled-config-server.rst

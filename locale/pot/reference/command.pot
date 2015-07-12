@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/command.txt:3
+# b5659d7b4f124b59b1e12d454856e0a9
+msgid "Database Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:7
+# 6d8851d5a3b048d997ca9abf152df22a
+msgid "All command documentation outlined below describes a command and its available parameters and provides a document template or prototype for each command. Some command documentation also includes the relevant :program:`mongo` shell helpers."
+msgstr ""
+
+#: ../source/reference/command.txt:13
+# bd97fe96ec754053a2cfda155a3080e0
+msgid "User Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:16
+# 4cbf153221744d6eb01a162e4de4f385
+msgid "Aggregation Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:30
+# afa1aee00fe240dcbcdbe8f04e6ee5e9
+msgid "Geospatial Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:46
+# da577bde7b524ef5b416e6c4facb016d
+msgid "Query and Write Operation Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:62
+# 50f2342868cf415594790ae0a88e665b
+msgid "Query Plan Cache Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:77
+# c77228f1d628434784dc6c0d711ef7d1
+msgid "Database Operations"
+msgstr ""
+
+#: ../source/reference/command.txt:80
+# 9ab53b5341814e88a8d42dddf93c172f
+msgid "Authentication Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:96
+# 95162bc0a732466b86071c68788eac0c
+msgid "User Management Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:112
+# a8b6a3ec6108428a8ac0fce60f9babfb
+msgid "Role Management Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:126
+# 446dff084f394d7aad99584d55eac659
+msgid "Replication Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:139
+# 0070b0fed398401c901465b54538affd
+msgid ":doc:`/replication` for more information regarding replication."
+msgstr ""
+
+#: ../source/reference/command.txt:143
+# 9ff2b1e637304142992e65d160d0cc37
+msgid "Sharding Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:156
+# d5770e66a50143de8011efae38bf21dc
+msgid ":doc:`/sharding` for more information about MongoDB's sharding functionality."
+msgstr ""
+
+#: ../source/reference/command.txt:162
+# 855cc6fc0f914da38e762648b347a7a9
+msgid "Instance Administration Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:176
+# d1fbd6b52def4572a842cd618fd3e16c
+msgid "Diagnostic Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:190
+# fa9fc33700494fafbc539e3c39bff862
+msgid "Internal Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:204
+# 1668b900857042598749ddcb63113ae7
+msgid "Testing Commands"
+msgstr ""
+
+#: ../source/reference/command.txt:218
+# d98e3394d3f1406c9b7d072b728492c8
+msgid "Auditing Commands"
+msgstr ""
+

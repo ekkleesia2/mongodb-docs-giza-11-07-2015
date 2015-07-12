@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2014
+# This file is distributed under the same license as the mongodb-manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mongodb-manual 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-03 15:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/reference/operator/query/polygon.txt:3
+# 9bb62ef6246440de941f93940c295e91
+msgid "$polygon"
+msgstr ""
+
+#: ../source/reference/operator/query/polygon.txt:11
+# 5024ef8a63dd43f68c2a05a03e098482
+msgid "The :query:`$polygon` operator specifies a polygon for a :term:`geospatial` :query:`$geoWithin` query on legacy coordinate pairs. The query returns pairs that are within the bounds of the polygon. The operator does *not* query for GeoJSON objects."
+msgstr ""
+
+#: ../source/reference/operator/query/polygon.txt:16
+# 08661ea033e74a508a851de2e3bc7b1c
+msgid "The :query:`$polygon` operator calculates distances using flat (planar) geometry."
+msgstr ""
+
+#: ../source/reference/operator/query/polygon.txt:19
+# 6dd9c05c9da845bfa89846de765e7ced
+msgid "The ``2d`` geospatial index supports the :query:`$polygon` operator."
+msgstr ""
+
+#: ../source/reference/operator/query/polygon.txt:22
+# 1171b13e05f2497e9629c8b6fc684404
+msgid "To define the polygon, specify an array of coordinate points. Use the following syntax:"
+msgstr ""
+
+#: ../source/reference/operator/query/polygon.txt:31
+# 669bb4f8d5ff4c119d705a854ee667c3
+msgid "If you use longitude and latitude, specify **longitude first**."
+msgstr ""
+
+#: ../source/reference/operator/query/polygon.txt:33
+# ff9e4591f411477c833a646f85c71381
+msgid "The last point specified is always implicitly connected to the first. You can specify as many points, and therefore sides, as you like."
+msgstr ""
+
+#: ../source/reference/operator/query/polygon.txt:37
+# ec43851113c84461b64313ea27b88671
+msgid "The following query returns all documents that have coordinates that exist within the polygon defined by ``[ 0 , 0 ]``, ``[ 3 , 6 ]``, and ``[ 6 , 0 ]``:"
+msgstr ""
+
+#: ../source/includes/note-geospatial-index-must-exist.rst:1
+# 9c8d13ae52374634a3897a3693d47d03
+msgid "Applications can use |operator| *without* having a geospatial index. However, geospatial indexes support much faster queries than the unindexed equivalents. Before 2.2.3, a geospatial index *must* exist on a field holding coordinates before using any of the geospatial query operators."
+msgstr ""
+
